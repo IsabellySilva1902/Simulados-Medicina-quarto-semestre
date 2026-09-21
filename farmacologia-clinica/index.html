@@ -49,7 +49,7 @@
 <div id="toast-container" class="fixed bottom-6 right-6 z-[100] flex flex-col gap-2 items-end"></div>
 
 <!-- ===================== HEADER ===================== -->
-<header class="border-b border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 backdrop-blur sticky top-0 z-40">
+<header class="border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 sticky top-0 z-40">
   <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
     <div class="flex items-center gap-2">
       <span class="text-2xl" aria-hidden="true">💊</span>
@@ -229,10 +229,12 @@
         <span id="q-category" class="px-2 py-1 rounded-full bg-brand-100 text-brand-700 dark:bg-brand-900/50 dark:text-brand-300 font-medium"></span>
         <span id="q-difficulty" class="px-2 py-1 rounded-full bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300 font-medium"></span>
         <span id="q-code" class="px-2 py-1 rounded-full bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-400 font-mono"></span>
-        <button id="btn-mark-review" class="ml-auto px-2 py-1 rounded-full border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700" title="Marcar para revisão">🏳️ <span id="mark-label">Marcar</span></button>
+        <button id="btn-clear-highlights" class="hidden ml-auto px-2 py-1 rounded-full border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700" title="Remover todos os grifos desta questão">🖍️ Limpar grifos</button>
+        <button id="btn-mark-review" class="px-2 py-1 rounded-full border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700" title="Marcar para revisão">🏳️ <span id="mark-label">Marcar</span></button>
       </div>
 
-      <p id="q-prompt" class="text-base sm:text-lg font-medium mb-5 leading-relaxed"></p>
+      <p id="q-prompt" class="text-base sm:text-lg font-medium mb-1.5 leading-relaxed select-text"></p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mb-5">🖍️ Selecione um trecho do enunciado para grifar. Clique num grifo para apagá-lo.</p>
 
       <div id="q-options" class="space-y-2.5 mb-4"></div>
 
@@ -7804,6 +7806,7 @@ function buildSessionQuestions(questions, rng) {
       struck: [],              // indices riscados
       marked: false,
       hintShown: false,
+      highlights: [],           // trechos grifados no enunciado: [{start, end}]
     };
   });
 }
@@ -8063,8 +8066,75 @@ function renderQuizDots() {
   );
 }
 
+/* =========================================================================
+   GRIFO NO ENUNCIADO (marca-texto)
+   ========================================================================= */
+function mergeHighlightRanges(ranges) {
+  const sorted = ranges.slice().sort((a, b) => a.start - b.start);
+  const merged = [];
+  for (const r of sorted) {
+    const last = merged[merged.length - 1];
+    if (last && r.start <= last.end) {
+      last.end = Math.max(last.end, r.end);
+    } else {
+      merged.push({ start: r.start, end: r.end });
+    }
+  }
+  return merged;
+}
+
+function renderHighlightedText(text, ranges, interactive) {
+  if (!ranges || !ranges.length) return escapeHtml(text);
+  const cls = interactive ? "hl-mark cursor-pointer" : "hl-mark";
+  const attrs = interactive ? 'title="Clique para apagar o grifo"' : "";
+  let html = "";
+  let cursor = 0;
+  ranges.forEach((r, i) => {
+    html += escapeHtml(text.slice(cursor, r.start));
+    html += `<mark class="${cls} bg-yellow-200 dark:bg-yellow-300 text-slate-900 rounded px-0.5" data-hl-index="${i}" ${attrs}>${escapeHtml(text.slice(r.start, r.end))}</mark>`;
+    cursor = r.end;
+  });
+  html += escapeHtml(text.slice(cursor));
+  return html;
+}
+
+function textOffsetFromPoint(root, node, offset) {
+  const preRange = document.createRange();
+  preRange.selectNodeContents(root);
+  preRange.setEnd(node, offset);
+  return preRange.toString().length;
+}
+
+function getPromptSelectionRange(root) {
+  const sel = window.getSelection();
+  if (!sel || sel.rangeCount === 0 || sel.isCollapsed) return null;
+  const range = sel.getRangeAt(0);
+  if (!root.contains(range.commonAncestorContainer)) return null;
+  const start = textOffsetFromPoint(root, range.startContainer, range.startOffset);
+  const end = textOffsetFromPoint(root, range.endContainer, range.endOffset);
+  if (end <= start) return null;
+  return { start, end };
+}
+
+function handlePromptSelection() {
+  const q = currentQuestion();
+  const root = document.getElementById("q-prompt");
+  const range = getPromptSelectionRange(root);
+  if (!range) return;
+  q.highlights = mergeHighlightRanges((q.highlights || []).concat(range));
+  window.getSelection().removeAllRanges();
+  renderQuizQuestion();
+}
+
+function removeHighlight(index) {
+  const q = currentQuestion();
+  q.highlights.splice(index, 1);
+  renderQuizQuestion();
+}
+
 function renderQuizQuestion() {
   const q = currentQuestion();
+  if (!q.highlights) q.highlights = []; // compatibilidade com tentativas salvas antes deste recurso
   const total = App.attempt.questions.length;
   const idx = App.attempt.currentIndex;
 
@@ -8075,11 +8145,19 @@ function renderQuizQuestion() {
   document.getElementById("q-category").textContent = q.category;
   document.getElementById("q-difficulty").textContent = q.difficulty;
   document.getElementById("q-code").textContent = q.code;
-  document.getElementById("q-prompt").textContent = q.prompt;
+  const promptEl = document.getElementById("q-prompt");
+  promptEl.innerHTML = renderHighlightedText(q.prompt, q.highlights, true);
+  promptEl.querySelectorAll(".hl-mark").forEach((markEl) =>
+    markEl.addEventListener("click", (e) => {
+      e.stopPropagation();
+      removeHighlight(Number(markEl.dataset.hlIndex));
+    })
+  );
+  document.getElementById("btn-clear-highlights").classList.toggle("hidden", q.highlights.length === 0);
 
   document.getElementById("mark-label").textContent = q.marked ? "Marcada" : "Marcar";
   document.getElementById("btn-mark-review").className =
-    "ml-auto px-2 py-1 rounded-full border hover:bg-slate-100 dark:hover:bg-slate-700 " +
+    "px-2 py-1 rounded-full border hover:bg-slate-100 dark:hover:bg-slate-700 " +
     (q.marked
       ? "border-amber-400 bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300"
       : "border-slate-300 dark:border-slate-600");
@@ -8362,7 +8440,7 @@ function renderReview() {
           ${q.marked ? `<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">🏳️ Marcada</span>` : ""}
           ${badge}
         </div>
-        <p class="font-medium mb-3">${qi + 1}. ${escapeHtml(q.prompt)}</p>
+        <p class="font-medium mb-3">${qi + 1}. ${renderHighlightedText(q.prompt, q.highlights)}</p>
         <div class="space-y-2 mb-3">${optionsHtml}</div>
         <div class="rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800 p-2.5 text-xs text-amber-700 dark:text-amber-300">
           💡 ${escapeHtml(q.clinicalPointers)}
@@ -8656,6 +8734,14 @@ function init() {
     q.marked = !q.marked;
     renderQuizQuestion();
   });
+  document.getElementById("btn-clear-highlights").addEventListener("click", () => {
+    const q = currentQuestion();
+    q.highlights = [];
+    renderQuizQuestion();
+  });
+  const promptEl = document.getElementById("q-prompt");
+  promptEl.addEventListener("mouseup", handlePromptSelection);
+  promptEl.addEventListener("touchend", handlePromptSelection);
   document.getElementById("btn-prev").addEventListener("click", goPrev);
   document.getElementById("btn-next").addEventListener("click", goNext);
   document.getElementById("btn-finish").addEventListener("click", () => {
