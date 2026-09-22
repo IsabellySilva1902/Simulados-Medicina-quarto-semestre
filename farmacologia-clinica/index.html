@@ -7626,12 +7626,13 @@ const QUESTIONS_DATABASE = [
 /* =========================================================================
    0. CONSTANTES / STORAGE
    ========================================================================= */
+const STORAGE_SUBJECT = "farmacologia-clinica"; // identificador unico: isola o localStorage entre simulados hospedados no mesmo dominio
 const LS_KEYS = {
-  seen: "simfc_seen_ids",
-  history: "simfc_history",
-  weak: "simfc_weak_ids",
-  current: "simfc_current_attempt",
-  dark: "simfc_dark_mode",
+  seen: `simfc_${STORAGE_SUBJECT}_seen_ids`,
+  history: `simfc_${STORAGE_SUBJECT}_history`,
+  weak: `simfc_${STORAGE_SUBJECT}_weak_ids`,
+  current: `simfc_${STORAGE_SUBJECT}_current_attempt`,
+  dark: "simfc_dark_mode", // preferencia de modo escuro compartilhada entre todos os simulados
 };
 const HISTORY_MAX = 50;
 
