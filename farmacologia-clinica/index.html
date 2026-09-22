@@ -239,6 +239,8 @@
 
       <div id="q-options" class="space-y-2.5 mb-4"></div>
 
+      <button id="btn-check-answer" class="hidden w-full mb-4 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold">✅ Conferir resposta</button>
+
       <div id="q-hint-box" class="hidden mb-4 rounded-lg bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-700 p-3 text-sm">
         <p class="font-semibold text-amber-800 dark:text-amber-200 mb-1">💡 Ponto-chave</p>
         <p id="q-hint-text" class="text-amber-700 dark:text-amber-300"></p>
@@ -405,12 +407,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Dose correta do medicamento prescrito.",
-        "rationale": "Incorreta. O material lista a dose ou intervalo impróprio como causa de fracasso terapêutico; uma dose correta e o oposto dessa causa e não explicaria uma resposta insatisfatória."
+        "rationale": "Incorreta. A dose ou intervalo impróprio é causa de fracasso terapêutico; uma dose correta e o oposto dessa causa e não explicaria uma resposta insatisfatória."
       },
       {
         "letter": "B",
         "text": "Uso adequado de medicamentos concomitantes.",
-        "rationale": "Incorreta. O material aponta interações com alimentos ou drogas como fator de fracasso; o uso adequado das medicações concomitantes representa justamente a ausência desse problema."
+        "rationale": "Incorreta. Interações com alimentos ou drogas são fator de fracasso; o uso adequado das medicações concomitantes representa justamente a ausência desse problema."
       },
       {
         "letter": "C",
@@ -509,12 +511,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Randomização dos pacientes para receber diferentes formulações do medicamento.",
-        "rationale": "CORRETA. O material aponta a randomização como elemento central da avaliação das evidências em ensaios clínicos experimentais, permitindo comparações confiáveis entre as formulações testadas."
+        "rationale": "CORRETA. A randomização é elemento central da avaliação das evidências em ensaios clínicos experimentais, permitindo comparações confiáveis entre as formulações testadas."
       },
       {
         "letter": "C",
         "text": "Uso exclusivo de medicamentos de marca na intervenção.",
-        "rationale": "Incorreta. O material não relaciona a confiabilidade do ensaio ao uso de medicamentos de marca; o que garante validade e o desenho randomizado e controlado."
+        "rationale": "Incorreta. A confiabilidade do ensaio não se relaciona ao uso de medicamentos de marca; o que garante validade e o desenho randomizado e controlado."
       },
       {
         "letter": "D",
@@ -542,7 +544,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Ignorar possíveis interações medicamentosas, uma vez que o paciente já utiliza várias medicações.",
-        "rationale": "Incorreta. O material cita interações com alimentos ou drogas como causa de fracasso terapêutico; ignora-las em um paciente polimedicado aumenta o risco de insucesso e de eventos adversos."
+        "rationale": "Incorreta. Interações com alimentos ou drogas são causa de fracasso terapêutico; ignora-las em um paciente polimedicado aumenta o risco de insucesso e de eventos adversos."
       },
       {
         "letter": "C",
@@ -613,7 +615,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Terapias não farmacológicas podem ser efetivas como opções complementares ou alternativas a farmacoterapia.",
-        "rationale": "CORRETA. O material trata as medidas não farmacológicas como parte do plano terapêutico, atuando de forma complementar ao tratamento medicamentoso em diversas condições clínicas."
+        "rationale": "CORRETA. As medidas não farmacológicas são parte do plano terapêutico, atuando de forma complementar ao tratamento medicamentoso em diversas condições clínicas."
       },
       {
         "letter": "D",
@@ -641,7 +643,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Adscrição.",
-        "rationale": "CORRETA. O material define a adscrição como o componente que traz o tratamento não farmacológico e as instruções de melhor forma de uso, isto e, as orientações detalhadas ao paciente."
+        "rationale": "CORRETA. A adscrição é o componente que traz o tratamento não farmacológico e as instruções de melhor forma de uso, isto e, as orientações detalhadas ao paciente."
       },
       {
         "letter": "C",
@@ -679,7 +681,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Osteoporose",
-        "rationale": "CORRETA. O material descreve a osteoporose como doença silenciosa cujo primeiro sintoma costuma ser a fratura, associada a perda de altura gradual e postura encurvada, compatível com o quadro descrito."
+        "rationale": "CORRETA. A osteoporose é doença silenciosa cujo primeiro sintoma costuma ser a fratura, associada a perda de altura gradual e postura encurvada, compatível com o quadro descrito."
       },
       {
         "letter": "D",
@@ -707,7 +709,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Aumentar a atividade osteoblástica.",
-        "rationale": "Incorreta. O material atribui esse efeito ao estrogênio, não especificamente a combinação de cálcio e vitamina D, cujo papel central e outro."
+        "rationale": "Incorreta. Esse efeito é atribuído ao estrogênio, não especificamente a combinação de cálcio e vitamina D, cujo papel central e outro."
       },
       {
         "letter": "C",
@@ -801,7 +803,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Corticosteroides.",
-        "rationale": "Incorreta. O material descreve os corticosteroides como causa secundária de osteoporose, pois inibem a ação osteoblástica e aumentam a ação osteoclástica, agravando a perda óssea."
+        "rationale": "Incorreta. Os corticosteroides são causa secundária de osteoporose, pois inibem a ação osteoblástica e aumentam a ação osteoclástica, agravando a perda óssea."
       },
       {
         "letter": "B",
@@ -811,12 +813,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Bisfosfonatos.",
-        "rationale": "CORRETA. O material descreve os bisfosfonatos como ligantes da hidroxiapatita óssea que inibem a aderência dos osteoclastos e a consequente absorção óssea, sendo indicados quando a resposta a terapia inicial e insuficiente."
+        "rationale": "CORRETA. Os bisfosfonatos são ligantes da hidroxiapatita óssea que inibem a aderência dos osteoclastos e a consequente absorção óssea, sendo indicados quando a resposta a terapia inicial e insuficiente."
       },
       {
         "letter": "D",
         "text": "Moduladores seletivos do receptor de estrogênio.",
-        "rationale": "Incorreta. O material cita o raloxifeno como opção preventiva na pos-menopausa, mas os bisfosfonatos são a classe descrita com ação mais direta sobre a inibição da reabsorção osteoclástica."
+        "rationale": "Incorreta. O raloxifeno é opção preventiva na pos-menopausa, mas os bisfosfonatos são a classe descrita com ação mais direta sobre a inibição da reabsorção osteoclástica."
       }
     ],
     "correctLetter": "C",
@@ -839,7 +841,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Inibidores seletivos do receptor de estrogênio.",
-        "rationale": "Incorreta. O material relaciona os moduladores seletivos do receptor de estrogênio a prevenção da osteoporose pos-menopausa, não ao contexto de corticoterapia crônica em homens."
+        "rationale": "Incorreta. Os moduladores seletivos do receptor de estrogênio relacionam-se a prevenção da osteoporose pos-menopausa, não ao contexto de corticoterapia crônica em homens."
       },
       {
         "letter": "C",
@@ -877,12 +879,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A vitamina D atua como um anti-inflamatório para aliviar a dor associada a osteoporose.",
-        "rationale": "Incorreta. O material não descreve a vitamina D como agente anti-inflamatório ou analgésico na osteoporose."
+        "rationale": "Incorreta. A vitamina D não é agente anti-inflamatório ou analgésico na osteoporose."
       },
       {
         "letter": "D",
         "text": "A vitamina D estimula a liberação de hormônios tireoidianos que fortalecem os ossos.",
-        "rationale": "Incorreta. O material relaciona a calcitonina as células C da tireoide, mas não atribui a vitamina D o estímulo de hormônios tireoidianos."
+        "rationale": "Incorreta. A calcitonina relaciona-se as células C da tireoide, mas não atribui a vitamina D o estímulo de hormônios tireoidianos."
       }
     ],
     "correctLetter": "B",
@@ -915,7 +917,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Calcitonina.",
-        "rationale": "CORRETA. O material descreve a calcitonina como reguladora do cálcio que inibe a atividade dos osteoclastos, constituindo alternativa anti-reabsortiva sem o risco de irritação esofágica e gastrointestinal atribuído aos bisfosfonatos."
+        "rationale": "CORRETA. A calcitonina é reguladora do cálcio que inibe a atividade dos osteoclastos, constituindo alternativa anti-reabsortiva sem o risco de irritação esofágica e gastrointestinal atribuído aos bisfosfonatos."
       }
     ],
     "correctLetter": "D",
@@ -933,7 +935,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Realizar exames laboratoriais mensais.",
-        "rationale": "Incorreta. O material não recomenda uma rotina laboratorial mensal como método padrão de acompanhamento da eficácia terapêutica na osteoporose."
+        "rationale": "Incorreta. Uma rotina laboratorial mensal não é método padrão de acompanhamento da eficácia terapêutica na osteoporose."
       },
       {
         "letter": "B",
@@ -943,7 +945,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Medir a DMO com DEXA central a cada 1 ou 2 anos, com mais frequência em situações de perda rápida de massa óssea.",
-        "rationale": "CORRETA. O material destaca a densitometria óssea como ferramenta central de diagnóstico e acompanhamento, sendo coerente reavalia-lá periodicamente e intensificar o monitoramento diante de perda acelerada de massa óssea."
+        "rationale": "CORRETA. A densitometria óssea é ferramenta central de diagnóstico e acompanhamento, sendo coerente reavalia-lá periodicamente e intensificar o monitoramento diante de perda acelerada de massa óssea."
       },
       {
         "letter": "D",
@@ -1014,7 +1016,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Metabolismo hepático para formar metabólitos ativos.",
-        "rationale": "Incorreta. O material não descreve os bisfosfonatos como fármacos que dependem de metabolização hepática para gerar metabólitos ativos; sua ação decorre da ligação direta a hidroxiapatita óssea."
+        "rationale": "Incorreta. Os bisfosfonatos não são fármacos que dependem de metabolização hepática para gerar metabólitos ativos; sua ação decorre da ligação direta a hidroxiapatita óssea."
       }
     ],
     "correctLetter": "C",
@@ -1169,7 +1171,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Ao terceiro passo, verificar se o tratamento e adequado a esse paciente, que exige considerar comorbidades, interações e função renal antes da prescrição.",
-        "rationale": "CORRETA. O material descreve o terceiro passo da prescrição racional como a verificação da adequação do tratamento ao paciente específico, exatamente o que o médico faz ao considerar interações, função renal e risco de retenção hídrica antes de prescrever."
+        "rationale": "CORRETA. O terceiro passo da prescrição racional é a verificação da adequação do tratamento ao paciente específico, exatamente o que o médico faz ao considerar interações, função renal e risco de retenção hídrica antes de prescrever."
       },
       {
         "letter": "C",
@@ -1197,12 +1199,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Ambas as abordagens são igualmente válidas, pois o viés de seleção não interfere na confiabilidade dos resultados quando a amostra e grande.",
-        "rationale": "Incorreta. O material trata a randomização como elemento central para minimizar o viés de seleção, o que contrária a ideia de que a seleção dirigida de pacientes não interfere na validade dos resultados."
+        "rationale": "Incorreta. A randomização é elemento central para minimizar o viés de seleção, o que contrária a ideia de que a seleção dirigida de pacientes não interfere na validade dos resultados."
       },
       {
         "letter": "B",
         "text": "A randomização do primeiro grupo minimiza o viés de seleção, enquanto a escolha dirigida de pacientes mais favoráveis no segundo grupo compromete a validade dos resultados.",
-        "rationale": "CORRETA. O material aponta a randomização como elemento-chave para minimizar o viés de seleção; selecionar deliberadamente os pacientes com quadro mais favorável para o grupo de intervenção introduz justamente esse viés, comprometendo a confiabilidade dos resultados."
+        "rationale": "CORRETA. A randomização é elemento-chave para minimizar o viés de seleção; selecionar deliberadamente os pacientes com quadro mais favorável para o grupo de intervenção introduz justamente esse viés, comprometendo a confiabilidade dos resultados."
       },
       {
         "letter": "C",
@@ -1461,7 +1463,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Perda de peso e fezes escurecidas indicam sangramento esofágico com anemia, enquanto rouquidão e piora da asma refletem a predisposição a doenças respiratórias associada a DRGE não tratada.",
-        "rationale": "CORRETA. O material relaciona a exposição contínua do esôfago ao suco gástrico a sangramento com anemia e perda de peso, além de predisposição a faringites, rouquidão e doenças respiratórias como a asma."
+        "rationale": "CORRETA. A exposição contínua do esôfago relaciona-se ao suco gástrico a sangramento com anemia e perda de peso, além de predisposição a faringites, rouquidão e doenças respiratórias como a asma."
       },
       {
         "letter": "B",
@@ -1499,7 +1501,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Aumento da motilidade gastrointestinal, elevação da pressão esofágica, e possibilidade de efeitos extrapiramidais e elevação da prolactina por antagonismo dopaminérgico central.",
-        "rationale": "CORRETA. O material descreve os procinéticos como antagonistas dopaminérgicos que restauram a motilidade gastrointestinal e elevam a pressão esofágica; o antagonismo dopaminérgico central e compartilhado por outros fármacos dessa classe farmacológica e pode se associar a efeitos extrapiramidais e elevação da prolactina."
+        "rationale": "CORRETA. Os procinéticos são antagonistas dopaminérgicos que restauram a motilidade gastrointestinal e elevam a pressão esofágica; o antagonismo dopaminérgico central e compartilhado por outros fármacos dessa classe farmacológica e pode se associar a efeitos extrapiramidais e elevação da prolactina."
       },
       {
         "letter": "C",
@@ -1509,7 +1511,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Aumento da secreção ácida, sedação por bloqueio H2 e redução da prolactina, sendo os efeitos motores independentes da ação dopaminérgica.",
-        "rationale": "Incorreta. O material não relaciona os procinéticos ao bloqueio H2 nem ao aumento da secreção ácida; seu mecanismo central e o antagonismo dopaminérgico, do qual decorrem também os efeitos motores."
+        "rationale": "Incorreta. Os procinéticos não se relacionam ao bloqueio H2 nem ao aumento da secreção ácida; seu mecanismo central e o antagonismo dopaminérgico, do qual decorrem também os efeitos motores."
       }
     ],
     "correctLetter": "B",
@@ -1664,7 +1666,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "O misoprostol bloqueia irreversívelmente a bomba de prótons das células parietais, e seu risco em mulheres em idade fértil decorre da absorção sistêmica elevada semelhante a dos IBPs.",
-        "rationale": "Incorreta. O material atribui o bloqueio da bomba de prótons aos IBPs, e não ao misoprostol, cujo mecanismo e a ação análoga a prostaglandina, com o risco específico relacionado a contrações uterinas, e não a absorção sistêmica elevada."
+        "rationale": "Incorreta. O bloqueio da bomba de prótons é atribuído aos IBPs, e não ao misoprostol, cujo mecanismo e a ação análoga a prostaglandina, com o risco específico relacionado a contrações uterinas, e não a absorção sistêmica elevada."
       },
       {
         "letter": "C",
@@ -1697,12 +1699,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A suspensão do IBP é necessária porque o fármaco aumenta o risco de sangramento durante o procedimento endoscópico, sem relação com a detecção do H. pylori.",
-        "rationale": "Incorreta. O material relaciona a suspensão do IBP especificamente ao risco de falso negativo na pesquisa do H. pylori, e não a um risco de sangramento durante o procedimento."
+        "rationale": "Incorreta. A suspensão do IBP especificamente relaciona-se ao risco de falso negativo na pesquisa do H. pylori, e não a um risco de sangramento durante o procedimento."
       },
       {
         "letter": "C",
         "text": "A suspensão do IBP visa evitar interação medicamentosa com o sedativo do exame, sem qualquer relação com a investigação do H. pylori.",
-        "rationale": "Incorreta. O material não menciona interação com sedativos como motivo da suspensão; o motivo específico e a prevenção de falso negativo na detecção do H. pylori."
+        "rationale": "Incorreta. Interação com sedativos não é motivo da suspensão; o motivo específico e a prevenção de falso negativo na detecção do H. pylori."
       },
       {
         "letter": "D",
@@ -1725,7 +1727,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Os antiácidos fornecem alívio imediato da queimação por neutralizar o ácido já presente, mas não são a primeira indicação para o tratamento definitivo da DRGE, sendo geralmente usados em conjunto com outros fármacos.",
-        "rationale": "CORRETA. O material descreve os antiácidos como fornecedores de alívio imediato por neutralização do ácido, mas explicita que não são a primeira indicação para o tratamento da DRGE, sendo normalmente associados a outros medicamentos."
+        "rationale": "CORRETA. Os antiácidos são fornecedores de alívio imediato por neutralização do ácido, mas explicita que não são a primeira indicação para o tratamento da DRGE, sendo normalmente associados a outros medicamentos."
       },
       {
         "letter": "B",
@@ -1768,12 +1770,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Fezes escurecidas indicam exclusivamente ingestão recente de alimentos escuros, sem qualquer relação com sangramento digestivo.",
-        "rationale": "Incorreta. O material relaciona fezes escurecidas a sangramento oculto do trato digestivo, e não a atribui exclusivamente a fatores alimentares nesse contexto clínico."
+        "rationale": "Incorreta. Fezes escurecidas relacionam-se a sangramento oculto do trato digestivo, e não a atribui exclusivamente a fatores alimentares nesse contexto clínico."
       },
       {
         "letter": "D",
         "text": "A hematêmese relatada por Seu Edmilson e sinal exclusivo de varizes esofágicas, sem qualquer relação com a doença ulcerosa péptica descrita.",
-        "rationale": "Incorreta. O material relaciona a hematêmese ao sangramento oculto da própria doença ulcerosa péptica, não restringindo esse achado a varizes esofágicas."
+        "rationale": "Incorreta. A hematêmese relaciona-se ao sangramento oculto da própria doença ulcerosa péptica, não restringindo esse achado a varizes esofágicas."
       }
     ],
     "correctLetter": "B",
@@ -1801,7 +1803,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O tabagismo deve ser mantido nos três casos, já que o material não relaciona essa medida a cicatrização ou prevenção de recidiva da úlcera péptica.",
-        "rationale": "Incorreta. O material orienta explicitamente a cessação do tabagismo como parte do tratamento não farmacológico da úlcera péptica, e não sua manutenção."
+        "rationale": "Incorreta. A cessação do tabagismo é explicitamente parte do tratamento não farmacológico da úlcera péptica, e não sua manutenção."
       },
       {
         "letter": "D",
@@ -1824,7 +1826,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Os procinéticos, além de restaurarem a motilidade gástrica, pilórica e do intestino delgado, também elevam a pressão esofágica, o que pode beneficiar qualquer paciente com DRGE, independentemente da presença de retardo do esvaziamento gástrico.",
-        "rationale": "CORRETA. O material descreve os procinéticos como fármacos que, além de restaurar a motilidade gastrointestinal, elevam a pressão esofágica, efeito relevante para o controle da DRGE mesmo em pacientes sem retardo específico do esvaziamento gástrico."
+        "rationale": "CORRETA. Os procinéticos são fármacos que, além de restaurar a motilidade gastrointestinal, elevam a pressão esofágica, efeito relevante para o controle da DRGE mesmo em pacientes sem retardo específico do esvaziamento gástrico."
       },
       {
         "letter": "B",
@@ -1857,7 +1859,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O tratamento busca maximizar fatores de proteção, como o muco, e reduzir o conteúdo agressivo do suco gástrico, composto por HCl, pepsina e enzimas pancreáticas, cuja presença no refluxo pode aumentar a agressão ao esôfago.",
-        "rationale": "CORRETA. O material descreve o racional do tratamento da DRGE como a maximização de fatores protetores (muco) e a redução do conteúdo agressivo do suco gástrico, cuja composição com HCl, pepsina e enzimas pancreáticas pode aumentar a agressão a mucosa esofágica quando refluída."
+        "rationale": "CORRETA. O racional do tratamento da DRGE é a maximização de fatores protetores (muco) e a redução do conteúdo agressivo do suco gástrico, cuja composição com HCl, pepsina e enzimas pancreáticas pode aumentar a agressão a mucosa esofágica quando refluída."
       },
       {
         "letter": "B",
@@ -1890,7 +1892,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A idade avançada diminui a produção de saliva rica em bicarbonato, reduzindo a proteção natural contra a acidez do refluxo, mas a abordagem terapêutica geral, incluindo medidas não farmacológicas e fármacos, permanece a mesma descrita.",
-        "rationale": "CORRETA. O material cita a diminuição da produção de saliva relacionada a idade como fator de risco para a DRGE, sem descrever uma abordagem terapêutica distinta para pacientes idosos além das medidas gerais já discutidas, não farmacológicas e farmacológicas."
+        "rationale": "CORRETA. A diminuição da produção de saliva relacionada a idade é fator de risco para a DRGE, sem descrever uma abordagem terapêutica distinta para pacientes idosos além das medidas gerais já discutidas, não farmacológicas e farmacológicas."
       },
       {
         "letter": "B",
@@ -1900,7 +1902,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A idade avançada elimina a necessidade de qualquer medida não farmacológica no tratamento da DRGE, bastando a farmacoterapia isolada.",
-        "rationale": "Incorreta. O material mantém as medidas não farmacológicas como parte do tratamento em qualquer faixa etária, não as eliminando especificamente em pacientes idosos."
+        "rationale": "Incorreta. As medidas não farmacológicas são parte do tratamento em qualquer faixa etária, não as eliminando especificamente em pacientes idosos."
       },
       {
         "letter": "D",
@@ -1933,12 +1935,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Os IBPs são indicados apenas para esofagite não erosiva leve, e os antagonistas H2 para os quadros mais graves, invertendo a relação descrita.",
-        "rationale": "Incorreta. O material relaciona os antagonistas H2 a esofagite não erosiva e os IBPs a inibição mais acentuada, adequada aos quadros mais intensos, e não o contrário."
+        "rationale": "Incorreta. Os antagonistas H2 relacionam-se a esofagite não erosiva e os IBPs a inibição mais acentuada, adequada aos quadros mais intensos, e não o contrário."
       },
       {
         "letter": "D",
         "text": "A escolha entre antagonista H2 e IBP depende exclusivamente da idade do paciente, sem qualquer relação com a gravidade da esofagite.",
-        "rationale": "Incorreta. O material relaciona a escolha entre essas classes a gravidade da esofagite e a resposta terapêutica esperada, e não a idade do paciente como critério central."
+        "rationale": "Incorreta. A escolha entre essas classes relaciona-se a gravidade da esofagite e a resposta terapêutica esperada, e não a idade do paciente como critério central."
       }
     ],
     "correctLetter": "A",
@@ -1971,7 +1973,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Apenas o caso do paciente com H. pylori positivo corresponde a uma forma reconhecida de úlcera péptica, os demais não se enquadram em nenhuma categoria descrita.",
-        "rationale": "Incorreta. O material reconhece também a úlcera associada ao uso crônico de AINE e a associada ao estresse como formas comuns, além da associada ao H. pylori, contemplando os três casos apresentados."
+        "rationale": "Incorreta. A úlcera associada ao uso crônico de AINE e a associada ao estresse são também formas comuns, além da associada ao H. pylori, contemplando os três casos apresentados."
       }
     ],
     "correctLetter": "A",
@@ -1999,7 +2001,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O segundo paciente apresenta quadro típico de DRGE, já que a dor noturna e sinal exclusivo dessa condição, e não da doença ulcerosa péptica.",
-        "rationale": "Incorreta. O material relaciona a dor noturna típica e o sangramento oculto principalmente a doença ulcerosa péptica, e não a descreve como sinal exclusivo da DRGE."
+        "rationale": "Incorreta. A dor noturna típica e o sangramento oculto principalmente relacionam-se a doença ulcerosa péptica, e não a descreve como sinal exclusivo da DRGE."
       },
       {
         "letter": "D",
@@ -2027,7 +2029,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Inibidores da bomba de prótons, que reduzem acentuadamente a secreção ácida e favorecem a cicatrização da mucosa lesada, associados a retirada do AINE como fator etiológico.",
-        "rationale": "CORRETA. O material descreve os IBPs como fármacos que inibem acentuadamente a produção de ácido gástrico, mecanismo central para a cicatrização da úlcera, sempre associados a retirada do fator etiológico, nesse caso o AINE."
+        "rationale": "CORRETA. Os IBPs são fármacos que inibem acentuadamente a produção de ácido gástrico, mecanismo central para a cicatrização da úlcera, sempre associados a retirada do fator etiológico, nesse caso o AINE."
       },
       {
         "letter": "C",
@@ -2070,7 +2072,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "O procinético bloqueia irreversívelmente a bomba de prótons, enquanto o IBP atua sobre receptores dopaminérgicos, invertendo os mecanismos descritos para essas duas classes.",
-        "rationale": "Incorreta. O material atribui o bloqueio da bomba de prótons ao IBP, e o antagonismo dopaminérgico ao procinético, e não o contrário, como proposto nesta alternativa."
+        "rationale": "Incorreta. O bloqueio da bomba de prótons é atribuído ao IBP, e o antagonismo dopaminérgico ao procinético, e não o contrário, como proposto nesta alternativa."
       }
     ],
     "correctLetter": "A",
@@ -2093,7 +2095,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A recidiva indica que o esquema farmacológico inicial estava incorreto, sendo necessário apenas trocar a classe de fármaco utilizada, sem qualquer relação com o uso continuado do AINE.",
-        "rationale": "Incorreta. O material relaciona a prevenção da recidiva principalmente a retirada do fator etiológico, e não apenas a troca do esquema farmacológico, o que torna essa explicação incompleta diante do uso continuado do AINE."
+        "rationale": "Incorreta. A prevenção da recidiva principalmente relaciona-se a retirada do fator etiológico, e não apenas a troca do esquema farmacológico, o que torna essa explicação incompleta diante do uso continuado do AINE."
       },
       {
         "letter": "C",
@@ -2159,12 +2161,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "O antagonista H2 e sempre superior ao IBP em qualquer grau de DRGE, de modo que a escolha do omeprazol para Wellington não encontra respaldo.",
-        "rationale": "Incorreta. O material descreve o IBP como capaz de inibição mais acentuada da secreção ácida em comparação ao antagonista H2, o que sustenta, e não contrária, a escolha do omeprazol para um quadro moderado."
+        "rationale": "Incorreta. O IBP é capaz de inibição mais acentuada da secreção ácida em comparação ao antagonista H2, o que sustenta, e não contrária, a escolha do omeprazol para um quadro moderado."
       },
       {
         "letter": "C",
         "text": "A escolha entre omeprazol e antagonista H2 e sempre aleatória e sem relação com a gravidade do quadro, dependendo apenas da preferência do paciente.",
-        "rationale": "Incorreta. O material relaciona a escolha entre essas classes a gravidade do quadro clínico, e não a trata como uma decisão aleatória e independente da severidade da DRGE."
+        "rationale": "Incorreta. A escolha entre essas classes relaciona-se a gravidade do quadro clínico, e não a trata como uma decisão aleatória e independente da severidade da DRGE."
       },
       {
         "letter": "D",
@@ -2253,17 +2255,17 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Antiácidos a base de alumínio tendem a causar constipação, enquanto formulações a base de magnésio tendem a causar diarreia osmótica; os IBPs, por reduzirem a secreção ácida, podem alterar a flora intestinal e favorecer quadros diarreicos em alguns pacientes.",
-        "rationale": "CORRETA. O material relaciona os antiácidos de alumínio a constipação e os de magnésio a diarreia osmótica, além de descrever a supressão ácida sustentada dos IBPs como fator que pode alterar a flora intestinal, favorecendo diarreia em alguns pacientes."
+        "rationale": "CORRETA. Os antiácidos de alumínio relacionam-se a constipação e os de magnésio a diarreia osmótica, além de descrever a supressão ácida sustentada dos IBPs como fator que pode alterar a flora intestinal, favorecendo diarreia em alguns pacientes."
       },
       {
         "letter": "B",
         "text": "Antiácidos a base de alumínio causam diarreia, e os IBPs causam constipação, invertendo a relação descrita para essas duas classes farmacológicas.",
-        "rationale": "Incorreta. O material relaciona os antiácidos de alumínio a constipação, e não a diarreia, e a supressão ácida dos IBPs a possível diarreia, e não a constipação, o que inverte a relação correta."
+        "rationale": "Incorreta. Os antiácidos de alumínio relacionam-se a constipação, e não a diarreia, e a supressão ácida dos IBPs a possível diarreia, e não a constipação, o que inverte a relação correta."
       },
       {
         "letter": "C",
         "text": "Nenhuma das duas classes farmacológicas apresenta qualquer efeito sobre o trânsito intestinal, sendo as queixas dos dois pacientes atribuíveis exclusivamente a outras causas não relacionadas aos fármacos.",
-        "rationale": "Incorreta. O material relaciona efeitos específicos sobre o trânsito intestinal tanto aos antiácidos de alumínio e magnésio quanto a supressão ácida sustentada dos IBPs, o que não permite descartar essa relação nos dois casos."
+        "rationale": "Incorreta. Efeitos específicos sobre o trânsito intestinal tanto relacionam-se aos antiácidos de alumínio e magnésio quanto a supressão ácida sustentada dos IBPs, o que não permite descartar essa relação nos dois casos."
       },
       {
         "letter": "D",
@@ -2296,7 +2298,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O IBP e indicado nesse caso apenas para prevenir uma futura infecção por H. pylori, sem qualquer relação com a cicatrização da úlcera já existente.",
-        "rationale": "Incorreta. O material relaciona o uso do IBP a redução da secreção ácida para promover a cicatrização da úlcera já existente, e não a prevenção de uma futura infecção por H. pylori nesse contexto."
+        "rationale": "Incorreta. O uso do IBP relaciona-se a redução da secreção ácida para promover a cicatrização da úlcera já existente, e não a prevenção de uma futura infecção por H. pylori nesse contexto."
       },
       {
         "letter": "D",
@@ -2319,7 +2321,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Todos compartilham o mecanismo de bloqueio irreversível da H+/K+-ATPase das células parietais, o que os classifica como inibidores da bomba de prótons, mesmo com estruturas químicas distintas entre si.",
-        "rationale": "CORRETA. O material lista exatamente esses cinco fármacos como representantes dos inibidores da bomba de prótons, unidos pelo mecanismo comum de bloqueio irreversível da H+/K+-ATPase das células parietais."
+        "rationale": "CORRETA. Esses cinco fármacos são exatamente representantes dos inibidores da bomba de prótons, unidos pelo mecanismo comum de bloqueio irreversível da H+/K+-ATPase das células parietais."
       },
       {
         "letter": "B",
@@ -2352,7 +2354,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O sucralfato sofre absorção mínima pelo trato gastrointestinal, atuando predominantemente de forma local sobre a mucosa lesada, o que reduz a relevância de uma eventual disfunção hepática sobre seu metabolismo sistêmico.",
-        "rationale": "CORRETA. O material descreve o sucralfato como um complexo de absorção mínima pelo trato gastrointestinal, sustentando sua ação predominantemente local, o que reduz a preocupação com metabolismo hepático sistêmico relevante para esse fármaco especificamente."
+        "rationale": "CORRETA. O sucralfato é um complexo de absorção mínima pelo trato gastrointestinal, sustentando sua ação predominantemente local, o que reduz a preocupação com metabolismo hepático sistêmico relevante para esse fármaco especificamente."
       },
       {
         "letter": "B",
@@ -2362,7 +2364,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O sucralfato atua exclusivamente por via sistêmica após absorção completa, com efeito citoprotetor dependente da circulação hepática.",
-        "rationale": "Incorreta. O material descreve o mecanismo do sucralfato como dependente do contato local direto com a mucosa lesada, formando um complexo aderente, e não de uma ação sistêmica dependente da absorção completa e da circulação hepática."
+        "rationale": "Incorreta. O mecanismo do sucralfato é dependente do contato local direto com a mucosa lesada, formando um complexo aderente, e não de uma ação sistêmica dependente da absorção completa e da circulação hepática."
       },
       {
         "letter": "D",
@@ -2395,7 +2397,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A erosão dental e a faringite recorrente são consideradas irreversíveis, tornando o tratamento farmacológico da DRGE inútil para esse paciente específico.",
-        "rationale": "Incorreta. O material não descreve essas complicações como irreversíveis a ponto de tornar o tratamento farmacológico inútil; ao contrário, inclui a prevenção de complicações entre os objetivos terapêuticos relevantes."
+        "rationale": "Incorreta. Essas complicações não são irreversíveis a ponto de tornar o tratamento farmacológico inútil; ao contrário, inclui a prevenção de complicações entre os objetivos terapêuticos relevantes."
       },
       {
         "letter": "D",
@@ -2418,7 +2420,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O misoprostol repõe a ação das prostaglandinas suprimidas pelo AINE, estimulando muco e bicarbonato protetores, enquanto o IBP reduz diretamente a secreção ácida pelo bloqueio da bomba de prótons; os mecanismos são diferentes, ainda que ambos protejam a mucosa.",
-        "rationale": "CORRETA. O material descreve o misoprostol como análogo de prostaglandina que repõe a função protetora suprimida pelo AINE, estimulando muco e bicarbonato, enquanto o IBP atua por um mecanismo distinto, o bloqueio direto da bomba de prótons, reduzindo a produção de ácido."
+        "rationale": "CORRETA. O misoprostol é análogo de prostaglandina que repõe a função protetora suprimida pelo AINE, estimulando muco e bicarbonato, enquanto o IBP atua por um mecanismo distinto, o bloqueio direto da bomba de prótons, reduzindo a produção de ácido."
       },
       {
         "letter": "B",
@@ -2428,12 +2430,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O misoprostol bloqueia a bomba de prótons de forma mais potente que o IBP, sendo por isso a escolha preferêncial em qualquer paciente em uso crônico de AINE.",
-        "rationale": "Incorreta. O material não descreve o misoprostol como bloqueador da bomba de prótons; seu mecanismo e a reposição da ação das prostaglandinas, diferente do mecanismo do IBP."
+        "rationale": "Incorreta. O misoprostol não é bloqueador da bomba de prótons; seu mecanismo e a reposição da ação das prostaglandinas, diferente do mecanismo do IBP."
       },
       {
         "letter": "D",
         "text": "O IBP estimula a produção de prostaglandinas protetoras, enquanto o misoprostol reduz diretamente a secreção ácida, invertendo os mecanismos descritos para esses dois fármacos.",
-        "rationale": "Incorreta. O material atribui o estímulo das prostaglandinas protetoras ao misoprostol, e a redução direta da secreção ácida ao IBP, e não o contrário, como proposto nesta alternativa."
+        "rationale": "Incorreta. O estímulo das prostaglandinas protetoras é atribuído ao misoprostol, e a redução direta da secreção ácida ao IBP, e não o contrário, como proposto nesta alternativa."
       }
     ],
     "correctLetter": "A",
@@ -2451,7 +2453,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A dor lombar, de caráter nociceptivo, decorre de ativação das fibras C por mediadores inflamatórios; a dor neuropática dos pes envolve alteração da via nervosa e pode se beneficiar de antidepressivos como a amitriptilina.",
-        "rationale": "CORRETA. O material relaciona a dor nociceptiva a ativação do sistema de defesa e inflamação por mediadores locais, e a dor neuropática a alterações da via nervosa, para a qual antidepressivos como a amitriptilina são citados como coadjuvantes úteis."
+        "rationale": "CORRETA. A dor nociceptiva relaciona-se a ativação do sistema de defesa e inflamação por mediadores locais, e a dor neuropática a alterações da via nervosa, para a qual antidepressivos como a amitriptilina são citados como coadjuvantes úteis."
       },
       {
         "letter": "B",
@@ -2461,7 +2463,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A dor neuropática dos pes decorre de mediadores inflamatórios periféricos, como a dor lombar, respondendo de forma preferêncial aos AINEs em altas doses.",
-        "rationale": "Incorreta. O material relaciona a dor neuropática a alterações da via nervosa, e não a mediadores inflamatórios periféricos, e não a descreve como preferêncialmente responsiva a AINEs em altas doses."
+        "rationale": "Incorreta. A dor neuropática relaciona-se a alterações da via nervosa, e não a mediadores inflamatórios periféricos, e não a descreve como preferêncialmente responsiva a AINEs em altas doses."
       },
       {
         "letter": "D",
@@ -2550,7 +2552,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Ativação de mediadores que estimulam a fibra C e induzem liberação de substância P, com quimiotaxia, migração de células de defesa e liberação de bradicinina, citocinas, histamina e óxido nítrico, mecanismos da etiologia inflamatória, distintos da neuropática.",
-        "rationale": "CORRETA. O material descreve esse conjunto de eventos como parte da etiologia inflamatória da dor, contrastando com a etiologia neuropática, relacionada a alterações de excitabilidade, síntese alterada de NMDA e perda de interneurônios."
+        "rationale": "CORRETA. Esse conjunto de eventos é parte da etiologia inflamatória da dor, contrastando com a etiologia neuropática, relacionada a alterações de excitabilidade, síntese alterada de NMDA e perda de interneurônios."
       },
       {
         "letter": "B",
@@ -2593,12 +2595,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O fenômeno indica dor nociceptiva típica, decorrente de inflamação tecidual ativa, que deveria responder bem a AINEs em dose plena.",
-        "rationale": "Incorreta. O material relaciona esse tipo de resposta exagerada a estímulos mínimos a etiologia neuropática, e não a nociceptiva, que decorre de inflamação tecidual ativa e tem outro perfil de resposta terapêutica."
+        "rationale": "Incorreta. Esse tipo de resposta exagerada relaciona-se a estímulos mínimos a etiologia neuropática, e não a nociceptiva, que decorre de inflamação tecidual ativa e tem outro perfil de resposta terapêutica."
       },
       {
         "letter": "D",
         "text": "A ausência de resposta a analgésicos comuns indica que a paciente está simulando os sintomas, já que qualquer dor real deveria responder a essas medicações.",
-        "rationale": "Incorreta. O material reconhece a dor neuropática como um mecanismo distinto, com resposta tipicamente insuficiente a analgésicos comuns, sem sustentar a hipótese de simulação dos sintomas."
+        "rationale": "Incorreta. A dor neuropática é um mecanismo distinto, com resposta tipicamente insuficiente a analgésicos comuns, sem sustentar a hipótese de simulação dos sintomas."
       }
     ],
     "correctLetter": "A",
@@ -2631,7 +2633,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "A presença de taquicardia e sudorese e característica descrita como típica da dor crônica persistente, e não da resposta autonômica aguda.",
-        "rationale": "Incorreta. O material relaciona esses sinais autonômicos a dor aguda, e não a dor crônica, que se caracteriza pela persistência sem função fisiológica protetora."
+        "rationale": "Incorreta. Esses sinais autonômicos relacionam-se a dor aguda, e não a dor crônica, que se caracteriza pela persistência sem função fisiológica protetora."
       }
     ],
     "correctLetter": "B",
@@ -2654,7 +2656,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Ambas as situações descrevem o mesmo instrumento, a escala analógica visual (VAS), que se baseia exclusivamente em números atribuídos verbalmente pelo paciente.",
-        "rationale": "Incorreta. O material descreve a VAS como uma representação visual contínua, distinta tanto da escala numérica quanto da escala verbal por categorias descritas no caso."
+        "rationale": "Incorreta. A VAS é uma representação visual contínua, distinta tanto da escala numérica quanto da escala verbal por categorias descritas no caso."
       },
       {
         "letter": "C",
@@ -2682,7 +2684,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O paracetamol e primeira linha para dor leve a moderada, sem risco de sangramento gastrointestinal nem ação anti-inflamatória, mas etilistas apresentam risco de comprometimento hepático com elevação de transaminases, exigindo cautela em Marilene.",
-        "rationale": "CORRETA. O material indica o paracetamol como primeira linha para dor leve a moderada, sem risco de sangramento gastrointestinal ou ação anti-inflamatória, mas alerta para o risco de comprometimento hepático em etilistas, relevante no caso de Marilene."
+        "rationale": "CORRETA. O paracetamol é primeira linha para dor leve a moderada, sem risco de sangramento gastrointestinal ou ação anti-inflamatória, mas alerta para o risco de comprometimento hepático em etilistas, relevante no caso de Marilene."
       },
       {
         "letter": "B",
@@ -2697,7 +2699,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "O consumo de álcool relatado por Marilene não apresenta qualquer relação com o uso de paracetamol, podendo o fármaco ser usado em qualquer dose sem monitorização adicional.",
-        "rationale": "Incorreta. O material relaciona especificamente o uso de paracetamol em etilistas a risco de comprometimento hepático, o que exige atenção e não uma ausência total de relação ou monitorização."
+        "rationale": "Incorreta. O uso de paracetamol em etilistas relaciona-se especificamente a risco de comprometimento hepático, o que exige atenção e não uma ausência total de relação ou monitorização."
       }
     ],
     "correctLetter": "A",
@@ -2748,7 +2750,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O naproxeno é descrito como opção mais segura do ponto de vista cardiovascular entre os AINEs, enquanto coxibes, indometacina e etodolaco são descritos como menos seguros nesse aspecto.",
-        "rationale": "CORRETA. O material relaciona o uso crônico de AINEs a risco cardiovascular variável entre as classes, apontando o naproxeno como opção mais segura, e coxibes, indometacina e etodolaco como menos seguros nesse aspecto."
+        "rationale": "CORRETA. O uso crônico de AINEs relaciona-se a risco cardiovascular variável entre as classes, apontando o naproxeno como opção mais segura, e coxibes, indometacina e etodolaco como menos seguros nesse aspecto."
       },
       {
         "letter": "B",
@@ -2814,7 +2816,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O primeiro fármaco atua predominantemente sobre o receptor mu, responsável por analgesia, sedação, inibição respiratória, euforia e dependência; o segundo atua predominantemente sobre o receptor kappa, responsável por analgesia espinhal, sedação e disforia.",
-        "rationale": "CORRETA. O material atribui exatamente esse conjunto de efeitos ao receptor mu (analgesia, sedação, inibição respiratória, euforia, dependência) e ao receptor kappa (analgesia espinhal, sedação, disforia, diminuição da motilidade do TGI)."
+        "rationale": "CORRETA. Esse conjunto de efeitos é exatamente atribuído ao receptor mu (analgesia, sedação, inibição respiratória, euforia, dependência) e ao receptor kappa (analgesia espinhal, sedação, disforia, diminuição da motilidade do TGI)."
       },
       {
         "letter": "B",
@@ -2829,7 +2831,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "O primeiro fármaco atua sobre o receptor kappa, responsável pela euforia e dependência, e o segundo sobre o receptor mu, responsável pela analgesia espinhal, invertendo a relação correta descrita.",
-        "rationale": "Incorreta. O material atribui euforia e dependência ao receptor mu, e analgesia espinhal ao receptor kappa, e não o contrário, como proposto nesta alternativa."
+        "rationale": "Incorreta. Euforia e dependência são atribuídas ao receptor mu, e analgesia espinhal ao receptor kappa, e não o contrário, como proposto nesta alternativa."
       }
     ],
     "correctLetter": "A",
@@ -2857,7 +2859,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A escolha descrita no caso corresponde a um antagonista opioide, fármaco que o material descreve como o mais indicado para o tratamento crônico da dor em pacientes com dependência prévia.",
-        "rationale": "Incorreta. O material relaciona os antagonistas opioides ao bloqueio dos efeitos opioides, como no manejo da intoxicação aguda, e não ao tratamento crônico da dor, papel mais compatível com agonistas parciais nesse contexto."
+        "rationale": "Incorreta. Os antagonistas opioides relacionam-se ao bloqueio dos efeitos opioides, como no manejo da intoxicação aguda, e não ao tratamento crônico da dor, papel mais compatível com agonistas parciais nesse contexto."
       },
       {
         "letter": "D",
@@ -2961,7 +2963,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Nenhum dos achados apresentados pela paciente tem relação com o uso de morfina, devendo ser investigados como eventos independentes do tratamento analgésico.",
-        "rationale": "Incorreta. O material relaciona diretamente hipotensão e constipação aos efeitos periféricos conhecidos dos opioides, e não os trata como eventos necessariamente independentes do tratamento com morfina."
+        "rationale": "Incorreta. Hipotensão e constipação relacionam-se diretamente aos efeitos periféricos conhecidos dos opioides, e não os trata como eventos necessariamente independentes do tratamento com morfina."
       }
     ],
     "correctLetter": "A",
@@ -3017,12 +3019,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A via intratecal elimina completamente o risco de depressão respiratória dos opioides, tornando desnecessária qualquer monitorização respiratória durante o procedimento.",
-        "rationale": "Incorreta. O material relaciona a via intratecal a menor risco, e não a eliminação completa do risco de depressão respiratória, o que não dispensa a monitorização adequada durante o procedimento."
+        "rationale": "Incorreta. A via intratecal relaciona-se a menor risco, e não a eliminação completa do risco de depressão respiratória, o que não dispensa a monitorização adequada durante o procedimento."
       },
       {
         "letter": "C",
         "text": "A escolha pela via intratecal decorre exclusivamente do menor custo dos fármacos utilizados por essa via, sem qualquer relação com o perfil de segurança respiratória descrito.",
-        "rationale": "Incorreta. O material relaciona a escolha da via intratecal ao perfil de segurança respiratória, e não a fatores de custo dos fármacos utilizados."
+        "rationale": "Incorreta. A escolha da via intratecal relaciona-se ao perfil de segurança respiratória, e não a fatores de custo dos fármacos utilizados."
       },
       {
         "letter": "D",
@@ -3045,12 +3047,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O opioide fraco, como a codeína, corresponde a cerca de 10% de conversão a morfina, o que exige cálculo cuidadoso ao escalonar para um opioide forte de maior potência relativa.",
-        "rationale": "CORRETA. O material define o opioide fraco como correspondente a cerca de 10% de conversão a morfina, informação relevante para o cálculo de equivalência ao escalonar para um opioide forte."
+        "rationale": "CORRETA. O opioide fraco é correspondente a cerca de 10% de conversão a morfina, informação relevante para o cálculo de equivalência ao escalonar para um opioide forte."
       },
       {
         "letter": "B",
         "text": "O opioide fraco corresponde a 90% de conversão a morfina, sendo praticamente equivalente em potência, o que tornaria desnecessário o escalonamento para um opioide forte nesse paciente.",
-        "rationale": "Incorreta. O material descreve o opioide fraco como correspondente a cerca de 10% de conversão a morfina, e não a 90%, o que sustenta, e não contrária, a necessidade de escalonamento para maior potência."
+        "rationale": "Incorreta. O opioide fraco é correspondente a cerca de 10% de conversão a morfina, e não a 90%, o que sustenta, e não contrária, a necessidade de escalonamento para maior potência."
       },
       {
         "letter": "C",
@@ -3111,7 +3113,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A urticária e reação adversa dos opioides mais frequente com a administração parenteral, o que explica sua ocorrência após a via intravenosa e sua ausência prévia com o uso oral do mesmo fármaco.",
-        "rationale": "CORRETA. O material descreve explicitamente a urticária como reação adversa dos opioides mais frequente com a administração parenteral, o que é coerente com a diferença observada entre as duas vias de uso relatadas pelo paciente."
+        "rationale": "CORRETA. A urticária é explicitamente reação adversa dos opioides mais frequente com a administração parenteral, o que é coerente com a diferença observada entre as duas vias de uso relatadas pelo paciente."
       },
       {
         "letter": "B",
@@ -3154,12 +3156,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A carbamazepina e indicada de forma genérica para qualquer tipo de dor crônica, enquanto a amitriptilina e reservada especificamente para a neuralgia do trigêmeo, invertendo as indicações descritas.",
-        "rationale": "Incorreta. O material relaciona a carbamazepina especificamente a neuralgia do trigêmeo, e a amitriptilina a um papel mais geral como antidepressivo coadjuvante, e não o contrário, como proposto nesta alternativa."
+        "rationale": "Incorreta. A carbamazepina especificamente relaciona-se a neuralgia do trigêmeo, e a amitriptilina a um papel mais geral como antidepressivo coadjuvante, e não o contrário, como proposto nesta alternativa."
       },
       {
         "letter": "D",
         "text": "Nenhum dos dois fármacos é citado como coadjuvante no tratamento da dor, sendo ambos classificados exclusivamente como anticonvulsivantes de uso neurológico geral.",
-        "rationale": "Incorreta. O material cita explicitamente ambos os fármacos como coadjuvantes no controle da dor, dentro da categoria de fármacos diversos de ação central, e não os restringe a uso neurológico geral desvinculado da dor."
+        "rationale": "Incorreta. Ambos os fármacos são explicitamente coadjuvantes no controle da dor, dentro da categoria de fármacos diversos de ação central, e não os restringe a uso neurológico geral desvinculado da dor."
       }
     ],
     "correctLetter": "A",
@@ -3177,17 +3179,17 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "As ergotaminas são citadas como coadjuvantes específicos para a enxaqueca, enquanto a carbamazepina é citada especificamente para a neuralgia do trigêmeo, cada uma com indicação própria dentro da categoria de ação central.",
-        "rationale": "CORRETA. O material cita as ergotaminas como coadjuvantes específicos para a enxaqueca, e a carbamazepina para a neuralgia do trigêmeo, ambas dentro da categoria de fármacos diversos de ação central para controle da dor."
+        "rationale": "CORRETA. As ergotaminas são coadjuvantes específicos para a enxaqueca, e a carbamazepina para a neuralgia do trigêmeo, ambas dentro da categoria de fármacos diversos de ação central para controle da dor."
       },
       {
         "letter": "B",
         "text": "A carbamazepina é citada como coadjuvante específico para a enxaqueca, enquanto as ergotaminas são citadas para a neuralgia do trigêmeo, invertendo a relação correta.",
-        "rationale": "Incorreta. O material relaciona a carbamazepina a neuralgia do trigêmeo, e as ergotaminas a enxaqueca, e não o contrário, como proposto nesta alternativa."
+        "rationale": "Incorreta. A carbamazepina relaciona-se a neuralgia do trigêmeo, e as ergotaminas a enxaqueca, e não o contrário, como proposto nesta alternativa."
       },
       {
         "letter": "C",
         "text": "Ergotaminas e carbamazepina são indicadas de forma intercambiável para qualquer um dos dois quadros clínicos, sem especificidade descrita.",
-        "rationale": "Incorreta. O material atribui indicações específicas é distintas a cada um desses coadjuvantes, ergotaminas para enxaqueca e carbamazepina para neuralgia do trigêmeo, e não os trata como intercambiáveis entre os dois quadros."
+        "rationale": "Incorreta. O material atribui indicações específicas e distintas a cada um desses coadjuvantes, ergotaminas para enxaqueca e carbamazepina para neuralgia do trigêmeo, e não os trata como intercambiáveis entre os dois quadros."
       },
       {
         "letter": "D",
@@ -3243,12 +3245,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Lombalgias, enxaqueca, fibromialgia, artrites, dores músculo-esqueléticas, tumores e traumas físicos são citados como condições de grande importância epidemiológica associadas a dor, com custos elevados para a população.",
-        "rationale": "CORRETA. O material cita exatamente essas condições como doenças de grande importância epidemiológica associadas a dor, com custos elevados para a população, confirmando a avaliação do gestor de saúde pública."
+        "rationale": "CORRETA. Essas condições são exatamente doenças de grande importância epidemiológica associadas a dor, com custos elevados para a população, confirmando a avaliação do gestor de saúde pública."
       },
       {
         "letter": "B",
-        "text": "O material relaciona a importância epidemiológica da dor exclusivamente a doenças cardiovasculares agudas, sem qualquer menção a lombalgias, enxaqueca ou fibromialgia.",
-        "rationale": "Incorreta. O material não cita doenças cardiovasculares agudas nesse contexto específico; as condições citadas são lombalgias, enxaqueca, fibromialgia, artrites, dores músculo-esqueléticas, tumores e traumas físicos."
+        "text": "A importância epidemiológica da dor exclusivamente relaciona-se a doenças cardiovasculares agudas, sem qualquer menção a lombalgias, enxaqueca ou fibromialgia.",
+        "rationale": "Incorreta. Doenças cardiovasculares agudas nesse contexto específico não são citadas; as condições citadas são lombalgias, enxaqueca, fibromialgia, artrites, dores músculo-esqueléticas, tumores e traumas físicos."
       },
       {
         "letter": "C",
@@ -3258,7 +3260,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Infecções respiratórias agudas são a principal condição de grande importância epidemiológica relacionada a dor citada, superando lombalgias e fibromialgia em relevância.",
-        "rationale": "Incorreta. O material não relaciona infecções respiratórias agudas a essa discussão sobre importância epidemiológica da dor; as condições citadas são outras, como lombalgias e fibromialgia."
+        "rationale": "Incorreta. Infecções respiratórias agudas não se relacionam a essa discussão sobre importância epidemiológica da dor; as condições citadas são outras, como lombalgias e fibromialgia."
       }
     ],
     "correctLetter": "A",
@@ -3291,7 +3293,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "AINEs, categoria de atuação periférica sobre a via da ciclo-oxigenase, mesma classificação atribuída aos anestésicos locais e aos opioides.",
-        "rationale": "Incorreta. O material não classifica a amitriptilina como AINE nem relaciona sua ação a via da ciclo-oxigenase; ela integra a categoria de fármacos diversos de ação central, distinta dos AINEs, dos opioides e dos anestésicos locais."
+        "rationale": "Incorreta. A amitriptilina não é AINE nem relaciona sua ação a via da ciclo-oxigenase; ela integra a categoria de fármacos diversos de ação central, distinta dos AINEs, dos opioides e dos anestésicos locais."
       }
     ],
     "correctLetter": "C",
@@ -3342,7 +3344,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O quadro corresponde a dependência física, resposta fisiológica esperada ao uso prolongado de opioides, com risco de síndrome de abstinência diante de suspensão abrupta, distinta da dependência psicológica caracterizada por desejo compulsivo pela substância.",
-        "rationale": "CORRETA. O material descreve a dependência física em terapia opioide prolongada como uma resposta fisiológica normal ao medicamento, com risco de síndrome de abstinência diante de interrupção abrupta, distinguindo-a da dependência psicológica, marcada por desejo compulsivo, ausente nesse paciente."
+        "rationale": "CORRETA. A dependência física em terapia opioide prolongada é uma resposta fisiológica normal ao medicamento, com risco de síndrome de abstinência diante de interrupção abrupta, distinguindo-a da dependência psicológica, marcada por desejo compulsivo, ausente nesse paciente."
       },
       {
         "letter": "B",
@@ -3357,7 +3359,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "O quadro indica que o paciente se tornou tolerante ao fármaco, devendo a dose ser imediatamente aumentada, independentemente dos sintomas relacionados a redução abrupta relatados pela família.",
-        "rationale": "Incorreta. O material trata tolerância e dependência física como conceitos distintos; o quadro descrito, relacionado a suspensão abrupta, corresponde a dependência física, e não necessariamente a um sinal isolado de tolerância exigindo aumento imediato de dose."
+        "rationale": "Incorreta. Tolerância e dependência física são conceitos distintos; o quadro descrito, relacionado a suspensão abrupta, corresponde a dependência física, e não necessariamente a um sinal isolado de tolerância exigindo aumento imediato de dose."
       }
     ],
     "correctLetter": "A",
@@ -3390,7 +3392,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Os sintomas de náusea e vômito eventualmente associados a esse quadro são raros e nunca demandam farmacoterapia específica, mesmo diante de obstrução intestinal confirmada.",
-        "rationale": "Incorreta. O material não descreve náusea e vômito como sintomas raros nesse contexto; pelo contrário, esses sintomas podem demandar fármacos como metoclopramida ou ondansetrona, especialmente em quadros de obstrução intestinal."
+        "rationale": "Incorreta. Náusea e vômito não são sintomas raros nesse contexto; pelo contrário, esses sintomas podem demandar fármacos como metoclopramida ou ondansetrona, especialmente em quadros de obstrução intestinal."
       }
     ],
     "correctLetter": "A",
@@ -3418,7 +3420,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A persistência da dor após uso de paracetamol indica que o diagnóstico inicial estava incorreto, devendo o paciente ser reavaliado exclusivamente por outra especialidade, sem ajuste farmacológico imediato.",
-        "rationale": "Incorreta. O material trata a evolução da intensidade da dor como parte esperada do acompanhamento, orientando o ajuste farmacológico por degraus, e não necessariamente uma reavaliação diagnóstica externa antes de qualquer ajuste."
+        "rationale": "Incorreta. A evolução da intensidade da dor é parte esperada do acompanhamento, orientando o ajuste farmacológico por degraus, e não necessariamente uma reavaliação diagnóstica externa antes de qualquer ajuste."
       },
       {
         "letter": "D",
@@ -3441,7 +3443,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O primeiro efeito relaciona-se ao receptor delta, responsável por analgesia periférica, sedação e disforia; o segundo relaciona-se ao receptor mu, responsável por analgesia, euforia, inibição respiratória e dependência.",
-        "rationale": "CORRETA. O material atribui exatamente esses efeitos ao receptor delta (analgesia periférica, sedação, disforia) e ao receptor mu (analgesia, sedação, inibição da respiração, diminuição da motilidade do TGI, euforia e dependência)."
+        "rationale": "CORRETA. Esses efeitos são exatamente atribuídos ao receptor delta (analgesia periférica, sedação, disforia) e ao receptor mu (analgesia, sedação, inibição da respiração, diminuição da motilidade do TGI, euforia e dependência)."
       },
       {
         "letter": "B",
@@ -3484,7 +3486,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A dolantina e o propofol são indicados especificamente para dor oncológica, e a morfina e reservada exclusivamente a medicação pré-anestésica, invertendo as aplicações corretas.",
-        "rationale": "Incorreta. O material relaciona dolantina e propofol a medicação pré-anestésica, e a morfina a aplicações como a dor oncológica, e não o contrário, como proposto nesta alternativa."
+        "rationale": "Incorreta. Dolantina e propofol relacionam-se a medicação pré-anestésica, e a morfina a aplicações como a dor oncológica, e não o contrário, como proposto nesta alternativa."
       },
       {
         "letter": "D",
@@ -3506,8 +3508,8 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "O material inclui a avaliação da função renal como parte do direcionamento clínico das reações adversas relacionadas ao uso crônico de AINEs, o que sustenta a cautela do médico em priorizar o paracetamol e monitorizar a função renal de Seu Raimundo.",
-        "rationale": "CORRETA. O material relaciona explicitamente o uso crônico de AINEs a necessidade de avaliar a função renal como parte do direcionamento clínico das reações adversas, o que justifica a conduta cautelosa do médico nesse paciente com doença renal crônica leve."
+        "text": "A avaliação da função renal é parte do direcionamento clínico das reações adversas relacionadas ao uso crônico de AINEs, o que sustenta a cautela do médico em priorizar o paracetamol e monitorizar a função renal de Seu Raimundo.",
+        "rationale": "CORRETA. O uso crônico de AINEs relaciona-se explicitamente a necessidade de avaliar a função renal como parte do direcionamento clínico das reações adversas, o que justifica a conduta cautelosa do médico nesse paciente com doença renal crônica leve."
       },
       {
         "letter": "B",
@@ -3540,7 +3542,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A escala analógica visual (VAS), instrumento sistematizado citado, pode ser mais adequada nesse contexto por depender de uma marcação em uma representação contínua, e não exclusivamente da atribuição verbal precisa de um número.",
-        "rationale": "CORRETA. O material cita a escala analógica visual (VAS) como instrumento sistematizado de avaliação da dor, distinto da escala numérica (NRS), que depende da atribuição verbal de um número exato, o que a torna potêncialmente mais adaptável a pacientes com dificuldade de comunicação verbal."
+        "rationale": "CORRETA. A escala analógica visual (VAS) é instrumento sistematizado de avaliação da dor, distinto da escala numérica (NRS), que depende da atribuição verbal de um número exato, o que a torna potêncialmente mais adaptável a pacientes com dificuldade de comunicação verbal."
       },
       {
         "letter": "B",
@@ -3578,7 +3580,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A dor da osteoartrite e de caráter exclusivamente neuropático, o que tornaria o uso de opioide inadequado desde o início, devendo o paciente ter recebido apenas coadjuvantes como amitriptilina ou carbamazepina.",
-        "rationale": "Incorreta. O material relaciona a dor da osteoartrite a um caráter predominantemente nociceptivo, associado a degeneração articular, e não exclusivamente neuropático, o que sustenta, e não inválida, a escolha do opioide após falha do não opioide."
+        "rationale": "Incorreta. A dor da osteoartrite relaciona-se a um caráter predominantemente nociceptivo, associado a degeneração articular, e não exclusivamente neuropático, o que sustenta, e não inválida, a escolha do opioide após falha do não opioide."
       },
       {
         "letter": "C",
@@ -3611,12 +3613,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Paracetamol e dipirona inibem intensamente a COX-1 gástrica, enquanto o ibuprofeno preserva as prostaglandinas da mucosa e reduz o risco de sangramento.",
-        "rationale": "Incorreta. O material relaciona a inibição intensa da COX-1 gástrica aos AINEs, como o ibuprofeno, e não ao paracetamol ou a dipirona, que apresentam perfil de menor ação anti-inflamatória e menor risco ulcerogênico."
+        "rationale": "Incorreta. A inibição intensa da COX-1 gástrica relaciona-se aos AINEs, como o ibuprofeno, e não ao paracetamol ou a dipirona, que apresentam perfil de menor ação anti-inflamatória e menor risco ulcerogênico."
       },
       {
         "letter": "C",
         "text": "Todos os analgésicos apresentam risco gastrointestinal semelhante, pois esse efeito depende apenas da duração do tratamento e não do mecanismo de ação do fármaco.",
-        "rationale": "Incorreta. O material relaciona o risco gastrointestinal ao mecanismo de ação de cada classe, especialmente a inibição das prostaglandinas pelos AINEs, e não apenas a duração do tratamento, independentemente do fármaco escolhido."
+        "rationale": "Incorreta. O risco gastrointestinal relaciona-se ao mecanismo de ação de cada classe, especialmente a inibição das prostaglandinas pelos AINEs, e não apenas a duração do tratamento, independentemente do fármaco escolhido."
       },
       {
         "letter": "D",
@@ -3639,7 +3641,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A seletividade por COX-2 pode reduzir parte da toxicidade gastrointestinal, mas exige cautela em pacientes com risco cardiovascular elevado.",
-        "rationale": "CORRETA. O material relaciona os coxibes a redução do risco gastrointestinal em comparação aos AINEs não seletivos, mas destaca a necessidade de cautela em pacientes com risco cardiovascular elevado, dado o perfil de segurança cardiovascular menos favorável dessa classe."
+        "rationale": "CORRETA. Os coxibes relacionam-se a redução do risco gastrointestinal em comparação aos AINEs não seletivos, mas destaca a necessidade de cautela em pacientes com risco cardiovascular elevado, dado o perfil de segurança cardiovascular menos favorável dessa classe."
       },
       {
         "letter": "B",
@@ -3654,7 +3656,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Coxibes são mais seguros após infarto porque preservam a COX-1 plaquetária e aumentam a proteção vascular sem alterar a formação de trombos.",
-        "rationale": "Incorreta. O material não descreve os coxibes como mais seguros após infarto; ao contrário, relaciona essa classe a maior cautela em pacientes com risco cardiovascular elevado, e não a um efeito protetor vascular aumentado."
+        "rationale": "Incorreta. Os coxibes não são mais seguros após infarto; ao contrário, relaciona essa classe a maior cautela em pacientes com risco cardiovascular elevado, e não a um efeito protetor vascular aumentado."
       }
     ],
     "correctLetter": "A",
@@ -3672,7 +3674,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Glucosamina e condroitina são associadas a matriz cartilaginosa e não tem como principal objetivo analgesia imediata, ao contrário dos analgésicos convencionais.",
-        "rationale": "CORRETA. O material descreve a glucosamina e a condroitina como estimuladoras da síntese de proteoglicanos da matriz cartilaginosa, sem ação analgésica direta, distinguindo-as dos analgésicos convencionais, voltados ao alívio sintomático imediato."
+        "rationale": "CORRETA. A glucosamina e a condroitina são estimuladoras da síntese de proteoglicanos da matriz cartilaginosa, sem ação analgésica direta, distinguindo-as dos analgésicos convencionais, voltados ao alívio sintomático imediato."
       },
       {
         "letter": "B",
@@ -3687,7 +3689,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Glucosamina e condroitina são potentes anti-inflamatórios de ação imediata, sendo reservadas principalmente para pacientes com elevado risco de sangramento.",
-        "rationale": "Incorreta. O material não descreve glucosamina e condroitina como anti-inflamatórios potentes de ação imediata; seu papel e o suporte a matriz cartilaginosa, sem ação analgésica ou anti-inflamatória direta relevante."
+        "rationale": "Incorreta. Glucosamina e condroitina não são anti-inflamatórios potentes de ação imediata; seu papel e o suporte a matriz cartilaginosa, sem ação analgésica ou anti-inflamatória direta relevante."
       }
     ],
     "correctLetter": "A",
@@ -3743,7 +3745,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "O diagnóstico da osteoartrite depende exclusivamente de exames laboratoriais de autoanticorpos, sendo a história clínica e o exame físico dispensáveis.",
-        "rationale": "Incorreta. O material integra história clínica e exame físico como partes essênciais do diagnóstico, ao lado da radiologia e da avaliação laboratorial, e não os torna dispensáveis em favor exclusivo de autoanticorpos."
+        "rationale": "Incorreta. História clínica e exame físico são partes essênciais do diagnóstico, ao lado da radiologia e da avaliação laboratorial, e não os torna dispensáveis em favor exclusivo de autoanticorpos."
       },
       {
         "letter": "C",
@@ -3786,7 +3788,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Suspensão de toda farmacoterapia, mantendo apenas medidas não farmacológicas, única conduta após falha do paracetamol descrita.",
-        "rationale": "Incorreta. O material mantém a farmacoterapia como parte do tratamento diante de persistência dos sintomas, não propondo sua suspensão total em favor exclusivo de medidas não farmacológicas."
+        "rationale": "Incorreta. A farmacoterapia é parte do tratamento diante de persistência dos sintomas, não propondo sua suspensão total em favor exclusivo de medidas não farmacológicas."
       }
     ],
     "correctLetter": "A",
@@ -3814,12 +3816,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Os coxibes devem ser indicados preferêncialmente para a paciente hipertensa com AVC prévio, já que essa classe apresenta excelente perfil de segurança cardiovascular.",
-        "rationale": "Incorreta. O material relaciona os coxibes a restrição em hipertensos e em pacientes com risco de AVC ou infarto, e não a um excelente perfil de segurança cardiovascular para esse tipo de paciente."
+        "rationale": "Incorreta. Os coxibes relacionam-se a restrição em hipertensos e em pacientes com risco de AVC ou infarto, e não a um excelente perfil de segurança cardiovascular para esse tipo de paciente."
       },
       {
         "letter": "D",
         "text": "A indicação dos coxibes depende exclusivamente da idade das pacientes, sem qualquer relação com o risco gastrointestinal ou cardiovascular individual.",
-        "rationale": "Incorreta. O material relaciona a indicação dos coxibes ao equilíbrio entre risco gastrointestinal e cardiovascular de cada paciente, e não a idade isoladamente como critério central."
+        "rationale": "Incorreta. A indicação dos coxibes relaciona-se ao equilíbrio entre risco gastrointestinal e cardiovascular de cada paciente, e não a idade isoladamente como critério central."
       }
     ],
     "correctLetter": "A",
@@ -3870,7 +3872,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A capsaicina promove deplecção da substância P nas terminações nervosas locais, processo que exige uso mínimo de duas semanas para a obtenção do efeito analgésico consistente, o que explica a ausência de alívio nos primeiros dias.",
-        "rationale": "CORRETA. O material descreve o mecanismo da capsaicina como promotor de deplecção da substância P, orientando o uso mínimo de 2 semanas para que o efeito analgésico seja obtido, o que explica a frustração da paciente nos primeiros dias de uso."
+        "rationale": "CORRETA. O mecanismo da capsaicina é promotor de deplecção da substância P, orientando o uso mínimo de 2 semanas para que o efeito analgésico seja obtido, o que explica a frustração da paciente nos primeiros dias de uso."
       },
       {
         "letter": "B",
@@ -3903,7 +3905,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Os rubefacientes tópicos, como os metil-salicilatos, oferecem efeito rápido, porém limitado, diferente do efeito mais consistente e progressivo da capsaicina, que depende de deplecção contínua da substância P.",
-        "rationale": "CORRETA. O material descreve os rubefacientes tópicos como agentes de efeito rápido, porém limitado, contrastando com o efeito mais consistente obtido com a capsaicina após uso contínuo, relacionado a deplecção progressiva da substância P."
+        "rationale": "CORRETA. Os rubefacientes tópicos são agentes de efeito rápido, porém limitado, contrastando com o efeito mais consistente obtido com a capsaicina após uso contínuo, relacionado a deplecção progressiva da substância P."
       },
       {
         "letter": "B",
@@ -3936,7 +3938,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O hialuronato de sódio e constituinte natural da cartilagem que promove lubrificação articular, sendo indicado especificamente na osteoartrite de joelho refratária as demais medidas terapêuticas orais e tópicas.",
-        "rationale": "CORRETA. O material descreve o hialuronato de sódio como constituinte natural da cartilagem, com papel de lubrificação articular, indicado especificamente na osteoartrite de joelho refratária as demais medidas terapêuticas, compatível com o caso descrito."
+        "rationale": "CORRETA. O hialuronato de sódio é constituinte natural da cartilagem, com papel de lubrificação articular, indicado especificamente na osteoartrite de joelho refratária as demais medidas terapêuticas, compatível com o caso descrito."
       },
       {
         "letter": "B",
@@ -3969,17 +3971,17 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A redução de peso diminui a sobrecarga mecânica sobre as articulações, fator relacionado ao dano inicial da cartilagem descrito na fisiopatologia da osteoartrite, o que justifica a dieta como estratégia não farmacológica relevante.",
-        "rationale": "CORRETA. O material relaciona o dano inicial da cartilagem a sobrecarga de peso ou trauma, o que sustenta a dieta voltada a perda de peso como estratégia não farmacológica relevante para reduzir essa sobrecarga mecânica em pacientes obesos com osteoartrite."
+        "rationale": "CORRETA. O dano inicial da cartilagem relaciona-se a sobrecarga de peso ou trauma, o que sustenta a dieta voltada a perda de peso como estratégia não farmacológica relevante para reduzir essa sobrecarga mecânica em pacientes obesos com osteoartrite."
       },
       {
         "letter": "B",
         "text": "A perda de peso reverte completamente a destruição do colágeno já instalada na cartilagem, eliminando a necessidade de qualquer farmacoterapia associada.",
-        "rationale": "Incorreta. O material não descreve a perda de peso como capaz de reverter completamente a destruição já instalada do colágeno; ela atua reduzindo a sobrecarga mecânica, sem eliminar a necessidade de farmacoterapia associada quando indicada."
+        "rationale": "Incorreta. A perda de peso não é capaz de reverter completamente a destruição já instalada do colágeno; ela atua reduzindo a sobrecarga mecânica, sem eliminar a necessidade de farmacoterapia associada quando indicada."
       },
       {
         "letter": "C",
         "text": "A dieta para perda de peso e recomendada exclusivamente para pacientes com osteoartrite de mãos, sem qualquer relação com a osteoartrite de joelhos descrita no caso.",
-        "rationale": "Incorreta. O material relaciona a perda de peso a redução da sobrecarga sobre articulações de carga, como os joelhos, e não a restringe exclusivamente a osteoartrite de mãos."
+        "rationale": "Incorreta. A perda de peso relaciona-se a redução da sobrecarga sobre articulações de carga, como os joelhos, e não a restringe exclusivamente a osteoartrite de mãos."
       },
       {
         "letter": "D",
@@ -4040,7 +4042,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Curar definitivamente a osteoartrite, revertendo por completo a degeneração da cartilagem já instalada, e o principal objetivo do tratamento descrito.",
-        "rationale": "Incorreta. O material não trata a cura definitiva como objetivo central do tratamento da osteoartrite, cujo foco e o alívio de sintomas, a limitação do impedimento funcional e a manutenção da qualidade de vida."
+        "rationale": "Incorreta. A cura definitiva não é objetivo central do tratamento da osteoartrite, cujo foco e o alívio de sintomas, a limitação do impedimento funcional e a manutenção da qualidade de vida."
       },
       {
         "letter": "C",
@@ -4073,7 +4075,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Os corticoides são a primeira escolha para qualquer paciente com osteoartrite, devendo ser iniciados antes mesmo do paracetamol em qualquer grau de dor.",
-        "rationale": "Incorreta. O material indica o paracetamol como primeira linha na dor leve a moderada da osteoartrite, com os corticoides ocupando um papel mais pontual, e não a primeira escolha geral antes do paracetamol."
+        "rationale": "Incorreta. O paracetamol é primeira linha na dor leve a moderada da osteoartrite, com os corticoides ocupando um papel mais pontual, e não a primeira escolha geral antes do paracetamol."
       },
       {
         "letter": "C",
@@ -4083,7 +4085,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Os corticoides substituem completamente a necessidade de AINEs no tratamento da osteoartrite, tornando essa última classe farmacológica dispensável.",
-        "rationale": "Incorreta. O material apresenta corticoides e AINEs como classes distintas dentro do arsenal terapêutico da osteoartrite, sem descrever a substituição completa de uma pela outra ou tornar os AINEs dispensáveis."
+        "rationale": "Incorreta. Corticoides e AINEs são classes distintas dentro do arsenal terapêutico da osteoartrite, sem descrever a substituição completa de uma pela outra ou tornar os AINEs dispensáveis."
       }
     ],
     "correctLetter": "A",
@@ -4116,7 +4118,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Os produtos tópicos substituem obrigatoriamente os AINEs orais em qualquer paciente com osteoartrite, tornando a associação proposta pelo paciente desnecessária.",
-        "rationale": "Incorreta. O material não trata os produtos tópicos como substitutos obrigatórios dos AINEs orais; ambos podem compor o protocolo terapêutico, isolados ou associados, conforme a necessidade clínica do paciente."
+        "rationale": "Incorreta. Os produtos tópicos não são substitutos obrigatórios dos AINEs orais; ambos podem compor o protocolo terapêutico, isolados ou associados, conforme a necessidade clínica do paciente."
       }
     ],
     "correctLetter": "A",
@@ -4134,22 +4136,22 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Sobrecarga mecânica repetida, sobrepeso e uso intenso das articulações se relacionam ao mecanismo central de dano a cartilagem descrito na fisiopatologia da osteoartrite, compatível com o histórico dessa paciente.",
-        "rationale": "CORRETA. O material relaciona o dano inicial da cartilagem a sobrecarga de peso ou trauma repetido, mecanismo compatível com o histórico de sobrepeso e uso intenso das articulações descrito no caso dessa paciente."
+        "rationale": "CORRETA. O dano inicial da cartilagem relaciona-se a sobrecarga de peso ou trauma repetido, mecanismo compatível com o histórico de sobrepeso e uso intenso das articulações descrito no caso dessa paciente."
       },
       {
         "letter": "B",
         "text": "Apenas fatores genéticos explicam o desenvolvimento da osteoartrite nessa paciente, sem qualquer relação com sobrecarga mecânica ou uso repetitivo das articulações.",
-        "rationale": "Incorreta. O material relaciona diretamente o dano inicial da cartilagem a sobrecarga de peso ou trauma mecânico, e não apenas a fatores genéticos isolados, o que não sustenta essa alternativa."
+        "rationale": "Incorreta. O dano inicial da cartilagem relaciona-se diretamente a sobrecarga de peso ou trauma mecânico, e não apenas a fatores genéticos isolados, o que não sustenta essa alternativa."
       },
       {
         "letter": "C",
         "text": "O sedentarismo da paciente protege contra a osteoartrite, já que reduz o desgaste mecânico das articulações, tornando seu quadro incompatível com o histórico relatado.",
-        "rationale": "Incorreta. O material não trata o sedentarismo como fator protetor contra a osteoartrite; o mecanismo central descrito envolve sobrecarga mecânica e desgaste progressivo da cartilagem, compatível com o sobrepeso e o uso intenso relatados, e não com o sedentarismo isoladamente."
+        "rationale": "Incorreta. O sedentarismo não é fator protetor contra a osteoartrite; o mecanismo central descrito envolve sobrecarga mecânica e desgaste progressivo da cartilagem, compatível com o sobrepeso e o uso intenso relatados, e não com o sedentarismo isoladamente."
       },
       {
         "letter": "D",
         "text": "A osteoartrite dessa paciente decorre exclusivamente de infecção articular prévia, mecanismo central da doença, sem relação com sobrecarga mecânica ou uso repetitivo.",
-        "rationale": "Incorreta. O material não relaciona a fisiopatologia da osteoartrite a infecção articular prévia; o mecanismo central descrito envolve sobrecarga mecânica repetida e desgaste da cartilagem, compatível com o histórico dessa paciente."
+        "rationale": "Incorreta. A fisiopatologia da osteoartrite não se relaciona a infecção articular prévia; o mecanismo central descrito envolve sobrecarga mecânica repetida e desgaste da cartilagem, compatível com o histórico dessa paciente."
       }
     ],
     "correctLetter": "A",
@@ -4172,7 +4174,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Celecoxib, por ser inibidor seletivo da COX-2 e apresentar excelente perfil de segurança cardiovascular em pacientes com insuficiência cardíaca.",
-        "rationale": "Incorreta. O material relaciona os coxibes a restrição em pacientes com risco cardiovascular relevante, perfil presente nesse paciente pela insuficiência cardíaca e hipertensão, tornando essa escolha inadequada."
+        "rationale": "Incorreta. Os coxibes relacionam-se a restrição em pacientes com risco cardiovascular relevante, perfil presente nesse paciente pela insuficiência cardíaca e hipertensão, tornando essa escolha inadequada."
       },
       {
         "letter": "C",
@@ -4200,12 +4202,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A atividade física adequada ao perfil do paciente integra as estratégias não farmacológicas recomendadas no manejo da osteoartrite, sem que seu benefício dependa da prática de exercícios de alta intensidade.",
-        "rationale": "CORRETA. O material inclui a atividade física como parte das estratégias não farmacológicas relevantes no manejo da osteoartrite, sem condicionar seu benefício a prática de exercícios de alta intensidade, o que tranquiliza a preocupação do paciente."
+        "rationale": "CORRETA. A atividade física é parte das estratégias não farmacológicas relevantes no manejo da osteoartrite, sem condicionar seu benefício a prática de exercícios de alta intensidade, o que tranquiliza a preocupação do paciente."
       },
       {
         "letter": "B",
         "text": "Apenas atividades físicas de alta intensidade trazem benefício real na osteoartrite, sendo exercícios leves ou moderados considerados ineficazes para essa condição.",
-        "rationale": "Incorreta. O material não indica atividades de alta intensidade como estratégia central; a orientação envolve atividade física adequada ao paciente, sem ênfase em alta intensidade como requisito para o benefício."
+        "rationale": "Incorreta. Atividades de alta intensidade não são estratégia central; a orientação envolve atividade física adequada ao paciente, sem ênfase em alta intensidade como requisito para o benefício."
       },
       {
         "letter": "C",
@@ -4309,7 +4311,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "As alterações radiográficas descritas não tem qualquer relação com a fisiopatologia da osteoartrite descrita, devendo ser investigadas como achado incidental sem relevância clínica.",
-        "rationale": "Incorreta. O material relaciona diretamente redução do espaço articular e formação de osteófitos a progressão da fisiopatologia da osteoartrite, e não os trata como achados incidentais sem relevância clínica para o quadro do paciente."
+        "rationale": "Incorreta. Redução do espaço articular e formação de osteófitos relacionam-se diretamente a progressão da fisiopatologia da osteoartrite, e não os trata como achados incidentais sem relevância clínica para o quadro do paciente."
       },
       {
         "letter": "D",
@@ -4347,7 +4349,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Os AINEs não seletivos preservam integralmente as prostaglandinas protetoras da mucosa gástrica, sendo mais seguros do ponto de vista gastrointestinal que os seletivos COX-2.",
-        "rationale": "Incorreta. O material relaciona os AINEs não seletivos a maior, e não menor, risco gastrointestinal, justamente pela inibição ampla das prostaglandinas protetoras, incluindo as dependentes da COX-1."
+        "rationale": "Incorreta. Os AINEs não seletivos relacionam-se a maior, e não menor, risco gastrointestinal, justamente pela inibição ampla das prostaglandinas protetoras, incluindo as dependentes da COX-1."
       }
     ],
     "correctLetter": "A",
@@ -4375,7 +4377,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Suspender toda farmacoterapia e as medidas já tentadas, mantendo apenas repouso absoluto, única conduta válida diante desse grau de refratariedade terapêutica.",
-        "rationale": "Incorreta. O material não propõe o repouso absoluto como conduta isolada diante de refratariedade terapêutica; a opção descrita para esse cenário de inaptidão funcional e a consideração de tratamento cirúrgico."
+        "rationale": "Incorreta. O repouso absoluto não é conduta isolada diante de refratariedade terapêutica; a opção descrita para esse cenário de inaptidão funcional e a consideração de tratamento cirúrgico."
       },
       {
         "letter": "D",
@@ -4403,7 +4405,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Os DMARDs são contraindicados em todas as doenças articulares, incluindo a artrite reumatoide, o que explicaria sua ausência também no tratamento da osteoartrite.",
-        "rationale": "Incorreta. O material não trata os DMARDs como contraindicados de forma geral; a discussão do material sobre osteoartrite simplesmente não inclui essa classe entre as opções terapêuticas dessa condição específica, sem generalizar contraindicação a outras doenças articulares."
+        "rationale": "Incorreta. Os DMARDs não são contraindicados de forma geral; a discussão do material sobre osteoartrite simplesmente não inclui essa classe entre as opções terapêuticas dessa condição específica, sem generalizar contraindicação a outras doenças articulares."
       },
       {
         "letter": "C",
@@ -4431,7 +4433,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Os AINEs podem comprometer a função renal ao inibirem prostaglandinas vasodilatadoras renais, efeito que se soma ao uso do diurético e explica a piora do edema e a elevação da creatinina observadas nesse paciente.",
-        "rationale": "CORRETA. O material inclui a avaliação da função renal como parte do direcionamento clínico das reações adversas relacionadas ao uso crônico de AINEs, relacionando essa classe a comprometimento renal, o que explica a piora do edema e a elevação da creatinina observadas nesse paciente em uso concomitante de diurético."
+        "rationale": "CORRETA. A avaliação da função renal é parte do direcionamento clínico das reações adversas relacionadas ao uso crônico de AINEs, relacionando essa classe a comprometimento renal, o que explica a piora do edema e a elevação da creatinina observadas nesse paciente em uso concomitante de diurético."
       },
       {
         "letter": "B",
@@ -4464,7 +4466,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "No paciente com acometimento localizado, terapias tópicas como capsaicina ou rubefacientes podem ser consideradas isoladamente ou associadas a outras classes, enquanto no paciente com acometimento poliarticular extenso, a abordagem sistêmica com paracetamol ou AINE tende a ser mais abrangente.",
-        "rationale": "CORRETA. O material descreve os produtos tópicos como úteis de forma isolada ou associada em quadros mais localizados, enquanto a farmacoterapia sistêmica com paracetamol e AINEs oferece uma abordagem mais abrangente para o acometimento articular extenso, compatível com o segundo paciente descrito."
+        "rationale": "CORRETA. Os produtos tópicos são úteis de forma isolada ou associada em quadros mais localizados, enquanto a farmacoterapia sistêmica com paracetamol e AINEs oferece uma abordagem mais abrangente para o acometimento articular extenso, compatível com o segundo paciente descrito."
       },
       {
         "letter": "B",
@@ -4474,12 +4476,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O paciente com acometimento poliarticular extenso deve receber exclusivamente terapia tópica localizada em cada articulação, estratégia mais prática do que a farmacoterapia sistêmica.",
-        "rationale": "Incorreta. O material não descreve a aplicação tópica isolada em cada articulação como estratégia preferêncial para acometimento poliarticular extenso; a farmacoterapia sistêmica e mais coerente nesse cenário mais abrangente."
+        "rationale": "Incorreta. A aplicação tópica isolada em cada articulação não é estratégia preferêncial para acometimento poliarticular extenso; a farmacoterapia sistêmica e mais coerente nesse cenário mais abrangente."
       },
       {
         "letter": "D",
         "text": "A extensão do acometimento articular não influência a escolha entre terapia tópica e sistêmica na osteoartrite, sendo essa decisão baseada exclusivamente na idade do paciente.",
-        "rationale": "Incorreta. O material não trata a idade como critério exclusivo para a escolha entre terapia tópica e sistêmica; a extensão e a localização do acometimento articular são elementos relevantes para essa decisão terapêutica."
+        "rationale": "Incorreta. A idade não é critério exclusivo para a escolha entre terapia tópica e sistêmica; a extensão e a localização do acometimento articular são elementos relevantes para essa decisão terapêutica."
       }
     ],
     "correctLetter": "A",
@@ -4530,7 +4532,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Glucosamina e condroitina podem ser consideradas pelo seu perfil de baixa toxicidade e por atuarem no suporte a matriz cartilaginosa, ainda que sem ação analgésica direta comparável a dos analgésicos convencionais que o paciente não tolera.",
-        "rationale": "CORRETA. O material descreve glucosamina e condroitina como fármacos de baixa toxicidade que estimulam a síntese de proteoglicanos da matriz cartilaginosa, sem ação analgésica direta, o que as torna uma consideração razoável nesse paciente com múltiplas intolerâncias aos analgésicos convencionais, sem substituir a necessidade de outras estratégias para o controle direto da dor."
+        "rationale": "CORRETA. Glucosamina e condroitina são fármacos de baixa toxicidade que estimulam a síntese de proteoglicanos da matriz cartilaginosa, sem ação analgésica direta, o que as torna uma consideração razoável nesse paciente com múltiplas intolerâncias aos analgésicos convencionais, sem substituir a necessidade de outras estratégias para o controle direto da dor."
       },
       {
         "letter": "B",
@@ -4540,7 +4542,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Glucosamina e condroitina apresentam alta toxicidade gastrointestinal, tornando-as inadequadas justamente para esse paciente com histórico de intolerância a AINEs e paracetamol.",
-        "rationale": "Incorreta. O material descreve essa suplementação como de baixa toxicidade, e não de alta toxicidade gastrointestinal, o que não sustenta contraindica-lá nesse paciente com intolerância prévia a outros analgésicos."
+        "rationale": "Incorreta. Essa suplementação é de baixa toxicidade, e não de alta toxicidade gastrointestinal, o que não sustenta contraindica-lá nesse paciente com intolerância prévia a outros analgésicos."
       },
       {
         "letter": "D",
@@ -4573,12 +4575,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Para o paciente com angina estável, um coxibe e a escolha mais coerente, já que essa classe apresenta excelente perfil de segurança cardiovascular, superior ao dos AINEs não seletivos.",
-        "rationale": "Incorreta. O material relaciona os coxibes a maior cautela, e não a excelente segurança cardiovascular, especialmente em pacientes com doença cardiovascular estabelecida, como a angina estável, o que torna essa escolha inadequada para esse paciente."
+        "rationale": "Incorreta. Os coxibes relacionam-se a maior cautela, e não a excelente segurança cardiovascular, especialmente em pacientes com doença cardiovascular estabelecida, como a angina estável, o que torna essa escolha inadequada para esse paciente."
       },
       {
         "letter": "D",
         "text": "Para o paciente com dispepsia leve, a indometacina e a escolha mais coerente, por apresentar o melhor perfil gastrointestinal entre os AINEs.",
-        "rationale": "Incorreta. O material não descreve a indometacina como opção de melhor perfil gastrointestinal; essa classe é descrita entre as menos seguras do ponto de vista cardiovascular, sem vantagem gastrointestinal destacada para o perfil desse paciente."
+        "rationale": "Incorreta. A indometacina não é opção de melhor perfil gastrointestinal; essa classe é descrita entre as menos seguras do ponto de vista cardiovascular, sem vantagem gastrointestinal destacada para o perfil desse paciente."
       }
     ],
     "correctLetter": "A",
@@ -4601,7 +4603,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Glicocorticoides promovem broncodilatação imediata tanto na asma quanto na rinite, enquanto os agonistas beta-2 de curta ação reduzem progressivamente a inflamação das vias aéreas ao longo de semanas.",
-        "rationale": "Incorreta. O material atribui o alívio rápido do bronçõespasmo aos agonistas beta-2 de curta ação, e o controle da inflamação persistente aos glicocorticoides, e não o contrário, como proposto nesta alternativa."
+        "rationale": "Incorreta. O alívio rápido do bronçõespasmo é atribuído aos agonistas beta-2 de curta ação, e o controle da inflamação persistente aos glicocorticoides, e não o contrário, como proposto nesta alternativa."
       },
       {
         "letter": "C",
@@ -4611,7 +4613,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Glicocorticoides são destinados apenas as crises agudas, enquanto agonistas beta-2 devem ser usados continuamente para impedir a inflamação das vias aéreas, tanto na asma quanto na rinite.",
-        "rationale": "Incorreta. O material relaciona os glicocorticoides ao controle contínuo da inflamação persistente, e os beta-2 agonistas de curta ação ao alívio das crises agudas, e não o contrário, como proposto nesta alternativa."
+        "rationale": "Incorreta. Os glicocorticoides relacionam-se ao controle contínuo da inflamação persistente, e os beta-2 agonistas de curta ação ao alívio das crises agudas, e não o contrário, como proposto nesta alternativa."
       }
     ],
     "correctLetter": "A",
@@ -4634,7 +4636,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Os de primeira geração atuam somente em receptores periféricos, enquanto os de segunda geração bloqueiam preferêncialmente receptores H1 cerebrais, o que explicaria a maior sedação destes últimos.",
-        "rationale": "Incorreta. O material relaciona a maior penetração no SNC e os efeitos anticolinérgicos aos anti-histamínicos de primeira geração, e não a uma atuação preferêncialmente central dos de segunda geração, que tendem a produzir menos sedação."
+        "rationale": "Incorreta. A maior penetração no SNC e os efeitos anticolinérgicos relacionam-se aos anti-histamínicos de primeira geração, e não a uma atuação preferêncialmente central dos de segunda geração, que tendem a produzir menos sedação."
       },
       {
         "letter": "C",
@@ -4667,17 +4669,17 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "O bloqueio H1 e irreversível, por isso a quantidade de histamina liberada não interfere na resposta terapêutica, e medidas ambientais apresentam pouca utilidade.",
-        "rationale": "Incorreta. O material descreve o bloqueio H1 dos anti-histamínicos como competitivo e reversível, e não irreversível, o que sustenta, e não contrária, a relevância da intensidade da exposição ao alérgeno sobre a resposta terapêutica."
+        "rationale": "Incorreta. O bloqueio H1 dos anti-histamínicos é competitivo e reversível, e não irreversível, o que sustenta, e não contrária, a relevância da intensidade da exposição ao alérgeno sobre a resposta terapêutica."
       },
       {
         "letter": "C",
         "text": "Anti-histamínicos eliminam a histamina já liberada, portanto a intensidade da exposição influência apenas a duração dos sintomas, e não a resposta farmacológica observada no experimento.",
-        "rationale": "Incorreta. O material não descreve os anti-histamínicos como fármacos que eliminam a histamina já liberada; seu mecanismo e o antagonismo competitivo e reversível nos receptores H1, o que explica a maior dificuldade de controle na exposição intensa."
+        "rationale": "Incorreta. Os anti-histamínicos não são fármacos que eliminam a histamina já liberada; seu mecanismo e o antagonismo competitivo e reversível nos receptores H1, o que explica a maior dificuldade de controle na exposição intensa."
       },
       {
         "letter": "D",
         "text": "Antagonistas H1 impedem a formação de IgE, de modo que sintomas persistentes indicam necessariamente resistência farmacológica e exigem aumento progressivo da dose.",
-        "rationale": "Incorreta. O material não descreve os anti-histamínicos H1 como fármacos que impedem a formação de IgE; seu mecanismo e o bloqueio competitivo e reversível dos receptores H1, o que explica a maior dificuldade de controle diante de exposição intensa, sem indicar necessariamente resistência farmacológica."
+        "rationale": "Incorreta. Os anti-histamínicos H1 não são fármacos que impedem a formação de IgE; seu mecanismo e o bloqueio competitivo e reversível dos receptores H1, o que explica a maior dificuldade de controle diante de exposição intensa, sem indicar necessariamente resistência farmacológica."
       }
     ],
     "correctLetter": "A",
@@ -4710,7 +4712,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "A rinite alérgica e um processo neurológico central desencadeado por estímulos olfativos, sem relação com o sistema imunológico ou com a liberação de histamina após exposição ao alérgeno.",
-        "rationale": "Incorreta. O material não descreve a rinite alérgica como processo neurológico central; trata-se de uma inflamação mediada por IgE, com a histamina desempenhando papel central nos sintomas agudos após exposição ao alérgeno."
+        "rationale": "Incorreta. A rinite alérgica não é processo neurológico central; trata-se de uma inflamação mediada por IgE, com a histamina desempenhando papel central nos sintomas agudos após exposição ao alérgeno."
       }
     ],
     "correctLetter": "A",
@@ -4743,7 +4745,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "A estimulação parassimpática é responsável pela ação terapêutica dos descongestionantes nasais, o que explicaria por que o segundo paciente, com hiperatividade parassimpática, deveria responder melhor ao mesmo fármaco.",
-        "rationale": "Incorreta. O material relaciona o mecanismo dos descongestionantes a estimulação simpática, e não a parassimpática, o que explica justamente a menor resposta esperada em um paciente com hiperatividade parassimpática predominante."
+        "rationale": "Incorreta. O mecanismo dos descongestionantes relaciona-se a estimulação simpática, e não a parassimpática, o que explica justamente a menor resposta esperada em um paciente com hiperatividade parassimpática predominante."
       }
     ],
     "correctLetter": "A",
@@ -4776,7 +4778,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Os problemas ortodônticos relacionados a respiração bucal crônica são consequência exclusiva de fatores genéticos, sem qualquer relação com a rinite alérgica persistente.",
-        "rationale": "Incorreta. O material relaciona explicitamente os problemas ortodônticos a respiração bucal decorrente da rinite alérgica persistente, e não os atribui exclusivamente a fatores genéticos independentes da condição nasal."
+        "rationale": "Incorreta. Os problemas ortodônticos relacionam-se explicitamente a respiração bucal decorrente da rinite alérgica persistente, e não os atribui exclusivamente a fatores genéticos independentes da condição nasal."
       }
     ],
     "correctLetter": "A",
@@ -4827,7 +4829,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Trocar para um anti-histamínico de segunda geração, como cetirizina, loratadina ou fexofenadina, que não atravessam facilmente a barreira hematoencefálica e tem menor efeito sedativo, preservando melhor a atenção do estudante.",
-        "rationale": "CORRETA. O material descreve os anti-histamínicos de segunda geração como fármacos que não atravessam facilmente a barreira hematoencefálica, reduzindo o efeito sedativo em comparação aos de primeira geração, o que preserva melhor a atenção, relevante para o desempenho acadêmico do estudante."
+        "rationale": "CORRETA. Os anti-histamínicos de segunda geração são fármacos que não atravessam facilmente a barreira hematoencefálica, reduzindo o efeito sedativo em comparação aos de primeira geração, o que preserva melhor a atenção, relevante para o desempenho acadêmico do estudante."
       },
       {
         "letter": "B",
@@ -4870,12 +4872,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O descongestionante tópico e sempre mais seguro que o sistêmico em qualquer paciente, inclusive hipertensos, tornando a oximetazolina a escolha preferêncial também para Seu Nelson.",
-        "rationale": "Incorreta. O material não trata o descongestionante tópico como sempre mais seguro; seu uso prolongado tem risco próprio de rinite medicamentosa, como no caso de Márcia, o que não o torna automaticamente preferêncial para qualquer paciente."
+        "rationale": "Incorreta. O descongestionante tópico não é sempre mais seguro; seu uso prolongado tem risco próprio de rinite medicamentosa, como no caso de Márcia, o que não o torna automaticamente preferêncial para qualquer paciente."
       },
       {
         "letter": "D",
         "text": "O risco de alteração da pressão arterial pela pseudoefedrina ocorre apenas em doses mínimas, sendo irrelevante em doses terapêuticas habituais, tornando essa preocupação desnecessária para Seu Nelson.",
-        "rationale": "Incorreta. O material relaciona o risco de alteração pressórica especificamente a doses elevadas da pseudoefedrina, e não a doses mínimas, mantendo relevante a cautela em pacientes hipertensos como Seu Nelson diante de doses mais altas."
+        "rationale": "Incorreta. O risco de alteração pressórica especificamente relaciona-se a doses elevadas da pseudoefedrina, e não a doses mínimas, mantendo relevante a cautela em pacientes hipertensos como Seu Nelson diante de doses mais altas."
       }
     ],
     "correctLetter": "A",
@@ -4898,7 +4900,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A loratadina deveria ser suficiente para controlar também a congestão nasal, o que tornaria a persistência desse sintoma em Patrícia um sinal de que o diagnóstico de rinite alérgica está incorreto.",
-        "rationale": "Incorreta. O material não descreve os anti-histamínicos como necessariamente suficientes para controlar a congestão nasal, o que não sustenta questionar o diagnóstico de Patrícia apenas pela persistência desse sintoma específico."
+        "rationale": "Incorreta. Os anti-histamínicos não são necessariamente suficientes para controlar a congestão nasal, o que não sustenta questionar o diagnóstico de Patrícia apenas pela persistência desse sintoma específico."
       },
       {
         "letter": "C",
@@ -4908,7 +4910,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "A persistência da congestão indica que Patrícia deveria trocar a loratadina por um anti-histamínico de primeira geração, única estratégia descrita para melhorar esse sintoma específico.",
-        "rationale": "Incorreta. O material não indica a troca para anti-histamínicos de primeira geração como estratégia para melhorar a congestão nasal; essa troca traria apenas maior risco de sedação, sem abordar especificamente o mecanismo da congestão persistente."
+        "rationale": "Incorreta. A troca para anti-histamínicos de primeira geração não é estratégia para melhorar a congestão nasal; essa troca traria apenas maior risco de sedação, sem abordar especificamente o mecanismo da congestão persistente."
       }
     ],
     "correctLetter": "A",
@@ -4992,17 +4994,17 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O teste de hipersensibilidade de pele é citado como parte do diagnóstico da rinite alérgica, permitindo identificar a sensibilidade específica a alérgenos, complementando a avaliação clínica desse paciente.",
-        "rationale": "CORRETA. O material cita o teste de hipersensibilidade de pele como parte da investigação diagnóstica da rinite alérgica, permitindo identificar a sensibilidade específica a alérgenos, exatamente o papel desempenhado nesse caso."
+        "rationale": "CORRETA. O teste de hipersensibilidade de pele é parte da investigação diagnóstica da rinite alérgica, permitindo identificar a sensibilidade específica a alérgenos, exatamente o papel desempenhado nesse caso."
       },
       {
         "letter": "B",
         "text": "O teste cutâneo descrito no caso corresponde a espirometria, exame citado especificamente para o diagnóstico da asma, e não da rinite alérgica.",
-        "rationale": "Incorreta. O material relaciona a espirometria ao diagnóstico da asma, e não ao teste cutâneo de hipersensibilidade, especificamente citado para a investigação da rinite alérgica."
+        "rationale": "Incorreta. A espirometria relaciona-se ao diagnóstico da asma, e não ao teste cutâneo de hipersensibilidade, especificamente citado para a investigação da rinite alérgica."
       },
       {
         "letter": "C",
         "text": "O teste cutâneo de hipersensibilidade não tem qualquer papel reconhecido para o diagnóstico de doenças alérgicas das vias aéreas, sendo dispensável nesse paciente.",
-        "rationale": "Incorreta. O material cita explicitamente o teste de hipersensibilidade de pele como parte do diagnóstico da rinite alérgica, o que contrária a ideia de que esse exame não tem papel reconhecido nesse contexto."
+        "rationale": "Incorreta. O teste de hipersensibilidade de pele é explicitamente parte do diagnóstico da rinite alérgica, o que contrária a ideia de que esse exame não tem papel reconhecido nesse contexto."
       },
       {
         "letter": "D",
@@ -5035,7 +5037,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Os efeitos anticolinérgicos são exclusivos dos anti-histamínicos de segunda geração, o que tornaria a decisão do médico equivocada para esse paciente com hiperplasia prostática benigna.",
-        "rationale": "Incorreta. O material atribui os efeitos anticolinérgicos aos anti-histamínicos de primeira geração, e não aos de segunda geração, que são descritos como isentos desses efeitos."
+        "rationale": "Incorreta. Os efeitos anticolinérgicos são atribuídos aos anti-histamínicos de primeira geração, e não aos de segunda geração, que são descritos como isentos desses efeitos."
       },
       {
         "letter": "D",
@@ -5068,12 +5070,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A presença de conjuntivite exclui o diagnóstico de rinite alérgica em Rafael, indicando outra etiologia para os sintomas nasais.",
-        "rationale": "Incorreta. O material não trata a presença de conjuntivite como critério de exclusão da rinite alérgica; ao contrário, a descreve como sintoma associado comum ao mesmo mecanismo imunológico."
+        "rationale": "Incorreta. A presença de conjuntivite não é critério de exclusão da rinite alérgica; ao contrário, a descreve como sintoma associado comum ao mesmo mecanismo imunológico."
       },
       {
         "letter": "D",
         "text": "A conjuntivite alérgica de Rafael e causada por infecção bacteriana secundária a rinite, sem relação com o mecanismo imunológico mediado por IgE descrito para essa doença.",
-        "rationale": "Incorreta. O material relaciona a conjuntivite alérgica ao mesmo mecanismo imunológico mediado por IgE da rinite, e não a uma infecção bacteriana secundária independente desse processo."
+        "rationale": "Incorreta. A conjuntivite alérgica relaciona-se ao mesmo mecanismo imunológico mediado por IgE da rinite, e não a uma infecção bacteriana secundária independente desse processo."
       }
     ],
     "correctLetter": "A",
@@ -5096,7 +5098,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Os antileucotrienos são contraindicados em qualquer paciente com sensibilidade a AINEs, devendo ser evitados nesse paciente independentemente do quadro respiratório associado.",
-        "rationale": "Incorreta. O material descreve os antileucotrienos como ativos, e não contraindicados, em quadros de asma desencadeados por AINEs, o que sustenta, e não afasta, sua consideração nesse paciente."
+        "rationale": "Incorreta. Os antileucotrienos são ativos, e não contraindicados, em quadros de asma desencadeados por AINEs, o que sustenta, e não afasta, sua consideração nesse paciente."
       },
       {
         "letter": "C",
@@ -5139,7 +5141,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Associar descongestionante oral com anti-histamínico de primeira geração para Dona Marta, única estratégia eficaz para pacientes hipertensos com rinite alérgica.",
-        "rationale": "Incorreta. O material não propõe essa associação como estratégia específica para pacientes hipertensos; ao contrário, orienta cautela com o descongestionante sistêmico nesse perfil de paciente."
+        "rationale": "Incorreta. Essa associação não é estratégia específica para pacientes hipertensos; ao contrário, orienta cautela com o descongestionante sistêmico nesse perfil de paciente."
       }
     ],
     "correctLetter": "A",
@@ -5199,8 +5201,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "O material não relaciona as medidas de controle ambiental a redução da prevalência da rinite alérgica, tornando essa estratégia de investimento incoerente com os princípios descritos.",
-        "rationale": "Incorreta. O material descreve explicitamente medidas de controle ambiental como parte do manejo da rinite alérgica, o que sustenta, e não contrária, a coerência dessa estratégia de investimento em saúde pública."
+        "text": "As medidas de controle ambiental não se relacionam a redução da prevalência da rinite alérgica, tornando essa estratégia de investimento incoerente com os princípios descritos.",
+        "rationale": "Incorreta. Medidas de controle ambiental são explicitamente parte do manejo da rinite alérgica, o que sustenta, e não contrária, a coerência dessa estratégia de investimento em saúde pública."
       },
       {
         "letter": "D",
@@ -5256,7 +5258,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A escolha por um anti-histamínico de segunda geração evita os efeitos centrais mais pronunciados dos fármacos de primeira geração, relacionados a maior penetração na barreira hematoencefálica, e a associação com medidas ambientais reforça o objetivo de reduzir a exposição ao alérgeno.",
-        "rationale": "CORRETA. O material relaciona os anti-histamínicos de primeira geração a maior penetração no SNC e a efeitos centrais mais pronunciados, o que sustenta a preferência por um fármaco de segunda geração nessa paciente, além de reforçar as medidas de controle ambiental como parte do objetivo de reduzir a exposição ao alérgeno descrito."
+        "rationale": "CORRETA. Os anti-histamínicos de primeira geração relacionam-se a maior penetração no SNC e a efeitos centrais mais pronunciados, o que sustenta a preferência por um fármaco de segunda geração nessa paciente, além de reforçar as medidas de controle ambiental como parte do objetivo de reduzir a exposição ao alérgeno descrito."
       },
       {
         "letter": "B",
@@ -5266,7 +5268,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "As medidas de controle ambiental são dispensáveis quando um anti-histamínico de segunda geração e utilizado, já que esses fármacos eliminam completamente a necessidade de reduzir a exposição ao alérgeno.",
-        "rationale": "Incorreta. O material trata as medidas de controle ambiental como parte do objetivo terapêutico de reduzir a exposição ao alérgeno, complementares a farmacoterapia, e não dispensáveis apenas pelo uso de um anti-histamínico de segunda geração."
+        "rationale": "Incorreta. As medidas de controle ambiental são parte do objetivo terapêutico de reduzir a exposição ao alérgeno, complementares a farmacoterapia, e não dispensáveis apenas pelo uso de um anti-histamínico de segunda geração."
       },
       {
         "letter": "D",
@@ -5289,17 +5291,17 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O uso contínuo do descongestionante tópico simpaticomimético por mais de 3 a 5 dias pode causar rinite medicamentosa, com congestão rebote ao suspender o fármaco, risco que não se aplica ao uso breve de apenas dois dias do colega de trabalho.",
-        "rationale": "CORRETA. O material relaciona o risco de rinite medicamentosa e congestão rebote especificamente ao uso contínuo do descongestionante tópico por mais de 3 a 5 dias, o que explica a piora relatada pelo primeiro paciente e a ausência desse risco no uso breve de dois dias do colega."
+        "rationale": "CORRETA. O risco de rinite medicamentosa e congestão rebote especificamente relaciona-se ao uso contínuo do descongestionante tópico por mais de 3 a 5 dias, o que explica a piora relatada pelo primeiro paciente e a ausência desse risco no uso breve de dois dias do colega."
       },
       {
         "letter": "B",
         "text": "O risco de rinite medicamentosa independe do tempo de uso do descongestionante tópico, devendo o colega de trabalho também esperar piora da congestão mesmo após apenas dois dias de uso.",
-        "rationale": "Incorreta. O material relaciona especificamente esse risco ao uso contínuo por mais de 3 a 5 dias, e não a qualquer período de uso, independentemente da duração, o que não sustenta essa expectativa para um uso de apenas dois dias."
+        "rationale": "Incorreta. Esse risco relaciona-se especificamente ao uso contínuo por mais de 3 a 5 dias, e não a qualquer período de uso, independentemente da duração, o que não sustenta essa expectativa para um uso de apenas dois dias."
       },
       {
         "letter": "C",
         "text": "A rinite medicamentosa descrita decorre exclusivamente do mecanismo simpaticomimético em si, ocorrendo mesmo após uma única dose do descongestionante tópico, independentemente da duração do tratamento.",
-        "rationale": "Incorreta. O material relaciona o risco de rinite medicamentosa ao uso contínuo prolongado, superior a 3 a 5 dias, e não a uma única dose isolada do mecanismo simpaticomimético do descongestionante."
+        "rationale": "Incorreta. O risco de rinite medicamentosa relaciona-se ao uso contínuo prolongado, superior a 3 a 5 dias, e não a uma única dose isolada do mecanismo simpaticomimético do descongestionante."
       },
       {
         "letter": "D",
@@ -5370,7 +5372,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "A persistência dos sintomas indica falha diagnóstica, devendo o paciente ser reavaliado para outra condição respiratória, já que o material descreveria o anti-histamínico de segunda geração como suficiente para o controle completo da rinite alérgica em qualquer caso.",
-        "rationale": "Incorreta. O material não descreve o anti-histamínico como suficiente para o controle completo em todos os casos, especialmente da congestão, o que não sustenta questionar o diagnóstico apenas pela persistência parcial dos sintomas descritos."
+        "rationale": "Incorreta. O anti-histamínico não é suficiente para o controle completo em todos os casos, especialmente da congestão, o que não sustenta questionar o diagnóstico apenas pela persistência parcial dos sintomas descritos."
       }
     ],
     "correctLetter": "A",
@@ -5388,7 +5390,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A asma e uma desordem inflamatória crônica das vias aéreas, com obstrução ao fluxo aéreo geralmente reversível, espontaneamente ou com tratamento, compatível com a normalização da função pulmonar entre as crises descrita nesse paciente.",
-        "rationale": "CORRETA. O material define a asma como desordem inflamatória crônica das vias aéreas, com obstrução geralmente reversível, espontaneamente ou com tratamento, exatamente compatível com a melhora após broncodilatador e a normalização entre as crises descritas."
+        "rationale": "CORRETA. A asma é desordem inflamatória crônica das vias aéreas, com obstrução geralmente reversível, espontaneamente ou com tratamento, exatamente compatível com a melhora após broncodilatador e a normalização entre as crises descritas."
       },
       {
         "letter": "B",
@@ -5431,7 +5433,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A asma desse paciente decorre exclusivamente de infecção respiratória crônica adquirida no ambiente de trabalho, único fator etiológico reconhecido para essa doença.",
-        "rationale": "Incorreta. O material não relaciona a etiologia da asma a infecção respiratória crônica como fator central; os fatores citados são atopia, genéticos e exposição ambiental ou ocupacional, como no caso desse paciente."
+        "rationale": "Incorreta. A etiologia da asma não se relaciona a infecção respiratória crônica como fator central; os fatores citados são atopia, genéticos e exposição ambiental ou ocupacional, como no caso desse paciente."
       },
       {
         "letter": "D",
@@ -5469,7 +5471,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Os achados desse paciente são incompatíveis com a fisiopatologia da asma descrita, que não relacionaria eosinófilos ou hipersecreção de muco a essa doença.",
-        "rationale": "Incorreta. O material relaciona diretamente eosinófilos e hipersecreção de muco a fisiopatologia da asma, o que torna os achados desse paciente compatíveis, e não incompatíveis, com a doença."
+        "rationale": "Incorreta. Eosinófilos e hipersecreção de muco relacionam-se diretamente a fisiopatologia da asma, o que torna os achados desse paciente compatíveis, e não incompatíveis, com a doença."
       }
     ],
     "correctLetter": "A",
@@ -5492,17 +5494,17 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Sibilos e tensão torácica são sinais clínicos clássicos da DRGE, e não da asma, o que tornaria o diagnóstico de asma incoerente para esse adolescente.",
-        "rationale": "Incorreta. O material relaciona sibilos e tensão torácica especificamente a asma, e não a DRGE, cujos sintomas clássicos descritos são outros, como pirose e regurgitação."
+        "rationale": "Incorreta. Sibilos e tensão torácica especificamente relacionam-se a asma, e não a DRGE, cujos sintomas clássicos descritos são outros, como pirose e regurgitação."
       },
       {
         "letter": "C",
         "text": "A ausência de pirose e regurgitação exclui qualquer possibilidade diagnóstica nesse adolescente, já que o material não reconhece a asma como diagnóstico possível sem esses sintomas digestivos associados.",
-        "rationale": "Incorreta. O material não relaciona a asma a presença de pirose ou regurgitação; esses sintomas são característicos da DRGE, condição distinta, o que não torna sua ausência um fator excludente para o diagnóstico de asma."
+        "rationale": "Incorreta. A asma não se relaciona a presença de pirose ou regurgitação; esses sintomas são característicos da DRGE, condição distinta, o que não torna sua ausência um fator excludente para o diagnóstico de asma."
       },
       {
         "letter": "D",
         "text": "A piora noturna da tosse e sinal exclusivo de DRGE, o que tornaria o quadro desse adolescente mais compatível com essa condição gastrointestinal do que com asma.",
-        "rationale": "Incorreta. O material relaciona a piora noturna da tosse aos sinais clínicos clássicos da asma, e não a descreve como sinal exclusivo da DRGE, o que sustenta o diagnóstico de asma nesse caso."
+        "rationale": "Incorreta. A piora noturna da tosse relaciona-se aos sinais clínicos clássicos da asma, e não a descreve como sinal exclusivo da DRGE, o que sustenta o diagnóstico de asma nesse caso."
       }
     ],
     "correctLetter": "A",
@@ -5520,7 +5522,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O diagnóstico da asma combina história clínica e espirometria, considerando também a relação com rinite e o histórico familiar do paciente, elementos todos presentes na investigação desse caso.",
-        "rationale": "CORRETA. O material descreve o diagnóstico da asma como baseado na história clínica associada a espirometria, considerando também a relação com rinite e o histórico familiar do paciente, exatamente os elementos reunidos na investigação desse caso."
+        "rationale": "CORRETA. O diagnóstico da asma é baseado na história clínica associada a espirometria, considerando também a relação com rinite e o histórico familiar do paciente, exatamente os elementos reunidos na investigação desse caso."
       },
       {
         "letter": "B",
@@ -5535,7 +5537,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Exames de imagem torácica são o único método diagnóstico citado para a asma, dispensando a espirometria e a história clínica desse paciente.",
-        "rationale": "Incorreta. O material não cita exames de imagem torácica como método central de diagnóstico da asma; os elementos descritos são história clínica e espirometria, considerando também rinite e histórico familiar."
+        "rationale": "Incorreta. Exames de imagem torácica não são método central de diagnóstico da asma; os elementos descritos são história clínica e espirometria, considerando também rinite e histórico familiar."
       }
     ],
     "correctLetter": "A",
@@ -5568,7 +5570,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "A redução de hospitalizações não é objetivo relacionado ao tratamento anti-inflamatório da asma, dependendo exclusivamente da disponibilidade do broncodilatador de resgate.",
-        "rationale": "Incorreta. O material relaciona a redução de hospitalizações aos objetivos gerais do tratamento da asma, que incluem o controle da inflamação crônica, e não a atribui exclusivamente a disponibilidade do broncodilatador de resgate."
+        "rationale": "Incorreta. A redução de hospitalizações relaciona-se aos objetivos gerais do tratamento da asma, que incluem o controle da inflamação crônica, e não a atribui exclusivamente a disponibilidade do broncodilatador de resgate."
       }
     ],
     "correctLetter": "A",
@@ -5629,7 +5631,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Substituir o salbutamol por um beta-2 agonista de longa ação isolado, sem necessidade de corticosteroide inalatório, única conduta indicada diante desse padrão de uso.",
-        "rationale": "Incorreta. O material não orienta o uso isolado de beta-2 de longa ação sem corticosteroide inalatório como resposta ao uso frequente do broncodilatador de curta ação; a conduta descrita e iniciar terapia anti-inflamatória com corticosteroide."
+        "rationale": "Incorreta. O uso isolado de beta-2 de longa ação sem corticosteroide inalatório não é resposta ao uso frequente do broncodilatador de curta ação; a conduta descrita e iniciar terapia anti-inflamatória com corticosteroide."
       },
       {
         "letter": "D",
@@ -5652,7 +5654,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Os beta-2 agonistas de longa ação promovem broncodilatação por mais de 12 horas, não servem para alívio imediato, e devem ser associados ao corticosteroide, sem que a dose deste seja aumentada, quando a monoterapia com corticoide isolado falha.",
-        "rationale": "CORRETA. O material descreve os beta-2 agonistas de longa ação como promotores de broncodilatação por mais de 12 horas, sem uso para alívio imediato, devendo ser associados, e não usados para aumentar a dose de corticoide, quando ha falha da monoterapia com o corticosteroide isolado."
+        "rationale": "CORRETA. Os beta-2 agonistas de longa ação são promotores de broncodilatação por mais de 12 horas, sem uso para alívio imediato, devendo ser associados, e não usados para aumentar a dose de corticoide, quando ha falha da monoterapia com o corticosteroide isolado."
       },
       {
         "letter": "B",
@@ -5695,7 +5697,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A via oral dos beta-2 agonistas tem início de ação mais rápido que a via inalatória, o que justificaria sua preferência nessa criança independentemente da incapacidade de usar o dispositivo inalatório.",
-        "rationale": "Incorreta. O material não descreve a via oral como mais rápida que a inalatória; a razão para seu uso nesse caso e a incapacidade da criança de usar corretamente o dispositivo inalatório, e não uma vantagem de velocidade de ação."
+        "rationale": "Incorreta. A via oral não é mais rápida que a inalatória; a razão para seu uso nesse caso e a incapacidade da criança de usar corretamente o dispositivo inalatório, e não uma vantagem de velocidade de ação."
       },
       {
         "letter": "D",
@@ -5718,7 +5720,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Os corticosteroides inalatórios, como a budesonida, revertem a inflamação crônica das vias aéreas com broncosseletividade, mas não promovem alívio imediato da crise aguda, papel desempenhado pelos beta-2 agonistas de curta ação.",
-        "rationale": "CORRETA. O material descreve o papel central dos corticosteroides inalatórios como reversão da inflamação crônica, fármacos de manutenção, distintos dos beta-2 agonistas de curta ação, responsáveis pelo alívio imediato da crise aguda, o que esclarece a dúvida desse paciente."
+        "rationale": "CORRETA. O papel central dos corticosteroides inalatórios é reversão da inflamação crônica, fármacos de manutenção, distintos dos beta-2 agonistas de curta ação, responsáveis pelo alívio imediato da crise aguda, o que esclarece a dúvida desse paciente."
       },
       {
         "letter": "B",
@@ -5761,7 +5763,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A teofilina deve substituir imediatamente o corticoide inalatório e o cromoglicato nesse paciente, por apresentar eficácia superior e maior segurança.",
-        "rationale": "Incorreta. O material não descreve a teofilina como substituta do corticoide e do cromoglicato; ao contrário, a reserva como adição a essas terapias quando insuficientes, dado seu perfil de risco mais elevado."
+        "rationale": "Incorreta. A teofilina não é substituta do corticoide e do cromoglicato; ao contrário, a reserva como adição a essas terapias quando insuficientes, dado seu perfil de risco mais elevado."
       },
       {
         "letter": "D",
@@ -5784,12 +5786,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O brometo de ipratrópio tem mecanismo anticolinérgico, distinto do beta-2 agonista, auxiliando no bronçõespasmo grave não responsivo, sem que se deva aumentar a dose do beta-2 agonista para compensar.",
-        "rationale": "CORRETA. O material descreve o brometo de ipratrópio como fármaco de mecanismo anticolinérgico, diferente do beta-2 agonista, indicado para auxiliar no bronçõespasmo grave não responsivo, orientando que a dose do beta-2 agonista não deve ser aumentada para compensar."
+        "rationale": "CORRETA. O brometo de ipratrópio é fármaco de mecanismo anticolinérgico, diferente do beta-2 agonista, indicado para auxiliar no bronçõespasmo grave não responsivo, orientando que a dose do beta-2 agonista não deve ser aumentada para compensar."
       },
       {
         "letter": "B",
         "text": "O brometo de ipratrópio tem o mesmo mecanismo do beta-2 agonista, atuando sobre os mesmos receptores adrenérgicos, o que tornaria a associação redundante nesse paciente.",
-        "rationale": "Incorreta. O material descreve o brometo de ipratrópio como fármaco de mecanismo diferente do beta-2 agonista, atuando por via anticolinérgica, o que não torna a associação redundante, mas complementar."
+        "rationale": "Incorreta. O brometo de ipratrópio é fármaco de mecanismo diferente do beta-2 agonista, atuando por via anticolinérgica, o que não torna a associação redundante, mas complementar."
       },
       {
         "letter": "C",
@@ -5799,7 +5801,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "O brometo de ipratrópio e indicado como fármaco de manutenção diária isolada nesse paciente, sem relação com o episódio agudo de bronçõespasmo grave descrito no caso.",
-        "rationale": "Incorreta. O material relaciona o brometo de ipratrópio especificamente ao auxílio no bronçõespasmo grave agudo não responsivo ao beta-2 agonista, e não como fármaco isolado de manutenção diária desvinculado do episódio agudo."
+        "rationale": "Incorreta. O brometo de ipratrópio especificamente relaciona-se ao auxílio no bronçõespasmo grave agudo não responsivo ao beta-2 agonista, e não como fármaco isolado de manutenção diária desvinculado do episódio agudo."
       }
     ],
     "correctLetter": "A",
@@ -5827,7 +5829,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Ipratrópio associado a montelucaste e ipratrópio associado a zafirlucaste são as únicas associações citadas, o que tornaria as apresentações desse serviço de emergência incompatíveis com o material.",
-        "rationale": "Incorreta. O material não cita essas associações do ipratrópio com antileucotrienos; as associações descritas são com fenoterol e salbutamol, compatíveis com as apresentações desse serviço."
+        "rationale": "Incorreta. Essas associações do ipratrópio com antileucotrienos não são citadas; as associações descritas são com fenoterol e salbutamol, compatíveis com as apresentações desse serviço."
       },
       {
         "letter": "D",
@@ -5836,7 +5838,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "O material cita as associações de brometo de ipratrópio com fenoterol e com salbutamol como formulações utilizadas no tratamento do bronçõespasmo."
+    "clinicalPointers": "As associações de brometo de ipratrópio com fenoterol e com salbutamol são formulações utilizadas no tratamento do bronçõespasmo."
   },
   {
     "id": 167,
@@ -5850,7 +5852,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Os antileucotrienos, como o montelucaste, são indicados na asma leve sem uso de glicocorticoide, com poucos efeitos adversos, mas não tem ação imediata, o que justifica o alerta do médico sobre não os usar isoladamente na crise aguda.",
-        "rationale": "CORRETA. O material descreve os antileucotrienos como opção para a asma leve sem uso de glicocorticoide, com poucos efeitos adversos, mas alerta que não tem ação imediata, não servindo para o controle agudo da crise, o que justifica o alerta do médico."
+        "rationale": "CORRETA. Os antileucotrienos são opção para a asma leve sem uso de glicocorticoide, com poucos efeitos adversos, mas alerta que não tem ação imediata, não servindo para o controle agudo da crise, o que justifica o alerta do médico."
       },
       {
         "letter": "B",
@@ -5893,7 +5895,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O omalizumabe atua bloqueando diretamente os receptores muscarínicos das vias aéreas, mecanismo semelhante ao do brometo de ipratrópio, sendo indicado independentemente dos níveis de IgE sérica.",
-        "rationale": "Incorreta. O material descreve o omalizumabe como anticorpo monoclonal direcionado contra a IgE, mecanismo distinto do bloqueio muscarínico atribuído ao brometo de ipratrópio, e condiciona sua indicação a IgE sérica elevada."
+        "rationale": "Incorreta. O omalizumabe é anticorpo monoclonal direcionado contra a IgE, mecanismo distinto do bloqueio muscarínico atribuído ao brometo de ipratrópio, e condiciona sua indicação a IgE sérica elevada."
       },
       {
         "letter": "D",
@@ -5959,7 +5961,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Os sinais clínicos de dispneia, sibilos e tosse noturna são exclusivos da asma extrínseca, o que tornaria o quadro do segundo paciente incompatível com o diagnóstico de asma.",
-        "rationale": "Incorreta. O material relaciona esses sinais clínicos a asma de forma geral, não os restringindo exclusivamente a forma extrínseca, o que sustenta a compatibilidade do quadro do segundo paciente com o diagnóstico de asma."
+        "rationale": "Incorreta. Esses sinais clínicos relacionam-se a asma de forma geral, não os restringindo exclusivamente a forma extrínseca, o que sustenta a compatibilidade do quadro do segundo paciente com o diagnóstico de asma."
       },
       {
         "letter": "D",
@@ -6025,7 +6027,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O corticosteroide inalatório atua exclusivamente sobre a musculatura lisa brônquica, sem qualquer efeito anti-inflamatório, o que explicaria a necessidade de associação com o beta-2 de longa ação.",
-        "rationale": "Incorreta. O material descreve o corticosteroide inalatório como responsável pela reversão da inflamação crônica, e não apenas por um efeito sobre a musculatura lisa brônquica, que é o mecanismo atribuído ao beta-2 agonista."
+        "rationale": "Incorreta. O corticosteroide inalatório é responsável pela reversão da inflamação crônica, e não apenas por um efeito sobre a musculatura lisa brônquica, que é o mecanismo atribuído ao beta-2 agonista."
       },
       {
         "letter": "D",
@@ -6096,7 +6098,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Para o primeiro paciente, os antileucotrienos são a escolha mais coerente pela eosinofilia observada, enquanto o corticosteroide inalatório seria mais indicado para o segundo paciente, invertendo as relações descritas.",
-        "rationale": "Incorreta. O material relaciona o corticosteroide inalatório a reversão da inflamação crônica, mais coerente com a eosinofilia do primeiro paciente, e os antileucotrienos especificamente a asma por AINEs, perfil do segundo paciente, e não o contrário, como proposto nesta alternativa."
+        "rationale": "Incorreta. O corticosteroide inalatório relaciona-se a reversão da inflamação crônica, mais coerente com a eosinofilia do primeiro paciente, e os antileucotrienos especificamente a asma por AINEs, perfil do segundo paciente, e não o contrário, como proposto nesta alternativa."
       }
     ],
     "correctLetter": "A",
@@ -6195,7 +6197,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "A menopausa aumenta a formação óssea; o PTH inibe osteoclastos; a calcitonina libera cálcio do osso, e a vitamina D reduz sua disponibilidade sistêmica.",
-        "rationale": "Incorreta. O material descreve a menopausa como fator de redução, e não aumento, da formação óssea; o PTH estimula, e não inibe, os osteoclastos; e a calcitonina inibe, e não promove, a liberação de cálcio do osso."
+        "rationale": "Incorreta. A menopausa é fator de redução, e não aumento, da formação óssea; o PTH estimula, e não inibe, os osteoclastos; e a calcitonina inibe, e não promove, a liberação de cálcio do osso."
       }
     ],
     "correctLetter": "A",
@@ -6213,7 +6215,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O alendronato estimula osteoblastos; a azia decorre de absorção sistêmica, devendo ser tomado com leite e seguido de repouso para melhorar a tolerabilidade.",
-        "rationale": "Incorreta. O material descreve o mecanismo do alendronato como ligação a hidroxiapatita com redução da atividade osteoclástica, e não estímulo direto aos osteoblastos, além de orientar jejum com água, e não leite, e posição ereta, e não repouso, após a administração."
+        "rationale": "Incorreta. O mecanismo do alendronato é ligação a hidroxiapatita com redução da atividade osteoclástica, e não estímulo direto aos osteoblastos, além de orientar jejum com água, e não leite, e posição ereta, e não repouso, após a administração."
       },
       {
         "letter": "B",
@@ -6223,7 +6225,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O alendronato bloqueia receptores de PTH; pode causar ulceração gástrica, devendo ser administrado após a refeição para diminuir o contato com a mucosa.",
-        "rationale": "Incorreta. O material não descreve o alendronato como bloqueador de receptores de PTH; seu mecanismo e a ligação a hidroxiapatita, e a orientação de administração e em jejum, antes das refeições, e não após elas."
+        "rationale": "Incorreta. O alendronato não é bloqueador de receptores de PTH; seu mecanismo e a ligação a hidroxiapatita, e a orientação de administração e em jejum, antes das refeições, e não após elas."
       },
       {
         "letter": "D",
@@ -6279,7 +6281,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A porção mineral, principal responsável pela rigidez, corresponde a maior parte da massa óssea; a porção orgânica, formada por colágeno e proteoglicanos, confere elasticidade ao tecido.",
-        "rationale": "CORRETA. O material descreve o osso como composto por uma porção mineral majoritária, responsável pela rigidez, e uma porção orgânica, com colágeno e proteoglicanos, responsável pela elasticidade do tecido."
+        "rationale": "CORRETA. O osso é composto por uma porção mineral majoritária, responsável pela rigidez, e uma porção orgânica, com colágeno e proteoglicanos, responsável pela elasticidade do tecido."
       },
       {
         "letter": "B",
@@ -6294,7 +6296,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "O osso e composto majoritariamente por água, cabendo as porções mineral e orgânica apenas a função de reposição tecidual após fraturas.",
-        "rationale": "Incorreta. O material descreve a água como componente minoritário do osso, com a porção mineral correspondendo a maior parte da massa óssea, e não a água."
+        "rationale": "Incorreta. A água é componente minoritário do osso, com a porção mineral correspondendo a maior parte da massa óssea, e não a água."
       }
     ],
     "correctLetter": "A",
@@ -6355,12 +6357,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Os bisfosfonatos estimulam diretamente os osteoclastos para acelerar a remodelação óssea, compensando a deficiência de osteoblastos observada na osteoporose.",
-        "rationale": "Incorreta. O material descreve os bisfosfonatos como inibidores, e não estimuladores, da atividade osteoclástica, o que reduz, e não acelera, a reabsorção óssea excessiva característica da osteoporose."
+        "rationale": "Incorreta. Os bisfosfonatos são inibidores, e não estimuladores, da atividade osteoclástica, o que reduz, e não acelera, a reabsorção óssea excessiva característica da osteoporose."
       },
       {
         "letter": "D",
         "text": "A homeostasia óssea normal depende exclusivamente dos osteoblastos, sem qualquer participação dos osteoclastos, e os bisfosfonatos atuariam potêncializando essa via única de formação óssea.",
-        "rationale": "Incorreta. O material descreve a homeostasia óssea como dependente do equilíbrio entre osteoblastos e osteoclastos, e não exclusivamente dos osteoblastos, e os bisfosfonatos atuam inibindo os osteoclastos, e não potêncializando a formação."
+        "rationale": "Incorreta. A homeostasia óssea é dependente do equilíbrio entre osteoblastos e osteoclastos, e não exclusivamente dos osteoblastos, e os bisfosfonatos atuam inibindo os osteoclastos, e não potêncializando a formação."
       }
     ],
     "correctLetter": "A",
@@ -6378,7 +6380,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A deficiência de estrogênio na menopausa favorece a atividade osteoclástica e reduz a formação osteoblástica, o que justifica a reposição estrogênica de curto prazo como estratégia para repor esse estímulo osteoblástico perdido, com riscos que limitam seu uso prolongado.",
-        "rationale": "CORRETA. O material relaciona a deficiência de estrogênio na menopausa ao favorecimento da atividade osteoclástica e a redução da formação osteoblástica, o que fundamenta o uso do estrogênio como reposição hormonal de curto prazo para estimular a ação osteoblástica, com riscos que limitam seu uso prolongado, como aumento de trombose e câncer de mama."
+        "rationale": "CORRETA. A deficiência de estrogênio na menopausa relaciona-se ao favorecimento da atividade osteoclástica e a redução da formação osteoblástica, o que fundamenta o uso do estrogênio como reposição hormonal de curto prazo para estimular a ação osteoblástica, com riscos que limitam seu uso prolongado, como aumento de trombose e câncer de mama."
       },
       {
         "letter": "B",
@@ -6459,7 +6461,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Fenobarbital e fenitoína não apresentam qualquer relação com o metabolismo ósseo, devendo a redução da densidade óssea desse paciente ser atribuída exclusivamente a outra causa não mencionada.",
-        "rationale": "Incorreta. O material relaciona diretamente esses anticonvulsivantes ao comprometimento do metabolismo da vitamina D, o que sustenta, e não afasta, sua relação com a redução da densidade óssea observada nesse paciente."
+        "rationale": "Incorreta. Esses anticonvulsivantes relacionam-se diretamente ao comprometimento do metabolismo da vitamina D, o que sustenta, e não afasta, sua relação com a redução da densidade óssea observada nesse paciente."
       }
     ],
     "correctLetter": "A",
@@ -6477,7 +6479,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A levotiroxina em excesso inibe processos de formação óssea, sendo causa secundária de osteoporose, com atenção especial recomendada em mulheres com hipotireoidismo na menopausa, momento em que a deficiência de estrogênio já favorece isoladamente a perda óssea.",
-        "rationale": "CORRETA. O material cita explicitamente a levotiroxina como causa secundária de osteoporose por inibir processos de formação óssea, com atenção especial recomendada para mulheres com hipotireoidismo na menopausa, situação em que esse efeito se soma ao da deficiência estrogênica já discutida para essa fase."
+        "rationale": "CORRETA. A levotiroxina é explicitamente causa secundária de osteoporose por inibir processos de formação óssea, com atenção especial recomendada para mulheres com hipotireoidismo na menopausa, situação em que esse efeito se soma ao da deficiência estrogênica já discutida para essa fase."
       },
       {
         "letter": "B",
@@ -6515,7 +6517,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "O raloxifeno bloqueia totalmente todos os receptores de estrogênio do corpo, incluindo os ósseos, sem qualquer efeito antirreabsortivo, o que explicaria seu perfil de segurança mamária.",
-        "rationale": "Incorreta. O material descreve o raloxifeno como utilizado no tratamento preventivo da osteoporose, o que pressupõe efeito agonista no osso, e não bloqueio total de todos os receptores de estrogênio do corpo."
+        "rationale": "Incorreta. O raloxifeno é utilizado no tratamento preventivo da osteoporose, o que pressupõe efeito agonista no osso, e não bloqueio total de todos os receptores de estrogênio do corpo."
       },
       {
         "letter": "C",
@@ -6614,7 +6616,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Apenas o histórico familiar de fraturas e reconhecido como fator de risco entre os elementos descritos, sendo os demais achados irrelevantes para o rastreamento preventivo dessa paciente.",
-        "rationale": "Incorreta. O material reconhece todos os elementos descritos no caso como fatores de risco, e não apenas o histórico familiar isoladamente, o que sustenta a relevância conjunta desses achados para o rastreamento."
+        "rationale": "Incorreta. Todos os elementos descritos no caso são fatores de risco, e não apenas o histórico familiar isoladamente, o que sustenta a relevância conjunta desses achados para o rastreamento."
       },
       {
         "letter": "C",
@@ -6652,7 +6654,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Ambos os objetivos, primário e secundário, se aplicam exclusivamente a pacientes já diagnosticadas com osteoporose, o que tornaria a conduta voltada a adolescente saudável incoerente com esses conceitos.",
-        "rationale": "Incorreta. O material relaciona o objetivo primário especificamente a prevenção em fase de desenvolvimento ósseo, aplicável a pessoas ainda sem diagnóstico de osteoporose, como a adolescente saudável descrita no caso."
+        "rationale": "Incorreta. O objetivo primário especificamente relaciona-se a prevenção em fase de desenvolvimento ósseo, aplicável a pessoas ainda sem diagnóstico de osteoporose, como a adolescente saudável descrita no caso."
       },
       {
         "letter": "D",
@@ -6685,7 +6687,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Os vegetais citados (espinafre, agrião, brócolis, couve) não tem qualquer relação com o aporte de cálcio, sendo essa orientação nutricional incoerente com as recomendações descritas.",
-        "rationale": "Incorreta. O material cita exatamente esses vegetais como fontes relevantes de cálcio na dieta, o que sustenta, e não contrária, a coerência dessa orientação nutricional com as recomendações do material."
+        "rationale": "Incorreta. Esses vegetais são exatamente fontes relevantes de cálcio na dieta, o que sustenta, e não contrária, a coerência dessa orientação nutricional com as recomendações do material."
       },
       {
         "letter": "D",
@@ -6713,17 +6715,17 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "O exercício físico tem efeito exclusivamente estético nesse paciente, sem qualquer relação com a redução de quedas ou fraturas, sendo dispensável diante da farmacoterapia já em curso.",
-        "rationale": "Incorreta. O material relaciona diretamente o exercício físico a redução de quedas e fraturas, por meio de múltiplos mecanismos, e não apenas a um efeito estético dispensável diante da farmacoterapia."
+        "rationale": "Incorreta. O exercício físico relaciona-se diretamente a redução de quedas e fraturas, por meio de múltiplos mecanismos, e não apenas a um efeito estético dispensável diante da farmacoterapia."
       },
       {
         "letter": "C",
         "text": "O exercício físico deve ser evitado em pacientes idosos com osteoporose em tratamento farmacológico, pelo risco de fraturas durante a atividade.",
-        "rationale": "Incorreta. O material recomenda o exercício físico como parte do manejo não farmacológico da osteoporose, e não o contraindica pelo risco de fraturas, mesmo em pacientes idosos já em farmacoterapia."
+        "rationale": "Incorreta. O exercício físico é parte do manejo não farmacológico da osteoporose, e não o contraindica pelo risco de fraturas, mesmo em pacientes idosos já em farmacoterapia."
       },
       {
         "letter": "D",
         "text": "O exercício físico melhora apenas a coordenação motora desse paciente, sem qualquer relação com a força muscular ou a deposição óssea.",
-        "rationale": "Incorreta. O material relaciona o exercício físico a múltiplos benefícios, incluindo força muscular e deposição óssea, além da coordenação, e não apenas a esse último aspecto isoladamente."
+        "rationale": "Incorreta. O exercício físico relaciona-se a múltiplos benefícios, incluindo força muscular e deposição óssea, além da coordenação, e não apenas a esse último aspecto isoladamente."
       }
     ],
     "correctLetter": "A",
@@ -6741,22 +6743,22 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A reposição de cálcio contribui para prevenir o hiperparatireoidismo secundário, que poderia se desenvolver como resposta compensatória a níveis insuficientes de cálcio circulante, estimulando excessivamente a liberação de PTH.",
-        "rationale": "CORRETA. O material relaciona a reposição de cálcio a prevenção do hiperparatireoidismo secundário, que pode se desenvolver como resposta compensatória a níveis insuficientes de cálcio circulante, evitando a estimulação excessiva da liberação de PTH."
+        "rationale": "CORRETA. A reposição de cálcio relaciona-se a prevenção do hiperparatireoidismo secundário, que pode se desenvolver como resposta compensatória a níveis insuficientes de cálcio circulante, evitando a estimulação excessiva da liberação de PTH."
       },
       {
         "letter": "B",
         "text": "A reposição de cálcio estimula diretamente a atividade dos osteoclastos, aumentando a reabsorção óssea, o que seria o objetivo específico relacionado ao PTH mencionado pelo médico.",
-        "rationale": "Incorreta. O material não descreve a reposição de cálcio como estimuladora da atividade osteoclástica; seu papel está relacionado a mineralização óssea e a prevenção do hiperparatireoidismo secundário, e não ao aumento da reabsorção óssea."
+        "rationale": "Incorreta. A reposição de cálcio não é estimuladora da atividade osteoclástica; seu papel está relacionado a mineralização óssea e a prevenção do hiperparatireoidismo secundário, e não ao aumento da reabsorção óssea."
       },
       {
         "letter": "C",
         "text": "A reposição de cálcio substitui completamente a necessidade de qualquer outro fármaco no tratamento da osteoporose desse paciente, dispensando qualquer preocupação com o PTH.",
-        "rationale": "Incorreta. O material não descreve a reposição de cálcio isolada como suficiente para a prevenção de fraturas, sendo necessária associação com outras medidas quando indicado, além de seu papel específico na prevenção do hiperparatireoidismo secundário."
+        "rationale": "Incorreta. A reposição de cálcio isolada não é suficiente para a prevenção de fraturas, sendo necessária associação com outras medidas quando indicado, além de seu papel específico na prevenção do hiperparatireoidismo secundário."
       },
       {
         "letter": "D",
         "text": "A reposição de cálcio reduz diretamente a produção de paratormônio pelas paratireoides, independentemente dos níveis de cálcio circulante, mecanismo distinto da prevenção do hiperparatireoidismo secundário.",
-        "rationale": "Incorreta. O material relaciona o efeito da reposição de cálcio a prevenção do hiperparatireoidismo secundário por meio da manutenção de níveis adequados de cálcio circulante, e não por uma ação direta e independente sobre a produção de paratormônio."
+        "rationale": "Incorreta. O efeito da reposição de cálcio relaciona-se a prevenção do hiperparatireoidismo secundário por meio da manutenção de níveis adequados de cálcio circulante, e não por uma ação direta e independente sobre a produção de paratormônio."
       }
     ],
     "correctLetter": "A",
@@ -6789,7 +6791,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "A reposição de cálcio não tem qualquer papel no tratamento da osteoporose estabelecida, devendo ser totalmente descartada em favor exclusivo de fármacos anti-reabsortivos.",
-        "rationale": "Incorreta. O material inclui a reposição de cálcio como parte do tratamento, apesar de seu efeito isolado ser mínimo na prevenção de fraturas, exigindo associação, e não substituição total, por outras medidas."
+        "rationale": "Incorreta. A reposição de cálcio é parte do tratamento, apesar de seu efeito isolado ser mínimo na prevenção de fraturas, exigindo associação, e não substituição total, por outras medidas."
       }
     ],
     "correctLetter": "A",
@@ -6817,12 +6819,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Nenhuma das duas fraturas descritas nos casos pode ser classificada como osteoporótica, já que a osteoporose nunca cursa com fraturas vertebrais assintomáticas ou fraturas não vertebrais após quedas simples.",
-        "rationale": "Incorreta. O material reconhece tanto as fraturas vertebrais assintomáticas quanto as fraturas não vertebrais após movimentos simples ou quedas como apresentações típicas da osteoporose, compatíveis com os dois casos descritos."
+        "rationale": "Incorreta. Tanto as fraturas vertebrais assintomáticas quanto as fraturas não vertebrais após movimentos simples ou quedas são apresentações típicas da osteoporose, compatíveis com os dois casos descritos."
       },
       {
         "letter": "D",
         "text": "As fraturas não vertebrais na osteoporose ocorrem exclusivamente após traumas de alta energia, como acidentes automobilísticos, o que tornaria o caso do segundo paciente, após queda simples em casa, incompatível com o material.",
-        "rationale": "Incorreta. O material relaciona as fraturas não vertebrais osteoporóticas a movimentos simples ou quedas de baixa energia, e não exclusivamente a traumas de alta energia, o que sustenta, e não torna incompatível, o caso do segundo paciente."
+        "rationale": "Incorreta. As fraturas não vertebrais osteoporóticas relacionam-se a movimentos simples ou quedas de baixa energia, e não exclusivamente a traumas de alta energia, o que sustenta, e não torna incompatível, o caso do segundo paciente."
       }
     ],
     "correctLetter": "A",
@@ -6845,7 +6847,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A densitometria óssea só deve ser solicitada após a ocorrência de uma primeira fratura, tornando o rastreamento de rotina dessa paciente assintomática desnecessário e sem respaldo.",
-        "rationale": "Incorreta. O material cita a densitometria como método de diagnóstico e acompanhamento útil mesmo antes de fraturas, coerente com a natureza silenciosa da doença, o que sustenta, e não torna desnecessário, o rastreamento de rotina."
+        "rationale": "Incorreta. A densitometria é método de diagnóstico e acompanhamento útil mesmo antes de fraturas, coerente com a natureza silenciosa da doença, o que sustenta, e não torna desnecessário, o rastreamento de rotina."
       },
       {
         "letter": "C",
@@ -6855,7 +6857,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "A densitometria óssea por DEXA não é citada como método relevante para o diagnóstico da osteoporose, sendo o diagnóstico dependente exclusivamente da presença de sintomas clínicos evidentes.",
-        "rationale": "Incorreta. O material cita explicitamente a densitometria óssea (DEXA) como método de referência para diagnóstico e acompanhamento da osteoporose, e não condiciona o diagnóstico exclusivamente a presença de sintomas clínicos evidentes."
+        "rationale": "Incorreta. A densitometria óssea (DEXA) é explicitamente método de referência para diagnóstico e acompanhamento da osteoporose, e não condiciona o diagnóstico exclusivamente a presença de sintomas clínicos evidentes."
       }
     ],
     "correctLetter": "A",
@@ -6888,7 +6890,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Aumentar a dose do bisfosfonato oral para compensar eventuais erros na orientação postural dessa paciente.",
-        "rationale": "Incorreta. O material não propõe o aumento de dose como forma de compensar erros na técnica de administração; essa conduta, aliás, aumentaria o risco de irritação esofágica, e não o reduziria."
+        "rationale": "Incorreta. O aumento de dose não é forma de compensar erros na técnica de administração; essa conduta, aliás, aumentaria o risco de irritação esofágica, e não o reduziria."
       }
     ],
     "correctLetter": "A",
@@ -6906,22 +6908,22 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Calcitonina intranasal, agente que inibe a atividade osteoclástica sem a via oral exigida pelos bisfosfonatos, representando alternativa anti-reabsortiva compatível com o histórico de esofagite erosiva grave dessa paciente.",
-        "rationale": "CORRETA. O material descreve a calcitonina como reguladora do cálcio que inibe a atividade dos osteoclastos, administrada por via intranasal, o que a torna alternativa anti-reabsortiva sem o risco de irritação esofágica associado aos bisfosfonatos orais, compatível com o histórico dessa paciente."
+        "rationale": "CORRETA. A calcitonina é reguladora do cálcio que inibe a atividade dos osteoclastos, administrada por via intranasal, o que a torna alternativa anti-reabsortiva sem o risco de irritação esofágica associado aos bisfosfonatos orais, compatível com o histórico dessa paciente."
       },
       {
         "letter": "B",
         "text": "Repetir o bisfosfonato oral em dose reduzida, estratégia descrita como suficiente para evitar a irritação esofágica em pacientes com esofagite erosiva grave prévia.",
-        "rationale": "Incorreta. O material não descreve a redução de dose do bisfosfonato oral como estratégia suficiente para evitar irritação esofágica em pacientes com esofagite erosiva grave; a via oral permanece de risco nesse perfil clínico, independentemente da dose."
+        "rationale": "Incorreta. A redução de dose do bisfosfonato oral não é estratégia suficiente para evitar irritação esofágica em pacientes com esofagite erosiva grave; a via oral permanece de risco nesse perfil clínico, independentemente da dose."
       },
       {
         "letter": "C",
         "text": "Suplementação isolada de vitamina D em altas doses, única alternativa descrita para pacientes com contraindicação a bisfosfonatos orais por esofagite erosiva grave.",
-        "rationale": "Incorreta. O material não descreve a suplementação isolada de vitamina D em altas doses como alternativa específica para essa contraindicação; a calcitonina intranasal e a opção anti-reabsortiva mais coerente descrita para esse cenário."
+        "rationale": "Incorreta. A suplementação isolada de vitamina D em altas doses não é alternativa específica para essa contraindicação; a calcitonina intranasal e a opção anti-reabsortiva mais coerente descrita para esse cenário."
       },
       {
         "letter": "D",
         "text": "Bisfosfonato injetável em dose plena mensal, única alternativa citada para pacientes com contraindicação a via oral por esofagite erosiva grave.",
-        "rationale": "Incorreta. O material não detalha especificamente um bisfosfonato injetável como alternativa nesse contexto; a opção anti-reabsortiva discutida para pacientes com contraindicação a via oral e a calcitonina intranasal."
+        "rationale": "Incorreta. Um bisfosfonato injetável não é especificamente alternativa nesse contexto; a opção anti-reabsortiva discutida para pacientes com contraindicação a via oral e a calcitonina intranasal."
       }
     ],
     "correctLetter": "A",
@@ -6954,7 +6956,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "A fratura vertebral após trauma de baixa intensidade nessa paciente não tem qualquer relação com o uso crônico de corticosteroide, devendo ser investigada exclusivamente como evento traumático independente.",
-        "rationale": "Incorreta. O material relaciona diretamente o uso crônico de corticosteroides ao comprometimento ósseo e ao risco aumentado de fraturas, o que sustenta, e não afasta, a relação entre a fratura vertebral e a corticoterapia crônica dessa paciente."
+        "rationale": "Incorreta. O uso crônico de corticosteroides relaciona-se diretamente ao comprometimento ósseo e ao risco aumentado de fraturas, o que sustenta, e não afasta, a relação entre a fratura vertebral e a corticoterapia crônica dessa paciente."
       }
     ],
     "correctLetter": "A",
@@ -6972,7 +6974,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A subscrição, componente que define a quantidade total do medicamento a ser dispensada, insuficiente nesse caso para cobrir o período até o retorno agendado.",
-        "rationale": "CORRETA. O material define a subscrição como o componente responsável pela quantidade total do medicamento a ser dispensada, exatamente o elemento insuficiente nesse caso para cobrir o tratamento até o retorno."
+        "rationale": "CORRETA. A subscrição é o componente responsável pela quantidade total do medicamento a ser dispensada, exatamente o elemento insuficiente nesse caso para cobrir o tratamento até o retorno."
       },
       {
         "letter": "B",
@@ -7005,7 +7007,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Apoiar decisões terapêuticas em estudos clínicos metodológicamente bem planejados, com grupo controle, grupo de intervenção e randomização, elementos que fundamentam a Medicina Baseada em Evidências descrita.",
-        "rationale": "CORRETA. O material relaciona a Medicina Baseada em Evidências a avaliação de ensaios clínicos experimentais metodológicamente bem planejados, com grupo controle, grupo de intervenção e randomização, exatamente a diferença entre os dois esquemas terapêuticos comparados nesse caso."
+        "rationale": "CORRETA. A Medicina Baseada em Evidências relaciona-se a avaliação de ensaios clínicos experimentais metodológicamente bem planejados, com grupo controle, grupo de intervenção e randomização, exatamente a diferença entre os dois esquemas terapêuticos comparados nesse caso."
       },
       {
         "letter": "B",
@@ -7043,7 +7045,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A situação desse paciente não tem qualquer relação com as causas de fracasso terapêutico descritas, devendo ser investigada exclusivamente como evolução natural da doença de base.",
-        "rationale": "Incorreta. O material relaciona diretamente dificuldades de horário e interrupção não orientada a baixa adesão terapêutica, uma das causas clássicas de fracasso descritas, e não a atribui exclusivamente a evolução natural da doença."
+        "rationale": "Incorreta. Dificuldades de horário e interrupção não orientada relacionam-se diretamente a baixa adesão terapêutica, uma das causas clássicas de fracasso descritas, e não a atribui exclusivamente a evolução natural da doença."
       },
       {
         "letter": "C",
@@ -7053,7 +7055,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "A interrupção de medicamentos sem orientação médica e sempre benéfica nesse paciente idoso polimedicado, por reduzir o risco de interações medicamentosas.",
-        "rationale": "Incorreta. O material não trata a interrupção não orientada de medicamentos como benefício; ao contrário, a relaciona a baixa adesão e possível fracasso terapêutico, exigindo orientação adequada, e não a interrupção espontânea."
+        "rationale": "Incorreta. A interrupção não orientada de medicamentos não é benefício; ao contrário, a relaciona a baixa adesão e possível fracasso terapêutico, exigindo orientação adequada, e não a interrupção espontânea."
       }
     ],
     "correctLetter": "A",
@@ -7104,7 +7106,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Essa etapa corresponde ao segundo passo da prescrição racional, especificar o objetivo terapêutico, que deve ser definido antes da escolha do fármaco específico a ser prescrito.",
-        "rationale": "CORRETA. O material descreve o segundo passo da prescrição racional como a especificação do objetivo terapêutico, etapa que antecede a escolha do fármaco específico, exatamente a sequência seguida pelo médico nesse caso."
+        "rationale": "CORRETA. O segundo passo da prescrição racional é a especificação do objetivo terapêutico, etapa que antecede a escolha do fármaco específico, exatamente a sequência seguida pelo médico nesse caso."
       },
       {
         "letter": "B",
@@ -7137,7 +7139,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A adscrição, componente da receita responsável pelas instruções de uso e recomendações complementares ao paciente, como a orientação de tomar o fármaco após as refeições.",
-        "rationale": "CORRETA. O material define a adscrição como o componente que traz o tratamento não farmacológico e as instruções de melhor forma de uso ao paciente, exatamente a natureza da orientação sobre tomar o fármaco após as refeições."
+        "rationale": "CORRETA. A adscrição é o componente que traz o tratamento não farmacológico e as instruções de melhor forma de uso ao paciente, exatamente a natureza da orientação sobre tomar o fármaco após as refeições."
       },
       {
         "letter": "B",
@@ -7170,12 +7172,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Essa decisão corresponde ao sexto passo da prescrição racional, monitorizar (e interromper) o tratamento, que inclui a possibilidade de suspensão da terapia diante de resposta inadequada.",
-        "rationale": "CORRETA. O material descreve o sexto e último passo da prescrição racional como a monitorização do tratamento, incluindo a possibilidade de sua interrupção, exatamente a decisão tomada pelo médico após reavaliar a resposta inadequada do paciente."
+        "rationale": "CORRETA. O sexto e último passo da prescrição racional é a monitorização do tratamento, incluindo a possibilidade de sua interrupção, exatamente a decisão tomada pelo médico após reavaliar a resposta inadequada do paciente."
       },
       {
         "letter": "B",
         "text": "Essa decisão corresponde ao primeiro passo da prescrição racional, definir o problema do paciente, já que a interrupção do fármaco reinicia o processo desde a identificação do problema.",
-        "rationale": "Incorreta. O material posiciona a monitorização e eventual interrupção do tratamento como sexto e último passo, distinto da definição inicial do problema, primeiro passo, ainda que possa levar a uma nova avaliação posterior."
+        "rationale": "Incorreta. A monitorização e eventual interrupção do tratamento são sexto e último passo, distinto da definição inicial do problema, primeiro passo, ainda que possa levar a uma nova avaliação posterior."
       },
       {
         "letter": "C",
@@ -7307,7 +7309,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Excesso de vitamina D e cálcio, levando a uma redução patológica da atividade dos osteoclastos, mecanismo central da osteoporose relacionada à idade.",
-        "rationale": "Incorreta. O material não descreve excesso de vitamina D e cálcio como mecanismo da osteoporose relacionada à idade; ao contrário, descreve deficiência desses elementos, associada à formação osteoblástica reduzida."
+        "rationale": "Incorreta. Excesso de vitamina D e cálcio não são mecanismo da osteoporose relacionada à idade; ao contrário, descreve deficiência desses elementos, associada à formação osteoblástica reduzida."
       },
       {
         "letter": "C",
@@ -7317,7 +7319,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Mecanismo idêntico ao da osteoporose secundária a corticoides, sem qualquer particularidade relacionada ao envelhecimento.",
-        "rationale": "Incorreta. O material descreve a osteoporose relacionada à idade como categoria própria, com mecanismo específico ligado à deficiência hormonal e nutricional do envelhecimento, distinta da osteoporose secundária a corticoides."
+        "rationale": "Incorreta. A osteoporose relacionada à idade é categoria própria, com mecanismo específico ligado à deficiência hormonal e nutricional do envelhecimento, distinta da osteoporose secundária a corticoides."
       }
     ],
     "correctLetter": "A",
@@ -7340,7 +7342,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Osteoporose pós-menopausa, única categoria descrita relacionada ao uso de medicamentos como a heparina, independentemente do sexo ou da idade da paciente.",
-        "rationale": "Incorreta. O material relaciona a osteoporose pós-menopausa especificamente à deficiência de estrogênio, e não ao uso de medicamentos como a heparina, que se enquadra na categoria secundária."
+        "rationale": "Incorreta. A osteoporose pós-menopausa especificamente relaciona-se à deficiência de estrogênio, e não ao uso de medicamentos como a heparina, que se enquadra na categoria secundária."
       },
       {
         "letter": "C",
@@ -7378,12 +7380,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Esses sinais clínicos só podem ser atribuídos à osteoporose após a confirmação de uma fratura vertebral evidente, sendo insuficientes isoladamente para essa suspeita clínica.",
-        "rationale": "Incorreta. O material descreve esses sinais como parte do quadro clínico da osteoporose mesmo antes de uma fratura evidente, o que sustenta a suspeita clínica nesse caso sem exigir confirmação prévia por fratura."
+        "rationale": "Incorreta. Esses sinais são parte do quadro clínico da osteoporose mesmo antes de uma fratura evidente, o que sustenta a suspeita clínica nesse caso sem exigir confirmação prévia por fratura."
       },
       {
         "letter": "D",
         "text": "A postura encurvada é sinal exclusivo de escoliose idiopática, sem qualquer relação com a osteoporose descrita, devendo essa paciente ser investigada apenas para essa outra condição.",
-        "rationale": "Incorreta. O material relaciona a postura encurvada e o arredondamento dos ombros aos sinais clínicos da osteoporose, e não os restringe exclusivamente à escoliose idiopática."
+        "rationale": "Incorreta. A postura encurvada e o arredondamento dos ombros relacionam-se aos sinais clínicos da osteoporose, e não os restringe exclusivamente à escoliose idiopática."
       }
     ],
     "correctLetter": "A",
@@ -7406,7 +7408,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "O acompanhamento da osteoporose depende exclusivamente de exames laboratoriais mensais, sem qualquer necessidade de avaliação clínica de sintomas gastrointestinais ou dor óssea.",
-        "rationale": "Incorreta. O material não recomenda uma rotina laboratorial mensal isolada como método padrão de acompanhamento; a avaliação clínica de sintomas gastrointestinais e dor óssea integra o seguimento descrito, e não é dispensável."
+        "rationale": "Incorreta. Uma rotina laboratorial mensal isolada não é método padrão de acompanhamento; a avaliação clínica de sintomas gastrointestinais e dor óssea integra o seguimento descrito, e não é dispensável."
       },
       {
         "letter": "C",
@@ -7434,22 +7436,22 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Calcitonina, fármaco que inibe a atividade dos osteoclastos sem o risco de irritação esofágica ou ulceração associado aos bisfosfonatos orais, representando alternativa anti-reabsortiva compatível com o histórico gástrico desse paciente.",
-        "rationale": "CORRETA. O material descreve a calcitonina como reguladora do cálcio que inibe a atividade dos osteoclastos, constituindo alternativa anti-reabsortiva sem o risco de irritação esofágica e gastrointestinal atribuído aos bisfosfonatos, coerente com o histórico de úlcera péptica desse paciente."
+        "rationale": "CORRETA. A calcitonina é reguladora do cálcio que inibe a atividade dos osteoclastos, constituindo alternativa anti-reabsortiva sem o risco de irritação esofágica e gastrointestinal atribuído aos bisfosfonatos, coerente com o histórico de úlcera péptica desse paciente."
       },
       {
         "letter": "B",
         "text": "Bisfosfonato oral em dose reduzida, estratégia que o material descreve como suficiente para eliminar o risco gastrointestinal em pacientes com histórico de úlcera péptica prévia.",
-        "rationale": "Incorreta. O material não descreve a redução de dose do bisfosfonato oral como estratégia suficiente para eliminar o risco gastrointestinal; o histórico de úlcera péptica mantém a preocupação relevante independentemente da dose utilizada."
+        "rationale": "Incorreta. A redução de dose do bisfosfonato oral não é estratégia suficiente para eliminar o risco gastrointestinal; o histórico de úlcera péptica mantém a preocupação relevante independentemente da dose utilizada."
       },
       {
         "letter": "C",
         "text": "Suplementação isolada de vitamina D em altas doses, única alternativa descrita para pacientes com histórico de úlcera péptica que impede o uso de bisfosfonatos orais.",
-        "rationale": "Incorreta. O material não descreve a suplementação isolada de vitamina D em altas doses como alternativa anti-reabsortiva específica para esse contexto; a calcitonina é a opção mais coerente descrita para esse cenário."
+        "rationale": "Incorreta. A suplementação isolada de vitamina D em altas doses não é alternativa anti-reabsortiva específica para esse contexto; a calcitonina é a opção mais coerente descrita para esse cenário."
       },
       {
         "letter": "D",
         "text": "Repositores de cálcio isolados, sem qualquer fármaco anti-reabsortivo associado, estratégia que o material descreve como suficiente para o tratamento desse paciente com histórico de úlcera péptica.",
-        "rationale": "Incorreta. O material descreve a reposição isolada de cálcio como de efeito mínimo na prevenção de fraturas, não sendo suficiente isoladamente, mesmo em pacientes com contraindicação relativa aos bisfosfonatos orais."
+        "rationale": "Incorreta. A reposição isolada de cálcio é de efeito mínimo na prevenção de fraturas, não sendo suficiente isoladamente, mesmo em pacientes com contraindicação relativa aos bisfosfonatos orais."
       }
     ],
     "correctLetter": "A",
@@ -7477,12 +7479,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A persistência do efeito decorre da formação de metabólitos ativos no fígado, que continuam circulando por meses após a suspensão do bisfosfonato.",
-        "rationale": "Incorreta. O material não descreve os bisfosfonatos como dependentes de metabolização hepática para formar metabólitos ativos; sua ação decorre da ligação direta à hidroxiapatita óssea, e não de metabólitos hepáticos circulantes."
+        "rationale": "Incorreta. Os bisfosfonatos não são dependentes de metabolização hepática para formar metabólitos ativos; sua ação decorre da ligação direta à hidroxiapatita óssea, e não de metabólitos hepáticos circulantes."
       },
       {
         "letter": "D",
         "text": "Os bisfosfonatos atravessam facilmente as membranas celulares por transporte passivo, o que explicaria sua persistência prolongada no organismo após a suspensão do tratamento.",
-        "rationale": "Incorreta. O material não descreve esse mecanismo de transporte passivo como determinante da longa permanência dos bisfosfonatos; a explicação correta é a incorporação à hidroxiapatita da matriz óssea."
+        "rationale": "Incorreta. Esse mecanismo de transporte passivo não é determinante da longa permanência dos bisfosfonatos; a explicação correta é a incorporação à hidroxiapatita da matriz óssea."
       }
     ],
     "correctLetter": "A",
@@ -7505,7 +7507,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Todos os fatores de risco citados pela paciente são igualmente modificáveis por mudanças de hábito, incluindo a raça branca e o histórico familiar de fraturas.",
-        "rationale": "Incorreta. O material não descreve raça branca ou histórico familiar como fatores modificáveis por mudança de hábito; esses são características intrínsecas da paciente, diferentemente do sedentarismo, do tabagismo e da ingestão de cálcio."
+        "rationale": "Incorreta. Raça branca ou histórico familiar não são fatores modificáveis por mudança de hábito; esses são características intrínsecas da paciente, diferentemente do sedentarismo, do tabagismo e da ingestão de cálcio."
       },
       {
         "letter": "C",
@@ -7515,7 +7517,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Apenas o histórico familiar de fraturas é reconhecido como fator de risco relevante, sendo os demais elementos citados pela paciente irrelevantes para a avaliação preventiva da osteoporose.",
-        "rationale": "Incorreta. O material reconhece todos os elementos citados pela paciente como fatores de risco relevantes para a osteoporose, e não apenas o histórico familiar isoladamente."
+        "rationale": "Incorreta. Todos os elementos citados pela paciente são fatores de risco relevantes para a osteoporose, e não apenas o histórico familiar isoladamente."
       }
     ],
     "correctLetter": "A",
@@ -7538,7 +7540,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A fenitoína estimula diretamente a atividade osteoclástica, sem qualquer relação com o metabolismo da vitamina D, o que tornaria a suplementação dessa vitamina uma conduta sem fundamento nesse paciente.",
-        "rationale": "Incorreta. O material atribui o efeito da fenitoína ao comprometimento do metabolismo da vitamina D, e não a um estímulo direto e isolado da atividade osteoclástica, o que sustenta, e não inválida, a suplementação direcionada dessa vitamina."
+        "rationale": "Incorreta. O efeito da fenitoína é atribuído ao comprometimento do metabolismo da vitamina D, e não a um estímulo direto e isolado da atividade osteoclástica, o que sustenta, e não inválida, a suplementação direcionada dessa vitamina."
       },
       {
         "letter": "C",
@@ -7770,6 +7772,7 @@ function normalizeAttemptQuestions(attempt) {
   attempt.questions.forEach((q) => {
     if (!q.highlights) q.highlights = [];
     if (typeof q.timeMs !== "number") q.timeMs = 0;
+    if (typeof q.checked !== "boolean") q.checked = false;
   });
 }
 
@@ -7902,6 +7905,7 @@ function buildSessionQuestions(questions, rng) {
       hintShown: false,
       highlights: [],           // trechos grifados no enunciado: [{start, end}]
       timeMs: 0,                 // tempo ativo acumulado nesta questao (ms); pausado quando a aba fica oculta
+      checked: false,            // modo tutor: so revela a resposta apos clicar em "Conferir resposta"
     };
   });
 }
@@ -8267,9 +8271,13 @@ function renderQuizQuestion() {
   document.getElementById("q-hint-text").textContent = q.clinicalPointers;
   hintBox.classList.toggle("hidden", !q.hintShown);
 
+  if (typeof q.checked !== "boolean") q.checked = false; // compatibilidade com tentativas salvas antes deste recurso
+
   const isTutor = App.attempt.mode === "tutor";
   const isAnswered = q.answerIndex !== null;
-  const revealAnswer = isAnswered && isTutor;
+  const revealAnswer = isAnswered && isTutor && q.checked;
+
+  document.getElementById("btn-check-answer").classList.toggle("hidden", !(isTutor && isAnswered && !q.checked));
 
   const optionsEl = document.getElementById("q-options");
   const letters = ["A", "B", "C", "D"];
@@ -8340,8 +8348,15 @@ function renderQuizQuestion() {
 
 function selectOption(i) {
   const q = currentQuestion();
-  if (App.attempt.mode === "tutor" && q.answerIndex !== null) return; // trava apos responder no modo tutor
+  if (App.attempt.mode === "tutor" && q.checked) return; // trava apos conferir a resposta no modo tutor
   q.answerIndex = i;
+  renderQuizQuestion();
+}
+
+function checkAnswer() {
+  const q = currentQuestion();
+  if (q.answerIndex === null) return;
+  q.checked = true;
   renderQuizQuestion();
 }
 
@@ -8870,6 +8885,7 @@ function init() {
   });
 
   // Quiz
+  document.getElementById("btn-check-answer").addEventListener("click", checkAnswer);
   document.getElementById("btn-hint").addEventListener("click", () => {
     const q = currentQuestion();
     q.hintShown = !q.hintShown;
