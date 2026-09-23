@@ -59,6 +59,9 @@
       </div>
     </div>
     <div class="flex items-center gap-2">
+      <button id="btn-how-to-use" title="Como usar o simulado" class="inline-flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700">
+        ❓ Como usar
+      </button>
       <button id="btn-export-progress" title="Exportar progresso" class="hidden sm:inline-flex items-center gap-1 text-xs px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700">
         ⬇️ Exportar
       </button>
@@ -93,6 +96,22 @@
         embaralhamento de alternativas a cada tentativa e modo de disputa por código de sessão.
       </p>
     </div>
+
+    <details class="rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 p-4 sm:p-5 mb-6">
+      <summary class="cursor-pointer font-semibold text-amber-800 dark:text-amber-200">
+        📓 Dica de estudo: monte seu caderno de erros enquanto resolve
+      </summary>
+      <div class="mt-3 text-sm text-amber-900 dark:text-amber-100 space-y-2">
+        <p>Um jeito eficiente de estudar com o simulado:</p>
+        <ol class="list-decimal list-inside space-y-1">
+          <li>Respondeu <strong>sem dificuldade</strong> e acertou? Siga para a próxima questão.</li>
+          <li>Respondeu <strong>com dificuldade</strong> (mesmo acertando) <strong>ou errou</strong>? Pare e escreva um resumo curto do assunto da questão no seu caderno (papel ou digital).</li>
+          <li>Continue o simulado normalmente.</li>
+          <li>No fim, use a seção <strong>🎯 Pontos fracos</strong>, aqui embaixo, para refazer essas questões — quantas vezes forem necessárias — até resolvê-las sem dificuldade.</li>
+        </ol>
+        <p class="text-xs text-amber-700 dark:text-amber-300">O simulado já guarda sozinho quais questões você errou; a parte de escrever o resumo é sua. 😉</p>
+      </div>
+    </details>
 
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
       <div class="rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 text-center">
@@ -351,6 +370,44 @@
       <button id="modal-import-replace" class="flex-1 py-2 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-medium">Substituir</button>
     </div>
     <button id="modal-import-cancel" class="w-full mt-2 py-2 rounded-lg text-sm text-slate-500 hover:underline">Cancelar</button>
+  </div>
+</div>
+
+<!-- ===================== HOW-TO-USE MODAL ===================== -->
+<div id="modal-howto" class="hidden fixed inset-0 z-[95] bg-black/50 flex items-center justify-center p-4">
+  <div class="bg-white dark:bg-slate-800 rounded-xl p-6 max-w-lg w-full shadow-xl max-h-[85vh] overflow-y-auto">
+    <div class="flex items-start justify-between gap-4 mb-3">
+      <h3 class="font-semibold text-lg">👋 Como usar este simulado</h3>
+      <button id="modal-howto-close-x" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xl leading-none">✕</button>
+    </div>
+    <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300">
+      <div>
+        <p class="font-medium text-slate-800 dark:text-slate-100">1. Escolha os assuntos</p>
+        <p>Marque só os assuntos que quer treinar, ou use "Marcar todos".</p>
+      </div>
+      <div>
+        <p class="font-medium text-slate-800 dark:text-slate-100">2. Defina a quantidade de questões</p>
+        <p>Elas são distribuídas proporcionalmente entre os assuntos marcados.</p>
+      </div>
+      <div>
+        <p class="font-medium text-slate-800 dark:text-slate-100">3. Escolha o modo</p>
+        <p><strong>Exame:</strong> só mostra o resultado no final, como numa prova de verdade.<br>
+        <strong>Tutor:</strong> corrige na hora. Responda e clique em "Conferir resposta" para ver se acertou e ler a justificativa, sem revelar sem querer.</p>
+      </div>
+      <div>
+        <p class="font-medium text-slate-800 dark:text-slate-100">✏️ Durante a questão</p>
+        <p>Selecione qualquer trecho do enunciado para grifar/marcar texto importante. O cronômetro mede o tempo total e por questão (e pausa se você trocar de aba).</p>
+      </div>
+      <div>
+        <p class="font-medium text-slate-800 dark:text-slate-100">🎯 Depois do simulado</p>
+        <p>A seção "Pontos fracos", na página inicial, guarda as questões que você errou — use-a para revisar só o que precisa. Veja também a dica de "caderno de erros" logo no topo da página.</p>
+      </div>
+      <div>
+        <p class="font-medium text-slate-800 dark:text-slate-100">👥 Código de sessão (opcional)</p>
+        <p>Combine um código com colegas para todos receberem exatamente as mesmas questões, na mesma ordem, e comparar notas.</p>
+      </div>
+    </div>
+    <button id="modal-howto-close" class="w-full mt-5 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium">Entendi</button>
   </div>
 </div>
 
@@ -7641,6 +7698,7 @@ const LS_KEYS = {
   weak: `simfc_${STORAGE_SUBJECT}_weak_ids`,
   current: `simfc_${STORAGE_SUBJECT}_current_attempt`,
   dark: "simfc_dark_mode", // preferencia de modo escuro compartilhada entre todos os simulados
+  tutorialSeen: "simfc_tutorial_seen", // guia "como usar" ja visto, compartilhado entre todos os simulados
 };
 const HISTORY_MAX = 50;
 
@@ -8800,6 +8858,17 @@ function toggleDarkMode() {
 }
 
 /* =========================================================================
+   14b. GUIA "COMO USAR"
+   ========================================================================= */
+function openHowToModal() {
+  document.getElementById("modal-howto").classList.remove("hidden");
+}
+function closeHowToModal() {
+  document.getElementById("modal-howto").classList.add("hidden");
+  lsSet(LS_KEYS.tutorialSeen, true);
+}
+
+/* =========================================================================
    15. LINK DE CONVITE / QUERY PARAMS
    ========================================================================= */
 function copyInviteLink() {
@@ -8969,6 +9038,13 @@ function init() {
   });
 
   document.getElementById("btn-dark-mode").addEventListener("click", toggleDarkMode);
+
+  document.getElementById("btn-how-to-use").addEventListener("click", openHowToModal);
+  document.getElementById("modal-howto-close").addEventListener("click", closeHowToModal);
+  document.getElementById("modal-howto-close-x").addEventListener("click", closeHowToModal);
+  if (!lsGet(LS_KEYS.tutorialSeen, false)) {
+    openHowToModal();
+  }
 
   window.addEventListener("beforeunload", () => {
     if (App.currentScreen === "quiz" && App.attempt && !App.attempt.finished) {
