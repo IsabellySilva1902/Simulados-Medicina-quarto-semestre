@@ -5,7 +5,7 @@ Simulados interativos de múltipla escolha, estilo ENAMED/residência, um por di
 ## Disciplinas
 
 - [`farmacologia-clinica/`](farmacologia-clinica/) — 220 questões, 7 assuntos
-- [`genetica-medica/`](genetica-medica/) — 220 questões, 8 assuntos
+- [`genetica-medica/`](genetica-medica/) — 270 questões, 8 assuntos
 - [`saude-mental/`](saude-mental/) — 220 questões, 7 assuntos
 - [`clinica-cirurgica/`](clinica-cirurgica/) — 237 questões, 8 assuntos
 
