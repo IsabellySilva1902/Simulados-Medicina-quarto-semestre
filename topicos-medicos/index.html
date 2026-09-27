@@ -1731,31 +1731,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Conceitos",
     "difficulty": "Básica",
-    "prompt": "O que caracteriza a dislipidemia?",
+    "prompt": "Homem de 45 anos, professor, traz perfil lipídico solicitado em outra unidade: CT = 182 mg/dL, LDL-c = 110 mg/dL, TG = 140 mg/dL e HDL-c = 31 mg/dL. Ele diz: 'O colesterol total está bom, então não tenho dislipidemia, certo?'. Qual resposta está correta?",
     "options": [
       {
         "letter": "A",
-        "text": "Apenas a redução dos triglicerídeos, que diminui a oferta de energia aos tecidos.",
-        "rationale": "Incorreta. TG reduzidos não definem dislipidemia; o problema é o aumento de TG ou de LDL-c."
+        "text": "Correto: HDL-c baixo só tem importância em mulheres, e em homens o diagnóstico depende dos triglicerídeos acima de 500.",
+        "rationale": "Incorreta. HDL-c reduzido compõe a definição em ambos os sexos."
       },
       {
         "letter": "B",
-        "text": "Alteração dos lipídios séricos: aumento de CT, LDL-c ou TG, ou redução do HDL-c.",
-        "rationale": "CORRETA. A dislipidemia é qualquer alteração nos níveis de lipídios no sangue, incluindo HDL-c baixo."
+        "text": "Não é bem assim: dislipidemia inclui aumento de CT, LDL-c ou TG e também a redução do HDL-c, como no seu exame.",
+        "rationale": "CORRETA. Dislipidemia é qualquer alteração dos lipídios séricos, incluindo HDL-c baixo."
       },
       {
         "letter": "C",
-        "text": "Apenas o aumento do colesterol total, sem considerar triglicerídeos ou o HDL-c.",
-        "rationale": "Incorreta. A definição é mais ampla: inclui TG elevados e HDL-c reduzido."
+        "text": "Correto: dislipidemia é definida apenas pelo colesterol total elevado, e os demais valores não entram no diagnóstico.",
+        "rationale": "Incorreta. A definição é mais ampla: inclui LDL-c, TG elevados e HDL-c reduzido."
       },
       {
         "letter": "D",
-        "text": "Qualquer valor de HDL-c acima do normal, que sempre indica risco cardiovascular.",
-        "rationale": "Incorreta. HDL-c elevado não define dislipidemia; o que entra na definição é o HDL-c baixo."
+        "text": "Não é bem assim: o HDL-c está alto demais, e HDL-c elevado é o principal critério diagnóstico de dislipidemia.",
+        "rationale": "Incorreta. HDL-c de 31 está baixo, e o que entra na definição é o HDL-c reduzido."
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "A definição inclui tanto aumentos quanto uma diminuição de frações lipídicas."
+    "clinicalPointers": "Revise quais frações lipídicas entram na definição e em que sentido cada uma se altera."
   },
   {
     "id": 42,
@@ -1763,31 +1763,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Conceitos",
     "difficulty": "Básica",
-    "prompt": "A aterosclerose é a principal via pela qual a dislipidemia gera eventos cardiovasculares. Qual alternativa define corretamente a aterosclerose?",
+    "prompt": "Mulher de 61 anos, com dislipidemia e HAS, faz ultrassonografia de carótidas que mostra placa de ateroma. Assustada, pergunta ao médico de família o que é a aterosclerose e por que o colesterol importa nesse caso. Qual explicação está correta?",
     "options": [
       {
         "letter": "A",
-        "text": "Dilatação benigna das artérias, sem relação com lipídios nem com eventos cardiovasculares futuros.",
+        "text": "É uma dilatação benigna das artérias do pescoço, sem relação com lipídios e sem aumento do risco de infarto ou AVC.",
         "rationale": "Incorreta. Há estreitamento e endurecimento arterial, e a relação com lipídios é central."
       },
       {
         "letter": "B",
-        "text": "Calcificação das valvas cardíacas causada por deficiência de vitamina D na infância.",
+        "text": "É uma calcificação das valvas cardíacas por falta de vitamina D, sem relação com a placa observada nas carótidas.",
         "rationale": "Incorreta. Essa descrição não corresponde à aterosclerose."
       },
       {
         "letter": "C",
-        "text": "Doença infecciosa aguda das veias, com trombos que se resolvem de forma espontânea em poucas semanas.",
+        "text": "É uma infecção aguda das veias, com trombos que desaparecem sozinhos em poucas semanas e sem relação com o colesterol.",
         "rationale": "Incorreta. A aterosclerose é crônica, arterial e não infecciosa."
       },
       {
         "letter": "D",
-        "text": "Doença inflamatória crônica com placas de gordura (ateromas) que estreitam e endurecem as artérias.",
-        "rationale": "CORRETA. Essa é a definição: doença inflamatória crônica com ateromas, que eleva o risco de eventos CV."
+        "text": "É uma doença inflamatória crônica com placas de gordura que estreitam e endurecem as artérias e elevam o risco CV.",
+        "rationale": "CORRETA. Essa é a definição de aterosclerose; a dislipidemia é um de seus principais determinantes."
       }
     ],
     "correctLetter": "D",
-    "clinicalPointers": "A definição destaca o caráter inflamatório e crônico da doença."
+    "clinicalPointers": "A definição destaca o caráter inflamatório e crônico e o efeito sobre a parede das artérias."
   },
   {
     "id": 43,
@@ -1795,31 +1795,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Rastreamento",
     "difficulty": "Básica",
-    "prompt": "Homem de 41 anos, assintomático, sem comorbidades, pergunta se deve fazer exames de colesterol. Segundo o PCDT de Dislipidemias (2019), qual é a orientação?",
+    "prompt": "Homem de 41 anos, pedreiro, assintomático, sem comorbidades, não fumante e sem história familiar relevante, vem à UBS para renovar atestado de saúde e pergunta se deve 'aproveitar e fazer o exame de colesterol'. Segundo o PCDT de Dislipidemias, qual é a orientação?",
     "options": [
       {
         "letter": "A",
-        "text": "Solicitar se houver dor torácica, pois o rastreio lipídico é voltado a sintomáticos.",
-        "rationale": "Incorreta. O rastreio é feito em assintomáticos de risco; esperar sintomas perde o objetivo preventivo."
+        "text": "Solicitar apenas se ele tiver dor torácica aos esforços, pois o rastreio lipídico é destinado a pessoas sintomáticas.",
+        "rationale": "Incorreta. O rastreio é feito em assintomáticos de risco."
       },
       {
         "letter": "B",
-        "text": "Solicitar o rastreio, pois homens a partir de 40 anos fazem parte da população de risco.",
-        "rationale": "CORRETA. Homens ≥ 40 anos estão na população-alvo do rastreio lipídico baseado em risco."
+        "text": "Solicitar CT, HDL-c e TG, com LDL-c calculado, pois homens a partir de 40 anos fazem parte da população de risco.",
+        "rationale": "CORRETA. Homens ≥ 40 anos estão na população-alvo do rastreio; os exames são CT, HDL-c e TG, com LDL-c calculado."
       },
       {
         "letter": "C",
-        "text": "Solicitar perfil lipídico a cada 3 meses desde os 18 anos, independentemente de qualquer risco.",
-        "rationale": "Incorreta. O PCDT evita testagem indiscriminada; o rastreio é orientado por risco."
+        "text": "Solicitar LDL-c dosado diretamente, apolipoproteína B e lipoproteína(a), repetindo os exames a cada 6 meses.",
+        "rationale": "Incorreta. Esses exames não compõem o rastreio do PCDT, nem há repetição semestral."
       },
       {
         "letter": "D",
-        "text": "Não solicitar, pois o rastreio em homens assintomáticos começa aos 60 anos.",
-        "rationale": "Incorreta. O PCDT inclui homens a partir de 40 anos, não de 60."
+        "text": "Não solicitar, pois o rastreio em homens assintomáticos e sem fatores de risco começa somente aos 60 anos de idade.",
+        "rationale": "Incorreta. O PCDT inclui homens a partir de 40 anos."
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "O PCDT define o rastreio por idade e sexo, além de fatores de risco."
+    "clinicalPointers": "O rastreamento é baseado em risco e tem critérios de idade por sexo."
   },
   {
     "id": 44,
@@ -1827,31 +1827,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Rastreamento",
     "difficulty": "Intermediária",
-    "prompt": "Mulher de 32 anos vivendo com HIV, em terapia antirretroviral, sem outras queixas. Segundo o PCDT de Dislipidemias, ela deve ser rastreada?",
+    "prompt": "Mulher de 32 anos, vivendo com HIV em uso regular de terapia antirretroviral, carga viral indetectável, sem outras comorbidades, pergunta se precisa fazer exame de colesterol, já que 'é nova e magra'. Segundo o PCDT de Dislipidemias, qual é a conduta?",
     "options": [
       {
         "letter": "A",
-        "text": "Não, pois o rastreio lipídico está contraindicado em uso de antirretrovirais.",
-        "rationale": "Incorreta. Não há contraindicação; ao contrário, PVHIV estão na população de risco."
+        "text": "Não rastrear, pois o exame lipídico é contraindicado em uso de antirretrovirais pelo risco de resultados falsos.",
+        "rationale": "Incorreta. Não há contraindicação; PVHIV estão na população de risco."
       },
       {
         "letter": "B",
-        "text": "Sim, pois o HIV está entre os fatores que indicam rastreio em qualquer idade.",
-        "rationale": "CORRETA. HIV (assim como HAS, DM, DRC, tabagismo e outras) coloca a pessoa na população de risco para rastreio."
+        "text": "Rastrear, pois viver com HIV coloca a pessoa na população de risco, independentemente da idade.",
+        "rationale": "CORRETA. HIV (assim como HAS, DM, DRC, tabagismo e outras condições) indica rastreio em qualquer idade."
       },
       {
         "letter": "C",
-        "text": "Sim, com dosagem de apolipoproteína B, pois o perfil lipídico é impreciso no HIV.",
-        "rationale": "Incorreta. Os exames de rastreio do PCDT são CT, HDL-c e TG, com LDL-c calculado."
+        "text": "Rastrear apenas com apolipoproteína B, pois CT, HDL-c e TG são imprecisos em pessoas vivendo com HIV.",
+        "rationale": "Incorreta. Os exames de rastreio são CT, HDL-c e TG, com LDL-c calculado."
       },
       {
         "letter": "D",
-        "text": "Não, pois mulheres só devem ser rastreadas a partir dos 50 anos ou após a menopausa.",
-        "rationale": "Incorreta. A idade é um critério, mas fatores como o HIV também indicam rastreio em qualquer idade."
+        "text": "Não rastrear, pois mulheres só entram na população de risco a partir dos 50 anos ou após a menopausa, sem exceções.",
+        "rationale": "Incorreta. A idade é um dos critérios, mas fatores como o HIV também indicam o rastreio."
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "Além da idade e do sexo, o PCDT lista condições que colocam a pessoa na população de risco."
+    "clinicalPointers": "Os critérios de rastreio não se limitam a idade e sexo."
   },
   {
     "id": 45,
@@ -1859,63 +1859,63 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Rastreamento",
     "difficulty": "Intermediária",
-    "prompt": "Qual é a filosofia do rastreamento lipídico adotada no PCDT de 2019?",
+    "prompt": "Mulher de 47 anos, costureira, entrou na menopausa aos 45 anos e não tem outras comorbidades. Sua irmã, de 52 anos, fez perfil lipídico no mês anterior. Ela pergunta se também deve fazer o exame. Segundo os critérios do PCDT, qual é a orientação?",
     "options": [
       {
         "letter": "A",
-        "text": "Rastreio apenas em pessoas que já tiveram infarto, dispensando a prevenção primária.",
-        "rationale": "Incorreta. O rastreio visa sobretudo a prevenção primária em populações de risco."
+        "text": "Rastrear apenas se a irmã tiver resultado alterado, pois a indicação depende da história familiar.",
+        "rationale": "Incorreta. A indicação dela já existe pela pós-menopausa."
       },
       {
         "letter": "B",
-        "text": "Rastreio baseado em risco, com custo-efetividade populacional e sem overtesting.",
-        "rationale": "CORRETA. O PCDT restringe os exames a populações com fatores de risco preexistentes, evitando overtesting."
+        "text": "Rastrear, pois mulheres com 50 anos ou mais ou em pós-menopausa estão na população de risco.",
+        "rationale": "CORRETA. O critério para mulheres é idade ≥ 50 anos ou pós-menopausa; ela já está na pós-menopausa."
       },
       {
         "letter": "C",
-        "text": "Rastreio guiado pelo desejo do paciente, sem critérios clínicos ou epidemiológicos.",
-        "rationale": "Incorreta. O PCDT define critérios de idade, sexo e fatores de risco para o rastreio."
+        "text": "Não rastrear, pois menopausa precoce protege contra dislipidemia e reduz o risco cardiovascular.",
+        "rationale": "Incorreta. A pós-menopausa aumenta o risco cardiovascular."
       },
       {
         "letter": "D",
-        "text": "Rastreio universal anual de toda a população adulta, com qualquer idade e risco.",
-        "rationale": "Incorreta. Rastreio universal é o oposto da estratégia baseada em risco do PCDT."
+        "text": "Não rastrear agora, pois o critério feminino exige 50 anos completos, independentemente da menopausa.",
+        "rationale": "Incorreta. A pós-menopausa também é critério, mesmo antes dos 50 anos."
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "O protocolo pensa em saúde pública e em evitar exames desnecessários."
+    "clinicalPointers": "O critério para mulheres combina idade e uma condição hormonal."
   },
   {
     "id": 46,
     "code": "DLP-06",
     "category": "Dislipidemia",
-    "subcategory": "Diagnóstico laboratorial",
-    "difficulty": "Básica",
-    "prompt": "Quais exames compõem o rastreio lipídico proposto no PCDT?",
+    "subcategory": "Rastreamento",
+    "difficulty": "Intermediária",
+    "prompt": "Homem de 26 anos, estudante, sem comorbidades, não fumante, IMC de 23 kg/m² e sem história familiar de doença cardiovascular precoce, pede um 'check-up completo com colesterol' porque viu uma propaganda de laboratório. Considerando a filosofia de rastreamento do PCDT, qual conduta é adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Apenas LDL-c dosado diretamente, sem os demais componentes.",
-        "rationale": "Incorreta. O rastreio usa CT, HDL-c e TG; o LDL-c costuma ser calculado."
+        "text": "Solicitar perfil lipídico completo anual, pois o rastreio universal de todos os adultos é a estratégia do PCDT.",
+        "rationale": "Incorreta. Rastreio universal é o oposto da estratégia baseada em risco."
       },
       {
         "letter": "B",
-        "text": "Apolipoproteína B, lipoproteína(a) e PCR ultrassensível.",
-        "rationale": "Incorreta. Esses marcadores não compõem o rastreio proposto no PCDT."
+        "text": "Solicitar perfil lipídico apenas se ele insistir, pois o critério de indicação é a preferência do paciente.",
+        "rationale": "Incorreta. O PCDT define critérios clínicos e epidemiológicos, não a preferência isolada."
       },
       {
         "letter": "C",
-        "text": "Colesterol total isolado, repetido a cada seis meses na unidade.",
-        "rationale": "Incorreta. O CT isolado não basta; HDL-c e TG também são necessários."
+        "text": "Solicitar perfil lipídico e iniciar estatina preventiva se o LDL-c for maior que 100 mg/dL em uma única dosagem.",
+        "rationale": "Incorreta. O exame não está indicado, e a decisão terapêutica depende do risco global."
       },
       {
         "letter": "D",
-        "text": "Colesterol total, HDL-c e triglicerídeos, com LDL-c calculado.",
-        "rationale": "CORRETA. O PCDT pede CT, HDL-c e TG; o LDL-c é calculado (Friedewald se TG < 400 mg/dL)."
+        "text": "Explicar que o rastreio é baseado em risco e que, sem fatores de risco nessa idade, o exame não está indicado.",
+        "rationale": "CORRETA. O PCDT restringe os exames a populações com fatores de risco, evitando overtesting."
       }
     ],
     "correctLetter": "D",
-    "clinicalPointers": "Um dos componentes do perfil não é dosado diretamente, mas calculado."
+    "clinicalPointers": "O PCDT pensa em custo-efetividade populacional e em evitar exames desnecessários."
   },
   {
     "id": 47,
@@ -1923,159 +1923,160 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Diagnóstico laboratorial",
     "difficulty": "Intermediária",
-    "prompt": "Paciente com CT = 240 mg/dL, HDL-c = 45 mg/dL e TG = 150 mg/dL. Qual é o LDL-c estimado pela fórmula de Friedewald?",
+    "prompt": "Homem de 52 anos, tabagista, tem o seguinte perfil lipídico: CT = 240 mg/dL, HDL-c = 45 mg/dL e TG = 150 mg/dL. O residente precisa registrar no prontuário o LDL-c calculado e o método utilizado. Qual registro está correto?",
     "options": [
       {
         "letter": "A",
-        "text": "195 mg/dL.",
-        "rationale": "Incorreta. Esse é o não-HDL-c (CT − HDL-c); faltou subtrair TG/5."
+        "text": "LDL-c de 195 mg/dL pela fórmula de Friedewald, válida porque o TG é menor que 400 mg/dL.",
+        "rationale": "Incorreta. 195 é o não-HDL-c (CT − HDL-c); faltou subtrair TG/5."
       },
       {
         "letter": "B",
-        "text": "135 mg/dL.",
-        "rationale": "Incorreta. Subtrair TG/5 duas vezes ou errar a ordem leva a valores menores."
+        "text": "LDL-c de 45 mg/dL pela fórmula de Friedewald, pois subtrai-se o valor total do TG da diferença CT − HDL-c.",
+        "rationale": "Incorreta. Subtrai-se TG/5, não o TG inteiro."
       },
       {
         "letter": "C",
-        "text": "165 mg/dL.",
-        "rationale": "CORRETA. (240 − 45) − (150/5) = 195 − 30 = 165 mg/dL."
+        "text": "LDL-c de 165 mg/dL pela fórmula de Friedewald, válida porque o TG é menor que 400 mg/dL.",
+        "rationale": "CORRETA. (240 − 45) − (150/5) = 195 − 30 = 165 mg/dL; Friedewald é válida com TG < 400."
       },
       {
         "letter": "D",
-        "text": "105 mg/dL.",
-        "rationale": "Incorreta. Subtraiu-se o TG inteiro em vez de TG/5."
+        "text": "LDL-c não calculável, pois a fórmula de Friedewald só é válida quando o TG é menor que 100 mg/dL.",
+        "rationale": "Incorreta. O limite de validade é TG < 400 mg/dL."
       }
     ],
     "correctLetter": "C",
-    "clinicalPointers": "LDL-c = (CT − HDL-c) − (TG/5), válida quando TG < 400 mg/dL."
+    "clinicalPointers": "Verifique se a fórmula de Friedewald é válida com esse valor de TG e aplique-a."
   },
   {
     "id": 48,
     "code": "DLP-08",
     "category": "Dislipidemia",
     "subcategory": "Diagnóstico laboratorial",
-    "difficulty": "Intermediária",
-    "prompt": "Mulher de 55 anos com CT = 210 mg/dL, HDL-c = 50 mg/dL e TG = 100 mg/dL. Qual é o LDL-c calculado?",
+    "difficulty": "Avançada",
+    "prompt": "Mulher preta de 58 anos, diarista, com HAS recém-diagnosticada, apresenta CT = 250 mg/dL, HDL-c = 38 mg/dL e TG = 180 mg/dL. Mora em bairro periférico, relata dificuldade de comprar frutas e verduras e trabalha em dois turnos. Qual alternativa integra corretamente o cálculo do LDL-c, a escolha anti-hipertensiva e o cuidado com os determinantes sociais?",
     "options": [
       {
         "letter": "A",
-        "text": "60 mg/dL.",
-        "rationale": "Incorreta. Subtraiu-se o valor total de TG, não TG/5."
+        "text": "LDL-c de 32 mg/dL; nenhuma intervenção lipídica; tratar a HAS apenas com dieta hipossódica sem medicamentos.",
+        "rationale": "Incorreta. Subtraiu-se o TG inteiro; o LDL-c correto é 176 mg/dL."
       },
       {
         "letter": "B",
-        "text": "160 mg/dL.",
-        "rationale": "Incorreta. É o não-HDL-c; faltou subtrair TG/5."
+        "text": "LDL-c de 212 mg/dL; priorizar IECA em monoterapia na HAS; prescrever dieta padronizada e culpar a paciente se não aderir.",
+        "rationale": "Incorreta. 212 é o não-HDL-c; IECA isolado tem menor resposta nesse grupo; e a culpabilização ignora os DSS."
       },
       {
         "letter": "C",
-        "text": "140 mg/dL.",
-        "rationale": "CORRETA. (210 − 50) − (100/5) = 160 − 20 = 140 mg/dL."
+        "text": "LDL-c de 176 mg/dL; priorizar tiazídico e BCC na HAS; construir orientações de dieta e atividade física considerando o território.",
+        "rationale": "CORRETA. (250 − 38) − 36 = 176; na população preta, tiazídico e BCC são preferenciais; as orientações devem considerar os DSS."
       },
       {
         "letter": "D",
-        "text": "110 mg/dL.",
-        "rationale": "Incorreta. Resultado de erro no cálculo de TG/5."
+        "text": "LDL-c de 176 mg/dL; priorizar betabloqueador na HAS; dispensar orientações de estilo de vida pela falta de acesso a alimentos.",
+        "rationale": "Incorreta. Betabloqueador não é a escolha; entender o território serve para adaptar, não abandonar, as orientações."
       }
     ],
     "correctLetter": "C",
-    "clinicalPointers": "Aplique Friedewald: primeiro CT − HDL-c; depois subtraia TG/5."
+    "clinicalPointers": "Calcule por Friedewald, lembre das classes preferenciais para a população preta e considere o território.",
+    "sourceLabel": "Questão da professora (adaptada)"
   },
   {
     "id": 49,
     "code": "DLP-09",
     "category": "Dislipidemia",
     "subcategory": "Diagnóstico laboratorial",
-    "difficulty": "Intermediária",
-    "prompt": "Homem de 50 anos apresenta CT = 250 mg/dL, HDL-c = 40 mg/dL e TG = 480 mg/dL. Qual é a abordagem laboratorial adequada?",
+    "difficulty": "Avançada",
+    "prompt": "Homem de 50 anos, com obesidade e consumo diário de álcool, apresenta CT = 250 mg/dL, HDL-c = 40 mg/dL e TG = 480 mg/dL. O alvo de LDL-c definido para ele seria de 100 mg/dL. Qual é a abordagem laboratorial correta e o alvo correspondente?",
     "options": [
       {
         "letter": "A",
-        "text": "Considerar o exame inválido e repeti-lo após um ano, pois TG alto impede a análise.",
-        "rationale": "Incorreta. O fluxograma oferece alternativa imediata: o não-HDL-c."
+        "text": "Não usar Friedewald; calcular o não-HDL-c (210 mg/dL), cujo alvo é 70 mg/dL, 30 abaixo do alvo do LDL-c.",
+        "rationale": "Incorreta. O alvo do não-HDL-c é 30 mg/dL acima, não abaixo, do alvo do LDL-c."
       },
       {
         "letter": "B",
-        "text": "Aplicar Friedewald normalmente, obtendo LDL-c de 114 mg/dL, e decidir por esse valor.",
-        "rationale": "Incorreta. Com TG ≥ 400 mg/dL a fórmula perde validade; o valor calculado seria enganoso."
+        "text": "Aplicar Friedewald normalmente, obtendo LDL-c de 114 mg/dL, com alvo de 100 mg/dL para esse valor.",
+        "rationale": "Incorreta. Com TG ≥ 400, Friedewald não é válida e o valor seria enganoso."
       },
       {
         "letter": "C",
-        "text": "Somar HDL-c e TG/5 ao CT, obtendo 386 mg/dL, que é o valor de referência nesse caso.",
-        "rationale": "Incorreta. Essa operação não existe no fluxograma; o correto é CT − HDL-c."
+        "text": "Considerar o exame inválido e repeti-lo só depois de um ano, pois TG acima de 400 impede qualquer análise.",
+        "rationale": "Incorreta. O não-HDL-c permite a análise imediata."
       },
       {
         "letter": "D",
-        "text": "Não usar Friedewald e calcular o não-HDL-c (CT − HDL-c), que resulta em 210 mg/dL.",
-        "rationale": "CORRETA. Com TG ≥ 400 mg/dL, Friedewald não é válida; usa-se não-HDL-c = 250 − 40 = 210 mg/dL."
+        "text": "Não usar Friedewald; calcular o não-HDL-c (CT − HDL-c = 210 mg/dL), cujo alvo é 130 mg/dL.",
+        "rationale": "CORRETA. Com TG ≥ 400, usa-se não-HDL-c = 250 − 40 = 210; o alvo é sempre 30 mg/dL acima do alvo do LDL-c (100 + 30)."
       }
     ],
     "correctLetter": "D",
-    "clinicalPointers": "A fórmula de Friedewald tem um limite de triglicerídeos."
+    "clinicalPointers": "A fórmula de Friedewald tem limite de TG; o parâmetro alternativo tem alvo com diferença fixa em relação ao do LDL-c."
   },
   {
     "id": 50,
     "code": "DLP-10",
     "category": "Dislipidemia",
     "subcategory": "Diagnóstico laboratorial",
-    "difficulty": "Avançada",
-    "prompt": "Para um paciente cujo alvo de LDL-c é 100 mg/dL, mas que tem TG ≥ 400 mg/dL, qual deve ser o alvo de não-HDL-c?",
+    "difficulty": "Intermediária",
+    "prompt": "Na reunião de equipe, um médico afirma que 'todo paciente com LDL-c acima de 100 mg/dL deve receber estatina, pois esse é o alvo de consenso'. Uma colega discorda, com base no PCDT. Qual posição está correta?",
     "options": [
       {
         "letter": "A",
-        "text": "100 mg/dL.",
-        "rationale": "Incorreta. É o alvo do LDL-c; o do não-HDL-c é 30 mg/dL acima."
+        "text": "Há consenso de que todo adulto com LDL-c acima de 100 mg/dL deve iniciar estatina, qualquer que seja o seu risco global.",
+        "rationale": "Incorreta. O PCDT não define início por LDL-c isolado."
       },
       {
         "letter": "B",
-        "text": "160 mg/dL.",
-        "rationale": "Incorreta. A diferença é de 30 mg/dL, não de 60."
+        "text": "O LDL-c não tem relação com eventos ateroscleróticos e só deve ser usado para acompanhar pacientes com diabetes.",
+        "rationale": "Incorreta. LDL-c > 100 mg/dL associa-se a maior risco aterosclerótico."
       },
       {
         "letter": "C",
-        "text": "70 mg/dL.",
-        "rationale": "Incorreta. Subtraiu-se 30 em vez de somar."
+        "text": "O único alvo aceito é LDL-c abaixo de 50 mg/dL para todas as pessoas, com ou sem doença cardiovascular estabelecida.",
+        "rationale": "Incorreta. Não existe esse alvo universal."
       },
       {
         "letter": "D",
-        "text": "130 mg/dL.",
-        "rationale": "CORRETA. O alvo de não-HDL-c é sempre 30 mg/dL acima do alvo de LDL-c: 100 + 30 = 130."
+        "text": "LDL-c > 100 associa-se a maior risco, mas não há consenso sobre um valor específico para iniciar ou como alvo.",
+        "rationale": "CORRETA. O PCDT reconhece essas associações, mas afirma que não há consenso sobre valor específico; a decisão segue o risco global."
       }
     ],
     "correctLetter": "D",
-    "clinicalPointers": "O alvo do não-HDL-c guarda uma diferença fixa em relação ao alvo do LDL-c."
+    "clinicalPointers": "Pense em como o PCDT trata números fixos de LDL-c na decisão terapêutica."
   },
   {
     "id": 51,
     "code": "DLP-11",
     "category": "Dislipidemia",
-    "subcategory": "Diagnóstico laboratorial",
-    "difficulty": "Intermediária",
-    "prompt": "Sobre o valor de LDL-c para iniciar tratamento ou como alvo terapêutico, qual afirmação é correta?",
+    "subcategory": "Hipercolesterolemia familiar",
+    "difficulty": "Avançada",
+    "prompt": "Homem de 35 anos, motorista, procura a UBS por nódulos endurecidos nos tendões de Aquiles. Tem LDL-c de 200 mg/dL em duas dosagens, sem outros achados, e não conhece a história clínica da família. Pelos critérios da OMS (Dutch), qual é a pontuação e a classificação?",
     "options": [
       {
         "letter": "A",
-        "text": "O único alvo aceito é LDL-c abaixo de 50 mg/dL para qualquer pessoa, seja qual for o risco cardiovascular.",
-        "rationale": "Incorreta. Não existe esse alvo universal."
+        "text": "7 pontos (xantoma tendinoso 4 + LDL-c 190–249: 3): diagnóstico provável de hipercolesterolemia familiar.",
+        "rationale": "Incorreta. O xantoma tendinoso vale 6 (4 é o arco córneo)."
       },
       {
         "letter": "B",
-        "text": "Há consenso de que todo adulto com LDL-c acima de 130 mg/dL deve iniciar estatina, independentemente do risco global.",
-        "rationale": "Incorreta. O PCDT não define início por LDL-c isolado; a decisão é pelo risco cardiovascular."
+        "text": "6 pontos (xantoma tendinoso 6 + LDL-c 190–249: 0): diagnóstico provável de hipercolesterolemia familiar.",
+        "rationale": "Incorreta. A faixa de LDL-c 190–249 vale 3 pontos."
       },
       {
         "letter": "C",
-        "text": "O LDL-c não tem relação com eventos ateroscleróticos, sendo usado apenas para rastrear diabetes.",
-        "rationale": "Incorreta. LDL-c > 100 mg/dL associa-se a maior risco de eventos ateroscleróticos."
+        "text": "12 pontos (xantoma tendinoso 6 + LDL-c 190–249: 6): diagnóstico definitivo de hipercolesterolemia familiar.",
+        "rationale": "Incorreta. A faixa de LDL-c 190–249 vale 3, não 6."
       },
       {
         "letter": "D",
-        "text": "LDL-c > 100 associa-se a maior risco, mas não há consenso sobre um valor específico de início ou de alvo.",
-        "rationale": "CORRETA. LDL-c > 100 associa-se a maior risco e < 100 é alvo para a maioria de alto risco, mas não há consenso sobre valor específico de início ou alvo."
+        "text": "9 pontos (xantoma tendinoso 6 + LDL-c 190–249: 3): diagnóstico definitivo de hipercolesterolemia familiar.",
+        "rationale": "CORRETA. 6 + 3 = 9; mais de 8 pontos é diagnóstico definitivo."
       }
     ],
     "correctLetter": "D",
-    "clinicalPointers": "Há uma ressalva importante sobre o uso de um valor fixo de LDL-c."
+    "clinicalPointers": "Pontue separadamente o achado do exame físico e a faixa de LDL-c; depois compare com os cortes de possível, provável e definitivo."
   },
   {
     "id": 52,
@@ -2083,31 +2084,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Hipercolesterolemia familiar",
     "difficulty": "Avançada",
-    "prompt": "Homem de 35 anos tem xantomas tendinosos no tendão de Aquiles e LDL-c de 200 mg/dL, sem outros dados. Pelos critérios da OMS (Dutch), qual é a pontuação e a classificação?",
+    "prompt": "Mulher de 38 anos, assintomática, tem arco córneo bilateral visto pelo oftalmologista e LDL-c de 180 mg/dL. Não há doença cardiovascular pessoal nem história familiar de DAC prematura. Pelos critérios da OMS (Dutch), qual é a classificação?",
     "options": [
       {
         "letter": "A",
-        "text": "4 pontos: diagnóstico possível.",
-        "rationale": "Incorreta. Xantoma vale 6, não 4 (4 é o arco córneo)."
+        "text": "Definitivo: 9 pontos (arco córneo antes dos 45 anos: 6 + LDL-c 155–189: 3).",
+        "rationale": "Incorreta. Arco córneo vale 4 e essa faixa de LDL-c vale 1."
       },
       {
         "letter": "B",
-        "text": "6 pontos: diagnóstico provável.",
-        "rationale": "Incorreta. Faltou somar os 3 pontos do LDL-c."
+        "text": "Provável: 6 pontos (arco córneo antes dos 45 anos: 4 + LDL-c 155–189: 2).",
+        "rationale": "Incorreta. A faixa de LDL-c 155–189 vale 1 ponto."
       },
       {
         "letter": "C",
-        "text": "9 pontos: diagnóstico definitivo.",
-        "rationale": "CORRETA. 6 (xantoma) + 3 (LDL 190–249) = 9; > 8 é definitivo."
+        "text": "Possível: 5 pontos (arco córneo antes dos 45 anos: 4 + LDL-c 155–189: 1).",
+        "rationale": "CORRETA. 4 + 1 = 5, na faixa de 3 a 5 (possível)."
       },
       {
         "letter": "D",
-        "text": "12 pontos: diagnóstico definitivo.",
-        "rationale": "Incorreta. O LDL de 200 vale 3, não 6."
+        "text": "Improvável: 1 ponto, pois o arco córneo não pontua quando não há xantomas.",
+        "rationale": "Incorreta. O arco córneo antes dos 45 anos vale 4 pontos por si só."
       }
     ],
     "correctLetter": "C",
-    "clinicalPointers": "Pontue separadamente o achado do exame físico e a faixa de LDL-c; depois compare com os cortes de possível, provável e definitivo."
+    "clinicalPointers": "Some a pontuação do achado ocular (considere a idade) à da faixa de LDL-c."
   },
   {
     "id": 53,
@@ -2115,31 +2116,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Hipercolesterolemia familiar",
     "difficulty": "Avançada",
-    "prompt": "Mulher de 38 anos apresenta arco córneo e LDL-c de 180 mg/dL, sem história pessoal ou familiar relevante. Pelos critérios da OMS (Dutch), qual é a classificação?",
+    "prompt": "Jovem de 25 anos, universitário, tem LDL-c de 340 mg/dL em duas dosagens. Não tem xantomas nem arco córneo, e a família é adotiva, sem informação sobre os pais biológicos. Pelos critérios da OMS (Dutch), qual é a classificação?",
     "options": [
       {
         "letter": "A",
-        "text": "Possível (5 pontos).",
-        "rationale": "CORRETA. 4 (arco córneo < 45 anos) + 1 (LDL 155–189) = 5 → possível (3–5)."
+        "text": "Provável, pois o LDL-c ≥ 330 vale 8 pontos, e o diagnóstico definitivo exige mais de 8.",
+        "rationale": "CORRETA. LDL ≥ 330 = 8 pontos, que está na faixa de 6 a 8 (provável)."
       },
       {
         "letter": "B",
-        "text": "Definitivo (9 pontos).",
-        "rationale": "Incorreta. Pontuação superestimada; o arco vale 4 e o LDL vale 1."
+        "text": "Possível, pois sem sinais físicos e sem história familiar a pontuação máxima é de 5 pontos.",
+        "rationale": "Incorreta. O LDL-c sozinho já soma 8 pontos."
       },
       {
         "letter": "C",
-        "text": "Provável (6 pontos).",
-        "rationale": "Incorreta. A soma é 5, não 6."
+        "text": "Definitivo, pois qualquer LDL-c acima de 330 mg/dL fecha sozinho o diagnóstico de HF.",
+        "rationale": "Incorreta. 8 pontos ficam na faixa provável; definitivo é acima de 8."
       },
       {
         "letter": "D",
-        "text": "Improvável (2 pontos).",
-        "rationale": "Incorreta. O arco córneo sozinho já vale 4 pontos."
+        "text": "Descartado, pois o escore não pode ser aplicado sem informação sobre a família biológica.",
+        "rationale": "Incorreta. O escore pode ser aplicado com os dados disponíveis."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Some a pontuação do achado ocular (considere a idade) à da faixa de LDL-c."
+    "clinicalPointers": "Pontue o LDL-c e confira com atenção os limites exatos de cada categoria."
   },
   {
     "id": 54,
@@ -2147,27 +2148,27 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Hipercolesterolemia familiar",
     "difficulty": "Avançada",
-    "prompt": "Homem de 30 anos com LDL-c de 260 mg/dL. O pai teve infarto aos 50 anos. Não há outros achados. Pelos critérios da OMS (Dutch), qual é a classificação?",
+    "prompt": "Homem de 30 anos, bancário, tem LDL-c de 260 mg/dL. Seu pai teve infarto aos 50 anos. Não há outros achados ao exame nem doença cardiovascular pessoal. Pelos critérios da OMS (Dutch), qual é a classificação?",
     "options": [
       {
         "letter": "A",
-        "text": "Provável (6 pontos).",
-        "rationale": "CORRETA. 5 (LDL 250–329) + 1 (pai com DAC prematura < 55 anos) = 6 → provável (6–8)."
+        "text": "Provável: 6 pontos (LDL-c 250–329: 5 + parente de 1º grau com DAC prematura: 1).",
+        "rationale": "CORRETA. 5 + 1 = 6 → provável (6 a 8); o pai infartou antes dos 55 anos."
       },
       {
         "letter": "B",
-        "text": "Definitivo (10 pontos).",
-        "rationale": "Incorreta. Seria definitivo com arco córneo; aqui a soma é 6."
+        "text": "Possível: 5 pontos, pois o infarto do pai aos 50 anos não é considerado prematuro.",
+        "rationale": "Incorreta. Em homens, DAC prematura é antes dos 55 anos; conta 1 ponto."
       },
       {
         "letter": "C",
-        "text": "Definitivo (13 pontos).",
-        "rationale": "Incorreta. LDL de 260 vale 5 pontos, não 8."
+        "text": "Definitivo: 13 pontos (LDL-c 250–329: 8 + história familiar: 5).",
+        "rationale": "Incorreta. Pontuação superestimada nos dois itens."
       },
       {
         "letter": "D",
-        "text": "Possível (5 pontos).",
-        "rationale": "Incorreta. Faltou somar o ponto da história familiar."
+        "text": "Definitivo: 10 pontos (LDL-c 250–329: 8 + parente de 1º grau com DAC prematura: 2).",
+        "rationale": "Incorreta. A faixa de LDL-c 250–329 vale 5, não 8."
       }
     ],
     "correctLetter": "A",
@@ -2179,128 +2180,129 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Hipercolesterolemia familiar",
     "difficulty": "Avançada",
-    "prompt": "Jovem de 25 anos tem LDL-c de 340 mg/dL, sem xantomas, arco córneo ou história familiar conhecida. Pelos critérios da OMS (Dutch), qual é a classificação?",
+    "prompt": "Homem de 36 anos tem arco córneo bilateral e LDL-c de 260 mg/dL. O pai teve infarto aos 43 anos. Na consulta, pergunta se o problema é 'só dele' e se precisa tomar remédio. Qual interpretação e conduta estão corretas?",
     "options": [
       {
         "letter": "A",
-        "text": "Possível, pois não há sinais físicos nem história familiar.",
-        "rationale": "Incorreta. O LDL sozinho já soma 8 pontos, acima de 'possível'."
+        "text": "HF definitiva (10 pontos): iniciar estatina, sem necessidade de investigar familiares, pois o caso é isolado.",
+        "rationale": "Incorreta. Por ser hereditária, a HF exige o rastreio dos familiares de 1º grau."
       },
       {
         "letter": "B",
-        "text": "Descartado, pois sem xantomas não se diagnostica a doença.",
-        "rationale": "Incorreta. O escore não exige xantomas; o LDL tem peso próprio."
+        "text": "HF possível (5 pontos): aguardar o primeiro evento coronariano para decidir sobre o tratamento.",
+        "rationale": "Incorreta. Pontuação subestimada; não se espera evento na HF definitiva."
       },
       {
         "letter": "C",
-        "text": "Definitivo, pois qualquer LDL acima de 330 já fecha o diagnóstico.",
-        "rationale": "Incorreta. Oito pontos ficam na faixa provável; definitivo é > 8."
+        "text": "HF provável (6 pontos): apenas dieta por 5 anos e investigação dos filhos quando atingirem 40 anos.",
+        "rationale": "Incorreta. A soma é 10, e HF definitiva tem indicação de estatina."
       },
       {
         "letter": "D",
-        "text": "Provável, pois 8 pontos estão na faixa de 6 a 8.",
-        "rationale": "CORRETA. LDL ≥ 330 = 8 pontos; definitivo exige mais de 8."
+        "text": "HF definitiva (10 pontos): iniciar estatina e investigar os familiares de primeiro grau.",
+        "rationale": "CORRETA. 1 (pai com DAC prematura) + 4 (arco córneo < 45 anos) + 5 (LDL 250–329) = 10; HF definitiva é critério de tratamento e exige rastreio familiar."
       }
     ],
     "correctLetter": "D",
-    "clinicalPointers": "Pontue o LDL-c e confira com atenção os limites exatos de cada categoria."
+    "clinicalPointers": "Some os pontos e lembre que se trata de uma doença hereditária.",
+    "sourceLabel": "Questão da professora (adaptada)"
   },
   {
     "id": 56,
     "code": "DLP-16",
     "category": "Dislipidemia",
-    "subcategory": "Hipercolesterolemia familiar",
-    "difficulty": "Intermediária",
-    "prompt": "Após diagnóstico definitivo de hipercolesterolemia familiar pelos critérios da OMS, qual conduta deve ser adotada, além do tratamento hipolipemiante?",
+    "subcategory": "Estratificação de risco",
+    "difficulty": "Básica",
+    "prompt": "Mulher de 55 anos, não fumante, com PA normal e sem diabetes, tem Escore de Risco Global (Framingham) de 8% em 10 anos. Ela pergunta se precisa de remédio para colesterol, pois o LDL-c é de 128 mg/dL. Qual interpretação está correta?",
     "options": [
       {
         "letter": "A",
-        "text": "Repetir o perfil lipídico a cada mês.",
-        "rationale": "Incorreta. O PCDT não exige monitorar o perfil lipídico após iniciar estatina."
+        "text": "Muito alto risco, pois toda mulher após a menopausa é classificada nessa categoria pelo escore.",
+        "rationale": "Incorreta. Muito alto risco exige doença cardiovascular estabelecida."
       },
       {
         "letter": "B",
-        "text": "Prescrever apenas dieta por cinco anos seguidos.",
-        "rationale": "Incorreta. A HF tem indicação de estatina; dieta isolada não basta."
+        "text": "Alto risco; o LDL-c acima de 100 mg/dL sozinho define a indicação de estatina, independentemente do ERG.",
+        "rationale": "Incorreta. A decisão segue o risco global, não um LDL-c isolado."
       },
       {
         "letter": "C",
-        "text": "Investigar os familiares de primeiro grau.",
-        "rationale": "CORRETA. Por ser hereditária, a HF exige rastreio dos familiares de 1º grau, além de estatina."
+        "text": "Baixo risco (< 10%); sem critério para estatina pelo PCDT, com foco em estilo de vida e reavaliação.",
+        "rationale": "CORRETA. ERG < 10% é baixo risco e não preenche o critério de inclusão (ERG > 10%)."
       },
       {
         "letter": "D",
-        "text": "Aguardar o primeiro evento coronariano.",
-        "rationale": "Incorreta. HF definitiva já é critério de tratamento no SUS; não se espera evento."
+        "text": "Risco moderado (entre 5% e 10%); indicação de estatina em dose máxima para atingir LDL-c abaixo de 70 mg/dL.",
+        "rationale": "Incorreta. Moderado vai de 10% a 20%; 8% é baixo risco."
       }
     ],
     "correctLetter": "C",
-    "clinicalPointers": "Trata-se de uma doença hereditária: pense nos parentes.",
-    "sourceLabel": "Questão da professora (adaptada)"
+    "clinicalPointers": "Relembre as faixas do ERG em 10 anos."
   },
   {
     "id": 57,
     "code": "DLP-17",
     "category": "Dislipidemia",
     "subcategory": "Estratificação de risco",
-    "difficulty": "Básica",
-    "prompt": "Paciente sem doença cardiovascular estabelecida tem Escore de Risco Global (Framingham) de 8% em 10 anos. Como é classificado?",
+    "difficulty": "Avançada",
+    "prompt": "Homem de 57 anos, hipertenso, tabagista e com IMC de 31 kg/m², sem doença cardiovascular. Perfil: CT = 260 mg/dL, HDL-c = 40 mg/dL e TG = 300 mg/dL. O ERG calculado foi de 14% em 10 anos. Qual interpretação e conduta estão corretas?",
     "options": [
       {
         "letter": "A",
-        "text": "Risco moderado.",
-        "rationale": "Incorreta. Moderado vai de 10% a 20%."
+        "text": "LDL-c de 220 mg/dL e risco alto: fibrato em monoterapia, pois os triglicerídeos estão acima de 150 mg/dL.",
+        "rationale": "Incorreta. 220 é o não-HDL-c; fibrato em monoterapia é para TG > 500 sem indicação de estatina."
       },
       {
         "letter": "B",
-        "text": "Baixo risco.",
-        "rationale": "CORRETA. ERG < 10% em 10 anos = baixo risco."
+        "text": "LDL-c de 160 mg/dL e risco moderado: mudança de estilo de vida e estatina, pelo critério de ERG > 10%.",
+        "rationale": "CORRETA. (260 − 40) − 60 = 160; ERG 14% é risco moderado e critério de inclusão: MEV + estatina."
       },
       {
         "letter": "C",
-        "text": "Alto risco.",
-        "rationale": "Incorreta. Alto é acima de 20% em 10 anos."
+        "text": "LDL-c de 160 mg/dL e risco baixo: apenas dieta e novo cálculo do escore daqui a 5 anos.",
+        "rationale": "Incorreta. ERG de 14% não é baixo risco (baixo é < 10%)."
       },
       {
         "letter": "D",
-        "text": "Muito alto risco.",
-        "rationale": "Incorreta. Muito alto exige doença cardiovascular estabelecida."
+        "text": "LDL-c de 100 mg/dL e risco moderado: nenhuma medicação, pois o LDL-c já está no alvo.",
+        "rationale": "Incorreta. O LDL-c correto é 160 mg/dL, e o ERG já indica estatina."
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "Relembre as faixas do ERG em 10 anos e a condição que define o risco muito alto."
+    "clinicalPointers": "Calcule o LDL-c por Friedewald e classifique o ERG pelas faixas de risco.",
+    "sourceLabel": "Questão da professora (adaptada)"
   },
   {
     "id": 58,
     "code": "DLP-18",
     "category": "Dislipidemia",
     "subcategory": "Estratificação de risco",
-    "difficulty": "Básica",
-    "prompt": "Paciente de 58 anos, hipertenso, sem doença cardiovascular prévia, tem ERG de 15% em 10 anos. Qual é a classificação de risco?",
+    "difficulty": "Intermediária",
+    "prompt": "Homem de 64 anos, ex-tabagista, com HAS e ERG de 24% em 10 anos, sem doença cardiovascular estabelecida. O filho pergunta se o risco do pai é 'moderado, como o da mãe, que deu 12%'. Qual resposta está correta?",
     "options": [
       {
         "letter": "A",
-        "text": "Risco moderado.",
-        "rationale": "CORRETA. ERG entre 10% e 20% em 10 anos = risco moderado."
+        "text": "Não: o pai tem alto risco (> 20%) e a mãe, risco moderado (10% a 20%); ambos preenchem critério de tratamento.",
+        "rationale": "CORRETA. ERG > 20% é alto risco e 10–20% é moderado; ambos têm ERG > 10%, critério de inclusão."
       },
       {
         "letter": "B",
-        "text": "Muito alto risco.",
-        "rationale": "Incorreta. Exige doença CV já estabelecida."
+        "text": "Não: a mãe tem baixo risco, pois o risco só é considerado moderado a partir de 15% em 10 anos.",
+        "rationale": "Incorreta. Moderado começa em 10%."
       },
       {
         "letter": "C",
-        "text": "Alto risco.",
-        "rationale": "Incorreta. Alto risco é > 20%."
+        "text": "Não: o pai tem muito alto risco, pois todo ERG acima de 20% equivale a doença cardiovascular estabelecida.",
+        "rationale": "Incorreta. Muito alto risco exige ECV estabelecida; ERG > 20% é alto risco."
       },
       {
         "letter": "D",
-        "text": "Baixo risco.",
-        "rationale": "Incorreta. Baixo risco é < 10%."
+        "text": "Sim: ambos têm risco moderado, pois essa categoria vai de 10% a 30% em 10 anos pelo escore.",
+        "rationale": "Incorreta. A faixa moderada vai de 10% a 20%."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Relembre as faixas do ERG em 10 anos."
+    "clinicalPointers": "Compare os dois valores com as faixas de 10% e 20%."
   },
   {
     "id": 59,
@@ -2308,32 +2310,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Estratificação de risco",
     "difficulty": "Intermediária",
-    "prompt": "Homem de 62 anos com infarto agudo do miocárdio há 1 ano. Como deve ser classificado o risco e qual é o objetivo do tratamento hipolipemiante?",
+    "prompt": "Homem de 62 anos, aposentado, teve infarto agudo do miocárdio há 1 ano e faz acompanhamento na UBS. O residente pergunta se deve calcular o Escore de Risco Global para decidir sobre a estatina. Qual orientação está correta?",
     "options": [
       {
         "letter": "A",
-        "text": "Alto risco; o tratamento é prevenção primária.",
-        "rationale": "Incorreta. Com evento prévio, trata-se de prevenção secundária e risco muito alto."
+        "text": "Não é necessário: após o infarto, a estatina só está indicada se o LDL-c estiver acima de 190 mg/dL.",
+        "rationale": "Incorreta. A indicação segue o risco muito alto, não um LDL-c isolado."
       },
       {
         "letter": "B",
-        "text": "Muito alto risco; o tratamento é prevenção secundária.",
-        "rationale": "CORRETA. ECV estabelecida = muito alto risco, com tratamento hipolipemiante como prevenção secundária."
+        "text": "Não: com doença cardiovascular estabelecida, o risco é muito alto e o tratamento é prevenção secundária.",
+        "rationale": "CORRETA. ECV estabelecida = muito alto risco; o hipolipemiante é prevenção secundária, sem necessidade de calcular o ERG."
       },
       {
         "letter": "C",
-        "text": "Baixo risco, se o LDL-c atual estiver abaixo de 100 mg/dL.",
-        "rationale": "Incorreta. LDL-c isolado não reduz a categoria de quem já teve evento."
+        "text": "Sim: o ERG define se ele é de risco moderado, e a estatina só é indicada se o valor passar de 20%.",
+        "rationale": "Incorreta. Com evento prévio, o risco já é muito alto."
       },
       {
         "letter": "D",
-        "text": "Risco moderado; basta dieta até recalcular o ERG.",
-        "rationale": "Incorreta. Após IAM não se usa o ERG para rebaixar o risco; ele é muito alto."
+        "text": "Sim: se o ERG for menor que 10%, o paciente pode ser reclassificado como baixo risco e dispensar a estatina.",
+        "rationale": "Incorreta. Após IAM não se usa o ERG para rebaixar o risco."
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "Quem já tem doença cardiovascular estabelecida está no topo da pirâmide de risco.",
-    "sourceLabel": "Questão da professora (adaptada)"
+    "clinicalPointers": "Pense em para que serve o escore e em quem ele se aplica."
   },
   {
     "id": 60,
@@ -2341,31 +2342,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Estratificação de risco",
     "difficulty": "Intermediária",
-    "prompt": "Paciente com IAM prévio tem LDL-c de 92 mg/dL e pergunta por que precisa manter estatina se o colesterol está 'normal'. Qual é a melhor explicação?",
+    "prompt": "Homem de 66 anos com infarto prévio, em uso de estatina, traz LDL-c de 92 mg/dL e pergunta: 'Se meu colesterol já está abaixo de 100, por que continuar o remédio?'. Qual é a melhor explicação, segundo o PCDT?",
     "options": [
       {
         "letter": "A",
-        "text": "O objetivo é reduzir eventos cardiovasculares; o risco global pesa mais que o LDL-c isolado.",
+        "text": "O objetivo é reduzir eventos; no muito alto risco, o risco global pesa mais que o LDL-c isolado.",
         "rationale": "CORRETA. Em prevenção secundária, o tratamento visa reduzir eventos, e o risco global orienta a conduta."
       },
       {
         "letter": "B",
-        "text": "O paciente deve trocar a estatina por genfibrozila, mais eficaz na prevenção secundária.",
-        "rationale": "Incorreta. Genfibrozila não substitui estatina em prevenção secundária e não deve ser associada a ela."
+        "text": "A estatina deve ser trocada por genfibrozila, que é mais eficaz que a estatina na prevenção secundária.",
+        "rationale": "Incorreta. Genfibrozila não substitui estatina em prevenção secundária."
       },
       {
         "letter": "C",
-        "text": "A estatina serve para baixar triglicerídeos e, por isso, independe do LDL-c do paciente.",
-        "rationale": "Incorreta. A estatina é o hipolipemiante central para reduzir risco aterosclerótico, não apenas TG."
+        "text": "A estatina só serve para baixar triglicerídeos, e por isso sua indicação independe do LDL-c medido.",
+        "rationale": "Incorreta. A estatina é o hipolipemiante central para reduzir o risco aterosclerótico."
       },
       {
         "letter": "D",
-        "text": "A estatina deve ser suspensa, pois o LDL-c abaixo de 100 mg/dL indica cura da aterosclerose.",
-        "rationale": "Incorreta. LDL-c < 100 não significa cura; o risco segue muito alto após IAM."
+        "text": "A estatina deve ser suspensa, pois o LDL-c abaixo de 100 mg/dL mostra que a aterosclerose já foi curada.",
+        "rationale": "Incorreta. LDL-c < 100 não significa cura; o risco segue muito alto."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "O foco do tratamento no PCDT é o risco global, não um número isolado de LDL-c.",
+    "clinicalPointers": "Pense em qual é o objetivo final do tratamento hipolipemiante após um infarto.",
     "sourceLabel": "Questão da professora (adaptada)"
   },
   {
@@ -2373,32 +2374,32 @@ const QUESTIONS_DATABASE = [
     "code": "DLP-21",
     "category": "Dislipidemia",
     "subcategory": "Critérios de inclusão no SUS",
-    "difficulty": "Intermediária",
-    "prompt": "Mulher de 52 anos, sem doença cardiovascular, tem ERG de 12% em 10 anos. Ela preenche critério para tratamento hipolipemiante pelo PCDT no SUS?",
+    "difficulty": "Avançada",
+    "prompt": "Homem de 50 anos, com diabetes tipo 2 há 3 anos e tabagista, sem doença cardiovascular estabelecida. O ERG calculado foi de 9%. A farmácia municipal questiona a dispensação de estatina, pois 'o escore deu abaixo de 10%'. Pelos critérios do PCDT, qual é a interpretação?",
     "options": [
       {
         "letter": "A",
-        "text": "Sim, pois ERG > 10% em 10 anos é critério de inclusão.",
-        "rationale": "CORRETA. Risco moderado/alto (ERG > 10% em 10 anos) é critério de inclusão no PCDT."
+        "text": "Preenche critério: diabético com mais de 45 anos (homem) e um fator de risco maior, independentemente do ERG.",
+        "rationale": "CORRETA. Diabéticos > 45 anos (H) ou > 50 (M) com tabagismo, HAS ou história familiar entram no PCDT, mesmo com ERG < 10%."
       },
       {
         "letter": "B",
-        "text": "Não, pois só se trata quem já teve evento cardiovascular.",
-        "rationale": "Incorreta. O PCDT inclui prevenção primária para ERG > 10%."
+        "text": "Não preenche critério, pois todo paciente precisa ter ERG acima de 10% para receber estatina pelo SUS.",
+        "rationale": "Incorreta. O ERG > 10% é um dos critérios; o de diabetes é independente."
       },
       {
         "letter": "C",
-        "text": "Sim, mas apenas com fibrato, nunca com estatina.",
-        "rationale": "Incorreta. A estatina é a base do tratamento; fibratos têm indicação restrita."
+        "text": "Preenche critério apenas se o LDL-c for maior que 190 mg/dL, pois o diabetes isolado não conta no PCDT.",
+        "rationale": "Incorreta. O critério para diabéticos não depende de valor de LDL-c."
       },
       {
         "letter": "D",
-        "text": "Não, pois o PCDT exige ERG acima de 30% para tratar.",
-        "rationale": "Incorreta. O corte de inclusão é > 10%, não 30%."
+        "text": "Não preenche critério, pois o tabagismo não é considerado fator de risco maior para pessoas com diabetes.",
+        "rationale": "Incorreta. Tabagismo é um dos fatores de risco maiores do critério."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Um dos critérios de inclusão é um valor de ERG."
+    "clinicalPointers": "Os critérios de inclusão são independentes entre si; há um específico para pessoas com diabetes."
   },
   {
     "id": 62,
@@ -2406,31 +2407,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Critérios de inclusão no SUS",
     "difficulty": "Avançada",
-    "prompt": "Homem de 50 anos com diabetes tipo 2 e tabagista ativo, sem doença cardiovascular estabelecida. Pelos critérios do PCDT para dispensação de hipolipemiante no SUS, qual é a interpretação?",
+    "prompt": "Mulher de 48 anos, com diabetes tipo 2 e HAS, sem doença cardiovascular, sem hipercolesterolemia familiar e com ERG de 8%. Ela pergunta por que a vizinha diabética de 52 anos recebe estatina pelo SUS e ela não. Considerando os critérios de inclusão do PCDT, qual explicação está correta?",
     "options": [
       {
         "letter": "A",
-        "text": "Não preenche critério, pois diabéticos só são incluídos após o primeiro infarto.",
-        "rationale": "Incorreta. O PCDT inclui diabéticos em prevenção primária quando cumprem idade + fator de risco."
+        "text": "Ela preenche critério pelo diabetes, pois o corte de idade para diabéticos é de 45 anos para ambos os sexos.",
+        "rationale": "Incorreta. O corte é 45 anos para homens e 50 anos para mulheres."
       },
       {
         "letter": "B",
-        "text": "Preenche critério: diabético com mais de 45 anos (homem) e um fator de risco maior.",
-        "rationale": "CORRETA. Diabéticos > 45 anos (homens) ou > 50 (mulheres) com tabagismo, HAS ou história familiar entram no PCDT."
+        "text": "Ela ainda não preenche critérios: o de diabetes exige mais de 50 anos em mulheres, e o ERG está abaixo de 10%.",
+        "rationale": "CORRETA. Diabéticas > 50 anos com fator maior entram no PCDT; aos 48 anos, com ERG 8% e sem aterosclerose ou HF, ela não preenche nenhum critério ainda."
       },
       {
         "letter": "C",
-        "text": "Não preenche critério, pois tabagismo não é considerado fator de risco maior.",
-        "rationale": "Incorreta. Tabagismo é um dos fatores de risco maiores citados no critério."
+        "text": "Ela preenche critério pela HAS isolada, que dá direito à estatina pelo SUS em qualquer idade.",
+        "rationale": "Incorreta. HAS isolada não é critério de inclusão; entra como fator de risco maior no critério do diabetes."
       },
       {
         "letter": "D",
-        "text": "Preenche critério se o LDL-c for maior que 190 mg/dL, e não pelo diabetes.",
-        "rationale": "Incorreta. O critério para diabéticos não depende de um valor específico de LDL-c."
+        "text": "Ela nunca terá direito à estatina, pois mulheres só são incluídas no PCDT após um evento cardiovascular.",
+        "rationale": "Incorreta. Mulheres podem ser incluídas por ERG > 10%, diabetes com mais de 50 anos ou HF."
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "Há um critério específico para diabéticos que combina idade e um fator de risco maior."
+    "clinicalPointers": "Confira cada critério de inclusão, prestando atenção ao corte de idade para mulheres com diabetes."
   },
   {
     "id": 63,
@@ -2438,27 +2439,27 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Critérios de inclusão no SUS",
     "difficulty": "Intermediária",
-    "prompt": "Homem de 64 anos refere dor na panturrilha ao caminhar dois quarteirões, que alivia com o repouso (claudicação intermitente). Em relação ao PCDT de Dislipidemias, esse achado:",
+    "prompt": "Homem de 64 anos, ex-tabagista, relata dor na panturrilha direita ao caminhar dois quarteirões, que alivia após alguns minutos de repouso. Pulsos pediosos diminuídos. Nunca teve infarto ou AVC. Em relação ao PCDT de Dislipidemias, esse quadro:",
     "options": [
       {
         "letter": "A",
-        "text": "É evidência clínica de aterosclerose e critério de inclusão para tratamento hipolipemiante.",
+        "text": "É evidência clínica de aterosclerose (claudicação intermitente) e critério de inclusão para hipolipemiante.",
         "rationale": "CORRETA. IAM prévio, isquemia cerebral e claudicação intermitente são evidências clínicas de aterosclerose no PCDT."
       },
       {
         "letter": "B",
-        "text": "É critério quando houver amputação prévia registrada no prontuário do paciente.",
+        "text": "Só será critério de inclusão se houver amputação prévia ou úlcera isquêmica registrada no prontuário.",
         "rationale": "Incorreta. A claudicação, por si só, já é evidência clínica de aterosclerose."
       },
       {
         "letter": "C",
-        "text": "Indica fibrato como primeira escolha, pois a doença periférica depende de triglicerídeos.",
-        "rationale": "Incorreta. A base do tratamento é a estatina; fibratos têm indicação restrita."
+        "text": "Indica fibrato como primeira escolha, pois a doença arterial periférica depende principalmente dos triglicerídeos.",
+        "rationale": "Incorreta. A base do tratamento é a estatina."
       },
       {
         "letter": "D",
-        "text": "Não tem relação com dislipidemia e deve ser tratado apenas com analgésico na unidade.",
-        "rationale": "Incorreta. Claudicação intermitente reflete doença arterial aterosclerótica periférica."
+        "text": "Não tem relação com dislipidemia e deve ser tratado apenas com analgésico e repouso na própria unidade.",
+        "rationale": "Incorreta. A claudicação reflete doença arterial aterosclerótica periférica."
       }
     ],
     "correctLetter": "A",
@@ -2470,26 +2471,26 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Arsenal terapêutico",
     "difficulty": "Básica",
-    "prompt": "Segundo o arsenal terapêutico do PCDT, qual é a faixa de dose da atorvastatina?",
+    "prompt": "Homem de 59 anos com ERG de 18% vai iniciar atorvastatina. O farmacêutico da UBS pergunta ao médico quais são as doses inicial e máxima previstas no PCDT para esse medicamento. Qual resposta está correta?",
     "options": [
       {
         "letter": "A",
-        "text": "5 mg (inicial) até 20 mg (máxima, mesmo em alto risco).",
-        "rationale": "Incorreta. Não corresponde à faixa da atorvastatina no PCDT."
+        "text": "Início com 20 mg, até 80 mg, com maior toxicidade.",
+        "rationale": "Incorreta. Essa é a faixa da sinvastatina."
       },
       {
         "letter": "B",
-        "text": "20 mg (inicial) até 40 mg (máxima, para todos os casos).",
+        "text": "Início com 20 mg, até 40 mg em qualquer caso.",
         "rationale": "Incorreta. Essa é a faixa da pravastatina."
       },
       {
         "letter": "C",
-        "text": "10 mg (inicial) até 80 mg (máxima, em casos especiais).",
-        "rationale": "CORRETA. A atorvastatina vai de 10 mg (inicial) a 80 mg (máxima)."
+        "text": "Início com 10 mg, até 80 mg em casos especiais.",
+        "rationale": "CORRETA. A atorvastatina vai de 10 mg (inicial) a 80 mg (máxima, casos especiais)."
       },
       {
         "letter": "D",
-        "text": "40 mg (inicial) até 160 mg (máxima, em casos especiais).",
+        "text": "Início com 40 mg, até 160 mg em casos especiais.",
         "rationale": "Incorreta. Não existe dose de 160 mg no PCDT."
       }
     ],
@@ -2502,26 +2503,26 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Arsenal terapêutico",
     "difficulty": "Intermediária",
-    "prompt": "Paciente em uso de sinvastatina 40 mg precisa de maior intensidade. O médico cogita 80 mg/dia. Qual cuidado deve ser considerado sobre essa dose?",
+    "prompt": "Mulher de 67 anos, com IAM prévio, usa sinvastatina 40 mg. O médico considera aumentar para 80 mg/dia. A paciente já teve mialgia leve no passado. Qual cuidado deve ser considerado sobre essa dose?",
     "options": [
       {
         "letter": "A",
-        "text": "Sinvastatina 80 mg/dia não tem efeitos adversos musculares nem hepáticos.",
-        "rationale": "Incorreta. Doses altas elevam o risco de toxicidade muscular e hepática."
+        "text": "A sinvastatina 80 mg/dia só é tóxica em pessoas vivendo com HIV, sendo segura nos demais pacientes.",
+        "rationale": "Incorreta. O risco de toxicidade da dose alta vale para todos."
       },
       {
         "letter": "B",
-        "text": "Sinvastatina 80 mg/dia associa-se a maior risco de toxicidade.",
-        "rationale": "CORRETA. A dose de 80 mg/dia de sinvastatina tem maior risco de toxicidade."
+        "text": "A sinvastatina 80 mg/dia associa-se a maior risco de toxicidade, o que exige cautela e monitoramento.",
+        "rationale": "CORRETA. O PCDT alerta que 80 mg/dia de sinvastatina tem maior risco de toxicidade."
       },
       {
         "letter": "C",
-        "text": "Sinvastatina 80 mg/dia é a dose inicial padrão para todos os pacientes.",
-        "rationale": "Incorreta. A dose inicial é 20 mg; 80 mg é o topo, com mais toxicidade."
+        "text": "A sinvastatina 80 mg/dia é a dose inicial padrão e não traz nenhum risco adicional de efeitos musculares.",
+        "rationale": "Incorreta. A dose inicial é 20 mg; 80 mg tem mais toxicidade."
       },
       {
         "letter": "D",
-        "text": "Sinvastatina não existe no PCDT e deve ser trocada por genfibrozila.",
+        "text": "A sinvastatina não faz parte do PCDT e deve ser substituída por genfibrozila na mesma dose diária.",
         "rationale": "Incorreta. A sinvastatina faz parte do arsenal; genfibrozila não substitui estatina."
       }
     ],
@@ -2534,31 +2535,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Arsenal terapêutico",
     "difficulty": "Intermediária",
-    "prompt": "Homem de 47 anos vivendo com HIV, em TARV, tem indicação de estatina pelo PCDT. Qual estatina é a preferida para esse grupo?",
+    "prompt": "Homem de 47 anos vivendo com HIV, em terapia antirretroviral, tem ERG de 16% e indicação de estatina pelo PCDT. O residente pergunta qual estatina do arsenal deve ser preferida nesse caso. Qual é a resposta?",
     "options": [
       {
         "letter": "A",
-        "text": "Pravastatina.",
-        "rationale": "CORRETA. A pravastatina é a estatina indicada para pessoas vivendo com HIV."
+        "text": "Pravastatina, preferida para pessoas vivendo com HIV.",
+        "rationale": "CORRETA. A pravastatina é a estatina indicada para PVHIV no PCDT."
       },
       {
         "letter": "B",
-        "text": "Genfibrozila.",
+        "text": "Genfibrozila, que substitui a estatina em pessoas com HIV.",
         "rationale": "Incorreta. Genfibrozila é fibrato, não estatina."
       },
       {
         "letter": "C",
-        "text": "Sinvastatina.",
-        "rationale": "Incorreta. Não é a estatina destacada para PVHIV."
+        "text": "Sinvastatina 80 mg, pela maior potência entre as estatinas.",
+        "rationale": "Incorreta. Não é a destacada para PVHIV, e 80 mg tem mais toxicidade."
       },
       {
         "letter": "D",
-        "text": "Nenhuma estatina.",
+        "text": "Nenhuma estatina, pois todas são contraindicadas com TARV.",
         "rationale": "Incorreta. PVHIV podem usar estatina; a pravastatina é a destacada."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Uma das três estatinas do arsenal foi citada especificamente para PVHIV."
+    "clinicalPointers": "Uma das três estatinas do arsenal é a preferida para esse grupo."
   },
   {
     "id": 67,
@@ -2566,63 +2567,63 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Fibratos",
     "difficulty": "Intermediária",
-    "prompt": "Mulher de 45 anos, sem indicação de estatina pelo risco cardiovascular, tem TG de 780 mg/dL em duas dosagens. Qual é a indicação do PCDT e seu objetivo principal?",
+    "prompt": "Mulher de 45 anos, sem doença cardiovascular e com ERG de 6%, tem triglicerídeos de 780 mg/dL em duas dosagens. Relata episódio de dor abdominal intensa no ano anterior, sem diagnóstico. Qual é a indicação do PCDT e seu objetivo principal?",
     "options": [
       {
         "letter": "A",
-        "text": "Apenas observar, pois TG elevado não traz risco agudo e só importa o LDL-c.",
-        "rationale": "Incorreta. TG muito elevados aumentam o risco de pancreatite aguda."
+        "text": "Apenas observar, pois triglicerídeos elevados não trazem risco agudo e só o LDL-c importa.",
+        "rationale": "Incorreta. TG muito elevado aumenta o risco de pancreatite aguda."
       },
       {
         "letter": "B",
-        "text": "Genfibrozila associada a sinvastatina, para reduzir TG e LDL-c ao mesmo tempo.",
-        "rationale": "Incorreta. Genfibrozila nunca deve ser associada a estatina (risco de rabdomiólise)."
+        "text": "Genfibrozila associada a sinvastatina, para reduzir ao mesmo tempo os triglicerídeos e o LDL-c.",
+        "rationale": "Incorreta. Genfibrozila nunca deve ser associada a estatina."
       },
       {
         "letter": "C",
-        "text": "Fibrato, pois TG > 500 mg/dL sem indicação de estatina, para prevenir pancreatite.",
-        "rationale": "CORRETA. O PCDT indica fibrato para quem não tem indicação de estatina e tem TG > 500 mg/dL (prevenção de pancreatite)."
+        "text": "Fibrato, por TG acima de 500 mg/dL em quem não tem indicação de estatina, para prevenir pancreatite.",
+        "rationale": "CORRETA. O PCDT indica fibrato para quem não tem indicação de estatina e tem TG > 500 mg/dL, prevenindo pancreatite."
       },
       {
         "letter": "D",
-        "text": "Estatina em dose máxima, pois estatinas são a única classe indicada para TG elevado.",
+        "text": "Estatina em dose máxima, pois é a única classe do PCDT indicada para triglicerídeos muito elevados.",
         "rationale": "Incorreta. Sem indicação de estatina e com TG > 500, o PCDT prevê fibrato."
       }
     ],
     "correctLetter": "C",
-    "clinicalPointers": "Há um valor de TG a partir do qual o fibrato é indicado para prevenir uma complicação abdominal."
+    "clinicalPointers": "Há um valor de TG a partir do qual se indica um hipolipemiante específico para prevenir uma complicação abdominal."
   },
   {
     "id": 68,
     "code": "DLP-28",
     "category": "Dislipidemia",
     "subcategory": "Fibratos",
-    "difficulty": "Básica",
-    "prompt": "Qual é a 'regra de ouro' de segurança sobre fibratos e estatinas?",
+    "difficulty": "Intermediária",
+    "prompt": "Homem de 58 anos, em uso de sinvastatina por IAM prévio, tem TG de 620 mg/dL. Outro serviço prescreveu genfibrozila 600 mg duas vezes ao dia, e ele chega à UBS com as duas receitas. Qual é a conduta mais segura?",
     "options": [
       {
         "letter": "A",
-        "text": "Qualquer fibrato pode ser associado a qualquer estatina sem risco adicional.",
-        "rationale": "Incorreta. A associação genfibrozila + estatina é proibida pelo risco de rabdomiólise."
+        "text": "Suspender a genfibrozila e contraindicar qualquer fibrato em pessoas que já usam estatina.",
+        "rationale": "Incorreta. O fenofibrato pode ser associado à estatina."
       },
       {
         "letter": "B",
-        "text": "Estatinas só podem ser usadas em associação com algum fibrato, nunca isoladas.",
-        "rationale": "Incorreta. Estatinas são usadas isoladamente como base do tratamento."
+        "text": "Suspender a estatina e manter apenas a genfibrozila, pois agora o problema principal são os triglicerídeos.",
+        "rationale": "Incorreta. Com IAM prévio, a estatina é indispensável."
       },
       {
         "letter": "C",
-        "text": "Fenofibrato nunca deve ser associado a estatinas, pelo risco de pancreatite.",
-        "rationale": "Incorreta. O fenofibrato pode ser associado a estatinas; a proibição é da genfibrozila."
+        "text": "Associar as duas medicações, pois qualquer fibrato pode ser combinado com qualquer estatina sem risco adicional.",
+        "rationale": "Incorreta. A associação genfibrozila + estatina é proibida pelo risco de rabdomiólise."
       },
       {
         "letter": "D",
-        "text": "Genfibrozila nunca deve ser associada a estatinas, pelo risco de rabdomiólise.",
-        "rationale": "CORRETA. É a regra de ouro: genfibrozila + estatina aumenta muito o risco de rabdomiólise."
+        "text": "Não associar genfibrozila à estatina, pelo risco de rabdomiólise; se houver indicação de fibrato, usar fenofibrato.",
+        "rationale": "CORRETA. É a 'regra de ouro': genfibrozila nunca com estatina; o fenofibrato pode ser associado."
       }
     ],
     "correctLetter": "D",
-    "clinicalPointers": "Um fibrato específico não deve ser combinado com estatinas por risco muscular grave."
+    "clinicalPointers": "Há uma regra de segurança específica sobre um fibrato e as estatinas."
   },
   {
     "id": 69,
@@ -2630,31 +2631,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Fibratos",
     "difficulty": "Avançada",
-    "prompt": "Homem de 60 anos com DM2 e doença arterial coronariana, em uso de atorvastatina, apresenta TG de 680 mg/dL apesar de mudanças no estilo de vida. Qual conduta é adequada?",
+    "prompt": "Homem de 60 anos com DM2 e doença arterial coronariana, em uso de atorvastatina, mantém TG de 680 mg/dL apesar de três meses de mudanças no estilo de vida. Qual conduta é adequada?",
     "options": [
       {
         "letter": "A",
-        "text": "Suspender todos os hipolipemiantes até que o TG caia apenas com a dieta.",
-        "rationale": "Incorreta. Suspender a estatina num paciente com DAC aumentaria o risco de eventos."
+        "text": "Suspender os hipolipemiantes até o TG cair com a dieta em seis meses.",
+        "rationale": "Incorreta. Suspender a estatina aumentaria o risco de eventos."
       },
       {
         "letter": "B",
         "text": "Trocar a estatina por fenofibrato, pois o problema agora é o triglicerídeo.",
-        "rationale": "Incorreta. Com DAC, a estatina é indispensável (prevenção secundária); não se suspende."
+        "rationale": "Incorreta. Com DAC, a estatina é indispensável (prevenção secundária)."
       },
       {
         "letter": "C",
         "text": "Manter a estatina, reforçar mudanças de estilo de vida e associar fenofibrato.",
-        "rationale": "CORRETA. Com TG > 500 em uso de estatina, associa-se fenofibrato (combinação permitida) e mantêm-se estatina e MEV."
+        "rationale": "CORRETA. Com TG > 500 em uso de estatina, associa-se fenofibrato e mantêm-se estatina e MEV."
       },
       {
         "letter": "D",
-        "text": "Manter a estatina e associar genfibrozila, o fibrato mais potente disponível.",
+        "text": "Manter a estatina e associar genfibrozila, o fibrato mais potente do PCDT.",
         "rationale": "Incorreta. Genfibrozila é proibida com estatina (rabdomiólise)."
       }
     ],
     "correctLetter": "C",
-    "clinicalPointers": "Há um fibrato que pode ser combinado com estatina e outro que não pode.",
+    "clinicalPointers": "Pense em qual fibrato pode ser combinado com estatina e em qual não pode.",
     "sourceLabel": "Questão da professora (adaptada)"
   },
   {
@@ -2663,31 +2664,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Monitoramento",
     "difficulty": "Intermediária",
-    "prompt": "Paciente em uso contínuo de atorvastatina há 1 ano, assintomático, pergunta se deve repetir o perfil lipídico a cada 3 meses. Segundo o PCDT:",
+    "prompt": "Homem de 63 anos, em uso contínuo de atorvastatina há 1 ano, assintomático, pergunta se deve repetir o perfil lipídico a cada 3 meses 'para ajustar a dose até chegar no alvo'. Segundo o PCDT, qual orientação está correta?",
     "options": [
       {
         "letter": "A",
-        "text": "A estatina deve ser suspensa se o LDL-c ficar abaixo de 100 mg/dL em algum controle.",
-        "rationale": "Incorreta. O tratamento é contínuo; LDL-c baixo não é motivo para suspender."
+        "text": "O perfil deve ser repetido a cada 6 meses, e a estatina trocada por fibrato se o HDL-c não subir.",
+        "rationale": "Incorreta. Não há essa recomendação no PCDT."
       },
       {
         "letter": "B",
-        "text": "É obrigatório repetir o perfil lipídico a cada 3 meses para ajustar a estatina ao LDL-c.",
-        "rationale": "Incorreta. A intensidade segue o risco, não um alvo de LDL-c; não há controle trimestral obrigatório."
+        "text": "É obrigatório repetir o perfil a cada 3 meses, ajustando a estatina até o LDL-c atingir 70 mg/dL.",
+        "rationale": "Incorreta. A intensidade não é guiada por alvo de LDL-c, e não há controle trimestral obrigatório."
       },
       {
         "letter": "C",
-        "text": "O perfil lipídico deve ser repetido semanalmente no primeiro ano de tratamento.",
-        "rationale": "Incorreta. Não há recomendação de monitoramento semanal."
+        "text": "O perfil lipídico deve ser repetido todo mês no primeiro ano, e a estatina suspensa se o LDL-c normalizar.",
+        "rationale": "Incorreta. Não há controle mensal, e o tratamento é contínuo."
       },
       {
         "letter": "D",
-        "text": "Não é necessário monitorar o perfil lipídico após iniciar a estatina em uso contínuo.",
-        "rationale": "CORRETA. O PCDT dispensa a monitorização do perfil lipídico após iniciar estatina."
+        "text": "Não é necessário monitorar o perfil lipídico após iniciar a estatina, pois a intensidade segue o risco.",
+        "rationale": "CORRETA. O PCDT dispensa a monitorização lipídica após iniciar estatina; a intensidade é definida pelo risco CV."
       }
     ],
     "correctLetter": "D",
-    "clinicalPointers": "O PCDT diferencia o monitoramento de estatinas do de fibratos."
+    "clinicalPointers": "O PCDT diferencia o monitoramento das estatinas do monitoramento dos fibratos."
   },
   {
     "id": 71,
@@ -2695,31 +2696,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Monitoramento",
     "difficulty": "Intermediária",
-    "prompt": "Paciente em uso de fenofibrato por hipertrigliceridemia. Qual monitoramento lipídico o PCDT recomenda?",
+    "prompt": "Mulher de 49 anos, sem indicação de estatina, usa fenofibrato por hipertrigliceridemia grave (TG inicial de 820 mg/dL). Na consulta de seguimento, pergunta com que frequência deve repetir os exames de gordura no sangue. Qual orientação está de acordo com o PCDT?",
     "options": [
       {
         "letter": "A",
-        "text": "Triglicerídeos semestralmente.",
+        "text": "Monitorar os triglicerídeos a cada seis meses.",
         "rationale": "CORRETA. Em uso de fibratos, o PCDT recomenda monitorar TG a cada seis meses."
       },
       {
         "letter": "B",
-        "text": "LDL-c a cada mês, por tempo indeterminado.",
-        "rationale": "Incorreta. O monitoramento de fibratos é por TG, não LDL-c mensal."
+        "text": "Monitorar o LDL-c todo mês, por tempo indeterminado.",
+        "rationale": "Incorreta. O monitoramento dos fibratos é pelo TG, não pelo LDL-c mensal."
       },
       {
         "letter": "C",
-        "text": "Nenhum exame lipídico de controle.",
-        "rationale": "Incorreta. Diferente das estatinas, fibratos pedem controle de TG."
+        "text": "Nenhum exame lipídico, como ocorre com as estatinas.",
+        "rationale": "Incorreta. Diferente das estatinas, os fibratos pedem controle de TG."
       },
       {
         "letter": "D",
-        "text": "HDL-c semanal nos primeiros meses.",
+        "text": "Monitorar o HDL-c semanalmente nos primeiros meses.",
         "rationale": "Incorreta. Não há recomendação de HDL-c semanal."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Para fibratos há um parâmetro específico com periodicidade definida."
+    "clinicalPointers": "Para fibratos há um parâmetro específico, com periodicidade definida."
   },
   {
     "id": 72,
@@ -2727,26 +2728,26 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Monitoramento",
     "difficulty": "Intermediária",
-    "prompt": "Sobre a intensidade do tratamento com estatinas no PCDT de Dislipidemias, assinale a correta.",
+    "prompt": "Em uma reunião de matriciamento, discute-se como definir a dose de estatina de um paciente de 70 anos com AVC isquêmico prévio. Um residente propõe começar com a menor dose e subir só se o LDL-c não chegar a 70 mg/dL. Segundo o PCDT, como deve ser definida a intensidade do tratamento?",
     "options": [
       {
         "letter": "A",
-        "text": "É definida só pelo LDL-c: toda pessoa deve atingir 70 mg/dL, independentemente do risco.",
+        "text": "Exclusivamente pelo LDL-c: todo paciente deve atingir 70 mg/dL, com ajustes trimestrais de dose.",
         "rationale": "Incorreta. O PCDT não define a intensidade exclusivamente por alvo de LDL-c."
       },
       {
         "letter": "B",
-        "text": "É sempre a dose máxima desde o início, para qualquer paciente e qualquer categoria de risco.",
-        "rationale": "Incorreta. A dose respeita o risco e o protocolo, com escalonamento quando indicado."
+        "text": "Sempre na dose máxima desde o início, para qualquer paciente e em qualquer categoria de risco.",
+        "rationale": "Incorreta. A dose respeita o risco e o protocolo."
       },
       {
         "letter": "C",
-        "text": "Segue o risco cardiovascular, nas doses do protocolo, sem ser definida só pelo alvo de LDL-c.",
-        "rationale": "CORRETA. A intensidade é determinada pelo risco CV, respeitando as doses do PCDT, e não apenas pelo alvo de LDL-c."
+        "text": "Conforme o risco cardiovascular, respeitando as doses do protocolo, e não apenas pelo alvo de LDL-c.",
+        "rationale": "CORRETA. A intensidade é determinada pelo risco CV, nas doses do PCDT, sem ser definida só por alvo de LDL-c."
       },
       {
         "letter": "D",
-        "text": "É definida pelo valor de triglicerídeos, que determina a estatina e a dose a prescrever.",
+        "text": "Pelo valor dos triglicerídeos, que determina tanto a estatina escolhida quanto a dose a prescrever.",
         "rationale": "Incorreta. TG orienta o uso de fibrato em situações específicas, não a intensidade da estatina."
       }
     ],
@@ -2759,26 +2760,26 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Segurança",
     "difficulty": "Intermediária",
-    "prompt": "Em que momentos o PCDT recomenda o monitoramento de toxicidade (transaminases e CPK) em usuários de estatinas ou fibratos?",
+    "prompt": "Homem de 56 anos vai iniciar atorvastatina 20 mg. A enfermeira da UBS organiza o cronograma de exames de segurança (transaminases e CPK). Segundo o PCDT, em que momentos a toxicidade deve ser monitorada?",
     "options": [
       {
         "letter": "A",
-        "text": "Quando surgir icterícia ou urina escura.",
+        "text": "Apenas quando surgirem icterícia, urina escura ou dor muscular.",
         "rationale": "Incorreta. O monitoramento é programado, não só por sintomas."
       },
       {
         "letter": "B",
-        "text": "Mensalmente, por tempo indeterminado, com CPK e TSH.",
+        "text": "Mensalmente, por tempo indeterminado, com CPK, TSH e creatinina.",
         "rationale": "Incorreta. Não há recomendação de controle mensal indefinido."
       },
       {
         "letter": "C",
-        "text": "Uma vez, dez anos após o início do tratamento.",
-        "rationale": "Incorreta. O controle é mais precoce: prévio, 6 meses e pós-ajuste."
+        "text": "Uma única vez, dez anos após o início, para avaliar dano acumulado.",
+        "rationale": "Incorreta. O controle é prévio, aos 6 meses e após ajustes."
       },
       {
         "letter": "D",
-        "text": "Antes de iniciar, aos 6 meses e após ajuste de dose.",
+        "text": "Antes de iniciar, aos 6 meses de uso e após cada ajuste de dose.",
         "rationale": "CORRETA. Monitoramento de toxicidade: prévio, aos 6 meses e após ajuste de dose."
       }
     ],
@@ -2791,31 +2792,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Segurança",
     "difficulty": "Avançada",
-    "prompt": "Paciente em uso de sinvastatina apresenta ALT de 140 U/L (limite superior da normalidade = 40 U/L), CPK normal e mialgia leve. Qual conduta segue o PCDT?",
+    "prompt": "Mulher de 61 anos, em uso de sinvastatina há 5 meses, refere mialgia leve e tem medo de 'estragar o fígado'. Exames: ALT = 140 U/L (limite superior da normalidade = 40 U/L) e CPK normal. Qual conduta está de acordo com o PCDT?",
     "options": [
       {
         "letter": "A",
-        "text": "Manter a dose atual, pois só há risco se a ALT ultrapassar 10 vezes o limite superior da normalidade.",
-        "rationale": "Incorreta. O corte hepático é 3× LSN; 10× é o corte da CPK para suspensão imediata."
+        "text": "Manter a dose atual, pois só há risco hepático quando a ALT ultrapassa 10 vezes o limite superior.",
+        "rationale": "Incorreta. O corte hepático é 3× LSN; 10× é o corte da CPK."
       },
       {
         "letter": "B",
-        "text": "Suspender a estatina, investigar causas secundárias e reintroduzir em dose menor após normalização.",
-        "rationale": "CORRETA. ALT > 3× LSN (140 > 120): suspender, investigar e reintroduzir em dose reduzida após normalizar."
+        "text": "Suspender a estatina, investigar causas secundárias e reintroduzir em dose menor após normalizar.",
+        "rationale": "CORRETA. ALT > 3× LSN (140 > 120): suspender, investigar e reintroduzir em dose reduzida (ou trocar) após normalizar."
       },
       {
         "letter": "C",
-        "text": "Dobrar a dose da estatina, pois a elevação da ALT indica que o fígado responde ao tratamento.",
+        "text": "Dobrar a dose da estatina, pois a elevação da ALT indica boa resposta do fígado ao tratamento.",
         "rationale": "Incorreta. Elevação de transaminases é toxicidade, não sinal de resposta."
       },
       {
         "letter": "D",
         "text": "Associar genfibrozila para proteger o fígado e manter a sinvastatina na mesma dose de antes.",
-        "rationale": "Incorreta. Genfibrozila com estatina é proibida (rabdomiólise) e não protege o fígado."
+        "rationale": "Incorreta. Genfibrozila com estatina é proibida e não protege o fígado."
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "Compare a ALT com 3 vezes o limite superior da normalidade.",
+    "clinicalPointers": "Compare a ALT com três vezes o limite superior da normalidade.",
     "sourceLabel": "Questão da professora (adaptada)"
   },
   {
@@ -2824,26 +2825,26 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Segurança",
     "difficulty": "Intermediária",
-    "prompt": "Paciente em atorvastatina refere dores musculares difusas. A CPK está 3 vezes acima do limite superior da normalidade. Qual é a conduta pelo PCDT?",
+    "prompt": "Homem de 68 anos, em uso de atorvastatina 40 mg, refere dores musculares difusas há 2 semanas, sem fraqueza e com urina de cor normal. A CPK está 3 vezes acima do limite superior da normalidade. Qual é a conduta pelo PCDT?",
     "options": [
       {
         "letter": "A",
-        "text": "Observar atentamente e considerar ajuste de dose.",
+        "text": "Observar atentamente e considerar ajuste de dose, pois a CPK está abaixo de 10 vezes o limite superior.",
         "rationale": "CORRETA. Dor muscular com CPK normal ou < 10× LSN: observar e considerar ajustar a dose."
       },
       {
         "letter": "B",
-        "text": "Ignorar a queixa, pois estatinas não causam dor muscular.",
+        "text": "Desconsiderar a queixa, pois estatinas não causam dor muscular e a CPK elevada é achado sem importância.",
         "rationale": "Incorreta. Mialgia é efeito adverso possível e deve ser monitorada."
       },
       {
         "letter": "C",
-        "text": "Associar genfibrozila para reduzir a inflamação muscular.",
+        "text": "Associar genfibrozila para reduzir a inflamação muscular e manter a dose atual da estatina.",
         "rationale": "Incorreta. Essa associação aumenta o risco de rabdomiólise."
       },
       {
         "letter": "D",
-        "text": "Suspender a estatina de forma imediata e definitiva.",
+        "text": "Suspender a estatina de forma imediata e definitiva, pois qualquer elevação de CPK indica rabdomiólise.",
         "rationale": "Incorreta. A suspensão imediata é para CPK > 10× LSN."
       }
     ],
@@ -2856,27 +2857,27 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Segurança",
     "difficulty": "Intermediária",
-    "prompt": "Paciente em uso de estatina apresenta fraqueza muscular intensa, urina escura e CPK 15 vezes acima do limite superior da normalidade. Qual é a conduta?",
+    "prompt": "Mulher de 72 anos, em uso de sinvastatina 40 mg, chega à UBS com fraqueza muscular intensa, dificuldade para levantar da cadeira e urina escura há 2 dias. A CPK está 15 vezes acima do limite superior da normalidade. Qual é a conduta?",
     "options": [
       {
         "letter": "A",
-        "text": "Reduzir a dose à metade e manter.",
+        "text": "Reduzir a dose da estatina à metade e reavaliar em 6 meses.",
         "rationale": "Incorreta. Com CPK > 10× LSN não se mantém a estatina."
       },
       {
         "letter": "B",
-        "text": "Manter a dose e repetir em 6 meses.",
-        "rationale": "Incorreta. Adiar a conduta expõe o paciente a rabdomiólise."
+        "text": "Manter a dose e repetir a CPK somente na próxima consulta.",
+        "rationale": "Incorreta. Adiar a conduta expõe a paciente a rabdomiólise."
       },
       {
         "letter": "C",
-        "text": "Suspender de imediato a estatina.",
-        "rationale": "CORRETA. CPK > 10× LSN (risco de rabdomiólise) exige suspensão imediata."
+        "text": "Suspender de imediato a estatina (risco de rabdomiólise).",
+        "rationale": "CORRETA. CPK > 10× LSN exige suspensão imediata da estatina ou do fibrato."
       },
       {
         "letter": "D",
-        "text": "Trocar por genfibrozila na mesma hora.",
-        "rationale": "Incorreta. Genfibrozila também pode causar toxicidade muscular e não é a conduta."
+        "text": "Trocar a sinvastatina por genfibrozila no mesmo dia.",
+        "rationale": "Incorreta. Genfibrozila também tem toxicidade muscular e não é a conduta."
       }
     ],
     "correctLetter": "C",
@@ -2886,33 +2887,34 @@ const QUESTIONS_DATABASE = [
     "id": 77,
     "code": "DLP-37",
     "category": "Dislipidemia",
-    "subcategory": "Determinantes sociais",
-    "difficulty": "Intermediária",
-    "prompt": "Paciente com dislipidemia relata que perto de casa só encontra alimentos ultraprocessados baratos e que frutas e verduras frescas são caras e distantes. Esse cenário ilustra:",
+    "subcategory": "Segurança",
+    "difficulty": "Avançada",
+    "prompt": "Homem de 58 anos teve IAM há 6 meses e usa sinvastatina 20 mg, com boa adesão e sem efeitos adversos. O LDL-c atual é de 125 mg/dL. Ele pergunta se o remédio 'está fazendo efeito' e qual o melhor horário para tomá-lo. Qual orientação está correta?",
     "options": [
       {
         "letter": "A",
-        "text": "Uma indicação para suspender a estatina, pois a dieta não será seguida mesmo.",
-        "rationale": "Incorreta. A dificuldade de dieta não justifica suspender o tratamento farmacológico."
+        "text": "Baixo risco: suspender a estatina, pois o LDL-c próximo de 100 mg/dL dispensa tratamento farmacológico.",
+        "rationale": "Incorreta. Após IAM o risco é muito alto e a estatina não deve ser suspensa."
       },
       {
         "letter": "B",
-        "text": "Um problema sem relação com a saúde, a ser resolvido fora do sistema de saúde.",
-        "rationale": "Incorreta. Os DSS são parte do cuidado e afetam diretamente a adesão."
+        "text": "Muito alto risco: trocar a sinvastatina por genfibrozila 600 mg, tomada duas vezes ao dia pela manhã.",
+        "rationale": "Incorreta. Genfibrozila não substitui estatina em prevenção secundária."
       },
       {
         "letter": "C",
-        "text": "Falta de força de vontade, que deve ser corrigida com orientações mais firmes.",
-        "rationale": "Incorreta. Essa leitura é equivocada: prescrever estilo de vida sem entender o território é ineficaz."
+        "text": "Risco moderado: manter a sinvastatina 20 mg, pois o LDL-c abaixo de 130 mg/dL já é o alvo de consenso.",
+        "rationale": "Incorreta. Após IAM o risco é muito alto, e não há alvo de consenso de 130 mg/dL."
       },
       {
         "letter": "D",
-        "text": "Um deserto alimentar, determinante social que limita a adesão à dieta prescrita.",
-        "rationale": "CORRETA. Desertos alimentares (in natura caros e distantes, ultraprocessados baratos) são determinantes sociais de saúde."
+        "text": "Muito alto risco: otimizar a estatina nas doses do PCDT, em dose única diária, de preferência à noite.",
+        "rationale": "CORRETA. Após IAM o risco é muito alto; a sinvastatina está na dose inicial e pode ser otimizada, em dose única, preferencialmente à noite."
       }
     ],
     "correctLetter": "D",
-    "clinicalPointers": "Contraponha a prescrição à realidade do território."
+    "clinicalPointers": "Classifique o risco após o IAM e pense na faixa de dose da sinvastatina e no horário de administração.",
+    "sourceLabel": "Questão da professora (adaptada)"
   },
   {
     "id": 78,
@@ -2920,31 +2922,31 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Determinantes sociais",
     "difficulty": "Intermediária",
-    "prompt": "Prescrever estilo de vida sem entender o território é ineficaz. Qual conduta traduz melhor essa ideia no cuidado da dislipidemia?",
+    "prompt": "Mulher de 54 anos, com dislipidemia, mora em conjunto habitacional na periferia. Relata que perto de casa só há mercadinhos com biscoitos, embutidos e refrigerantes baratos, enquanto frutas e verduras frescas são caras e ficam a 40 minutos de ônibus. O residente anota 'baixa adesão à dieta'. Como esse cenário deve ser interpretado?",
     "options": [
       {
         "letter": "A",
-        "text": "Identificar barreiras do território (alimentos, locais seguros, renda) e pactuar metas factíveis.",
-        "rationale": "CORRETA. É preciso considerar desertos alimentares, falta de áreas seguras e determinantes econômicos e étnico-raciais."
+        "text": "Como deserto alimentar, determinante social que limita a adesão e exige orientações adaptadas ao território.",
+        "rationale": "CORRETA. Desertos alimentares (in natura caros e distantes, ultraprocessados baratos) são determinantes sociais de saúde."
       },
       {
         "letter": "B",
-        "text": "Entregar uma dieta padronizada e culpar o paciente se os lipídios não melhorarem na consulta seguinte.",
-        "rationale": "Incorreta. A culpabilização ignora os determinantes sociais e tende a falhar."
+        "text": "Como falta de força de vontade da paciente, a ser corrigida com orientações mais firmes a cada consulta.",
+        "rationale": "Incorreta. Essa leitura culpabiliza a paciente; prescrever sem entender o território é ineficaz."
       },
       {
         "letter": "C",
-        "text": "Recomendar academia particular diária como única forma válida de atividade física.",
-        "rationale": "Incorreta. Recomendações sem considerar o acesso real são ineficazes."
+        "text": "Como indicação para suspender a estatina, pois sem dieta adequada o medicamento não terá efeito.",
+        "rationale": "Incorreta. A dificuldade de dieta não justifica suspender o tratamento farmacológico."
       },
       {
         "letter": "D",
-        "text": "Dispensar orientações de estilo de vida, pois o território torna qualquer mudança impossível.",
-        "rationale": "Incorreta. Entender o território serve para adaptar as orientações, não para abandoná-las."
+        "text": "Como um problema sem relação com a saúde, a ser resolvido pela assistência social, fora da consulta.",
+        "rationale": "Incorreta. Os DSS fazem parte do cuidado e afetam diretamente a adesão."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Pense em adaptar a orientação ao contexto real da pessoa."
+    "clinicalPointers": "Contraponha a prescrição à realidade do território."
   },
   {
     "id": 79,
@@ -2952,64 +2954,63 @@ const QUESTIONS_DATABASE = [
     "category": "Dislipidemia",
     "subcategory": "Determinantes sociais",
     "difficulty": "Intermediária",
-    "prompt": "Entre as prescrições de estilo de vida para dislipidemia com base na SBC, qual inclui estratégias farmacológicas e cirúrgicas?",
+    "prompt": "Homem de 49 anos, vigilante noturno, com dislipidemia, recebe orientação de caminhar 30 minutos por dia. Na consulta seguinte, conta que a rua é escura, sem calçada e com relatos frequentes de assalto, e que dorme durante o dia. Qual conduta traduz a ideia de que prescrever estilo de vida sem entender o território é ineficaz?",
     "options": [
       {
         "letter": "A",
-        "text": "Cessação do tabagismo com cirurgia pulmonar e uso de corticoide.",
-        "rationale": "Incorreta. Não é uma estratégia recomendada de perda de peso."
+        "text": "Manter a orientação de caminhada noturna e registrar a não adesão como responsabilidade exclusiva do paciente.",
+        "rationale": "Incorreta. A culpabilização ignora os determinantes sociais e tende a falhar."
       },
       {
         "letter": "B",
-        "text": "Perda de peso, incluindo análogos de GLP-1 e cirurgia bariátrica.",
-        "rationale": "CORRETA. A perda de peso com análogos de GLP-1 e cirurgia bariátrica é forte recomendação da SBC."
+        "text": "Identificar as barreiras do território e da rotina e pactuar alternativas factíveis de atividade física.",
+        "rationale": "CORRETA. A falta de áreas seguras e iluminadas é determinante social; o plano deve ser construído com o paciente."
       },
       {
         "letter": "C",
-        "text": "Atividade física com anabolizantes e cirurgia ortopédica eletiva.",
-        "rationale": "Incorreta. Anabolizantes não fazem parte das recomendações."
+        "text": "Dispensar qualquer orientação de atividade física, já que o território torna a mudança impossível.",
+        "rationale": "Incorreta. Entender o território serve para adaptar as orientações, não para abandoná-las."
       },
       {
         "letter": "D",
-        "text": "Espiritualidade associada a fibratos e a cirurgia cardíaca precoce.",
-        "rationale": "Incorreta. A espiritualidade aparece como moduladora, sem associação cirúrgica."
+        "text": "Recomendar academia particular diária como única forma válida de atividade física para o caso.",
+        "rationale": "Incorreta. Recomendações sem considerar o acesso real são ineficazes."
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "Pense em análogos de um hormônio intestinal e em um tipo de cirurgia."
+    "clinicalPointers": "Adapte a orientação ao contexto real da pessoa, sem abandoná-la."
   },
   {
     "id": 80,
     "code": "DLP-40",
     "category": "Dislipidemia",
-    "subcategory": "Diagnóstico laboratorial",
-    "difficulty": "Avançada",
-    "prompt": "Homem de 57 anos, hipertenso, tabagista, IMC 31 kg/m², sem doença cardiovascular. Exames: CT = 260 mg/dL, HDL-c = 40 mg/dL, TG = 300 mg/dL. ERG calculado de 14% em 10 anos. Qual interpretação e conduta estão corretas?",
+    "subcategory": "Determinantes sociais",
+    "difficulty": "Intermediária",
+    "prompt": "Mulher de 52 anos, com obesidade grau III, dislipidemia e HAS, frequenta um grupo religioso na comunidade. Na consulta, pergunta o que, além de dieta e exercício, poderia ajudar no controle do colesterol e do risco cardiovascular. Considerando as recomendações da SBC citadas no PCDT, qual alternativa é correta?",
     "options": [
       {
         "letter": "A",
-        "text": "LDL-c de 160 mg/dL, risco baixo; dieta e reavaliação em 5 anos.",
-        "rationale": "Incorreta. O cálculo está certo, mas ERG de 14% não é baixo risco (baixo é < 10%)."
+        "text": "Cirurgia bariátrica apenas após os 70 anos e restrição total de gorduras, inclusive das insaturadas.",
+        "rationale": "Incorreta. Não há essa restrição de idade nem essa recomendação dietética."
       },
       {
         "letter": "B",
-        "text": "LDL-c de 100 mg/dL, risco moderado; nenhuma intervenção medicamentosa.",
-        "rationale": "Incorreta. Valor incorreto: o LDL-c é 160 mg/dL, e ERG de 14% já indica estatina pelo PCDT."
+        "text": "Anabolizantes para aumentar a massa muscular e fibrato em substituição à estatina, se houver.",
+        "rationale": "Incorreta. Anabolizantes não fazem parte das recomendações, e fibrato não substitui estatina."
       },
       {
         "letter": "C",
-        "text": "LDL-c de 160 mg/dL, risco moderado; mudança de estilo de vida e estatina.",
-        "rationale": "CORRETA. (260 − 40) − 300/5 = 160 mg/dL; ERG 14% é risco moderado (> 10%, critério de inclusão): MEV + estatina."
+        "text": "Perda de peso, inclusive com GLP-1 ou bariátrica, e valorizar a espiritualidade como moduladora benéfica.",
+        "rationale": "CORRETA. A SBC recomenda perda de peso com GLP-1 e bariátrica (forte recomendação) e reconhece espiritualidade e religiosidade como moduladores benéficos (SBC 2025)."
       },
       {
         "letter": "D",
-        "text": "LDL-c de 220 mg/dL, risco alto; fibrato como monoterapia de escolha.",
-        "rationale": "Incorreta. 220 é o não-HDL-c; e fibrato em monoterapia é para TG > 500 sem indicação de estatina."
+        "text": "Suplemento de ômega-3 em dose alta e abandono das atividades religiosas, que aumentam o estresse emocional.",
+        "rationale": "Incorreta. Não correspondem às recomendações citadas; a espiritualidade é vista como benéfica."
       }
     ],
     "correctLetter": "C",
-    "clinicalPointers": "Calcule o LDL-c por Friedewald e classifique o ERG pelos cortes de 10% e 20%.",
-    "sourceLabel": "Questão da professora (adaptada)"
+    "clinicalPointers": "Pense em estratégias que vão além da dieta e em um fator de proteção ligado à vida comunitária."
   },
   {
     "id": 81,
