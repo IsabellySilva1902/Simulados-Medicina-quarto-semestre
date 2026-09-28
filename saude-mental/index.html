@@ -252,7 +252,7 @@
         <button id="btn-mark-review" class="px-2 py-1 rounded-full border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700" title="Marcar para revisão">🏳️ <span id="mark-label">Marcar</span></button>
       </div>
 
-      <p id="q-prompt" class="text-base sm:text-lg font-medium mb-1.5 leading-relaxed select-text"></p>
+      <p id="q-prompt" class="text-base sm:text-lg font-medium mb-1.5 leading-relaxed select-text" style="white-space: pre-line"></p>
       <p class="text-xs text-slate-400 dark:text-slate-500 mb-5">🖍️ Selecione um trecho do enunciado para grifar. Clique num grifo para apagá-lo.</p>
 
       <div id="q-options" class="space-y-2.5 mb-4"></div>
@@ -418,7 +418,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 2,
     "code": "INTRO-02",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Exame do Estado Mental: Sensopercepção",
     "difficulty": "Intermediária",
     "prompt": "Vagner, 29 anos, operário de fábrica, é atendido em um ambulatório de Feira de Santana relatando ansiedade e insônia há duas semanas. Durante a entrevista, ele hesita antes de responder a uma pergunta e, por fim, admite que, à noite, ouve um sussurro repetindo seu nome, mesmo estando sozinho em casa. Diante disso, o médico pergunta: \"Você tem ouvido ou visto coisas que outras pessoas não percebem?\" Segundo o roteiro do Exame do Estado Mental apresentado na disciplina, essa pergunta investiga qual domínio, e o que mais deve ser explorado diante de uma resposta positiva como a de Vagner?",
@@ -450,7 +450,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 3,
     "code": "INTRO-03",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Entrevista psiquiátrica: técnicas de vínculo",
     "difficulty": "Intermediária",
     "prompt": "Dona Zenaide, 58 anos, dona de casa, está internada em um hospital de Ilhéus para investigação de uma dor abdominal recorrente sem causa clínica identificada até o momento. Durante a entrevista, ela chora ao relatar que está com medo de ter uma doença grave e de não conseguir mais cuidar da casa sozinha. Atento ao estado emocional dela, o médico residente diz: \"Imagino como isso deve estar sendo difícil para você.\" Segundo as técnicas de vínculo na entrevista apresentadas na disciplina, essa fala exemplifica qual tipo de vínculo?",
@@ -482,7 +482,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 4,
     "code": "INTRO-04",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Roteiro de anamnese psiquiátrica",
     "difficulty": "Intermediária",
     "prompt": "Ronaldo, 34 anos, mecânico, é atendido pela primeira vez no ambulatório de Saúde Mental de Feira de Santana por episódios de tristeza e desânimo. Ao conduzir a anamnese, o estudante de medicina já registrou a queixa principal e a história da doença atual, e chega agora à seção de Antecedentes Familiares do roteiro. Segundo esse roteiro, apresentado na disciplina, qual conjunto de informações deve sempre ser investigado nessa seção?",
@@ -514,7 +514,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 5,
     "code": "INTRO-05",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Exame do Estado Mental: humor x afeto",
     "difficulty": "Intermediária",
     "prompt": "Marcelo, 41 anos, comerciante, é atendido em Vitória da Conquista após a esposa notar longos períodos de isolamento em casa. No Exame do Estado Mental, ele relata sentir-se \"vazio\" quando questionado sobre como está se sentindo emocionalmente, falando em tom monocórdico, enquanto o examinador observa, ao longo de toda a entrevista, expressão facial pouco variável e reduzida amplitude emocional, mesmo ao relatar assuntos que antes o emocionariam. Esses dois achados — o relato de \"vazio\" e a expressão facial pouco variável — correspondem, respectivamente, a quais domínios do exame psíquico?",
@@ -546,7 +546,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 6,
     "code": "INTRO-06",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Avaliação de risco de suicídio",
     "difficulty": "Intermediária",
     "prompt": "João Pedro, estudante do 4º ano de Medicina em estágio na emergência de um hospital de Salvador, atende um paciente de humor visivelmente deprimido, fala lenta e olhar baixo. Apesar de notar sinais de sofrimento intenso, ele evita perguntar diretamente sobre ideação suicida, com medo de \"plantar a ideia\" na cabeça do paciente. Segundo as boas práticas discutidas na disciplina de Saúde Mental sobre avaliação de risco, essa conduta de João Pedro está correta?",
@@ -578,7 +578,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 7,
     "code": "INTRO-07",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Técnicas de vínculo: autenticidade e conhecimento",
     "difficulty": "Intermediária",
     "prompt": "Seu Antônio, pescador de 61 anos, chega visivelmente tenso à primeira consulta em um ambulatório de Ilhéus, mal olhando para o médico. Buscando reduzir a tensão inicial, o médico comenta de forma descontraída: \"Vi que o senhor é lá da Barra — adoro aquela região!\", apresentando-se de forma simples e genuína. Aos poucos, Seu Antônio relaxa e passa a falar mais abertamente; então o médico pergunta: \"O senhor tem notado também perda de interesse e de sono?\", conduzindo perguntas pertinentes que transmitem preparo técnico para ajudar. Essas duas falas exemplificam, respectivamente, quais técnicas de vínculo na entrevista psiquiátrica?",
@@ -610,7 +610,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 8,
     "code": "INTRO-08",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Relação médico-paciente",
     "difficulty": "Intermediária",
     "prompt": "Durante a supervisão de um atendimento em Feira de Santana, a preceptora nota que a interna Camila dedicou os primeiros dez minutos da consulta apenas a ouvir a história do paciente, sem interrompê-lo nem partir direto para perguntas objetivas, mesmo com a agenda do ambulatório cheia. Questionada sobre essa escolha, Camila responde que, em Psiquiatria, compreender a vivência do paciente já é parte do próprio tratamento. Segundo a fundamentação teórica apresentada na aula introdutória de Saúde Mental, qual afirmação melhor resume o raciocínio de Camila sobre o papel da relação médico-paciente?",
@@ -642,7 +642,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 9,
     "code": "INTRO-09",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Exame do Estado Mental: forma x conteúdo do pensamento",
     "difficulty": "Intermediária",
     "prompt": "Severino, 47 anos, agricultor, é atendido no ambulatório de Juazeiro após a família notar mudanças de comportamento. Durante a entrevista, ele relata, de forma coerente e com sequência lógica de ideias, uma crença fixa e irredutível de que vizinhos estariam se reunindo para prejudicá-lo, sem que o médico consiga demovê-lo dessa ideia por meio de argumentos. Esses dois achados — a crença fixa e irredutível, e a organização lógica do discurso — correspondem, respectivamente, a quais domínios do Exame do Estado Mental?",
@@ -674,7 +674,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 10,
     "code": "INTRO-10",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Anamnese: registro da queixa principal",
     "difficulty": "Intermediária",
     "prompt": "Ao atender Dona Marlene, 63 anos, costureira, em sua primeira consulta na UBS de Alagoinhas, o estudante de medicina ouve dela: \"Estou sem dormir e sem vontade de fazer nada há um mês.\" Na hora de registrar a Queixa Principal no prontuário, ele hesita entre transcrever exatamente essa frase ou reescrevê-la em termos técnicos, como \"paciente refere insônia e anedonia\". Segundo a rotina de anamnese apresentada na disciplina, como essa queixa deve ser preferencialmente registrada?",
@@ -706,7 +706,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 11,
     "code": "INTRO-11",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Anamnese e organicidade (integração com Delirium)",
     "difficulty": "Avançada",
     "prompt": "Durante a supervisão de um caso em Camaçari, o preceptor pergunta ao interno Diego por que ele insistiu tanto em perguntar sobre o início exato dos sintomas e sobre quais medicamentos o paciente estava usando, antes mesmo de cogitar um diagnóstico psiquiátrico. Diego explica que queria primeiro descartar uma causa orgânica para a confusão mental do paciente, tema que será aprofundado na aula de Delirium. Qual conjunto de informações da anamnese é classicamente mais relevante para esse raciocínio?",
@@ -2850,7 +2850,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 78,
     "code": "INTRO-12",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Definição e papel da anamnese",
     "difficulty": "Intermediária",
     "prompt": "Durante a supervisão de um atendimento em Feira de Santana, a preceptora pergunta ao interno Bruno por que ele insiste em ouvir toda a história do paciente, incluindo detalhes que parecem não ter relação direta com a queixa, antes de sequer cogitar hipóteses diagnósticas. Bruno responde que, em Psiquiatria, muitas vezes não há exame que confirme o diagnóstico, e que a própria história bem contada já aponta o caminho. Segundo a definição de anamnese apresentada na disciplina, qual afirmação melhor explica esse raciocínio, especialmente em Saúde Mental?",
@@ -2882,7 +2882,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 79,
     "code": "INTRO-13",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Atitudes essenciais na relação médico-paciente",
     "difficulty": "Intermediária",
     "prompt": "No primeiro atendimento a Dona Neuza, 70 anos, visivelmente desconfiada e pouco à vontade, o médico residente em Vitória da Conquista evita pressa, trata-a com respeito e paciência, fala com clareza e demonstra interesse genuíno pelo que ela relata, mesmo diante de uma consulta que se estende além do previsto. Ao final, Dona Neuza, antes reticente, já conversa abertamente sobre seus sintomas. Segundo a disciplina, qual é o papel dessas atitudes essenciais na entrevista psiquiátrica, ilustrado pela mudança de postura de Dona Neuza?",
@@ -3682,7 +3682,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 104,
     "code": "INTRO-14",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Anamnese: Interrogatório Sintomatológico",
     "difficulty": "Intermediária",
     "prompt": "Ao entrevistar Josenilda, 45 anos, atendida pela primeira vez em uma UBS de Feira de Santana, o estudante já registrou a queixa principal (dor de cabeça) e a história da doença atual. Antes de encerrar a anamnese, ele decide perguntar ativamente sobre sintomas de outros sistemas que a paciente não mencionou espontaneamente, como alterações do sono, do apetite e do humor. Segundo o roteiro de anamnese apresentado na disciplina, essa conduta corresponde a qual etapa, e qual é sua utilidade prática?",
@@ -3714,7 +3714,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 105,
     "code": "INTRO-15",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Anamnese: Hábitos de Vida",
     "difficulty": "Intermediária",
     "prompt": "Durante a anamnese de Edmilson, 52 anos, pedreiro, atendido em Alagoinhas, o estudante de medicina chega à seção de Hábitos de Vida do roteiro. Além de perguntar sobre sono, alimentação e atividade física, quais itens devem SEMPRE ser investigados nessa seção, segundo a disciplina?",
@@ -3746,7 +3746,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 106,
     "code": "INTRO-16",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Anamnese: História Psicossocial",
     "difficulty": "Intermediária",
     "prompt": "Ao entrevistar Vanessa, 38 anos, professora, atendida em Camaçari por sintomas ansiosos, o médico dedica um tempo da consulta a perguntar sobre o relacionamento dela com o marido, sua rotina de trabalho e sua rede de apoio, além de investigar, com cuidado, se ela já vivenciou eventos estressores importantes, perdas ou situações de violência. Segundo o roteiro de anamnese apresentado na disciplina, essas perguntas fazem parte de qual seção, e o que mais deve ser acolhido nela?",
@@ -3778,7 +3778,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 107,
     "code": "INTRO-17",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Exame do Estado Mental: Aparência",
     "difficulty": "Intermediária",
     "prompt": "Ao iniciar o Exame do Estado Mental de Sebastião, 55 anos, atendido em Feira de Santana, o médico observa, antes mesmo de qualquer pergunta, a higiene, o vestuário, o autocuidado, a idade aparente e a adequação do paciente ao contexto da consulta. Esses elementos observados compõem qual domínio do Exame do Estado Mental?",
@@ -3810,7 +3810,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 108,
     "code": "INTRO-18",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Exame do Estado Mental: Comportamento e Psicomotricidade",
     "difficulty": "Intermediária",
     "prompt": "Durante a entrevista com Adalberto, 40 anos, atendido em Ilhéus, o examinador nota que ele se remexe continuamente na cadeira, movimenta os pés sem parar e mantém pouco contato visual, apesar de colaborar com as perguntas. Esses achados correspondem a qual domínio do Exame do Estado Mental?",
@@ -3842,7 +3842,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 109,
     "code": "INTRO-19",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Exame do Estado Mental: Cognição",
     "difficulty": "Intermediária",
     "prompt": "Ao avaliar o domínio de Cognição no Exame do Estado Mental de DonaIzaura, 68 anos, atendida em Juazeiro, o médico pergunta a data de hoje, pede que ela repita três palavras e, alguns minutos depois, pede que as recorde novamente. Esses procedimentos avaliam quais elementos do domínio de Cognição?",
@@ -3874,7 +3874,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 110,
     "code": "INTRO-20",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Exame do Estado Mental: Insight e Julgamento",
     "difficulty": "Intermediária",
     "prompt": "Ao final da entrevista com Norival, 60 anos, atendido em Vitória da Conquista, o médico pergunta diretamente: \"O senhor acredita que está passando por algum problema de saúde?\" Segundo o roteiro do Exame do Estado Mental, essa pergunta investiga qual domínio, e o que exatamente ele avalia?",
@@ -3906,7 +3906,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 111,
     "code": "INTRO-21",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Exame do Estado Mental: Fala",
     "difficulty": "Intermediária",
     "prompt": "Durante a entrevista com Rosemeire, 33 anos, atendida em Feira de Santana, o examinador observa que ela responde às perguntas com um discurso espontâneo, fluente, em volume e velocidade habituais, sem qualquer dificuldade de articulação. Esses elementos observados compõem qual domínio do Exame do Estado Mental?",
@@ -4579,7 +4579,7 @@ const QUESTIONS_DATABASE = [
     "id": 132,
     "code": "ESQ-21",
     "category": "Esquizofrenia",
-    "subcategory": "Fisiopatologia: hipófunção glutamatérgica",
+    "subcategory": "Fisiopatologia: hipofunção glutamatérgica",
     "difficulty": "Avançada",
     "prompt": "Em uma aula sobre fisiopatologia da esquizofrenia, o professor explica que, além da hipótese dopaminérgica clássica, existe também uma hipótese envolvendo um neurotransmissor excitatório específico, cuja hipofunção estaria implicada tanto em sintomas positivos quanto negativos. Segundo a disciplina, qual neurotransmissor e receptor estão envolvidos nessa hipótese?",
     "options": [
@@ -7379,7 +7379,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 219,
     "code": "INTRO-22",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Prova anterior - Exame do Estado Mental: Orientação",
     "difficulty": "Intermediária",
     "previousExam": true,
@@ -7412,7 +7412,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 220,
     "code": "INTRO-23",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Prova anterior - Exame do Estado Mental: Atenção",
     "difficulty": "Intermediária",
     "previousExam": true,
@@ -7445,7 +7445,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 221,
     "code": "INTRO-24",
-    "category": "Introducao",
+    "category": "Introdução",
     "subcategory": "Prova anterior - Anamnese x Exame Psíquico",
     "difficulty": "Avançada",
     "previousExam": true,
@@ -8327,7 +8327,7 @@ function renderReview() {
           ${q.marked ? `<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">🏳️ Marcada</span>` : ""}
           ${badge}
         </div>
-        <p class="font-medium mb-3">${qi + 1}. ${renderHighlightedText(q.prompt, q.highlights)}</p>
+        <p class="font-medium mb-3" style="white-space: pre-line">${qi + 1}. ${renderHighlightedText(q.prompt, q.highlights)}</p>
         <div class="space-y-2 mb-3">${optionsHtml}</div>
         <div class="rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800 p-2.5 text-xs text-amber-700 dark:text-amber-300">
           💡 ${escapeHtml(q.clinicalPointers)}

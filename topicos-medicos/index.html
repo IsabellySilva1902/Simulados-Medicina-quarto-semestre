@@ -264,7 +264,7 @@
         <button id="btn-mark-review" class="px-2 py-1 rounded-full border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700" title="Marcar para revisão">🏳️ <span id="mark-label">Marcar</span></button>
       </div>
 
-      <p id="q-prompt" class="text-base sm:text-lg font-medium mb-1.5 leading-relaxed select-text"></p>
+      <p id="q-prompt" class="text-base sm:text-lg font-medium mb-1.5 leading-relaxed select-text" style="white-space: pre-line"></p>
       <p class="text-xs text-slate-400 dark:text-slate-500 mb-3">🖍️ Selecione um trecho do enunciado, de uma tabela ou de um gráfico para grifar. Clique num grifo para apagá-lo.</p>
 
       <div id="q-visual-container"></div>
@@ -8020,7 +8020,7 @@ function renderReview() {
           ${q.marked ? `<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">🏳️ Marcada</span>` : ""}
           ${badge}
         </div>
-        <p class="font-medium mb-3">${qi + 1}. ${renderHighlightedText(q.prompt, q.highlights)}</p>
+        <p class="font-medium mb-3" style="white-space: pre-line">${qi + 1}. ${renderHighlightedText(q.prompt, q.highlights)}</p>
         <div data-review-visual="${qi}">${renderVisual(q)}</div>
         <div class="space-y-2 mb-3">${optionsHtml}</div>
         <div class="rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800 p-2.5 text-xs text-amber-700 dark:text-amber-300">

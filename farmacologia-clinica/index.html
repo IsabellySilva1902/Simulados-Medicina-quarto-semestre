@@ -253,7 +253,7 @@
         <button id="btn-mark-review" class="px-2 py-1 rounded-full border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700" title="Marcar para revisão">🏳️ <span id="mark-label">Marcar</span></button>
       </div>
 
-      <p id="q-prompt" class="text-base sm:text-lg font-medium mb-1.5 leading-relaxed select-text"></p>
+      <p id="q-prompt" class="text-base sm:text-lg font-medium mb-1.5 leading-relaxed select-text" style="white-space: pre-line"></p>
       <p class="text-xs text-slate-400 dark:text-slate-500 mb-5">🖍️ Selecione um trecho do enunciado para grifar. Clique num grifo para apagá-lo.</p>
 
       <div id="q-options" class="space-y-2.5 mb-4"></div>
@@ -430,7 +430,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Prova anterior - Elementos da Medicina Baseada em Evidências",
     "origem": "prova_antiga",
     "difficulty": "Intermediária",
-    "prompt": "Em um estudo clínico, pesquisadores investigaram o uso de um novo medicamento para tratar uma condição cardiovascular rara. O medicamento passou por testes em um grupo de pacientes que apresentavam a doença e os resultados foram analisados cuidadosamente. Com base na Medicina Baseada em Evidências, qual e o elemento-chave em estudos clínicos experimentais que ajuda a garantir a validade dos resultados e a minimizar o viés de seleção?",
+    "prompt": "Em um estudo clínico, pesquisadores investigaram o uso de um novo medicamento para tratar uma condição cardiovascular rara. O medicamento passou por testes em um grupo de pacientes que apresentavam a doença e os resultados foram analisados cuidadosamente. Com base na Medicina Baseada em Evidências, qual é o elemento-chave em estudos clínicos experimentais que ajuda a garantir a validade dos resultados e a minimizar o viés de seleção?",
     "options": [
       {
         "letter": "A",
@@ -516,7 +516,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Inscrição com o ativo em sua denominação comum brasileira.",
-        "rationale": "CORRETA. A inscrição como o componente que traz os dados do fármaco é definida: o ativo (preferêncialmente pela denominação comum brasileira), a dose, a frequência e o período de uso."
+        "rationale": "CORRETA. A inscrição como o componente que traz os dados do fármaco é definida: o ativo (preferencialmente pela denominação comum brasileira), a dose, a frequência e o período de uso."
       }
     ],
     "correctLetter": "D",
@@ -534,7 +534,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Escolha do medicamento com base na medicina baseada em evidências.",
-        "rationale": "Incorreta. Basear a escolha do fármaco em evidências científicas e uma prática recomendada, e não um fator que reduz a adesão terapêutica."
+        "rationale": "Incorreta. Basear a escolha do fármaco em evidências científicas é uma prática recomendada, e não um fator que reduz a adesão terapêutica."
       },
       {
         "letter": "B",
@@ -577,7 +577,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Uso exclusivo de medicamentos de marca na intervenção.",
-        "rationale": "Incorreta. A confiabilidade do ensaio não se relaciona ao uso de medicamentos de marca; o que garante validade e o desenho randomizado e controlado."
+        "rationale": "Incorreta. A confiabilidade do ensaio não se relaciona ao uso de medicamentos de marca; o que garante validade é o desenho randomizado e controlado."
       },
       {
         "letter": "D",
@@ -600,7 +600,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Fornecer informações, instruções e recomendações ao paciente sobre cada medicamento.",
-        "rationale": "CORRETA. O quinto passo da prescrição racional descrito e fornecer informações, instruções e recomendações ao paciente, etapa essêncial quando ha vários medicamentos em uso concomitante."
+        "rationale": "CORRETA. O quinto passo da prescrição racional descrito e fornecer informações, instruções e recomendações ao paciente, etapa essencial quando há vários medicamentos em uso concomitante."
       },
       {
         "letter": "B",
@@ -648,7 +648,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Inscrição com os dados do fármaco, incluindo dose e frequência.",
-        "rationale": "CORRETA. A escrita adequada das doses e a diferença entre mcg e mg merecem atenção justamente na inscrição, onde a ilegibilidade tem maior potêncial de causar erro de medicação."
+        "rationale": "CORRETA. A escrita adequada das doses e a diferença entre mcg e mg merecem atenção justamente na inscrição, onde a ilegibilidade tem maior potencial de causar erro de medicação."
       }
     ],
     "correctLetter": "D",
@@ -680,7 +680,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "O uso de terapias não farmacológicas requer obrigatoriamente acompanhamento presêncial e a monitorização pelos profissionais de saúde.",
+        "text": "O uso de terapias não farmacológicas requer obrigatoriamente acompanhamento presencial e a monitorização pelos profissionais de saúde.",
         "rationale": "Incorreta. Trata-se de uma exigência absoluta que não é descrita dessa forma no material de referência."
       }
     ],
@@ -704,7 +704,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Adscrição.",
-        "rationale": "CORRETA. A adscrição é o componente que traz o tratamento não farmacológico e as instruções de melhor forma de uso, isto e, as orientações detalhadas ao paciente."
+        "rationale": "CORRETA. A adscrição é o componente que traz o tratamento não farmacológico e as instruções de melhor forma de uso, isto é, as orientações detalhadas ao paciente."
       },
       {
         "letter": "C",
@@ -718,7 +718,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "A adscrição e o componente da receita voltado as instruções e recomendações de uso diretamente ao paciente."
+    "clinicalPointers": "A adscrição é o componente da receita voltado as instruções e recomendações de uso diretamente ao paciente."
   },
   {
     "id": 10,
@@ -765,7 +765,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Estimular a reabsorção óssea.",
-        "rationale": "Incorreta. Estimular a reabsorção óssea e o processo indesejado na osteoporose, realizado pelos osteoclastos, e contrária o objetivo da terapia preventiva."
+        "rationale": "Incorreta. Estimular a reabsorção óssea e o processo indesejado na osteoporose, realizado pelos osteoclastos, e contraria o objetivo da terapia preventiva."
       },
       {
         "letter": "B",
@@ -793,7 +793,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Prova anterior - Orientação postural no uso de bisfosfonatos",
     "origem": "prova_antiga",
     "difficulty": "Intermediária",
-    "prompt": "Um paciente idoso e diagnosticado com osteoporose e fraturas prévias. O médico decide iniciar uma terapia com bifosfonatos para melhorar a densidade mineral óssea e reduzir o risco de fraturas futuras. Além de orientar sobre a administração correta dos medicamentos, o médico também enfatiza a importância de permanecer em posição vertical e evitar deitar-se logo após tomar os medicamentos. Qual é o motivo por tras dessa orientação?",
+    "prompt": "Um paciente idoso e diagnosticado com osteoporose e fraturas prévias. O médico decide iniciar uma terapia com bifosfonatos para melhorar a densidade mineral óssea e reduzir o risco de fraturas futuras. Além de orientar sobre a administração correta dos medicamentos, o médico também enfatiza a importância de permanecer em posição vertical e evitar deitar-se logo após tomar os medicamentos. Qual é o motivo por trás dessa orientação?",
     "options": [
       {
         "letter": "A",
@@ -859,7 +859,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Prova anterior - Classe farmacológica anti-reabsortiva de primeira linha",
     "origem": "prova_antiga",
     "difficulty": "Intermediária",
-    "prompt": "Uma paciente pos-menopausa com osteoporose está sendo tratada com cálcio e vitamina D, além de terapia hormonal para controle dos sintomas da menopausa. Apesar disso, sua densidade mineral óssea contínua diminuindo. Qual é a classe de medicamentos que interfere nos processos de remodelação óssea, reduzindo a reabsorção e sendo uma opção de tratamento para essa paciente?",
+    "prompt": "Uma paciente pós-menopausa com osteoporose está sendo tratada com cálcio e vitamina D, além de terapia hormonal para controle dos sintomas da menopausa. Apesar disso, sua densidade mineral óssea contínua diminuindo. Qual é a classe de medicamentos que interfere nos processos de remodelação óssea, reduzindo a reabsorção e sendo uma opção de tratamento para essa paciente?",
     "options": [
       {
         "letter": "A",
@@ -879,7 +879,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Moduladores seletivos do receptor de estrogênio.",
-        "rationale": "Incorreta. O raloxifeno é opção preventiva na pos-menopausa, mas os bisfosfonatos são a classe descrita com ação mais direta sobre a inibição da reabsorção osteoclástica."
+        "rationale": "Incorreta. O raloxifeno é opção preventiva na pós-menopausa, mas os bisfosfonatos são a classe descrita com ação mais direta sobre a inibição da reabsorção osteoclástica."
       }
     ],
     "correctLetter": "C",
@@ -892,7 +892,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Prova anterior - Osteoporose secundária a corticosteroide",
     "origem": "prova_antiga",
     "difficulty": "Intermediária",
-    "prompt": "Um paciente idoso do sexo masculino, com histórico de uso crônico de corticosteroides devido a uma doença autoimune, apresenta densidade mineral óssea reduzida e risco aumentado de fraturas. O médico prescritor opta por iniciar um tratamento farmacológico para prevenir a perda óssea. Qual das seguintes classes de medicamentos e a mais apropriada para esse paciente, considerando seu histórico de uso de corticosteroides e sua necessidade de preservar a massa óssea?",
+    "prompt": "Um paciente idoso do sexo masculino, com histórico de uso crônico de corticosteroides devido a uma doença autoimune, apresenta densidade mineral óssea reduzida e risco aumentado de fraturas. O médico prescritor opta por iniciar um tratamento farmacológico para prevenir a perda óssea. Qual das seguintes classes de medicamentos é a mais apropriada para esse paciente, considerando seu histórico de uso de corticosteroides e sua necessidade de preservar a massa óssea?",
     "options": [
       {
         "letter": "A",
@@ -902,7 +902,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Inibidores seletivos do receptor de estrogênio.",
-        "rationale": "Incorreta. Os moduladores seletivos do receptor de estrogênio relacionam-se a prevenção da osteoporose pos-menopausa, não ao contexto de corticoterapia crônica em homens."
+        "rationale": "Incorreta. Os moduladores seletivos do receptor de estrogênio relacionam-se a prevenção da osteoporose pós-menopausa, não ao contexto de corticoterapia crônica em homens."
       },
       {
         "letter": "C",
@@ -912,11 +912,11 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Bisfosfonatos.",
-        "rationale": "CORRETA. Alendronato de sódio e risedronato são indicados tanto para a osteoporose pos-menopausa quanto para a relacionada ao uso de glicocorticoides."
+        "rationale": "CORRETA. Alendronato de sódio e risedronato são indicados tanto para a osteoporose pós-menopausa quanto para a relacionada ao uso de glicocorticoides."
       }
     ],
     "correctLetter": "D",
-    "clinicalPointers": "Os bisfosfonatos (alendronato, risedronato) são indicados tanto na osteoporose pos-menopausa quanto na osteoporose secundária ao uso crônico de glicocorticoides."
+    "clinicalPointers": "Os bisfosfonatos (alendronato, risedronato) são indicados tanto na osteoporose pós-menopausa quanto na osteoporose secundária ao uso crônico de glicocorticoides."
   },
   {
     "id": 16,
@@ -925,7 +925,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Prova anterior - Papel da vitamina D na terapia com cálcio",
     "origem": "prova_antiga",
     "difficulty": "Intermediária",
-    "prompt": "Uma paciente na pos-menopausa foi diagnosticada com osteoporose e recebeu a prescrição de carbonato de cálcio combinado com vitamina D. Ela questiona o médico sobre a importância dessa combinação. Como o médico deve explicar o papel da vitamina D nessa terapia?",
+    "prompt": "Uma paciente na pós-menopausa foi diagnosticada com osteoporose e recebeu a prescrição de carbonato de cálcio combinado com vitamina D. Ela questiona o médico sobre a importância dessa combinação. Como o médico deve explicar o papel da vitamina D nessa terapia?",
     "options": [
       {
         "letter": "A",
@@ -949,7 +949,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "A vitamina D e essêncial para a absorção intestinal de cálcio, viabilizando a mineralização óssea quando associada ao carbonato de cálcio."
+    "clinicalPointers": "A vitamina D é essencial para a absorção intestinal de cálcio, viabilizando a mineralização óssea quando associada ao carbonato de cálcio."
   },
   {
     "id": 17,
@@ -968,7 +968,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Raloxifeno.",
-        "rationale": "Incorreta. O raloxifeno principalmente no tratamento preventivo da osteoporose pos-menopausa é indicado, não especificamente como alternativa por risco gastrointestinal."
+        "rationale": "Incorreta. O raloxifeno principalmente no tratamento preventivo da osteoporose pós-menopausa é indicado, não especificamente como alternativa por risco gastrointestinal."
       },
       {
         "letter": "C",
@@ -991,7 +991,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Prova anterior - Monitorização da eficácia terapêutica",
     "origem": "prova_antiga",
     "difficulty": "Intermediária",
-    "prompt": "Durante uma consulta de acompanhamento de uma paciente em tratamento para osteoporose, qual e a abordagem recomendada para monitorar a eficácia terapêutica?",
+    "prompt": "Durante uma consulta de acompanhamento de uma paciente em tratamento para osteoporose, qual é a abordagem recomendada para monitorar a eficácia terapêutica?",
     "options": [
       {
         "letter": "A",
@@ -1099,7 +1099,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "Definir o problema, estabelecer o objetivo terapêutico e verificar se o tratamento e adequado a esse paciente antes de prescrever, orientar e monitorizar.",
+        "text": "Definir o problema, estabelecer o objetivo terapêutico e verificar se o tratamento é adequado a esse paciente antes de prescrever, orientar e monitorizar.",
         "rationale": "CORRETA. Essa sequência reproduz os seis passos da prescrição racional descritos: definir o problema, especificar o objetivo, verificar a adequação ao paciente, prescrever, orientar e monitorizar, nessa ordem."
       },
       {
@@ -1128,7 +1128,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Cabeçalho: identificação institucional; superinscrição: símbolo da prescrição; inscrição: medicamento; subscrição: quantidade; adscrição: orientações de uso.",
-        "rationale": "CORRETA. Essa e a organização tradicional dos componentes da receita descrita: cabeçalho institucional, superinscrição com o símbolo da prescrição e dados do paciente, inscrição com o fármaco, subscrição com a quantidade e adscrição com as orientações de uso."
+        "rationale": "CORRETA. Essa é a organização tradicional dos componentes da receita descrita: cabeçalho institucional, superinscrição com o símbolo da prescrição e dados do paciente, inscrição com o fármaco, subscrição com a quantidade e adscrição com as orientações de uso."
       },
       {
         "letter": "B",
@@ -1175,7 +1175,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "A morfina dispensa receituário especial por ser usada em cuidados paliativos, enquanto o benzodiazepínico exige receita amarela por seu potêncial de abuso.",
+        "text": "A morfina dispensa receituário especial por ser usada em cuidados paliativos, enquanto o benzodiazepínico exige receita amarela por seu potencial de abuso.",
         "rationale": "Incorreta. A morfina não é isenta de receituário especial em nenhum contexto clínico, e o benzodiazepínico se enquadra na lista B1, com receita azul, e não amarela."
       }
     ],
@@ -1231,7 +1231,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "Ao terceiro passo, verificar se o tratamento e adequado a esse paciente, que exige considerar comorbidades, interações e função renal antes da prescrição.",
+        "text": "Ao terceiro passo, verificar se o tratamento é adequado a esse paciente, que exige considerar comorbidades, interações e função renal antes da prescrição.",
         "rationale": "CORRETA. O terceiro passo da prescrição racional é a verificação da adequação do tratamento ao paciente específico, exatamente o que o médico faz ao considerar interações, função renal e risco de retenção hídrica antes de prescrever."
       },
       {
@@ -1260,7 +1260,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Ambas as abordagens são igualmente válidas, pois o viés de seleção não interfere na confiabilidade dos resultados quando a amostra e grande.",
-        "rationale": "Incorreta. A randomização é elemento central para minimizar o viés de seleção, o que contrária a ideia de que a seleção dirigida de pacientes não interfere na validade dos resultados."
+        "rationale": "Incorreta. A randomização é elemento central para minimizar o viés de seleção, o que contraria a ideia de que a seleção dirigida de pacientes não interfere na validade dos resultados."
       },
       {
         "letter": "B",
@@ -1274,7 +1274,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "Nenhuma das duas abordagens e válida cientificamente, pois a Medicina Baseada em Evidências exige exclusivamente estudos observacionais sem qualquer grupo controle.",
+        "text": "Nenhuma das duas abordagens é válida cientificamente, pois a Medicina Baseada em Evidências exige exclusivamente estudos observacionais sem qualquer grupo controle.",
         "rationale": "Incorreta. O ensaio clínico experimental, com grupo controle e grupo de intervenção randomizados, é a base da Medicina Baseada em Evidências, que não é rejeitada em favor de estudos observacionais isolados."
       }
     ],
@@ -1288,7 +1288,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Classificação de substâncias com risco teratogênico e imunossupressor",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Uma clínica dermatológica atende duas pacientes em idade fértil: uma inicia isotretinoína oral para acne grave, e outra inicia talidomida para uma reação hansenica. Ambas as substâncias exigem receituário de controle especial pelo risco teratogênico. Qual alternativa classifica corretamente essas substâncias segundo a Portaria 344/98?",
+    "prompt": "Uma clínica dermatológica atende duas pacientes em idade fértil: uma inicia isotretinoína oral para acne grave, e outra inicia talidomida para uma reação hansênica. Ambas as substâncias exigem receituário de controle especial pelo risco teratogênico. Qual alternativa classifica corretamente essas substâncias segundo a Portaria 344/98?",
     "options": [
       {
         "letter": "A",
@@ -1297,8 +1297,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "A isotretinoína se enquadra na lista A1 (entorpecentes), e a talidomida na lista B1 (psicotrópicos), pelo potêncial de dependência de ambas as substâncias.",
-        "rationale": "Incorreta. Nem a isotretinoína nem a talidomida são classificadas como entorpecentes ou psicotrópicos; sua classificação específica decorre do risco teratogênico e imunossupressor, e não de potêncial de dependência."
+        "text": "A isotretinoína se enquadra na lista A1 (entorpecentes), e a talidomida na lista B1 (psicotrópicos), pelo potencial de dependência de ambas as substâncias.",
+        "rationale": "Incorreta. Nem a isotretinoína nem a talidomida são classificadas como entorpecentes ou psicotrópicos; sua classificação específica decorre do risco teratogênico e imunossupressor, e não de potencial de dependência."
       },
       {
         "letter": "C",
@@ -1307,8 +1307,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "A isotretinoína dispensa controle especial por ser de uso tópico habitual, e apenas a talidomida exige receituário diferênciado.",
-        "rationale": "Incorreta. A isotretinoína do caso é de uso oral e é classificada na lista C2, com exigência de controle especial, não sendo isenta de receituário diferênciado."
+        "text": "A isotretinoína dispensa controle especial por ser de uso tópico habitual, e apenas a talidomida exige receituário diferenciado.",
+        "rationale": "Incorreta. A isotretinoína do caso é de uso oral e é classificada na lista C2, com exigência de controle especial, não sendo isenta de receituário diferenciado."
       }
     ],
     "correctLetter": "A",
@@ -1330,7 +1330,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "A legibilidade da inscrição, especialmente a diferênciação entre unidades como mg e mcg, cuidado diretamente relacionado à prevenção de erros de medicação.",
+        "text": "A legibilidade da inscrição, especialmente a diferenciação entre unidades como mg e mcg, cuidado diretamente relacionado à prevenção de erros de medicação.",
         "rationale": "CORRETA. A legibilidade da inscrição merece atenção especial, com foco na diferença entre mcg e mg, justamente pelo risco de erro de dose que uma ambiguidade dessa natureza pode causar."
       },
       {
@@ -1345,7 +1345,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "A legibilidade da inscrição, com atenção a diferênciação entre unidades como mg e mcg, e cuidado central na prescrição para prevenir erros de dose potêncialmente graves."
+    "clinicalPointers": "A legibilidade da inscrição, com atenção a diferenciação entre unidades como mg e mcg, e cuidado central na prescrição para prevenir erros de dose potencialmente graves."
   },
   {
     "id": 29,
@@ -1384,7 +1384,7 @@ const QUESTIONS_DATABASE = [
     "id": 30,
     "code": "PRESRAC-19",
     "category": "Prescrição Racional",
-    "subcategory": "Diferênciação entre subscrição e adscrição em receita incompleta",
+    "subcategory": "Diferenciação entre subscrição e adscrição em receita incompleta",
     "origem": "nova",
     "difficulty": "Intermediária",
     "prompt": "Uma receita de antibiótico chega a farmácia contendo o nome do fármaco, a dose e a via de administração, mas sem informar quantos comprimidos devem ser dispensados nem como o paciente deve tomar o medicamento em relação as refeições. Quais dois componentes da receita estão ausentes nesse caso, segundo a organização descrita?",
@@ -1392,7 +1392,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Inscrição e superinscrição, pois faltam o nome do fármaco e os dados do paciente, respectivamente.",
-        "rationale": "Incorreta. O caso informa que o nome do fármaco, a dose e a via já constam na receita, elementos da inscrição, e não ha menção a ausência dos dados do paciente."
+        "rationale": "Incorreta. O caso informa que o nome do fármaco, a dose e a via já constam na receita, elementos da inscrição, e não há menção a ausência dos dados do paciente."
       },
       {
         "letter": "B",
@@ -1457,7 +1457,7 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "Omeprazol bloqueia irreversívelmente a H+/K+-ATPase; ranitidina antagoniza os receptores H2; sucralfato forma complexo aderente que protege a mucosa lesada, sem reduzir diretamente a secreção ácida.",
+        "text": "Omeprazol bloqueia irreversivelmente a H+/K+-ATPase; ranitidina antagoniza os receptores H2; sucralfato forma complexo aderente que protege a mucosa lesada, sem reduzir diretamente a secreção ácida.",
         "rationale": "CORRETA. Esses três mecanismos distintos são exatamente descritos: bloqueio irreversível da bomba de prótons pelo omeprazol, antagonismo H2 pela ranitidina, e formação de barreira citoprotetora pelo sucralfato, sem ação direta sobre a secreção ácida."
       },
       {
@@ -1486,7 +1486,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Fatores de risco da DRGE e escolha da conduta inicial",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Ronaldo, 44 anos, caminhoneiro, apresenta pirose quase diária ha três meses. Dorme logo após as refeições, fuma dez cigarros por dia e prefere refeições gordurosas. Após duas semanas seguindo orientações de perda de peso, elevação da cabeceira e jejum noturno, os sintomas persistem. Qual alternativa relaciona corretamente os fatores de risco de Ronaldo a conduta mais coerente nesse momento?",
+    "prompt": "Ronaldo, 44 anos, caminhoneiro, apresenta pirose quase diária há três meses. Dorme logo após as refeições, fuma dez cigarros por dia e prefere refeições gordurosas. Após duas semanas seguindo orientações de perda de peso, elevação da cabeceira e jejum noturno, os sintomas persistem. Qual alternativa relaciona corretamente os fatores de risco de Ronaldo a conduta mais coerente nesse momento?",
     "options": [
       {
         "letter": "A",
@@ -1510,7 +1510,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Dieta gordurosa, tabagismo e postura pos-prandial são fatores de risco da DRGE; a persistência dos sintomas após duas semanas de medidas não farmacológicas indica o início da farmacoterapia."
+    "clinicalPointers": "Dieta gordurosa, tabagismo e postura pós-prandial são fatores de risco da DRGE; a persistência dos sintomas após duas semanas de medidas não farmacológicas indica o início da farmacoterapia."
   },
   {
     "id": 34,
@@ -1519,7 +1519,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Complicações esofágicas e extradigestivas da DRGE não tratada",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Marta, 52 anos, com DRGE não tratada ha anos, apresenta perda de peso, fezes escurecidas e rouquidão persistente, além de episódios recentes de piora de uma asma previamente controlada. Qual alternativa relaciona corretamente essas queixas as complicações da exposição crônica do esôfago ao suco gástrico?",
+    "prompt": "Marta, 52 anos, com DRGE não tratada há anos, apresenta perda de peso, fezes escurecidas e rouquidão persistente, além de episódios recentes de piora de uma asma previamente controlada. Qual alternativa relaciona corretamente essas queixas as complicações da exposição crônica do esôfago ao suco gástrico?",
     "options": [
       {
         "letter": "A",
@@ -1552,7 +1552,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Mecanismo dos procinéticos e seus efeitos extradigestivos",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Um fármaco bloqueador de receptores D2 e utilizado para favorecer a motilidade gastrointestinal em um paciente com retardo do esvaziamento gástrico associado a DRGE. Em aula, os estudantes analisam como essa mesma ação pode produzir efeitos em outras regiões do organismo. Qual conjunto de consequências e farmacológicamente coerente com o mecanismo dos procinéticos descrito?",
+    "prompt": "Um fármaco bloqueador de receptores D2 é utilizado para favorecer a motilidade gastrointestinal em um paciente com retardo do esvaziamento gástrico associado a DRGE. Em aula, os estudantes analisam como essa mesma ação pode produzir efeitos em outras regiões do organismo. Qual conjunto de consequências e farmacologicamente coerente com o mecanismo dos procinéticos descrito?",
     "options": [
       {
         "letter": "A",
@@ -1582,10 +1582,10 @@ const QUESTIONS_DATABASE = [
     "id": 36,
     "code": "TGI-05",
     "category": "Farmacoterapia dos Distúrbios do TGI",
-    "subcategory": "Diferênciação entre gastrite e doença ulcerosa péptica e suas causas",
+    "subcategory": "Diferenciação entre gastrite e doença ulcerosa péptica e suas causas",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Em uma investigação endoscópica, um paciente apresenta lesão que penetra a porção muscular da mucosa gástrica, associada a uso crônico de AINE, enquanto outro paciente apresenta apenas inflamação superficial da mucosa, sem penetração profunda. Qual alternativa diferência corretamente essas duas condições e suas causas comuns?",
+    "prompt": "Em uma investigação endoscópica, um paciente apresenta lesão que penetra a porção muscular da mucosa gástrica, associada a uso crônico de AINE, enquanto outro paciente apresenta apenas inflamação superficial da mucosa, sem penetração profunda. Qual alternativa diferencia corretamente essas duas condições e suas causas comuns?",
     "options": [
       {
         "letter": "A",
@@ -1594,8 +1594,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "Ambos os casos correspondem a gastrite, já que a profundidade da lesão não é critério de diferênciação entre gastrite e úlcera péptica.",
-        "rationale": "Incorreta. A profundidade da lesão, penetração ou não da porção muscular da mucosa, é exatamente o critério de diferênciação entre gastrite e úlcera péptica."
+        "text": "Ambos os casos correspondem a gastrite, já que a profundidade da lesão não é critério de diferenciação entre gastrite e úlcera péptica.",
+        "rationale": "Incorreta. A profundidade da lesão, penetração ou não da porção muscular da mucosa, é exatamente o critério de diferenciação entre gastrite e úlcera péptica."
       },
       {
         "letter": "C",
@@ -1684,7 +1684,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Objetivos do tratamento da doença ulcerosa péptica conforme o fator etiológico",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Nivaldo, 63 anos, usa diclofenaco ha meses e desenvolve úlcera gástrica, com teste sorológico negativo para H. pylori. Ja Osvaldo, do caso anterior, tem úlcera duodenal positiva para H. pylori. Qual alternativa relaciona corretamente o objetivo do tratamento de cada paciente ao seu fator etiológico específico?",
+    "prompt": "Nivaldo, 63 anos, usa diclofenaco há meses e desenvolve úlcera gástrica, com teste sorológico negativo para H. pylori. Já Osvaldo, do caso anterior, tem úlcera duodenal positiva para H. pylori. Qual alternativa relaciona corretamente o objetivo do tratamento de cada paciente ao seu fator etiológico específico?",
     "options": [
       {
         "letter": "A",
@@ -1693,7 +1693,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "Para Nivaldo, o objetivo inclui suspender ou trocar o AINE, associado a farmacoterapia para cicatrização; para Osvaldo, o objetivo inclui erradicar o H. pylori com o esquema poliquimioterapico específico.",
+        "text": "Para Nivaldo, o objetivo inclui suspender ou trocar o AINE, associado a farmacoterapia para cicatrização; para Osvaldo, o objetivo inclui erradicar o H. pylori com o esquema poliquimioterápico específico.",
         "rationale": "CORRETA. Os objetivos do tratamento da úlcera péptica como alívio da dor, cicatrização e retirada do fator etiológico são definidos: suspensão ou troca do AINE quando este e a causa, e erradicação do H. pylori quando a infecção e confirmada, exatamente como nos casos de Nivaldo e Osvaldo."
       },
       {
@@ -1726,7 +1726,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "O misoprostol bloqueia irreversívelmente a bomba de prótons das células parietais, e seu risco em mulheres em idade fértil decorre da absorção sistêmica elevada semelhante a dos IBPs.",
+        "text": "O misoprostol bloqueia irreversivelmente a bomba de prótons das células parietais, e seu risco em mulheres em idade fértil decorre da absorção sistêmica elevada semelhante a dos IBPs.",
         "rationale": "Incorreta. O bloqueio da bomba de prótons é atribuído aos IBPs, e não ao misoprostol, cujo mecanismo e a ação análoga a prostaglandina, com o risco específico relacionado a contrações uterinas, e não a absorção sistêmica elevada."
       },
       {
@@ -1750,7 +1750,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Suspensão do IBP antes da endoscopia e risco de falso negativo",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Valdete está em uso regular de omeprazol ha várias semanas e sera submetida a endoscopia para investigar H. pylori. O médico solicita a suspensão do IBP por duas semanas antes do exame. Qual alternativa explica corretamente essa conduta e sua relação com o mecanismo do fármaco?",
+    "prompt": "Valdete está em uso regular de omeprazol há várias semanas e será submetida a endoscopia para investigar H. pylori. O médico solicita a suspensão do IBP por duas semanas antes do exame. Qual alternativa explica corretamente essa conduta e sua relação com o mecanismo do fármaco?",
     "options": [
       {
         "letter": "A",
@@ -1816,7 +1816,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Sinais de alarme e mecanismo do sangramento na doença ulcerosa péptica",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Seu Edmilson, 61 anos, relata fezes enegrecidas ha dois dias e um episódio de vômito com sangue, sem dor abdominal intensa no momento. A equipe suspeita de sangramento digestivo associado a doença ulcerosa péptica, mesmo na ausência de dor evidente. Qual alternativa justifica corretamente essa suspeita?",
+    "prompt": "Seu Edmilson, 61 anos, relata fezes enegrecidas há dois dias e um episódio de vômito com sangue, sem dor abdominal intensa no momento. A equipe suspeita de sangramento digestivo associado a doença ulcerosa péptica, mesmo na ausência de dor evidente. Qual alternativa justifica corretamente essa suspeita?",
     "options": [
       {
         "letter": "A",
@@ -1892,12 +1892,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Os procinéticos atuam exclusivamente sobre o esvaziamento gástrico, sem qualquer efeito sobre a pressão esofágica, o que restringe seu benefício ao primeiro paciente.",
-        "rationale": "Incorreta. Aos procinéticos também é atribuído o efeito de elevar a pressão esofágica, o que justamente amplia seu potêncial benefício além do contexto específico de retardo do esvaziamento gástrico."
+        "rationale": "Incorreta. Aos procinéticos também é atribuído o efeito de elevar a pressão esofágica, o que justamente amplia seu potencial benefício além do contexto específico de retardo do esvaziamento gástrico."
       },
       {
         "letter": "C",
         "text": "Os procinéticos reduzem a pressão esofágica para facilitar a passagem do bolo alimentar, efeito que beneficiária apenas pacientes sem retardo do esvaziamento gástrico.",
-        "rationale": "Incorreta. A elevação é descrita, não a redução, da pressão esofágica como efeito dos procinéticos, o que contrária diretamente essa alternativa."
+        "rationale": "Incorreta. A elevação é descrita, não a redução, da pressão esofágica como efeito dos procinéticos, o que contraria diretamente essa alternativa."
       },
       {
         "letter": "D",
@@ -1990,7 +1990,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "Antagonistas H2 e IBPs tem exatamente a mesma potência de inibição ácida, sendo a escolha entre eles irrelevante para a gravidade da esofagite.",
+        "text": "Antagonistas H2 e IBPs têm exatamente a mesma potência de inibição ácida, sendo a escolha entre eles irrelevante para a gravidade da esofagite.",
         "rationale": "Incorreta. A potência de inibição ácida difere entre as duas classes: os IBPs são responsáveis por inibição mais acentuada, o que torna a escolha relevante conforme a gravidade do quadro."
       },
       {
@@ -2044,10 +2044,10 @@ const QUESTIONS_DATABASE = [
     "id": 50,
     "code": "TGI-19",
     "category": "Farmacoterapia dos Distúrbios do TGI",
-    "subcategory": "Diferênciação clínica entre DRGE e doença ulcerosa péptica em dois pacientes",
+    "subcategory": "Diferenciação clínica entre DRGE e doença ulcerosa péptica em dois pacientes",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Um paciente apresenta pirose predominantemente pos-prandial, com piora ao deitar-se após as refeições; outro apresenta dor epigástrica noturna que o acorda, associada a episódios de fezes escurecidas. Qual alternativa diferência corretamente os dois quadros, integrando fisiopatologia e sinais clínicos descritos?",
+    "prompt": "Um paciente apresenta pirose predominantemente pós-prandial, com piora ao deitar-se após as refeições; outro apresenta dor epigástrica noturna que o acorda, associada a episódios de fezes escurecidas. Qual alternativa diferencia corretamente os dois quadros, integrando fisiopatologia e sinais clínicos descritos?",
     "options": [
       {
         "letter": "A",
@@ -2117,7 +2117,7 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "O antiácido neutraliza quimicamente o ácido já secretado; o procinético atua sobre receptores dopaminérgicos para estimular a motilidade; o IBP bloqueia irreversívelmente a bomba de prótons das células parietais.",
+        "text": "O antiácido neutraliza quimicamente o ácido já secretado; o procinético atua sobre receptores dopaminérgicos para estimular a motilidade; o IBP bloqueia irreversivelmente a bomba de prótons das células parietais.",
         "rationale": "CORRETA. Cada fármaco tem um alvo distinto: neutralização química direta do ácido pelo antiácido, antagonismo dopaminérgico com estímulo da motilidade pelo procinético, e bloqueio irreversível da bomba de prótons pelo IBP."
       },
       {
@@ -2132,7 +2132,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "O procinético bloqueia irreversívelmente a bomba de prótons, enquanto o IBP atua sobre receptores dopaminérgicos, invertendo os mecanismos descritos para essas duas classes.",
+        "text": "O procinético bloqueia irreversivelmente a bomba de prótons, enquanto o IBP atua sobre receptores dopaminérgicos, invertendo os mecanismos descritos para essas duas classes.",
         "rationale": "Incorreta. O bloqueio da bomba de prótons é atribuído ao IBP, e o antagonismo dopaminérgico ao procinético, e não o contrário, como proposto nesta alternativa."
       }
     ],
@@ -2165,7 +2165,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "A farmacoterapia adequada e suficiente para curar definitivamente a úlcera péptica, tornando essa recidiva um evento inexplicável pelos princípios descritos.",
+        "text": "A farmacoterapia adequada é suficiente para curar definitivamente a úlcera péptica, tornando essa recidiva um evento inexplicável pelos princípios descritos.",
         "rationale": "Incorreta. A farmacoterapia isolada não cura definitivamente a doença sem a retirada do fator etiológico, o que explica perfeitamente a recidiva observada, e não a torna um evento inexplicável."
       }
     ],
@@ -2222,7 +2222,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "O antagonista H2 e sempre superior ao IBP em qualquer grau de DRGE, de modo que a escolha do omeprazol para Wellington não encontra respaldo.",
-        "rationale": "Incorreta. O IBP é capaz de inibição mais acentuada da secreção ácida em comparação ao antagonista H2, o que sustenta, e não contrária, a escolha do omeprazol para um quadro moderado."
+        "rationale": "Incorreta. O IBP é capaz de inibição mais acentuada da secreção ácida em comparação ao antagonista H2, o que sustenta, e não contraria, a escolha do omeprazol para um quadro moderado."
       },
       {
         "letter": "C",
@@ -2297,8 +2297,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "A avaliação do uso de AINE é dispensável quando o teste sorológico para H. pylori e positivo, já que a erradicação da bactéria e suficiente independentemente de outros fatores.",
-        "rationale": "Incorreta. A avaliação do uso de AINE não é dispensada mesmo diante de teste positivo para H. pylori, já que ambos os fatores etiológicos podem coexistir e influênciar a conduta terapêutica."
+        "text": "A avaliação do uso de AINE é dispensável quando o teste sorológico para H. pylori e positivo, já que a erradicação da bactéria é suficiente independentemente de outros fatores.",
+        "rationale": "Incorreta. A avaliação do uso de AINE não é dispensada mesmo diante de teste positivo para H. pylori, já que ambos os fatores etiológicos podem coexistir e influenciar a conduta terapêutica."
       }
     ],
     "correctLetter": "A",
@@ -2353,12 +2353,12 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "A suspensão isolada do AINE e suficiente para curar completamente a úlcera já estabelecida, tornando a farmacoterapia com IBP uma medida apenas opcional.",
+        "text": "A suspensão isolada do AINE é suficiente para curar completamente a úlcera já estabelecida, tornando a farmacoterapia com IBP uma medida apenas opcional.",
         "rationale": "Incorreta. A cicatrização efetiva da úlcera relaciona-se à farmacoterapia específica associada à retirada do fator etiológico; a suspensão isolada do AINE não é suficiente para a cura da lesão já instalada."
       },
       {
         "letter": "C",
-        "text": "O IBP e indicado nesse caso apenas para prevenir uma futura infecção por H. pylori, sem qualquer relação com a cicatrização da úlcera já existente.",
+        "text": "O IBP é indicado nesse caso apenas para prevenir uma futura infecção por H. pylori, sem qualquer relação com a cicatrização da úlcera já existente.",
         "rationale": "Incorreta. O uso do IBP relaciona-se a redução da secreção ácida para promover a cicatrização da úlcera já existente, e não a prevenção de uma futura infecção por H. pylori nesse contexto."
       },
       {
@@ -2473,7 +2473,7 @@ const QUESTIONS_DATABASE = [
     "id": 63,
     "code": "TGI-32",
     "category": "Farmacoterapia dos Distúrbios do TGI",
-    "subcategory": "Diferênciação entre indicação de misoprostol e de IBP na prevenção de lesão por AINE",
+    "subcategory": "Diferenciação entre indicação de misoprostol e de IBP na prevenção de lesão por AINE",
     "origem": "nova",
     "difficulty": "Avançada",
     "prompt": "Dois pacientes em uso crônico de AINE recebem estratégias de proteção gástrica diferentes: um recebe misoprostol, e outro recebe um IBP associado ao anti-inflamatório. Um estudante pergunta se essas duas estratégias são equivalentes em mecanismo. Qual alternativa esclarece corretamente a diferença?",
@@ -2490,7 +2490,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "O misoprostol bloqueia a bomba de prótons de forma mais potente que o IBP, sendo por isso a escolha preferêncial em qualquer paciente em uso crônico de AINE.",
+        "text": "O misoprostol bloqueia a bomba de prótons de forma mais potente que o IBP, sendo por isso a escolha preferencial em qualquer paciente em uso crônico de AINE.",
         "rationale": "Incorreta. O misoprostol não é bloqueador da bomba de prótons; seu mecanismo e a reposição da ação das prostaglandinas, diferente do mecanismo do IBP."
       },
       {
@@ -2509,27 +2509,27 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Mecanismo e tratamento conforme o tipo de dor",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Um paciente apresenta dor lombar após esforço físico recente e, concomitantemente, queixa-se de queimação e choques nos pes decorrentes de neuropatia diabética já diagnosticada. O professor destaca que reconhecer o mecanismo de cada dor orienta a escolha terapêutica. Qual alternativa relaciona corretamente mecanismo e tratamento nesse paciente?",
+    "prompt": "Um paciente apresenta dor lombar após esforço físico recente e, concomitantemente, queixa-se de queimação e choques nos pés decorrentes de neuropatia diabética já diagnosticada. O professor destaca que reconhecer o mecanismo de cada dor orienta a escolha terapêutica. Qual alternativa relaciona corretamente mecanismo e tratamento nesse paciente?",
     "options": [
       {
         "letter": "A",
-        "text": "A dor lombar, de caráter nociceptivo, decorre de ativação das fibras C por mediadores inflamatórios; a dor neuropática dos pes envolve alteração da via nervosa e pode se beneficiar de antidepressivos como a amitriptilina.",
+        "text": "A dor lombar, de caráter nociceptivo, decorre de ativação das fibras C por mediadores inflamatórios; a dor neuropática dos pés envolve alteração da via nervosa e pode se beneficiar de antidepressivos como a amitriptilina.",
         "rationale": "CORRETA. A dor nociceptiva relaciona-se a ativação do sistema de defesa e inflamação por mediadores locais, e a dor neuropática a alterações da via nervosa, para a qual antidepressivos como a amitriptilina são citados como coadjuvantes úteis."
       },
       {
         "letter": "B",
-        "text": "Ambas as dores tem a mesma origem inflamatória periférica, sendo os opioides fortes a primeira escolha racional para as duas queixas apresentadas por esse paciente.",
+        "text": "Ambas as dores têm a mesma origem inflamatória periférica, sendo os opioides fortes a primeira escolha racional para as duas queixas apresentadas por esse paciente.",
         "rationale": "Incorreta. A etiologia inflamatória difere da neuropática; opioides fortes não são a primeira escolha racional para dor lombar aguda leve nem para dor neuropática, que tem coadjuvantes próprios."
       },
       {
         "letter": "C",
-        "text": "A dor neuropática dos pes decorre de mediadores inflamatórios periféricos, como a dor lombar, respondendo de forma preferêncial aos AINEs em altas doses.",
-        "rationale": "Incorreta. A dor neuropática relaciona-se a alterações da via nervosa, e não a mediadores inflamatórios periféricos, e não a descreve como preferêncialmente responsiva a AINEs em altas doses."
+        "text": "A dor neuropática dos pés decorre de mediadores inflamatórios periféricos, como a dor lombar, respondendo de forma preferencial aos AINEs em altas doses.",
+        "rationale": "Incorreta. A dor neuropática relaciona-se a alterações da via nervosa, e não a mediadores inflamatórios periféricos, e não a descreve como preferencialmente responsiva a AINEs em altas doses."
       },
       {
         "letter": "D",
-        "text": "A dor lombar tem origem neuropática central, enquanto a queimação nos pes reflete um quadro nociceptivo agudo, tratável com paracetamol isolado.",
-        "rationale": "Incorreta. Essa alternativa inverte as etiologias: a dor lombar por esforço e de caráter nociceptivo, e a queimação por neuropatia diabética e de caráter neuropático, e não o contrário."
+        "text": "A dor lombar tem origem neuropática central, enquanto a queimação nos pés reflete um quadro nociceptivo agudo, tratável com paracetamol isolado.",
+        "rationale": "Incorreta. Essa alternativa inverte as etiologias: a dor lombar por esforço é de caráter nociceptivo, e a queimação por neuropatia diabética é de caráter neuropático, e não o contrário."
       }
     ],
     "correctLetter": "A",
@@ -2641,7 +2641,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Alodinia como manifestação da dor neuropática e implicação terapêutica",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Uma paciente com neuropatia diabética relata que o simples contato do lençol sobre os pes já desencadeia dor intensa, mesmo sem qualquer estímulo nocivo, situação que não melhora com analgésicos comuns. Qual alternativa relaciona corretamente esse fenômeno ao mecanismo da dor neuropática e a conduta terapêutica coerente?",
+    "prompt": "Uma paciente com neuropatia diabética relata que o simples contato do lençol sobre os pés já desencadeia dor intensa, mesmo sem qualquer estímulo nocivo, situação que não melhora com analgésicos comuns. Qual alternativa relaciona corretamente esse fenômeno ao mecanismo da dor neuropática e a conduta terapêutica coerente?",
     "options": [
       {
         "letter": "A",
@@ -2671,10 +2671,10 @@ const QUESTIONS_DATABASE = [
     "id": 69,
     "code": "DOROPI-06",
     "category": "Farmacologia da Dor e Opioides",
-    "subcategory": "Diferênciação fisiológica entre dor aguda protetora e dor crônica",
+    "subcategory": "Diferenciação fisiológica entre dor aguda protetora e dor crônica",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Dois casos são comparados: um paciente com dor imediata após uma fratura recente, acompanhada de taquicardia e sudorese, e outro com dor persistente ha meses, sem função fisiológica aparente, associada a prejuízo do sono e das atividades diárias. Qual alternativa diferência corretamente os dois quadros?",
+    "prompt": "Dois casos são comparados: um paciente com dor imediata após uma fratura recente, acompanhada de taquicardia e sudorese, e outro com dor persistente há meses, sem função fisiológica aparente, associada a prejuízo do sono e das atividades diárias. Qual alternativa diferencia corretamente os dois quadros?",
     "options": [
       {
         "letter": "A",
@@ -2750,11 +2750,11 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "O paracetamol e contraindicado para qualquer grau de dor em pacientes que consomem álcool, devendo ser substituído por AINE em dose plena nesse caso.",
-        "rationale": "Incorreta. O paracetamol não é totalmente contraindicado em etilistas, apenas exige atenção ao risco hepático; a substituição por AINE em dose plena traz outros riscos não preferênciais nesse contexto."
+        "rationale": "Incorreta. O paracetamol não é totalmente contraindicado em etilistas, apenas exige atenção ao risco hepático; a substituição por AINE em dose plena traz outros riscos não preferenciais nesse contexto."
       },
       {
         "letter": "C",
-        "text": "O paracetamol tem forte ação anti-inflamatória, sendo por isso a escolha preferêncial para dor lombar de origem inflamatória mesmo em pacientes etilistas.",
+        "text": "O paracetamol tem forte ação anti-inflamatória, sendo por isso a escolha preferencial para dor lombar de origem inflamatória mesmo em pacientes etilistas.",
         "rationale": "Incorreta. O paracetamol não apresenta ação anti-inflamatória relevante, o que não sustenta essa alternativa como justificativa de escolha para dor de origem inflamatória."
       },
       {
@@ -2788,7 +2788,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Tanto a ação analgésica quanto a anti-inflamatória dos AINEs surgem simultaneamente, em poucas horas, o que tornaria o relato desse paciente clinicamente incoerente.",
-        "rationale": "Incorreta. Os tempos de instalação dessas duas ações diferem claramente e não são simultâneos, o que sustenta, e não contrária, o relato do paciente."
+        "rationale": "Incorreta. Os tempos de instalação dessas duas ações diferem claramente e não são simultâneos, o que sustenta, e não contraria, o relato do paciente."
       },
       {
         "letter": "D",
@@ -2816,7 +2816,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Os coxibes são a opção mais segura do ponto de vista cardiovascular entre os AINEs, o que tornaria a escolha do médico clinicamente incoerente.",
-        "rationale": "Incorreta. Os coxibes como parte do grupo de AINEs menos seguros do ponto de vista cardiovascular são descritos, não como a opção mais segura, o que sustenta, e não contrária, a escolha pelo naproxeno."
+        "rationale": "Incorreta. Os coxibes como parte do grupo de AINEs menos seguros do ponto de vista cardiovascular são descritos, não como a opção mais segura, o que sustenta, e não contraria, a escolha pelo naproxeno."
       },
       {
         "letter": "C",
@@ -2848,8 +2848,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "Qualquer AINE pode ser associado ao anticoagulante sem qualquer ajuste, pois não ha relação descrita entre essas classes farmacológicas.",
-        "rationale": "Incorreta. A associação com anticoagulantes deve ser evitada pelo maior risco de hemorragia, o que contrária a ideia de ausência de relação relevante entre as classes."
+        "text": "Qualquer AINE pode ser associado ao anticoagulante sem qualquer ajuste, pois não há relação descrita entre essas classes farmacológicas.",
+        "rationale": "Incorreta. A associação com anticoagulantes deve ser evitada pelo maior risco de hemorragia, o que contraria a ideia de ausência de relação relevante entre as classes."
       },
       {
         "letter": "C",
@@ -2905,17 +2905,17 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Classificação farmacológica dos opioides e implicação clínica da escolha",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Um médico avalia a prescrição de um opioide para um paciente com dependência prévia, optando por um fármaco com efeito teto e menor potêncial de abuso, em vez de um agonista pleno. Qual alternativa relaciona corretamente essa escolha a classificação dos opioides quanto a ação nos receptores?",
+    "prompt": "Um médico avalia a prescrição de um opioide para um paciente com dependência prévia, optando por um fármaco com efeito teto e menor potencial de abuso, em vez de um agonista pleno. Qual alternativa relaciona corretamente essa escolha a classificação dos opioides quanto a ação nos receptores?",
     "options": [
       {
         "letter": "A",
-        "text": "Os opioides classificam-se quanto à ação nos receptores em agonistas, agonistas parciais e antagonistas; a escolha por um fármaco com efeito teto e menor potêncial de abuso é coerente com a categoria de agonista parcial.",
-        "rationale": "CORRETA. Os opioides classificam-se em agonistas, agonistas parciais e antagonistas quanto à ação nos receptores, e a escolha de um fármaco com efeito teto e menor potêncial de abuso, descrita no caso, é coerente com as características farmacológicas de um agonista parcial."
+        "text": "Os opioides classificam-se quanto à ação nos receptores em agonistas, agonistas parciais e antagonistas; a escolha por um fármaco com efeito teto e menor potencial de abuso é coerente com a categoria de agonista parcial.",
+        "rationale": "CORRETA. Os opioides classificam-se em agonistas, agonistas parciais e antagonistas quanto à ação nos receptores, e a escolha de um fármaco com efeito teto e menor potencial de abuso, descrita no caso, é coerente com as características farmacológicas de um agonista parcial."
       },
       {
         "letter": "B",
         "text": "Não existe classificação dos opioides quanto à ação nos receptores, sendo todos os fármacos dessa classe equivalentes em potência e risco de abuso.",
-        "rationale": "Incorreta. Os opioides classificam-se explicitamente em agonistas, agonistas parciais e antagonistas, o que contrária a ideia de tratamento uniforme de toda a classe farmacológica."
+        "rationale": "Incorreta. Os opioides classificam-se explicitamente em agonistas, agonistas parciais e antagonistas, o que contraria a ideia de tratamento uniforme de toda a classe farmacológica."
       },
       {
         "letter": "C",
@@ -2924,12 +2924,12 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "Agonistas plenos e agonistas parciais tem exatamente o mesmo perfil de efeito teto e potêncial de abuso, tornando irrelevante a escolha entre essas duas categorias.",
+        "text": "Agonistas plenos e agonistas parciais têm exatamente o mesmo perfil de efeito teto e potencial de abuso, tornando irrelevante a escolha entre essas duas categorias.",
         "rationale": "Incorreta. Agonistas plenos e agonistas parciais são categorias distintas quanto à ação nos receptores, o que sustenta a relevância da escolha entre elas nesse contexto clínico."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Os opioides se classificam em agonistas, agonistas parciais e antagonistas quanto a ação nos receptores; fármacos com efeito teto e menor potêncial de abuso são compatíveis com a categoria de agonista parcial."
+    "clinicalPointers": "Os opioides se classificam em agonistas, agonistas parciais e antagonistas quanto a ação nos receptores; fármacos com efeito teto e menor potencial de abuso são compatíveis com a categoria de agonista parcial."
   },
   {
     "id": 77,
@@ -2971,7 +2971,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Depressão respiratória e supressão da tosse: mecanismos compartilhados",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "A codeína, um opioide, e utilizada tanto para analgesia quanto em formulações antitussígenas, mas seu uso exige cautela quanto a um efeito respiratório potêncialmente grave, especialmente em associação com outros depressores do SNC. Qual alternativa relaciona corretamente esses dois efeitos da codeína?",
+    "prompt": "A codeína, um opioide, é utilizada tanto para analgesia quanto em formulações antitussígenas, mas seu uso exige cautela quanto a um efeito respiratório potencialmente grave, especialmente em associação com outros depressores do SNC. Qual alternativa relaciona corretamente esses dois efeitos da codeína?",
     "options": [
       {
         "letter": "A",
@@ -3018,7 +3018,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "A queda pressoria decorre de estímulo direto do opioide sobre o no sinusal, e a constipação decorre de aceleração do trânsito intestinal.",
+        "text": "A queda pressórica decorre de estímulo direto do opioide sobre o no sinusal, e a constipação decorre de aceleração do trânsito intestinal.",
         "rationale": "Incorreta. Não há efeito direto dos opioides sobre o nó sinusal; a constipação relaciona-se ao retardo, e não à aceleração, do trânsito intestinal."
       },
       {
@@ -3100,20 +3100,20 @@ const QUESTIONS_DATABASE = [
     "id": 82,
     "code": "DOROPI-19",
     "category": "Farmacologia da Dor e Opioides",
-    "subcategory": "Conversão de potência do opioide fraco em relação a morfina",
+    "subcategory": "Conversão de potência do opioide fraco em relação à morfina",
     "origem": "nova",
     "difficulty": "Avançada",
     "prompt": "Um paciente em uso de codeína para dor moderada não obtém controle adequado, e o médico decide escalonar para um opioide forte, calculando a dose equivalente com base na conversão de potência entre os fármacos. Qual alternativa descreve corretamente essa relação de conversão?",
     "options": [
       {
         "letter": "A",
-        "text": "O opioide fraco, como a codeína, corresponde a cerca de 10% de conversão a morfina, o que exige cálculo cuidadoso ao escalonar para um opioide forte de maior potência relativa.",
-        "rationale": "CORRETA. O opioide fraco é correspondente a cerca de 10% de conversão a morfina, informação relevante para o cálculo de equivalência ao escalonar para um opioide forte."
+        "text": "O opioide fraco, como a codeína, corresponde a cerca de 10% de conversão à morfina, o que exige cálculo cuidadoso ao escalonar para um opioide forte de maior potência relativa.",
+        "rationale": "CORRETA. O opioide fraco é correspondente a cerca de 10% de conversão à morfina, informação relevante para o cálculo de equivalência ao escalonar para um opioide forte."
       },
       {
         "letter": "B",
-        "text": "O opioide fraco corresponde a 90% de conversão a morfina, sendo praticamente equivalente em potência, o que tornaria desnecessário o escalonamento para um opioide forte nesse paciente.",
-        "rationale": "Incorreta. O opioide fraco é correspondente a cerca de 10% de conversão a morfina, e não a 90%, o que sustenta, e não contrária, a necessidade de escalonamento para maior potência."
+        "text": "O opioide fraco corresponde a 90% de conversão à morfina, sendo praticamente equivalente em potência, o que tornaria desnecessário o escalonamento para um opioide forte nesse paciente.",
+        "rationale": "Incorreta. O opioide fraco é correspondente a cerca de 10% de conversão à morfina, e não a 90%, o que sustenta, e não contraria, a necessidade de escalonamento para maior potência."
       },
       {
         "letter": "C",
@@ -3122,12 +3122,12 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "O opioide fraco corresponde a 50% de conversão a morfina, sendo classificado como potência intermediária equivalente aos opioides fortes.",
-        "rationale": "Incorreta. O valor de conversão a morfina para o opioide fraco é de aproximadamente 10%, e não 50%, o que não o classifica como potência intermediária equivalente aos opioides fortes."
+        "text": "O opioide fraco corresponde a 50% de conversão à morfina, sendo classificado como potência intermediária equivalente aos opioides fortes.",
+        "rationale": "Incorreta. O valor de conversão à morfina para o opioide fraco é de aproximadamente 10%, e não 50%, o que não o classifica como potência intermediária equivalente aos opioides fortes."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "O opioide fraco corresponde a cerca de 10% de conversão a morfina, referência importante para o cálculo de equivalência ao escalonar para um opioide forte."
+    "clinicalPointers": "O opioide fraco corresponde a cerca de 10% de conversão à morfina, referência importante para o cálculo de equivalência ao escalonar para um opioide forte."
   },
   {
     "id": 83,
@@ -3178,13 +3178,13 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "A via de administração não influência a frequência de urticária associada aos opioides, devendo essa reação ser investigada como alergia a outro componente do procedimento.",
-        "rationale": "Incorreta. A maior frequência de urticária relaciona-se especificamente à via parenteral, contrariando a ideia de que a via não influência essa reação adversa e tornando desnecessária, nesse caso, uma investigação alternativa."
+        "text": "A via de administração não influencia a frequência de urticária associada aos opioides, devendo essa reação ser investigada como alergia a outro componente do procedimento.",
+        "rationale": "Incorreta. A maior frequência de urticária relaciona-se especificamente à via parenteral, contrariando a ideia de que a via não influencia essa reação adversa e tornando desnecessária, nesse caso, uma investigação alternativa."
       },
       {
         "letter": "C",
-        "text": "A urticária e mais frequente com a administração oral dos opioides, o que tornaria incoerente a ausência dessa reação durante o uso domiciliar do paciente.",
-        "rationale": "Incorreta. A maior frequência de urticária a via parenteral é associada, não a via oral, o que sustenta, e não contrária, a ausência da reação durante o uso domiciliar oral relatado."
+        "text": "A urticária é mais frequente com a administração oral dos opioides, o que tornaria incoerente a ausência dessa reação durante o uso domiciliar do paciente.",
+        "rationale": "Incorreta. A maior frequência de urticária a via parenteral é associada, não à via oral, o que sustenta, e não contraria, a ausência da reação durante o uso domiciliar oral relatado."
       },
       {
         "letter": "D",
@@ -3216,7 +3216,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "A carbamazepina e indicada de forma genérica para qualquer tipo de dor crônica, enquanto a amitriptilina e reservada especificamente para a neuralgia do trigêmeo, invertendo as indicações descritas.",
+        "text": "A carbamazepina é indicada de forma genérica para qualquer tipo de dor crônica, enquanto a amitriptilina e reservada especificamente para a neuralgia do trigêmeo, invertendo as indicações descritas.",
         "rationale": "Incorreta. A carbamazepina especificamente relaciona-se a neuralgia do trigêmeo, e a amitriptilina a um papel mais geral como antidepressivo coadjuvante, e não o contrário, como proposto nesta alternativa."
       },
       {
@@ -3268,7 +3268,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "As quatro categorias de fármacos para controle da dor e seus locais de ação",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Um paciente com dor pos-operatória recebe simultaneamente um opioide, um AINE e um anestésico local infiltrativo, além de um antidepressivo coadjuvante para uma dor neuropática crônica associada. Qual alternativa relaciona corretamente essas quatro classes as categorias farmacológicas e locais de ação descritos?",
+    "prompt": "Um paciente com dor pós-operatória recebe simultaneamente um opioide, um AINE e um anestésico local infiltrativo, além de um antidepressivo coadjuvante para uma dor neuropática crônica associada. Qual alternativa relaciona corretamente essas quatro classes as categorias farmacológicas e locais de ação descritos?",
     "options": [
       {
         "letter": "A",
@@ -3277,7 +3277,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "As quatro classes atuam exclusivamente no sistema nervoso periférico, sem qualquer diferênciação de local de ação entre opioides, AINEs, anestésicos locais e antidepressivos coadjuvantes.",
+        "text": "As quatro classes atuam exclusivamente no sistema nervoso periférico, sem qualquer diferenciação de local de ação entre opioides, AINEs, anestésicos locais e antidepressivos coadjuvantes.",
         "rationale": "Incorreta. Os opioides, de atuação central, diferem claramente dos AINEs e anestésicos locais, de atuação periférica; as quatro classes não são uniformemente periféricas."
       },
       {
@@ -3301,7 +3301,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Importância epidemiológica da dor crônica e suas principais condições associadas",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Um gestor de saúde pública avalia o impacto socioeconômico da dor crônica em sua região, citando lombalgias, enxaqueca, fibromialgia e dores músculo-esqueléticas entre as condições de maior peso assistêncial. Qual alternativa confirma corretamente essas condições como exemplos de grande importância epidemiológica associadas a dor?",
+    "prompt": "Um gestor de saúde pública avalia o impacto socioeconômico da dor crônica em sua região, citando lombalgias, enxaqueca, fibromialgia e dores músculo-esqueléticas entre as condições de maior peso assistencial. Qual alternativa confirma corretamente essas condições como exemplos de grande importância epidemiológica associadas a dor?",
     "options": [
       {
         "letter": "A",
@@ -3364,15 +3364,15 @@ const QUESTIONS_DATABASE = [
     "id": 90,
     "code": "DOROPI-27",
     "category": "Farmacologia da Dor e Opioides",
-    "subcategory": "Escolha analgésica pos-operatória em paciente com alergias e insuficiência renal leve",
+    "subcategory": "Escolha analgésica pós-operatória em paciente com alergias e insuficiência renal leve",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Beatriz, 70 anos, com leve insuficiência renal, sera submetida a colecistectomia e relata alergia a dipirona e ao ácido acetilsalicílico, além de fazer uso de carbamazepina para convulsões e hidroclorotiazida para hipertensão. Qual alternativa apresenta a opção analgésica pos-operatória mais coerente com o perfil de Beatriz, integrando risco renal, alergias e uso concomitante de outros fármacos?",
+    "prompt": "Beatriz, 70 anos, com leve insuficiência renal, será submetida a colecistectomia e relata alergia a dipirona e ao ácido acetilsalicílico, além de fazer uso de carbamazepina para convulsões e hidroclorotiazida para hipertensão. Qual alternativa apresenta a opção analgésica pós-operatória mais coerente com o perfil de Beatriz, integrando risco renal, alergias e uso concomitante de outros fármacos?",
     "options": [
       {
         "letter": "A",
         "text": "Codeína associada a paracetamol, evitando os AINEs pelo risco renal e de sangramento, e evitando dipirona e AAS pela alergia relatada, opção compatível com o perfil renal e alérgico de Beatriz.",
-        "rationale": "CORRETA. Considerando a alergia a dipirona e AAS, a insuficiência renal leve e os riscos associados aos AINEs, a associação de codeína, um opioide fraco, com paracetamol e a opção mais coerente para o controle da dor pos-operatória de Beatriz."
+        "rationale": "CORRETA. Considerando a alergia a dipirona e AAS, a insuficiência renal leve e os riscos associados aos AINEs, a associação de codeína, um opioide fraco, com paracetamol é a opção mais coerente para o controle da dor pós-operatória de Beatriz."
       },
       {
         "letter": "B",
@@ -3381,13 +3381,13 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "Ácido acetilsalicílico em dose analgésica plena, uma vez que a alergia relatada por Beatriz não contraindicaria seu uso pos-operatório.",
-        "rationale": "Incorreta. A alergia relatada ao ácido acetilsalicílico contraindica diretamente seu uso, independentemente do contexto pos-operatório ou de qualquer outra característica clínica de Beatriz."
+        "text": "Ácido acetilsalicílico em dose analgésica plena, uma vez que a alergia relatada por Beatriz não contraindicaria seu uso pós-operatório.",
+        "rationale": "Incorreta. A alergia relatada ao ácido acetilsalicílico contraindica diretamente seu uso, independentemente do contexto pós-operatório ou de qualquer outra característica clínica de Beatriz."
       },
       {
         "letter": "D",
         "text": "Dipirona associada a AINE, combinação recomendada para maximizar o efeito analgésico em pacientes com insuficiência renal leve, apesar das alergias relatadas.",
-        "rationale": "Incorreta. A alergia relatada a dipirona contraindica diretamente essa escolha, além de a associação de dipirona com AINE não ser estratégia preferêncial nesse perfil de risco renal."
+        "rationale": "Incorreta. A alergia relatada a dipirona contraindica diretamente essa escolha, além de a associação de dipirona com AINE não ser estratégia preferencial nesse perfil de risco renal."
       }
     ],
     "correctLetter": "A",
@@ -3433,7 +3433,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Constipação induzida por opioides versus obstrução intestinal mecânica em paciente oncológico",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Uma paciente com câncer abdominal metastático, em uso crônico de opioide oral, apresenta piora do controle álgico, massa abdominal palpável e sinais sugestivos de obstrução intestinal subaguda, além de mal-estar ha uma semana. Qual alternativa relaciona corretamente a possibilidade de constipação induzida por opioides a conduta mais coerente nesse cenário?",
+    "prompt": "Uma paciente com câncer abdominal metastático, em uso crônico de opioide oral, apresenta piora do controle álgico, massa abdominal palpável e sinais sugestivos de obstrução intestinal subaguda, além de mal-estar há uma semana. Qual alternativa relaciona corretamente a possibilidade de constipação induzida por opioides a conduta mais coerente nesse cenário?",
     "options": [
       {
         "letter": "A",
@@ -3496,10 +3496,10 @@ const QUESTIONS_DATABASE = [
     "id": 94,
     "code": "DOROPI-31",
     "category": "Farmacologia da Dor e Opioides",
-    "subcategory": "Diferênciação entre efeitos do receptor delta e do receptor mu",
+    "subcategory": "Diferenciação entre efeitos do receptor delta e do receptor mu",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Dois efeitos opioides são comparados em uma aula: um relacionado a analgesia periférica e sedação com disforia, e outro relacionado a analgesia central mais intensa, com euforia, inibição respiratória e potêncial de dependência significativo. Qual alternativa identifica corretamente os receptores envolvidos em cada efeito?",
+    "prompt": "Dois efeitos opioides são comparados em uma aula: um relacionado a analgesia periférica e sedação com disforia, e outro relacionado a analgesia central mais intensa, com euforia, inibição respiratória e potencial de dependência significativo. Qual alternativa identifica corretamente os receptores envolvidos em cada efeito?",
     "options": [
       {
         "letter": "A",
@@ -3529,10 +3529,10 @@ const QUESTIONS_DATABASE = [
     "id": 95,
     "code": "DOROPI-32",
     "category": "Farmacologia da Dor e Opioides",
-    "subcategory": "Medicação pré-anestésica com opioides e diferênciação de outras aplicações clínicas",
+    "subcategory": "Medicação pré-anestésica com opioides e diferenciação de outras aplicações clínicas",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Em um centro cirúrgico, dolantina e propofol são utilizados como medicação pré-anestésica para sedação e analgesia prévias a um procedimento, enquanto em outra ala do hospital, morfina e usada para dor crônica oncológica em cuidados paliativos. Qual alternativa diferência corretamente essas duas aplicações clínicas dos opioides?",
+    "prompt": "Em um centro cirúrgico, dolantina e propofol são utilizados como medicação pré-anestésica para sedação e analgesia prévias a um procedimento, enquanto em outra ala do hospital, morfina é usada para dor crônica oncológica em cuidados paliativos. Qual alternativa diferencia corretamente essas duas aplicações clínicas dos opioides?",
     "options": [
       {
         "letter": "A",
@@ -3603,7 +3603,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A escala analógica visual (VAS), instrumento sistematizado citado, pode ser mais adequada nesse contexto por depender de uma marcação em uma representação contínua, e não exclusivamente da atribuição verbal precisa de um número.",
-        "rationale": "CORRETA. A escala analógica visual (VAS) é instrumento sistematizado de avaliação da dor, distinto da escala numérica (NRS), que depende da atribuição verbal de um número exato, o que a torna potêncialmente mais adaptável a pacientes com dificuldade de comunicação verbal."
+        "rationale": "CORRETA. A escala analógica visual (VAS) é instrumento sistematizado de avaliação da dor, distinto da escala numérica (NRS), que depende da atribuição verbal de um número exato, o que a torna potencialmente mais adaptável a pacientes com dificuldade de comunicação verbal."
       },
       {
         "letter": "B",
@@ -3617,7 +3617,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "A escala verbal (VRS) e a mais adequada nesse caso, pois depende exclusivamente de gestos padronizados, sem qualquer necessidade de comunicação verbal por parte do paciente.",
+        "text": "A escala verbal (VRS) é a mais adequada nesse caso, pois depende exclusivamente de gestos padronizados, sem qualquer necessidade de comunicação verbal por parte do paciente.",
         "rationale": "Incorreta. A escala verbal (VRS) como baseada em categorias descritivas verbais, como leve, moderada ou intensa é descrita, não em gestos padronizados independentes da comunicação verbal."
       }
     ],
@@ -3640,7 +3640,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "A dor da osteoartrite e de caráter exclusivamente neuropático, o que tornaria o uso de opioide inadequado desde o início, devendo o paciente ter recebido apenas coadjuvantes como amitriptilina ou carbamazepina.",
+        "text": "A dor da osteoartrite é de caráter exclusivamente neuropático, o que tornaria o uso de opioide inadequado desde o início, devendo o paciente ter recebido apenas coadjuvantes como amitriptilina ou carbamazepina.",
         "rationale": "Incorreta. A dor da osteoartrite relaciona-se a um caráter predominantemente nociceptivo, associado a degeneração articular, e não exclusivamente neuropático, o que sustenta, e não inválida, a escolha do opioide após falha do não opioide."
       },
       {
@@ -3707,7 +3707,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A inibição seletiva da COX-2 reduz simultaneamente o risco gastrointestinal e cardiovascular, tornando os coxibes superiores em qualquer perfil clínico.",
-        "rationale": "Incorreta. Redução simultânea do risco cardiovascular pelos coxibes não é descrita; ao contrário, relaciona essa classe a maior cautela cardiovascular, o que contrária a ideia de superioridade em qualquer perfil clínico."
+        "rationale": "Incorreta. Redução simultânea do risco cardiovascular pelos coxibes não é descrita; ao contrário, relaciona essa classe a maior cautela cardiovascular, o que contraria a ideia de superioridade em qualquer perfil clínico."
       },
       {
         "letter": "C",
@@ -3806,7 +3806,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "O diagnóstico da osteoartrite depende exclusivamente de exames laboratoriais de autoanticorpos, sendo a história clínica e o exame físico dispensáveis.",
-        "rationale": "Incorreta. História clínica e exame físico são partes essênciais do diagnóstico, ao lado da radiologia e da avaliação laboratorial, e não os torna dispensáveis em favor exclusivo de autoanticorpos."
+        "rationale": "Incorreta. História clínica e exame físico são partes essenciais do diagnóstico, ao lado da radiologia e da avaliação laboratorial, e não os torna dispensáveis em favor exclusivo de autoanticorpos."
       },
       {
         "letter": "C",
@@ -3862,7 +3862,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Restrição dos coxibes por risco cardiovascular versus indicação por risco gastrointestinal",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Duas pacientes com osteoartrite são comparadas: uma hipertensa mal controlada com AVC prévio, outra com histórico de úlcera péptica mas sem fatores de risco cardiovascular relevantes. Ambas tem dor persistente após falha do paracetamol. Qual alternativa relaciona corretamente a indicação dos coxibes a cada uma dessas pacientes?",
+    "prompt": "Duas pacientes com osteoartrite são comparadas: uma hipertensa mal controlada com AVC prévio, outra com histórico de úlcera péptica mas sem fatores de risco cardiovascular relevantes. Ambas têm dor persistente após falha do paracetamol. Qual alternativa relaciona corretamente a indicação dos coxibes a cada uma dessas pacientes?",
     "options": [
       {
         "letter": "A",
@@ -3876,7 +3876,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "Os coxibes devem ser indicados preferêncialmente para a paciente hipertensa com AVC prévio, já que essa classe apresenta excelente perfil de segurança cardiovascular.",
+        "text": "Os coxibes devem ser indicados preferencialmente para a paciente hipertensa com AVC prévio, já que essa classe apresenta excelente perfil de segurança cardiovascular.",
         "rationale": "Incorreta. Os coxibes relacionam-se a restrição em hipertensos e em pacientes com risco de AVC ou infarto, e não a um excelente perfil de segurança cardiovascular para esse tipo de paciente."
       },
       {
@@ -3895,22 +3895,22 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Classificação dos AINEs quanto a seletividade da COX e implicação na escolha terapêutica",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Um paciente com osteoartrite recebe inicialmente ibuprofeno, AINE não seletivo, e posteriormente é trocado para meloxicam, descrito como preferêncial para a COX-2. Um estudante pergunta se essa troca altera significativamente o perfil de seletividade enzimática do tratamento. Qual alternativa responde corretamente quanto a essa classificação?",
+    "prompt": "Um paciente com osteoartrite recebe inicialmente ibuprofeno, AINE não seletivo, e posteriormente é trocado para meloxicam, descrito como preferencial para a COX-2. Um estudante pergunta se essa troca altera significativamente o perfil de seletividade enzimática do tratamento. Qual alternativa responde corretamente quanto a essa classificação?",
     "options": [
       {
         "letter": "A",
-        "text": "O ibuprofeno e classificado como AINE não seletivo, e o meloxicam como preferêncial COX-2, categorias distintas dentro da classificação dos AINEs quanto a seletividade pelas isoenzimas da ciclo-oxigenase descrita.",
-        "rationale": "CORRETA. O ibuprofeno classifica-se entre os AINEs não seletivos, e o meloxicam, entre os preferênciais COX-2, ao lado da nimesulida — categorias distintas dentro da classificação dos AINEs quanto à seletividade enzimática."
+        "text": "O ibuprofeno e classificado como AINE não seletivo, e o meloxicam como preferencial COX-2, categorias distintas dentro da classificação dos AINEs quanto a seletividade pelas isoenzimas da ciclo-oxigenase descrita.",
+        "rationale": "CORRETA. O ibuprofeno classifica-se entre os AINEs não seletivos, e o meloxicam, entre os preferenciais COX-2, ao lado da nimesulida — categorias distintas dentro da classificação dos AINEs quanto à seletividade enzimática."
       },
       {
         "letter": "B",
         "text": "Ibuprofeno e meloxicam pertencem exatamente à mesma categoria de seletividade enzimática, tornando a troca farmacologicamente irrelevante.",
-        "rationale": "Incorreta. Essas duas categorias, não seletivos e preferênciais COX-2, diferem claramente, o que torna a troca relevante do ponto de vista da seletividade enzimática, e não irrelevante."
+        "rationale": "Incorreta. Essas duas categorias, não seletivos e preferenciais COX-2, diferem claramente, o que torna a troca relevante do ponto de vista da seletividade enzimática, e não irrelevante."
       },
       {
         "letter": "C",
         "text": "O ibuprofeno e classificado como seletivo COX-2, e o meloxicam como não seletivo, invertendo a classificação correta apresentada para esses dois fármacos.",
-        "rationale": "Incorreta. O ibuprofeno classifica-se como não seletivo, e o meloxicam, como preferêncial COX-2 — não o contrário, como proposto nesta alternativa."
+        "rationale": "Incorreta. O ibuprofeno classifica-se como não seletivo, e o meloxicam, como preferencial COX-2 — não o contrário, como proposto nesta alternativa."
       },
       {
         "letter": "D",
@@ -3919,7 +3919,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Ibuprofeno (não seletivo) e meloxicam (preferêncial COX-2) pertencem a categorias distintas dentro da classificação dos AINEs quanto a seletividade enzimática descrita."
+    "clinicalPointers": "Ibuprofeno (não seletivo) e meloxicam (preferencial COX-2) pertencem a categorias distintas dentro da classificação dos AINEs quanto a seletividade enzimática descrita."
   },
   {
     "id": 107,
@@ -3958,10 +3958,10 @@ const QUESTIONS_DATABASE = [
     "id": 108,
     "code": "AINESOA-10",
     "category": "AINEs e Osteoartrite",
-    "subcategory": "Diferênciação entre rubefacientes tópicos e capsaicina quanto a duração do efeito",
+    "subcategory": "Diferenciação entre rubefacientes tópicos e capsaicina quanto a duração do efeito",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Dois pacientes com osteoartrite usam terapias tópicas diferentes: um usa capsaicina de forma contínua ha três semanas, com melhora progressiva da dor, e outro usa um rubefaciente a base de metil-salicilato, com alívio rápido após cada aplicação, mas de curta duração. Qual alternativa diferência corretamente esses dois perfis?",
+    "prompt": "Dois pacientes com osteoartrite usam terapias tópicas diferentes: um usa capsaicina de forma contínua há três semanas, com melhora progressiva da dor, e outro usa um rubefaciente a base de metil-salicilato, com alívio rápido após cada aplicação, mas de curta duração. Qual alternativa diferencia corretamente esses dois perfis?",
     "options": [
       {
         "letter": "A",
@@ -3970,7 +3970,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "Os rubefacientes tópicos tem efeito idêntico ao da capsaicina, exigindo também duas semanas de uso contínuo para o alívio da dor.",
+        "text": "Os rubefacientes tópicos têm efeito idêntico ao da capsaicina, exigindo também duas semanas de uso contínuo para o alívio da dor.",
         "rationale": "Incorreta. O perfil de efeito dos rubefacientes tópicos, rápido e limitado, difere do efeito da capsaicina, que demanda uso contínuo mínimo de duas semanas para consolidação do efeito."
       },
       {
@@ -3981,7 +3981,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "A capsaicina e os rubefacientes tópicos são contraindicados em uso conjunto em qualquer paciente com osteoartrite, o que tornaria os dois casos incompatíveis entre si.",
-        "rationale": "Incorreta. Contraindicação entre essas duas terapias tópicas não é descrita; apenas diferência seus perfis de efeito, rápido e limitado para os rubefacientes, e mais consistente e progressivo para a capsaicina."
+        "rationale": "Incorreta. Contraindicação entre essas duas terapias tópicas não é descrita; apenas diferencia seus perfis de efeito, rápido e limitado para os rubefacientes, e mais consistente e progressivo para a capsaicina."
       }
     ],
     "correctLetter": "A",
@@ -4008,17 +4008,17 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "O hialuronato de sódio bloqueia irreversívelmente a ciclo-oxigenase, mecanismo compartilhado com os AINEs não seletivos, sendo indicado como alternativa oral a esses fármacos.",
+        "text": "O hialuronato de sódio bloqueia irreversivelmente a ciclo-oxigenase, mecanismo compartilhado com os AINEs não seletivos, sendo indicado como alternativa oral a esses fármacos.",
         "rationale": "Incorreta. Ao hialuronato de sódio não é atribuído o mecanismo de bloqueio da ciclo-oxigenase, característico dos AINEs; seu papel é fisiológico e lubrificante, aplicado por via intra-articular, e não oral."
       },
       {
         "letter": "D",
-        "text": "O hialuronato de sódio e indicado como primeira escolha em qualquer paciente com osteoartrite, antes mesmo do uso de paracetamol.",
+        "text": "O hialuronato de sódio é indicado como primeira escolha em qualquer paciente com osteoartrite, antes mesmo do uso de paracetamol.",
         "rationale": "Incorreta. O hialuronato de sódio para casos refratários as demais medidas terapêuticas é reservado, não como primeira escolha antes do paracetamol, que é a primeira linha para dor leve a moderada."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "O hialuronato de sódio, constituinte natural da cartilagem com função lubrificante, e indicado por via intra-articular na osteoartrite de joelho refratária as demais medidas terapêuticas."
+    "clinicalPointers": "O hialuronato de sódio, constituinte natural da cartilagem com função lubrificante, é indicado por via intra-articular na osteoartrite de joelho refratária as demais medidas terapêuticas."
   },
   {
     "id": 110,
@@ -4057,10 +4057,10 @@ const QUESTIONS_DATABASE = [
     "id": 111,
     "code": "AINESOA-13",
     "category": "AINEs e Osteoartrite",
-    "subcategory": "Indicação cirúrgica conforme incapacidade funcional e diferênciação entre osteotomia e artroplastia",
+    "subcategory": "Indicação cirúrgica conforme incapacidade funcional e diferenciação entre osteotomia e artroplastia",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Dois pacientes com osteoartrite grave são avaliados para cirurgia: um recebe indicação de osteotomia para realinhamento ósseo, e outro recebe indicação de artroplastia para substituição completa da articulação, ambos após dor refratária ao tratamento médico otimizado. Qual alternativa diferência corretamente esses dois procedimentos?",
+    "prompt": "Dois pacientes com osteoartrite grave são avaliados para cirurgia: um recebe indicação de osteotomia para realinhamento ósseo, e outro recebe indicação de artroplastia para substituição completa da articulação, ambos após dor refratária ao tratamento médico otimizado. Qual alternativa diferencia corretamente esses dois procedimentos?",
     "options": [
       {
         "letter": "A",
@@ -4102,7 +4102,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "Curar definitivamente a osteoartrite, revertendo por completo a degeneração da cartilagem já instalada, e o principal objetivo do tratamento descrito.",
+        "text": "Curar definitivamente a osteoartrite, revertendo por completo a degeneração da cartilagem já instalada, é o principal objetivo do tratamento descrito.",
         "rationale": "Incorreta. A cura definitiva não é objetivo central do tratamento da osteoartrite, cujo foco e o alívio de sintomas, a limitação do impedimento funcional e a manutenção da qualidade de vida."
       },
       {
@@ -4159,7 +4159,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Uso combinado de produtos tópicos com outras classes terapêuticas na osteoartrite",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Um paciente em uso de AINE oral para osteoartrite de joelho pergunta se pode associar um creme de capsaicina para potêncializar o controle da dor, ou se essa combinação seria inadequada. Qual alternativa responde corretamente?",
+    "prompt": "Um paciente em uso de AINE oral para osteoartrite de joelho pergunta se pode associar um creme de capsaicina para potencializar o controle da dor, ou se essa combinação seria inadequada. Qual alternativa responde corretamente?",
     "options": [
       {
         "letter": "A",
@@ -4173,7 +4173,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "A associação de capsaicina com AINE oral e contraindicada, pelo risco de potêncialização excessiva dos efeitos adversos gastrointestinais dos AINEs.",
+        "text": "A associação de capsaicina com AINE oral e contraindicada, pelo risco de potencialização excessiva dos efeitos adversos gastrointestinais dos AINEs.",
         "rationale": "Incorreta. Essa contraindicação específica não é descrita; a capsaicina atua localmente por deplecção de substância P, sem relação direta com os efeitos adversos gastrointestinais sistêmicos dos AINEs orais."
       },
       {
@@ -4230,7 +4230,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Paracetamol, evitando os riscos cardiovasculares e gastrointestinais associados aos AINEs, incluindo os coxibes, nesse paciente de alto risco combinado.",
-        "rationale": "CORRETA. Diante do perfil de risco cardiovascular (insuficiência cardíaca, hipertensão) e gastrointestinal (gastrite crônica) combinados, o paracetamol, indicado para dor leve a moderada e sem os riscos gastrointestinais e cardiovasculares dos AINEs, e a opção mais coerente."
+        "rationale": "CORRETA. Diante do perfil de risco cardiovascular (insuficiência cardíaca, hipertensão) e gastrointestinal (gastrite crônica) combinados, o paracetamol, indicado para dor leve a moderada e sem os riscos gastrointestinais e cardiovasculares dos AINEs, é a opção mais coerente."
       },
       {
         "letter": "B",
@@ -4249,7 +4249,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Em paciente com risco cardiovascular e gastrointestinal combinados, o paracetamol e a opção mais segura para dor leve, evitando os riscos associados aos AINEs, incluindo os coxibes."
+    "clinicalPointers": "Em paciente com risco cardiovascular e gastrointestinal combinados, o paracetamol é a opção mais segura para dor leve, evitando os riscos associados aos AINEs, incluindo os coxibes."
   },
   {
     "id": 117,
@@ -4288,7 +4288,7 @@ const QUESTIONS_DATABASE = [
     "id": 118,
     "code": "AINESOA-20",
     "category": "AINEs e Osteoartrite",
-    "subcategory": "Diferênciação entre osteoartrite com e sem componente inflamatório evidente",
+    "subcategory": "Diferenciação entre osteoartrite com e sem componente inflamatório evidente",
     "origem": "nova",
     "difficulty": "Avançada",
     "prompt": "Dois pacientes com osteoartrite de joelho são comparados: um com sinais evidentes de calor, rubor e edema articular, e outro apenas com dor e rigidez, sem sinais inflamatórios evidentes ao exame. Qual alternativa relaciona corretamente essa variabilidade a definição da osteoartrite descrita?",
@@ -4357,7 +4357,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Integração entre progressão radiográfica e objetivos do tratamento não curativo",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Um paciente com osteoartrite avançada, evidênciada por redução do espaço articular e osteófitos na radiografia, pergunta se o tratamento proposto podera reverter essas alterações estruturais já estabelecidas. Qual alternativa relaciona corretamente a fisiopatologia progressiva da doença aos objetivos reais do tratamento?",
+    "prompt": "Um paciente com osteoartrite avançada, evidenciada por redução do espaço articular e osteófitos na radiografia, pergunta se o tratamento proposto poderá reverter essas alterações estruturais já estabelecidas. Qual alternativa relaciona corretamente a fisiopatologia progressiva da doença aos objetivos reais do tratamento?",
     "options": [
       {
         "letter": "A",
@@ -4387,7 +4387,7 @@ const QUESTIONS_DATABASE = [
     "id": 121,
     "code": "AINESOA-23",
     "category": "AINEs e Osteoartrite",
-    "subcategory": "Diferênciação entre mecanismo dos AINEs seletivos e não seletivos quanto ao risco gastrointestinal versus cardiovascular",
+    "subcategory": "Diferenciação entre mecanismo dos AINEs seletivos e não seletivos quanto ao risco gastrointestinal versus cardiovascular",
     "origem": "nova",
     "difficulty": "Avançada",
     "prompt": "Um professor compara dois grupos de AINEs quanto ao equilíbrio entre proteção gastrointestinal e segurança cardiovascular: um grupo não seletivo, que inibe amplamente as isoenzimas da COX, e um grupo seletivo COX-2, que preserva parcialmente a COX-1. Qual alternativa relaciona corretamente esse equilíbrio ao perfil de risco de cada grupo?",
@@ -4404,7 +4404,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "Não ha qualquer diferença de perfil de risco entre AINEs seletivos e não seletivos, sendo a escolha entre eles irrelevante para a segurança gastrointestinal ou cardiovascular do paciente.",
+        "text": "Não há qualquer diferença de perfil de risco entre AINEs seletivos e não seletivos, sendo a escolha entre eles irrelevante para a segurança gastrointestinal ou cardiovascular do paciente.",
         "rationale": "Incorreta. O perfil de risco difere claramente entre essas duas categorias de AINEs, tanto do ponto de vista gastrointestinal quanto cardiovascular, o que torna a escolha entre eles clinicamente relevante."
       },
       {
@@ -4453,7 +4453,7 @@ const QUESTIONS_DATABASE = [
     "id": 123,
     "code": "AINESOA-25",
     "category": "AINEs e Osteoartrite",
-    "subcategory": "Diferênciação entre osteoartrite e artrite reumatoide quanto ao arsenal terapêutico central",
+    "subcategory": "Diferenciação entre osteoartrite e artrite reumatoide quanto ao arsenal terapêutico central",
     "origem": "nova",
     "difficulty": "Avançada",
     "prompt": "Um professor questiona por que drogas modificadoras da doença (DMARDs) não fazem parte do arsenal terapêutico descrito para a osteoartrite, diferentemente de doenças articulares inflamatórias autoimunes. Qual é a explicação clinicamente mais coerente?",
@@ -4475,7 +4475,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "Os AINEs e os DMARDs são farmacológicamente idênticos, tornando desnecessária qualquer distinção entre eles no tratamento das doenças articulares.",
+        "text": "Os AINEs e os DMARDs são farmacologicamente idênticos, tornando desnecessária qualquer distinção entre eles no tratamento das doenças articulares.",
         "rationale": "Incorreta. AINEs e DMARDs são classes distintas, com mecanismos e indicações diferentes; não são farmacologicamente idênticos ou intercambiáveis entre osteoartrite e artrite reumatoide."
       }
     ],
@@ -4503,8 +4503,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "Os AINEs potêncializam a ação diurética do fármaco em uso, o que explicaria a melhora, e não a piora, do edema observada nesse paciente.",
-        "rationale": "Incorreta. Potêncialização da ação diurética pelos AINEs não é descrita; ao contrário, relaciona essa classe a comprometimento da função renal, compatível com a piora, e não a melhora, do edema observada."
+        "text": "Os AINEs potencializam a ação diurética do fármaco em uso, o que explicaria a melhora, e não a piora, do edema observada nesse paciente.",
+        "rationale": "Incorreta. Potencialização da ação diurética pelos AINEs não é descrita; ao contrário, relaciona essa classe a comprometimento da função renal, compatível com a piora, e não a melhora, do edema observada."
       },
       {
         "letter": "D",
@@ -4537,11 +4537,11 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O paciente com acometimento poliarticular extenso deve receber exclusivamente terapia tópica localizada em cada articulação, estratégia mais prática do que a farmacoterapia sistêmica.",
-        "rationale": "Incorreta. A aplicação tópica isolada em cada articulação não é estratégia preferêncial para acometimento poliarticular extenso; a farmacoterapia sistêmica e mais coerente nesse cenário mais abrangente."
+        "rationale": "Incorreta. A aplicação tópica isolada em cada articulação não é estratégia preferencial para acometimento poliarticular extenso; a farmacoterapia sistêmica e mais coerente nesse cenário mais abrangente."
       },
       {
         "letter": "D",
-        "text": "A extensão do acometimento articular não influência a escolha entre terapia tópica e sistêmica na osteoartrite, sendo essa decisão baseada exclusivamente na idade do paciente.",
+        "text": "A extensão do acometimento articular não influencia a escolha entre terapia tópica e sistêmica na osteoartrite, sendo essa decisão baseada exclusivamente na idade do paciente.",
         "rationale": "Incorreta. A idade não é critério exclusivo para a escolha entre terapia tópica e sistêmica; a extensão e a localização do acometimento articular são elementos relevantes para essa decisão terapêutica."
       }
     ],
@@ -4552,7 +4552,7 @@ const QUESTIONS_DATABASE = [
     "id": 126,
     "code": "AINESOA-28",
     "category": "AINEs e Osteoartrite",
-    "subcategory": "Diferênciação entre efeito analgésico do paracetamol e efeito anti-inflamatório dos AINEs em quadro misto",
+    "subcategory": "Diferenciação entre efeito analgésico do paracetamol e efeito anti-inflamatório dos AINEs em quadro misto",
     "origem": "nova",
     "difficulty": "Intermediária",
     "prompt": "Um paciente com osteoartrite de joelho apresenta tanto dor quanto sinais evidentes de edema e calor articular, sugerindo componente inflamatório associado. O médico pondera entre manter paracetamol isolado ou introduzir um AINE. Qual alternativa justifica corretamente a decisão mais coerente, integrando as propriedades farmacológicas descritas?",
@@ -4565,7 +4565,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "O paracetamol deve ser mantido isoladamente mesmo diante de sinais inflamatórios evidentes, já que teria ação anti-inflamatória potente equivalente aos AINEs nesse contexto.",
-        "rationale": "Incorreta. O paracetamol não apresenta ação anti-inflamatória relevante, o que contrária a ideia de equivalência aos AINEs diante de um quadro com componente inflamatório evidente."
+        "rationale": "Incorreta. O paracetamol não apresenta ação anti-inflamatória relevante, o que contraria a ideia de equivalência aos AINEs diante de um quadro com componente inflamatório evidente."
       },
       {
         "letter": "C",
@@ -4625,8 +4625,8 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "Para o paciente com dispepsia leve e sem risco cardiovascular, um AINE preferêncial ou seletivo COX-2 pode ser considerado; para o paciente com angina estável, um AINE não seletivo com menor risco cardiovascular relativo, como o naproxeno, e mais coerente, evitando os coxibes.",
-        "rationale": "CORRETA. Os AINEs preferênciais ou seletivos COX-2 relacionam-se a menor risco gastrointestinal, adequados ao primeiro perfil, e o naproxeno é a opção mais segura do ponto de vista cardiovascular entre os AINEs, mais coerente para o paciente com angina estável, no qual os coxibes exigem maior cautela."
+        "text": "Para o paciente com dispepsia leve e sem risco cardiovascular, um AINE preferencial ou seletivo COX-2 pode ser considerado; para o paciente com angina estável, um AINE não seletivo com menor risco cardiovascular relativo, como o naproxeno, e mais coerente, evitando os coxibes.",
+        "rationale": "CORRETA. Os AINEs preferenciais ou seletivos COX-2 relacionam-se a menor risco gastrointestinal, adequados ao primeiro perfil, e o naproxeno é a opção mais segura do ponto de vista cardiovascular entre os AINEs, mais coerente para o paciente com angina estável, no qual os coxibes exigem maior cautela."
       },
       {
         "letter": "B",
@@ -4645,7 +4645,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Em dispepsia leve sem risco cardiovascular, AINEs preferênciais ou seletivos COX-2 podem ser considerados; em angina estável, AINEs não seletivos mais seguros cardiovascularmente, como o naproxeno, são mais coerentes que os coxibes."
+    "clinicalPointers": "Em dispepsia leve sem risco cardiovascular, AINEs preferenciais ou seletivos COX-2 podem ser considerados; em angina estável, AINEs não seletivos mais seguros cardiovascularmente, como o naproxeno, são mais coerentes que os coxibes."
   },
   {
     "id": 129,
@@ -4658,13 +4658,13 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "Agonistas beta-2 de curta ação aliviam rapidamente o bronçõespasmo na asma, enquanto glicocorticoides, inalatórios na asma ou nasais na rinite, atuam no controle da inflamação persistente em ambas as condições.",
+        "text": "Agonistas beta-2 de curta ação aliviam rapidamente o broncoespasmo na asma, enquanto glicocorticoides, inalatórios na asma ou nasais na rinite, atuam no controle da inflamação persistente em ambas as condições.",
         "rationale": "CORRETA. Os beta-2 agonistas de curta ação são fármacos de alívio rápido do broncoespasmo, e os glicocorticoides, sejam inalatórios na asma ou nasais na rinite, são responsáveis pelo controle da inflamação persistente subjacente a essas doenças alérgicas das vias aéreas."
       },
       {
         "letter": "B",
         "text": "Glicocorticoides promovem broncodilatação imediata tanto na asma quanto na rinite, enquanto os agonistas beta-2 de curta ação reduzem progressivamente a inflamação das vias aéreas ao longo de semanas.",
-        "rationale": "Incorreta. O alívio rápido do bronçõespasmo é atribuído aos agonistas beta-2 de curta ação, e o controle da inflamação persistente aos glicocorticoides, e não o contrário, como proposto nesta alternativa."
+        "rationale": "Incorreta. O alívio rápido do broncoespasmo é atribuído aos agonistas beta-2 de curta ação, e o controle da inflamação persistente aos glicocorticoides, e não o contrário, como proposto nesta alternativa."
       },
       {
         "letter": "C",
@@ -4678,7 +4678,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Agonistas beta-2 de curta ação aliviam rapidamente o bronçõespasmo, enquanto glicocorticoides, inalatórios ou nasais conforme a doença, controlam a inflamação persistente subjacente as doenças alérgicas das vias aéreas."
+    "clinicalPointers": "Agonistas beta-2 de curta ação aliviam rapidamente o broncoespasmo, enquanto glicocorticoides, inalatórios ou nasais conforme a doença, controlam a inflamação persistente subjacente as doenças alérgicas das vias aéreas."
   },
   {
     "id": 130,
@@ -4696,8 +4696,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "Os de primeira geração atuam somente em receptores periféricos, enquanto os de segunda geração bloqueiam preferêncialmente receptores H1 cerebrais, o que explicaria a maior sedação destes últimos.",
-        "rationale": "Incorreta. A maior penetração no SNC e os efeitos anticolinérgicos relacionam-se aos anti-histamínicos de primeira geração, e não a uma atuação preferêncialmente central dos de segunda geração, que tendem a produzir menos sedação."
+        "text": "Os de primeira geração atuam somente em receptores periféricos, enquanto os de segunda geração bloqueiam preferencialmente receptores H1 cerebrais, o que explicaria a maior sedação destes últimos.",
+        "rationale": "Incorreta. A maior penetração no SNC e os efeitos anticolinérgicos relacionam-se aos anti-histamínicos de primeira geração, e não a uma atuação preferencialmente central dos de segunda geração, que tendem a produzir menos sedação."
       },
       {
         "letter": "C",
@@ -4730,7 +4730,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "O bloqueio H1 e irreversível, por isso a quantidade de histamina liberada não interfere na resposta terapêutica, e medidas ambientais apresentam pouca utilidade.",
-        "rationale": "Incorreta. O bloqueio H1 dos anti-histamínicos é competitivo e reversível, e não irreversível, o que sustenta, e não contrária, a relevância da intensidade da exposição ao alérgeno sobre a resposta terapêutica."
+        "rationale": "Incorreta. O bloqueio H1 dos anti-histamínicos é competitivo e reversível, e não irreversível, o que sustenta, e não contraria, a relevância da intensidade da exposição ao alérgeno sobre a resposta terapêutica."
       },
       {
         "letter": "C",
@@ -4819,7 +4819,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Complicações da rinite alérgica persistente e sua relação com a respiração bucal crônica",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Joãozinho, 6 anos, apresenta respiração predominantemente bucal ha meses, dificuldade para dormir e episódios recorrentes de dor de ouvido, quadro relacionado a rinite alérgica não tratada adequadamente. Qual alternativa relaciona corretamente essas complicações a persistência da rinite alérgica?",
+    "prompt": "Joãozinho, 6 anos, apresenta respiração predominantemente bucal há meses, dificuldade para dormir e episódios recorrentes de dor de ouvido, quadro relacionado a rinite alérgica não tratada adequadamente. Qual alternativa relaciona corretamente essas complicações a persistência da rinite alérgica?",
     "options": [
       {
         "letter": "A",
@@ -4918,7 +4918,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Risco de rinite medicamentosa versus uso de descongestionante sistêmico em paciente hipertenso",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Márcia usa spray nasal de oximetazolina ha mais de dez dias seguidos para alívio da congestão, notando piora dos sintomas a cada tentativa de suspensão. Ja Seu Nelson, hipertenso, pergunta se pode usar um descongestionante sistêmico por via oral em vez do spray nasal. Qual alternativa relaciona corretamente os riscos de cada estratégia?",
+    "prompt": "Márcia usa spray nasal de oximetazolina há mais de dez dias seguidos para alívio da congestão, notando piora dos sintomas a cada tentativa de suspensão. Já Seu Nelson, hipertenso, pergunta se pode usar um descongestionante sistêmico por via oral em vez do spray nasal. Qual alternativa relaciona corretamente os riscos de cada estratégia?",
     "options": [
       {
         "letter": "A",
@@ -4932,8 +4932,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "O descongestionante tópico e sempre mais seguro que o sistêmico em qualquer paciente, inclusive hipertensos, tornando a oximetazolina a escolha preferêncial também para Seu Nelson.",
-        "rationale": "Incorreta. O descongestionante tópico não é sempre mais seguro; seu uso prolongado tem risco próprio de rinite medicamentosa, como no caso de Márcia, o que não o torna automaticamente preferêncial para qualquer paciente."
+        "text": "O descongestionante tópico e sempre mais seguro que o sistêmico em qualquer paciente, inclusive hipertensos, tornando a oximetazolina a escolha preferencial também para Seu Nelson.",
+        "rationale": "Incorreta. O descongestionante tópico não é sempre mais seguro; seu uso prolongado tem risco próprio de rinite medicamentosa, como no caso de Márcia, o que não o torna automaticamente preferencial para qualquer paciente."
       },
       {
         "letter": "D",
@@ -4965,7 +4965,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "Os corticosteroides nasais tem mecanismo idêntico ao dos anti-histamínicos, bloqueio direto dos receptores H1, o que tornaria a associação entre essas duas classes redundante no caso de Patrícia.",
+        "text": "Os corticosteroides nasais têm mecanismo idêntico ao dos anti-histamínicos, bloqueio direto dos receptores H1, o que tornaria a associação entre essas duas classes redundante no caso de Patrícia.",
         "rationale": "Incorreta. Mecanismos distintos entre essas duas classes são descritos: os anti-histamínicos bloqueiam receptores H1, enquanto os corticosteroides nasais atuam de forma mais ampla sobre mediadores inflamatórios e vasoconstrição, o que não torna a associação redundante."
       },
       {
@@ -4988,7 +4988,7 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "O montelucaste, antagonista dos receptores de leucotrienos, e indicado principalmente para terapia crônica, não revertendo crises agudas já instaladas, devendo ser associado a outras estratégias para o alívio imediato dos sintomas.",
+        "text": "O montelucaste, antagonista dos receptores de leucotrienos, é indicado principalmente para terapia crônica, não revertendo crises agudas já instaladas, devendo ser associado a outras estratégias para o alívio imediato dos sintomas.",
         "rationale": "CORRETA. Os antileucotrienos, como o montelucaste, são antagonistas dos receptores de leucotrienos indicados para terapia crônica, e explicitamente não revertem crises agudas já instaladas, o que exige outras estratégias para o alívio imediato."
       },
       {
@@ -5003,12 +5003,12 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "O montelucaste não apresenta qualquer efeito adverso relevante, o que justificaria seu uso preferêncial mesmo para alívio imediato de crises agudas de rinite alérgica.",
+        "text": "O montelucaste não apresenta qualquer efeito adverso relevante, o que justificaria seu uso preferencial mesmo para alívio imediato de crises agudas de rinite alérgica.",
         "rationale": "Incorreta. Há efeitos adversos relevantes para os antileucotrienos, como cefaleia, tontura, depressão e insônia, e ainda assim são reservados para terapia crônica, sem eficácia para alívio imediato de crises agudas."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "O montelucaste, antagonista dos receptores de leucotrienos, e indicado para terapia crônica da rinite alérgica, sem efeito de reversão de crises agudas já instaladas."
+    "clinicalPointers": "O montelucaste, antagonista dos receptores de leucotrienos, é indicado para terapia crônica da rinite alérgica, sem efeito de reversão de crises agudas já instaladas."
   },
   {
     "id": 140,
@@ -5065,7 +5065,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O teste cutâneo de hipersensibilidade não tem qualquer papel reconhecido para o diagnóstico de doenças alérgicas das vias aéreas, sendo dispensável nesse paciente.",
-        "rationale": "Incorreta. O teste de hipersensibilidade de pele é explicitamente parte do diagnóstico da rinite alérgica, o que contrária a ideia de que esse exame não tem papel reconhecido nesse contexto."
+        "rationale": "Incorreta. O teste de hipersensibilidade de pele é explicitamente parte do diagnóstico da rinite alérgica, o que contraria a ideia de que esse exame não tem papel reconhecido nesse contexto."
       },
       {
         "letter": "D",
@@ -5093,7 +5093,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Os anti-histamínicos de segunda geração apresentam efeitos anticolinérgicos mais intensos que os de primeira geração, o que tornaria essa escolha do médico incoerente para esse paciente.",
-        "rationale": "Incorreta. Ocorre o oposto: ausência de efeitos anticolinérgicos relevantes nos anti-histamínicos de segunda geração, em contraste com os de primeira geração, o que sustenta, e não contrária, a escolha do médico."
+        "rationale": "Incorreta. Ocorre o oposto: ausência de efeitos anticolinérgicos relevantes nos anti-histamínicos de segunda geração, em contraste com os de primeira geração, o que sustenta, e não contraria, a escolha do médico."
       },
       {
         "letter": "C",
@@ -5102,7 +5102,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "Não ha qualquer diferença entre as gerações de anti-histamínicos quanto a efeitos anticolinérgicos, tornando a escolha do médico uma decisão arbitrária sem fundamento farmacológico.",
+        "text": "Não há qualquer diferença entre as gerações de anti-histamínicos quanto a efeitos anticolinérgicos, tornando a escolha do médico uma decisão arbitrária sem fundamento farmacológico.",
         "rationale": "Incorreta. As duas gerações diferem claramente quanto aos efeitos anticolinérgicos, o que fundamenta, e não torna arbitrária, a escolha do médico por um anti-histamínico de segunda geração nesse paciente."
       }
     ],
@@ -5212,7 +5212,7 @@ const QUESTIONS_DATABASE = [
     "id": 146,
     "code": "RINITE-18",
     "category": "Farmacoterapia da Rinite Alérgica",
-    "subcategory": "Diferênciação entre efeito preventivo e efeito de alívio imediato dos anti-histamínicos",
+    "subcategory": "Diferenciação entre efeito preventivo e efeito de alívio imediato dos anti-histamínicos",
     "origem": "nova",
     "difficulty": "Intermediária",
     "prompt": "Um paciente inicia anti-histamínico apenas no dia em que os sintomas de rinite alérgica já estão intensos, obtendo controle parcial, enquanto outro paciente, orientado a iniciar o mesmo fármaco dias antes da exposição sazonal esperada ao pólen, relata melhor controle dos sintomas. Qual alternativa explica corretamente essa diferença?",
@@ -5248,7 +5248,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Integração entre prevalência da rinite alérgica e relevância do controle ambiental em saúde pública",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Um gestor de saúde pública avalia investir em campanhas de controle ambiental (poeira, umidade, animais domésticos) para reduzir a carga assistêncial da rinite alérgica em sua região, considerando a prevalência elevada da doença na população mundial. Qual alternativa confirma corretamente essa prevalência e sustenta a relevância dessa estratégia?",
+    "prompt": "Um gestor de saúde pública avalia investir em campanhas de controle ambiental (poeira, umidade, animais domésticos) para reduzir a carga assistencial da rinite alérgica em sua região, considerando a prevalência elevada da doença na população mundial. Qual alternativa confirma corretamente essa prevalência e sustenta a relevância dessa estratégia?",
     "options": [
       {
         "letter": "A",
@@ -5263,7 +5263,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "As medidas de controle ambiental não se relacionam a redução da prevalência da rinite alérgica, tornando essa estratégia de investimento incoerente com os princípios descritos.",
-        "rationale": "Incorreta. Medidas de controle ambiental são explicitamente parte do manejo da rinite alérgica, o que sustenta, e não contrária, a coerência dessa estratégia de investimento em saúde pública."
+        "rationale": "Incorreta. Medidas de controle ambiental são explicitamente parte do manejo da rinite alérgica, o que sustenta, e não contraria, a coerência dessa estratégia de investimento em saúde pública."
       },
       {
         "letter": "D",
@@ -5328,7 +5328,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "As medidas de controle ambiental são dispensáveis quando um anti-histamínico de segunda geração e utilizado, já que esses fármacos eliminam completamente a necessidade de reduzir a exposição ao alérgeno.",
+        "text": "As medidas de controle ambiental são dispensáveis quando um anti-histamínico de segunda geração é utilizado, já que esses fármacos eliminam completamente a necessidade de reduzir a exposição ao alérgeno.",
         "rationale": "Incorreta. As medidas de controle ambiental são parte do objetivo terapêutico de reduzir a exposição ao alérgeno, complementares a farmacoterapia, e não dispensáveis apenas pelo uso de um anti-histamínico de segunda geração."
       },
       {
@@ -5347,7 +5347,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Integração entre mecanismo simpaticomimético dos descongestionantes e o risco de rinite medicamentosa",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Um paciente usa descongestionante tópico simpaticomimético continuamente ha semanas, e um colega de trabalho, que usa o mesmo tipo de fármaco ha apenas dois dias para um resfriado comum, pergunta por que o primeiro relata piora da congestão ao tentar parar o uso, enquanto ele próprio não espera esse problema. Qual alternativa explica corretamente essa diferença?",
+    "prompt": "Um paciente usa descongestionante tópico simpaticomimético continuamente há semanas, e um colega de trabalho, que usa o mesmo tipo de fármaco há apenas dois dias para um resfriado comum, pergunta por que o primeiro relata piora da congestão ao tentar parar o uso, enquanto ele próprio não espera esse problema. Qual alternativa explica corretamente essa diferença?",
     "options": [
       {
         "letter": "A",
@@ -5399,7 +5399,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "O antileucotrieno oral não apresenta qualquer efeito adverso descrito, sendo por isso a escolha preferêncial para qualquer paciente com preocupação sobre efeitos colaterais de corticosteroides.",
+        "text": "O antileucotrieno oral não apresenta qualquer efeito adverso descrito, sendo por isso a escolha preferencial para qualquer paciente com preocupação sobre efeitos colaterais de corticosteroides.",
         "rationale": "Incorreta. Há efeitos adversos relevantes para os antileucotrienos, como cefaleia, tontura, depressão e insônia, que precisam ser considerados mesmo quando essa classe é escolhida para evitar corticosteroides."
       }
     ],
@@ -5512,7 +5512,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Fisiopatologia da hipersensibilização das vias aéreas e correlação com achados laboratoriais",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Um paciente com asma apresenta, no escarro induzido, aumento de eosinófilos e outras células inflamatórias, além de hipersecreção de muco evidênciada por broncoscopia. Qual alternativa relaciona corretamente esses achados ao processo de hipersensibilização das vias aéreas descrito?",
+    "prompt": "Um paciente com asma apresenta, no escarro induzido, aumento de eosinófilos e outras células inflamatórias, além de hipersecreção de muco evidenciada por broncoscopia. Qual alternativa relaciona corretamente esses achados ao processo de hipersensibilização das vias aéreas descrito?",
     "options": [
       {
         "letter": "A",
@@ -5522,7 +5522,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A hipersensibilização das vias aéreas na asma envolve participação exclusiva de neutrófilos, sem qualquer relação com eosinófilos, o que tornaria o achado de eosinofilia no escarro desse paciente incompatível com asma.",
-        "rationale": "Incorreta. Eosinófilos, basófilos, macrófagos e linfócitos são as células participantes da fisiopatologia da asma, e não neutrófilos de forma exclusiva, o que sustenta, e não contrária, o achado de eosinofilia nesse paciente."
+        "rationale": "Incorreta. Eosinófilos, basófilos, macrófagos e linfócitos são as células participantes da fisiopatologia da asma, e não neutrófilos de forma exclusiva, o que sustenta, e não contraria, o achado de eosinofilia nesse paciente."
       },
       {
         "letter": "C",
@@ -5542,7 +5542,7 @@ const QUESTIONS_DATABASE = [
     "id": 156,
     "code": "ASMA-04",
     "category": "Farmacoterapia da Asma",
-    "subcategory": "Sinais clínicos clássicos da asma e diagnóstico diferêncial com DRGE",
+    "subcategory": "Sinais clínicos clássicos da asma e diagnóstico diferencial com DRGE",
     "origem": "nova",
     "difficulty": "Intermediária",
     "prompt": "Um adolescente procura atendimento com episódios recorrentes de falta de ar, sibilos audíveis, sensação de aperto no peito e tosse que piora durante a noite, sem relato de pirose ou regurgitação. Qual alternativa relaciona corretamente esse quadro clínico a asma, e não a DRGE, segundo os sinais clínicos descritos para cada condição?",
@@ -5611,7 +5611,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Priorização do controle da inflamação crônica sobre o alívio isolado da broncoconstrição",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Um paciente asmático usa apenas broncodilatador de resgate ha meses, sem qualquer fármaco de manutenção, e questiona por que o médico insiste em associar um anti-inflamatório, já que o broncodilatador alivia bem seus sintomas agudos. Qual alternativa responde corretamente, integrando os objetivos do tratamento da asma descritos?",
+    "prompt": "Um paciente asmático usa apenas broncodilatador de resgate há meses, sem qualquer fármaco de manutenção, e questiona por que o médico insiste em associar um anti-inflamatório, já que o broncodilatador alivia bem seus sintomas agudos. Qual alternativa responde corretamente, integrando os objetivos do tratamento da asma descritos?",
     "options": [
       {
         "letter": "A",
@@ -5620,7 +5620,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "O alívio adequado dos sintomas agudos com broncodilatador de resgate e suficiente para atingir todos os objetivos do tratamento da asma descritos, tornando desnecessário qualquer anti-inflamatório.",
+        "text": "O alívio adequado dos sintomas agudos com broncodilatador de resgate é suficiente para atingir todos os objetivos do tratamento da asma descritos, tornando desnecessário qualquer anti-inflamatório.",
         "rationale": "Incorreta. Os objetivos do tratamento da asma são mais amplos, como a redução da inflamação crônica, que o uso isolado do broncodilatador de resgate não alcança, mesmo com bom alívio sintomático agudo."
       },
       {
@@ -5648,12 +5648,12 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "Os beta-2 agonistas promovem relaxamento da musculatura lisa brônquica e estabilizam mastócitos, com maior broncosseletividade quando administrados em aerossol, o que reduz efeitos sistêmicos em comparação a via oral.",
+        "text": "Os beta-2 agonistas promovem relaxamento da musculatura lisa brônquica e estabilizam mastócitos, com maior broncosseletividade quando administrados em aerossol, o que reduz efeitos sistêmicos em comparação à via oral.",
         "rationale": "CORRETA. Esse é exatamente o mecanismo dos beta-2 agonistas: relaxamento do músculo liso brônquico e estabilização de mastócitos, com maior broncosseletividade na forma de aerossol, o que explica a preferência por essa via em vez da oral."
       },
       {
         "letter": "B",
-        "text": "Os beta-2 agonistas bloqueiam irreversívelmente os receptores muscarínicos da musculatura brônquica, efeito mais pronunciado por via oral do que por aerossol.",
+        "text": "Os beta-2 agonistas bloqueiam irreversivelmente os receptores muscarínicos da musculatura brônquica, efeito mais pronunciado por via oral do que por aerossol.",
         "rationale": "Incorreta. Esse mecanismo para o brometo de ipratrópio, fármaco anticolinérgico é descrito, não para os beta-2 agonistas, cujo mecanismo é distinto, relacionado ao relaxamento da musculatura lisa brônquica."
       },
       {
@@ -5668,7 +5668,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Os beta-2 agonistas relaxam a musculatura lisa brônquica e estabilizam mastócitos, com maior broncosseletividade e menor risco sistêmico quando administrados em aerossol, em comparação a via oral."
+    "clinicalPointers": "Os beta-2 agonistas relaxam a musculatura lisa brônquica e estabilizam mastócitos, com maior broncosseletividade e menor risco sistêmico quando administrados em aerossol, em comparação à via oral."
   },
   {
     "id": 160,
@@ -5715,7 +5715,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Os beta-2 agonistas de longa ação promovem broncodilatação por mais de 12 horas, não servem para alívio imediato, e devem ser associados ao corticosteroide, sem que a dose deste seja aumentada, quando a monoterapia com corticoide isolado falha.",
-        "rationale": "CORRETA. Os beta-2 agonistas de longa ação são promotores de broncodilatação por mais de 12 horas, sem uso para alívio imediato, devendo ser associados, e não usados para aumentar a dose de corticoide, quando ha falha da monoterapia com o corticosteroide isolado."
+        "rationale": "CORRETA. Os beta-2 agonistas de longa ação são promotores de broncodilatação por mais de 12 horas, sem uso para alívio imediato, devendo ser associados, e não usados para aumentar a dose de corticoide, quando há falha da monoterapia com o corticosteroide isolado."
       },
       {
         "letter": "B",
@@ -5724,7 +5724,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "A associação de beta-2 de longa ação com corticosteroide inalatório deve ser acompanhada de aumento proporcional da dose do corticoide, para potêncializar o efeito anti-inflamatório.",
+        "text": "A associação de beta-2 de longa ação com corticosteroide inalatório deve ser acompanhada de aumento proporcional da dose do corticoide, para potencializar o efeito anti-inflamatório.",
         "rationale": "Incorreta. Associar o beta-2 de longa ação sem necessidade de aumentar a dose do corticoide quando a monoterapia isolada falha, e não um aumento proporcional automático da dose do corticoide."
       },
       {
@@ -5773,7 +5773,7 @@ const QUESTIONS_DATABASE = [
     "id": 163,
     "code": "ASMA-11",
     "category": "Farmacoterapia da Asma",
-    "subcategory": "Corticosteroides inalatórios: mecanismo, representantes e diferênciação dos beta-2 agonistas",
+    "subcategory": "Corticosteroides inalatórios: mecanismo, representantes e diferenciação dos beta-2 agonistas",
     "origem": "nova",
     "difficulty": "Intermediária",
     "prompt": "Um paciente em uso de budesonida inalatória para asma persistente pergunta se esse fármaco também alivia rapidamente a falta de ar durante uma crise aguda, da mesma forma que seu broncodilatador de resgate. Qual alternativa responde corretamente, integrando o mecanismo dos corticosteroides inalatórios descrito?",
@@ -5839,15 +5839,15 @@ const QUESTIONS_DATABASE = [
     "id": 165,
     "code": "ASMA-13",
     "category": "Farmacoterapia da Asma",
-    "subcategory": "Mecanismo do brometo de ipratrópio em contraste com o beta-2 agonista no bronçõespasmo grave",
+    "subcategory": "Mecanismo do brometo de ipratrópio em contraste com o beta-2 agonista no broncoespasmo grave",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Um paciente com bronçõespasmo grave não responsivo adequadamente ao beta-2 agonista de curta ação recebe brometo de ipratrópio associado ao tratamento, sem aumento da dose do beta-2. Qual alternativa relaciona corretamente o mecanismo do ipratrópio e a conduta adotada?",
+    "prompt": "Um paciente com broncoespasmo grave não responsivo adequadamente ao beta-2 agonista de curta ação recebe brometo de ipratrópio associado ao tratamento, sem aumento da dose do beta-2. Qual alternativa relaciona corretamente o mecanismo do ipratrópio e a conduta adotada?",
     "options": [
       {
         "letter": "A",
-        "text": "O brometo de ipratrópio tem mecanismo anticolinérgico, distinto do beta-2 agonista, auxiliando no bronçõespasmo grave não responsivo, sem que se deva aumentar a dose do beta-2 agonista para compensar.",
-        "rationale": "CORRETA. O brometo de ipratrópio é fármaco de mecanismo anticolinérgico, diferente do beta-2 agonista, indicado para auxiliar no bronçõespasmo grave não responsivo, orientando que a dose do beta-2 agonista não deve ser aumentada para compensar."
+        "text": "O brometo de ipratrópio tem mecanismo anticolinérgico, distinto do beta-2 agonista, auxiliando no broncoespasmo grave não responsivo, sem que se deva aumentar a dose do beta-2 agonista para compensar.",
+        "rationale": "CORRETA. O brometo de ipratrópio é fármaco de mecanismo anticolinérgico, diferente do beta-2 agonista, indicado para auxiliar no broncoespasmo grave não responsivo, orientando que a dose do beta-2 agonista não deve ser aumentada para compensar."
       },
       {
         "letter": "B",
@@ -5856,17 +5856,17 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "O brometo de ipratrópio deve substituir totalmente o beta-2 agonista de curta ação nesse paciente, já que apresenta eficácia superior em qualquer crise de bronçõespasmo.",
-        "rationale": "Incorreta. O brometo de ipratrópio como fármaco associado ao beta-2 agonista em bronçõespasmo grave não responsivo é descrito, não como substituto total do beta-2 agonista."
+        "text": "O brometo de ipratrópio deve substituir totalmente o beta-2 agonista de curta ação nesse paciente, já que apresenta eficácia superior em qualquer crise de broncoespasmo.",
+        "rationale": "Incorreta. O brometo de ipratrópio como fármaco associado ao beta-2 agonista em broncoespasmo grave não responsivo é descrito, não como substituto total do beta-2 agonista."
       },
       {
         "letter": "D",
-        "text": "O brometo de ipratrópio e indicado como fármaco de manutenção diária isolada nesse paciente, sem relação com o episódio agudo de bronçõespasmo grave descrito no caso.",
-        "rationale": "Incorreta. O brometo de ipratrópio especificamente relaciona-se ao auxílio no bronçõespasmo grave agudo não responsivo ao beta-2 agonista, e não como fármaco isolado de manutenção diária desvinculado do episódio agudo."
+        "text": "O brometo de ipratrópio é indicado como fármaco de manutenção diária isolada nesse paciente, sem relação com o episódio agudo de broncoespasmo grave descrito no caso.",
+        "rationale": "Incorreta. O brometo de ipratrópio especificamente relaciona-se ao auxílio no broncoespasmo grave agudo não responsivo ao beta-2 agonista, e não como fármaco isolado de manutenção diária desvinculado do episódio agudo."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "O brometo de ipratrópio tem mecanismo anticolinérgico, distinto do beta-2 agonista, sendo associado no bronçõespasmo grave não responsivo, sem necessidade de aumentar a dose do beta-2 agonista."
+    "clinicalPointers": "O brometo de ipratrópio tem mecanismo anticolinérgico, distinto do beta-2 agonista, sendo associado no broncoespasmo grave não responsivo, sem necessidade de aumentar a dose do beta-2 agonista."
   },
   {
     "id": 166,
@@ -5875,11 +5875,11 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Associações farmacêuticas com brometo de ipratrópio e escolha conforme fármaco associado disponível",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Um serviço de emergência dispõe de duas apresentações combinadas para nebulização no manejo do bronçõespasmo grave: uma associando ipratrópio a fenoterol, outra associando ipratrópio a salbutamol. Qual alternativa descreve corretamente essas associações farmacêuticas citadas?",
+    "prompt": "Um serviço de emergência dispõe de duas apresentações combinadas para nebulização no manejo do broncoespasmo grave: uma associando ipratrópio a fenoterol, outra associando ipratrópio a salbutamol. Qual alternativa descreve corretamente essas associações farmacêuticas citadas?",
     "options": [
       {
         "letter": "A",
-        "text": "Ipratrópio associado a fenoterol e ipratrópio associado a salbutamol são as duas associações farmacêuticas contendo brometo de ipratrópio citadas para o tratamento do bronçõespasmo.",
+        "text": "Ipratrópio associado a fenoterol e ipratrópio associado a salbutamol são as duas associações farmacêuticas contendo brometo de ipratrópio citadas para o tratamento do broncoespasmo.",
         "rationale": "CORRETA. Essas duas associações farmacêuticas contendo brometo de ipratrópio são exatamente citadas: com fenoterol e com salbutamol, compatíveis com as duas apresentações disponíveis nesse serviço de emergência."
       },
       {
@@ -5894,12 +5894,12 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "O ipratrópio não é citado em nenhuma associação farmacêutica combinada, sendo utilizado exclusivamente de forma isolada em qualquer contexto de bronçõespasmo grave.",
-        "rationale": "Incorreta. As associações de ipratrópio com fenoterol e com salbutamol são explicitamente reconhecidas, o que contrária a ideia de uso exclusivamente isolado em qualquer contexto."
+        "text": "O ipratrópio não é citado em nenhuma associação farmacêutica combinada, sendo utilizado exclusivamente de forma isolada em qualquer contexto de broncoespasmo grave.",
+        "rationale": "Incorreta. As associações de ipratrópio com fenoterol e com salbutamol são explicitamente reconhecidas, o que contraria a ideia de uso exclusivamente isolado em qualquer contexto."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "As associações de brometo de ipratrópio com fenoterol e com salbutamol são formulações utilizadas no tratamento do bronçõespasmo."
+    "clinicalPointers": "As associações de brometo de ipratrópio com fenoterol e com salbutamol são formulações utilizadas no tratamento do broncoespasmo."
   },
   {
     "id": 167,
@@ -5960,12 +5960,12 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "O omalizumabe e indicado para qualquer paciente com asma leve, independentemente dos níveis de IgE sérica ou da faixa etária.",
+        "text": "O omalizumabe é indicado para qualquer paciente com asma leve, independentemente dos níveis de IgE sérica ou da faixa etária.",
         "rationale": "Incorreta. A indicação do omalizumabe é restrita a pacientes com IgE sérica elevada, alergia grave não controlada com corticosteroide, e faixa etária específica de 11 a 50 anos; não é indicado a qualquer paciente com asma leve."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "O omalizumabe, anticorpo monoclonal anti-IgE, e indicado em pacientes de 11 a 50 anos com IgE sérica elevada e alergia grave não controlada com corticosteroide."
+    "clinicalPointers": "O omalizumabe, anticorpo monoclonal anti-IgE, é indicado em pacientes de 11 a 50 anos com IgE sérica elevada e alergia grave não controlada com corticosteroide."
   },
   {
     "id": 169,
@@ -6070,7 +6070,7 @@ const QUESTIONS_DATABASE = [
     "id": 172,
     "code": "ASMA-20",
     "category": "Farmacoterapia da Asma",
-    "subcategory": "Diferênciação de mecanismo entre corticosteroide inalatório e beta-2 de longa ação para justificar a associação",
+    "subcategory": "Diferenciação de mecanismo entre corticosteroide inalatório e beta-2 de longa ação para justificar a associação",
     "origem": "nova",
     "difficulty": "Avançada",
     "prompt": "Um paciente com asma persistente, mesmo em uso regular de beta-2 agonista de longa ação, ainda necessita de corticosteroide inalatório associado para o controle adequado da doença. Qual alternativa explica corretamente essa necessidade, integrando os mecanismos distintos dessas duas classes descritos?",
@@ -6126,7 +6126,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Não haveria qualquer dado epidemiológico específico sobre a asma no Brasil, tornando a avaliação desse gestor baseada em informações não respaldadas.",
-        "rationale": "Incorreta. Há dados específicos sobre atendimentos pelo SUS e prevalência da asma no Brasil, incluindo sua maior frequência na infância, o que respalda, e não contrária, a avaliação desse gestor."
+        "rationale": "Incorreta. Há dados específicos sobre atendimentos pelo SUS e prevalência da asma no Brasil, incluindo sua maior frequência na infância, o que respalda, e não contraria, a avaliação desse gestor."
       }
     ],
     "correctLetter": "A",
@@ -6169,29 +6169,29 @@ const QUESTIONS_DATABASE = [
     "id": 175,
     "code": "ASMA-23",
     "category": "Farmacoterapia da Asma",
-    "subcategory": "Manejo de bronçõespasmo grave em paciente sem resposta a múltiplas inalações de beta-2 agonista",
+    "subcategory": "Manejo de broncoespasmo grave em paciente sem resposta a múltiplas inalações de beta-2 agonista",
     "origem": "nova",
     "difficulty": "Avançada",
     "prompt": "Um paciente com crise asmática grave e sibilos difusos apresenta resposta insuficiente após múltiplas inalações de salbutamol. A equipe médica decide associar outro broncodilatador de mecanismo diferente, sem aumentar a dose do salbutamol. Qual alternativa apresenta a conduta mais coerente para esse paciente?",
     "options": [
       {
         "letter": "A",
-        "text": "Associar brometo de ipratrópio, fármaco de mecanismo anticolinérgico distinto do beta-2 agonista, indicado para o bronçõespasmo grave não responsivo, sem necessidade de aumentar a dose do beta-2 agonista já utilizado.",
-        "rationale": "CORRETA. Exatamente essa conduta: associar o brometo de ipratrópio, de mecanismo anticolinérgico distinto, no bronçõespasmo grave não responsivo ao beta-2 agonista, sem necessidade de aumentar a dose deste último."
+        "text": "Associar brometo de ipratrópio, fármaco de mecanismo anticolinérgico distinto do beta-2 agonista, indicado para o broncoespasmo grave não responsivo, sem necessidade de aumentar a dose do beta-2 agonista já utilizado.",
+        "rationale": "CORRETA. Exatamente essa conduta: associar o brometo de ipratrópio, de mecanismo anticolinérgico distinto, no broncoespasmo grave não responsivo ao beta-2 agonista, sem necessidade de aumentar a dose deste último."
       },
       {
         "letter": "B",
-        "text": "Aumentar exclusivamente a dose do salbutamol já utilizado, sem associar qualquer outro fármaco, única conduta descrita para bronçõespasmo grave não responsivo a múltiplas inalações.",
-        "rationale": "Incorreta. A associação do brometo de ipratrópio nesse cenário de bronçõespasmo grave não responsivo é especificamente descrita, não apenas o aumento isolado da dose do beta-2 agonista já utilizado."
+        "text": "Aumentar exclusivamente a dose do salbutamol já utilizado, sem associar qualquer outro fármaco, única conduta descrita para broncoespasmo grave não responsivo a múltiplas inalações.",
+        "rationale": "Incorreta. A associação do brometo de ipratrópio nesse cenário de broncoespasmo grave não responsivo é especificamente descrita, não apenas o aumento isolado da dose do beta-2 agonista já utilizado."
       },
       {
         "letter": "C",
-        "text": "Iniciar teofilina isolada como única alternativa terapêutica nesse cenário de bronçõespasmo grave agudo, sem associar qualquer fármaco de mecanismo anticolinérgico.",
+        "text": "Iniciar teofilina isolada como única alternativa terapêutica nesse cenário de broncoespasmo grave agudo, sem associar qualquer fármaco de mecanismo anticolinérgico.",
         "rationale": "Incorreta. A teofilina é um fármaco em desuso, reservado para quando corticoide e cromoglicato são insuficientes; não é a primeira alternativa isolada em broncoespasmo agudo grave não responsivo ao beta-2 agonista."
       },
       {
         "letter": "D",
-        "text": "Substituir o salbutamol por um beta-2 agonista de longa ação, única conduta indicada para bronçõespasmo grave agudo não responsivo a múltiplas inalações do beta-2 de curta ação.",
+        "text": "Substituir o salbutamol por um beta-2 agonista de longa ação, única conduta indicada para broncoespasmo grave agudo não responsivo a múltiplas inalações do beta-2 de curta ação.",
         "rationale": "Incorreta. Os beta-2 agonistas de longa ação para alívio imediato de crises agudas não são indicados; eles não devem ser usados com essa finalidade, sendo fármacos de manutenção contínua, e não para substituição aguda do beta-2 de curta ação."
       }
     ],
@@ -6219,8 +6219,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "O controle da broncoconstrição aguda por broncodilatador e suficiente para atingir todos os objetivos do tratamento da asma descritos, tornando as hospitalizações recorrentes um achado sem relação com a farmacoterapia atual desse paciente.",
-        "rationale": "Incorreta. Os objetivos do tratamento da asma são mais amplos, incluindo a redução da inflamação crônica e das hospitalizações, que o controle isolado da broncoconstrição aguda não alcança, como evidênciado pelas exacerbações recorrentes."
+        "text": "O controle da broncoconstrição aguda por broncodilatador é suficiente para atingir todos os objetivos do tratamento da asma descritos, tornando as hospitalizações recorrentes um achado sem relação com a farmacoterapia atual desse paciente.",
+        "rationale": "Incorreta. Os objetivos do tratamento da asma são mais amplos, incluindo a redução da inflamação crônica e das hospitalizações, que o controle isolado da broncoconstrição aguda não alcança, como evidenciado pelas exacerbações recorrentes."
       },
       {
         "letter": "D",
@@ -6370,7 +6370,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Osso cortical versus osso trabecular quanto a função estrutural e metabólica",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Durante discussão teórica, o preceptor pergunta qual e a diferença funcional entre o osso cortical e o osso trabecular, relacionando essa diferença ao papel de cada um na homeóstase mineral e na sustentação estrutural. Qual alternativa está correta?",
+    "prompt": "Durante discussão teórica, o preceptor pergunta qual é a diferença funcional entre o osso cortical e o osso trabecular, relacionando essa diferença ao papel de cada um na homeóstase mineral e na sustentação estrutural. Qual alternativa está correta?",
     "options": [
       {
         "letter": "A",
@@ -6385,11 +6385,11 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "O osso cortical e o único tipo relacionado ao intercâmbio metabólico de cálcio, enquanto o osso trabecular teria função exclusivamente estrutural.",
-        "rationale": "Incorreta. Essa relação é invertida: o osso trabecular, mais poroso, e o mais relacionado ao intercâmbio metabólico de cálcio, enquanto o cortical tem papel predominantemente estrutural."
+        "rationale": "Incorreta. Essa relação é invertida: o osso trabecular, mais poroso, é o mais relacionado ao intercâmbio metabólico de cálcio, enquanto o cortical tem papel predominantemente estrutural."
       },
       {
         "letter": "D",
-        "text": "Não ha qualquer diferença funcional entre osso cortical e osso trabecular, sendo os termos utilizados de forma intercambiável.",
+        "text": "Não há qualquer diferença funcional entre osso cortical e osso trabecular, sendo os termos utilizados de forma intercambiável.",
         "rationale": "Incorreta. As funções predominantes de cada tipo de osso diferem claramente — estrutural para o cortical e metabólica para o trabecular —, o que não sustenta o uso intercambiável dos termos."
       }
     ],
@@ -6422,8 +6422,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "A homeostasia óssea normal depende exclusivamente dos osteoblastos, sem qualquer participação dos osteoclastos, e os bisfosfonatos atuariam potêncializando essa via única de formação óssea.",
-        "rationale": "Incorreta. A homeostasia óssea é dependente do equilíbrio entre osteoblastos e osteoclastos, e não exclusivamente dos osteoblastos, e os bisfosfonatos atuam inibindo os osteoclastos, e não potêncializando a formação."
+        "text": "A homeostasia óssea normal depende exclusivamente dos osteoblastos, sem qualquer participação dos osteoclastos, e os bisfosfonatos atuariam potencializando essa via única de formação óssea.",
+        "rationale": "Incorreta. A homeostasia óssea é dependente do equilíbrio entre osteoblastos e osteoclastos, e não exclusivamente dos osteoblastos, e os bisfosfonatos atuam inibindo os osteoclastos, e não potencializando a formação."
       }
     ],
     "correctLetter": "A",
@@ -6433,7 +6433,7 @@ const QUESTIONS_DATABASE = [
     "id": 183,
     "code": "OSTEOP-18",
     "category": "Farmacoterapia do Tecido Ósseo",
-    "subcategory": "Mecanismo da osteoporose pos-menopausa integrado ao racional terapêutico do estrogênio",
+    "subcategory": "Mecanismo da osteoporose pós-menopausa integrado ao racional terapêutico do estrogênio",
     "origem": "nova",
     "difficulty": "Avançada",
     "prompt": "Uma mulher de 55 anos, no início da menopausa, e uma paciente de 60 anos, já em uso de reposição estrogênica de curto prazo, são comparadas quanto ao mecanismo da perda óssea e a justificativa terapêutica do estrogênio. Qual alternativa integra corretamente esses dois aspectos?",
@@ -6483,7 +6483,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "Os bisfosfonatos são indicados exclusivamente na osteoporose pos-menopausa, sendo contraindicados na osteoporose secundária ao uso crônico de corticosteroides como no caso desse paciente.",
+        "text": "Os bisfosfonatos são indicados exclusivamente na osteoporose pós-menopausa, sendo contraindicados na osteoporose secundária ao uso crônico de corticosteroides como no caso desse paciente.",
         "rationale": "Incorreta. Os bisfosfonatos são explicitamente indicados também para a osteoporose relacionada ao uso de glicocorticoides, além da pós-menopausa, o que não sustenta contraindicação nesse contexto secundário."
       },
       {
@@ -6535,7 +6535,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Levotiroxina em excesso como causa secundária de osteoporose em mulher hipotireóidea na menopausa",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Uma professora aposentada, em uso de levotiroxina em dose elevada para hipotireoidismo ha vários anos, sem reavaliação recente da dose, e agora na menopausa, e avaliada quanto ao risco ósseo. Qual alternativa relaciona corretamente o uso prolongado de levotiroxina em excesso ao mecanismo da osteoporose secundária descrito, integrando o momento da menopausa?",
+    "prompt": "Uma professora aposentada, em uso de levotiroxina em dose elevada para hipotireoidismo há vários anos, sem reavaliação recente da dose, e agora na menopausa, e avaliada quanto ao risco ósseo. Qual alternativa relaciona corretamente o uso prolongado de levotiroxina em excesso ao mecanismo da osteoporose secundária descrito, integrando o momento da menopausa?",
     "options": [
       {
         "letter": "A",
@@ -6568,7 +6568,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Mecanismo dual do raloxifeno e comparação com o estrogênio quanto ao risco mamário",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Uma paciente pos-menopausa, para quem foi prescrito raloxifeno como estratégia preventiva, pergunta por que esse fármaco não apresenta os mesmos riscos do estrogênio isolado sobre a mama, apesar de ambos atuarem sobre receptores de estrogênio. Qual alternativa explica corretamente essa diferença?",
+    "prompt": "Uma paciente pós-menopausa, para quem foi prescrito raloxifeno como estratégia preventiva, pergunta por que esse fármaco não apresenta os mesmos riscos do estrogênio isolado sobre a mama, apesar de ambos atuarem sobre receptores de estrogênio. Qual alternativa explica corretamente essa diferença?",
     "options": [
       {
         "letter": "A",
@@ -6601,7 +6601,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Regulação contrária entre paratormônio e calcitonina sobre a atividade osteoclástica",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Durante discussão teórica, o preceptor pergunta qual e o efeito do paratormônio sobre a atividade dos osteoclastos, em contraste com o efeito da calcitonina, para explicar a regulação fisiológica do cálcio sanguíneo. Qual alternativa está correta?",
+    "prompt": "Durante discussão teórica, o preceptor pergunta qual é o efeito do paratormônio sobre a atividade dos osteoclastos, em contraste com o efeito da calcitonina, para explicar a regulação fisiológica do cálcio sanguíneo. Qual alternativa está correta?",
     "options": [
       {
         "letter": "A",
@@ -6671,8 +6671,8 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "Raca branca, baixo peso corporal, sedentarismo, tabagismo, baixa ingestão de cálcio e vitamina D, e histórico familiar de fraturas são todos fatores de risco reconhecidos para a osteoporose, presentes simultaneamente no caso dessa paciente.",
-        "rationale": "CORRETA. Esses elementos como fatores de risco reconhecidos para a osteoporose são exatamente listados: raca branca, histórico familiar, sedentarismo, baixa ingestão de cálcio e vitamina D, tabagismo e baixo peso corporal, todos presentes na descrição dessa paciente."
+        "text": "Raça branca, baixo peso corporal, sedentarismo, tabagismo, baixa ingestão de cálcio e vitamina D, e histórico familiar de fraturas são todos fatores de risco reconhecidos para a osteoporose, presentes simultaneamente no caso dessa paciente.",
+        "rationale": "CORRETA. Esses elementos como fatores de risco reconhecidos para a osteoporose são exatamente listados: raça branca, histórico familiar, sedentarismo, baixa ingestão de cálcio e vitamina D, tabagismo e baixo peso corporal, todos presentes na descrição dessa paciente."
       },
       {
         "letter": "B",
@@ -6686,12 +6686,12 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "A raca branca não é reconhecida como fator de risco, sendo apenas um dado demográfico sem qualquer relação com a avaliação preventiva da osteoporose nessa paciente.",
+        "text": "A raça branca não é reconhecida como fator de risco, sendo apenas um dado demográfico sem qualquer relação com a avaliação preventiva da osteoporose nessa paciente.",
         "rationale": "Incorreta. A raça branca está explicitamente entre os fatores de risco reconhecidos para a osteoporose; não é um dado demográfico irrelevante para a avaliação preventiva."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Raca branca, baixo peso corporal, sedentarismo, tabagismo, baixa ingestão de cálcio e vitamina D, e histórico familiar de fraturas são fatores de risco reconhecidos para a osteoporose, todos presentes nessa paciente."
+    "clinicalPointers": "Raça branca, baixo peso corporal, sedentarismo, tabagismo, baixa ingestão de cálcio e vitamina D, e histórico familiar de fraturas são fatores de risco reconhecidos para a osteoporose, todos presentes nessa paciente."
   },
   {
     "id": 191,
@@ -6719,7 +6719,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "Não ha qualquer distinção entre objetivo primário e secundário no tratamento da osteoporose descrita, sendo as duas condutas apresentadas equivalentes entre si.",
+        "text": "Não há qualquer distinção entre objetivo primário e secundário no tratamento da osteoporose descrita, sendo as duas condutas apresentadas equivalentes entre si.",
         "rationale": "Incorreta. Há explicitamente essa distinção entre objetivo primário (prevenção) e secundário (manejo da doença instalada), o que diferencia, e não equivale, as duas condutas apresentadas no caso."
       }
     ],
@@ -6737,18 +6737,18 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "As orientações de consumo de laticínios e dos vegetais citados, além da tranquilização quanto ao consumo moderado de cafeína (2 a 4 xícaras) sem efeito deletério relevante quando a dieta e adequada em cálcio, são coerentes com as recomendações dietéticas descritas.",
+        "text": "As orientações de consumo de laticínios e dos vegetais citados, além da tranquilização quanto ao consumo moderado de cafeína (2 a 4 xícaras) sem efeito deletério relevante quando a dieta é adequada em cálcio, são coerentes com as recomendações dietéticas descritas.",
         "rationale": "CORRETA. Esses vegetais (espinafre, agrião, brócolis, couve) e laticínios são exatamente fontes de cálcio, e o consumo de 2 a 4 xícaras de café não tem efeito deletério relevante quando a dieta é adequada em cálcio, coerente com as orientações dadas a essa paciente."
       },
       {
         "letter": "B",
         "text": "O consumo de cafeína em qualquer quantidade deveria ser proibido nessa paciente, o que tornaria a tranquilização do profissional de saúde incoerente com as recomendações descritas.",
-        "rationale": "Incorreta. O consumo de cafeína não é proibido em qualquer quantidade; um consumo de 2 a 4 xícaras não tem efeito deletério relevante quando a dieta é adequada em cálcio, o que sustenta, e não contrária, a tranquilização dada."
+        "rationale": "Incorreta. O consumo de cafeína não é proibido em qualquer quantidade; um consumo de 2 a 4 xícaras não tem efeito deletério relevante quando a dieta é adequada em cálcio, o que sustenta, e não contraria, a tranquilização dada."
       },
       {
         "letter": "C",
         "text": "Os vegetais citados (espinafre, agrião, brócolis, couve) não tem qualquer relação com o aporte de cálcio, sendo essa orientação nutricional incoerente com as recomendações descritas.",
-        "rationale": "Incorreta. Esses vegetais são exatamente fontes relevantes de cálcio na dieta, o que sustenta, e não contrária, a coerência dessa orientação nutricional."
+        "rationale": "Incorreta. Esses vegetais são exatamente fontes relevantes de cálcio na dieta, o que sustenta, e não contraria, a coerência dessa orientação nutricional."
       },
       {
         "letter": "D",
@@ -6757,7 +6757,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Laticínios e vegetais como espinafre, agrião, brócolis e couve são fontes de cálcio citadas, e o consumo de 2 a 4 xícaras de café não tem efeito deletério relevante quando a dieta e adequada em cálcio."
+    "clinicalPointers": "Laticínios e vegetais como espinafre, agrião, brócolis e couve são fontes de cálcio citadas, e o consumo de 2 a 4 xícaras de café não tem efeito deletério relevante quando a dieta é adequada em cálcio."
   },
   {
     "id": 193,
@@ -6841,7 +6841,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "A reposição isolada de cálcio e suficiente para prevenir a totalidade das fraturas em qualquer paciente com osteoporose já estabelecida, dispensando qualquer outro fármaco anti-reabsortivo.",
+        "text": "A reposição isolada de cálcio é suficiente para prevenir a totalidade das fraturas em qualquer paciente com osteoporose já estabelecida, dispensando qualquer outro fármaco anti-reabsortivo.",
         "rationale": "Incorreta. O efeito da reposição isolada de cálcio como mínimo na prevenção de fraturas é descrito, não como suficiente para preveni-las totalmente, especialmente em osteoporose já estabelecida."
       },
       {
@@ -6862,10 +6862,10 @@ const QUESTIONS_DATABASE = [
     "id": 196,
     "code": "OSTEOP-31",
     "category": "Farmacoterapia do Tecido Ósseo",
-    "subcategory": "Diferênciação entre fraturas vertebrais assintomáticas e fraturas não vertebrais sintomáticas",
+    "subcategory": "Diferenciação entre fraturas vertebrais assintomáticas e fraturas não vertebrais sintomáticas",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Uma paciente e diagnosticada com fratura vertebral por compressão após exame de imagem solicitado por outro motivo, sem relato prévio de dor significativa, enquanto outro paciente, após queda simples em casa, apresenta dor severa imediata no punho, com inchaço e redução importante da mobilidade. Qual alternativa diferência corretamente essas duas apresentações de fratura osteoporótica?",
+    "prompt": "Uma paciente e diagnosticada com fratura vertebral por compressão após exame de imagem solicitado por outro motivo, sem relato prévio de dor significativa, enquanto outro paciente, após queda simples em casa, apresenta dor severa imediata no punho, com inchaço e redução importante da mobilidade. Qual alternativa diferencia corretamente essas duas apresentações de fratura osteoporótica?",
     "options": [
       {
         "letter": "A",
@@ -6979,7 +6979,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Suplementação isolada de vitamina D em altas doses, única alternativa descrita para pacientes com contraindicação a bisfosfonatos orais por esofagite erosiva grave.",
-        "rationale": "Incorreta. A suplementação isolada de vitamina D em altas doses não é alternativa específica para essa contraindicação; a calcitonina intranasal e a opção anti-reabsortiva mais coerente descrita para esse cenário."
+        "rationale": "Incorreta. A suplementação isolada de vitamina D em altas doses não é alternativa específica para essa contraindicação; a calcitonina intranasal é a opção anti-reabsortiva mais coerente descrita para esse cenário."
       },
       {
         "letter": "D",
@@ -7001,7 +7001,7 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "Reduzir a dose de prednisona quando possível, já que os corticosteroides inibem osteoblastos e estimulam osteoclastos, e associar bisfosfonato, indicado tanto para a osteoporose pos-menopausa quanto para a relacionada ao uso de glicocorticoides, compatível com o quadro dessa paciente.",
+        "text": "Reduzir a dose de prednisona quando possível, já que os corticosteroides inibem osteoblastos e estimulam osteoclastos, e associar bisfosfonato, indicado tanto para a osteoporose pós-menopausa quanto para a relacionada ao uso de glicocorticoides, compatível com o quadro dessa paciente.",
         "rationale": "CORRETA. O uso crônico de glicocorticoides relaciona-se à inibição da ação osteoblástica e ao aumento da ação osteoclástica, orientando redução da dose quando possível; bisfosfonatos como alendronato e risedronato são indicados tanto para a osteoporose pós-menopausa quanto para a relacionada ao uso de glicocorticoides, compatível com a conduta integrada para essa paciente."
       },
       {
@@ -7011,7 +7011,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "O bisfosfonato e indicado exclusivamente para osteoporose pos-menopausa, sendo contraindicado no contexto de osteoporose secundária ao uso crônico de corticosteroides, como no caso dessa paciente.",
+        "text": "O bisfosfonato é indicado exclusivamente para osteoporose pós-menopausa, sendo contraindicado no contexto de osteoporose secundária ao uso crônico de corticosteroides, como no caso dessa paciente.",
         "rationale": "Incorreta. Os bisfosfonatos são explicitamente indicados também para a osteoporose relacionada ao uso de glicocorticoides, além da pós-menopausa, o que não sustenta contraindicação nesse contexto secundário descrito no caso."
       },
       {
@@ -7021,7 +7021,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Reduzir a dose de corticoide quando possível, dado seu efeito inibidor sobre osteoblastos e estimulador sobre osteoclastos, e associar bisfosfonato, indicado tanto na osteoporose pos-menopausa quanto na relacionada a glicocorticoides."
+    "clinicalPointers": "Reduzir a dose de corticoide quando possível, dado seu efeito inibidor sobre osteoblastos e estimulador sobre osteoclastos, e associar bisfosfonato, indicado tanto na osteoporose pós-menopausa quanto na relacionada a glicocorticoides."
   },
   {
     "id": 201,
@@ -7067,8 +7067,8 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "Apoiar decisões terapêuticas em estudos clínicos metodológicamente bem planejados, com grupo controle, grupo de intervenção e randomização, elementos que fundamentam a Medicina Baseada em Evidências descrita.",
-        "rationale": "CORRETA. A Medicina Baseada em Evidências relaciona-se a avaliação de ensaios clínicos experimentais metodológicamente bem planejados, com grupo controle, grupo de intervenção e randomização, exatamente a diferença entre os dois esquemas terapêuticos comparados nesse caso."
+        "text": "Apoiar decisões terapêuticas em estudos clínicos metodologicamente bem planejados, com grupo controle, grupo de intervenção e randomização, elementos que fundamentam a Medicina Baseada em Evidências descrita.",
+        "rationale": "CORRETA. A Medicina Baseada em Evidências relaciona-se a avaliação de ensaios clínicos experimentais metodologicamente bem planejados, com grupo controle, grupo de intervenção e randomização, exatamente a diferença entre os dois esquemas terapêuticos comparados nesse caso."
       },
       {
         "letter": "B",
@@ -7087,7 +7087,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "A Medicina Baseada em Evidências se apoia em estudos clínicos metodológicamente bem planejados, com grupo controle, intervenção e randomização, distinta da prática empírica baseada apenas na experiência do prescritor."
+    "clinicalPointers": "A Medicina Baseada em Evidências se apoia em estudos clínicos metodologicamente bem planejados, com grupo controle, intervenção e randomização, distinta da prática empírica baseada apenas na experiência do prescritor."
   },
   {
     "id": 203,
@@ -7177,7 +7177,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Essa etapa corresponde ao primeiro passo da prescrição racional, definir o problema do paciente, já que a meta terapêutica e parte da identificação inicial do problema.",
-        "rationale": "Incorreta. A definição do problema (primeiro passo) é separada da especificação do objetivo terapêutico (segundo passo), etapas distintas e sequênciais, e não uma única etapa combinada."
+        "rationale": "Incorreta. A definição do problema (primeiro passo) é separada da especificação do objetivo terapêutico (segundo passo), etapas distintas e sequenciais, e não uma única etapa combinada."
       },
       {
         "letter": "D",
@@ -7192,7 +7192,7 @@ const QUESTIONS_DATABASE = [
     "id": 206,
     "code": "PRESRAC-26",
     "category": "Prescrição Racional",
-    "subcategory": "Diferênciação entre inscrição e adscrição em caso de orientação alimentar associada ao fármaco",
+    "subcategory": "Diferenciação entre inscrição e adscrição em caso de orientação alimentar associada ao fármaco",
     "origem": "nova",
     "difficulty": "Intermediária",
     "prompt": "Uma receita de metformina contém o nome do fármaco, a dose e a via de administração na inscrição, além de uma observação adicional orientando o paciente a tomar o medicamento após as refeições para reduzir desconforto gastrointestinal. A qual componente da receita pertence essa orientação adicional?",
@@ -7242,7 +7242,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "Essa decisão corresponde ao terceiro passo da prescrição racional, verificar se o tratamento e adequado ao paciente, etapa que ocorre antes, e não depois, do início da farmacoterapia.",
+        "text": "Essa decisão corresponde ao terceiro passo da prescrição racional, verificar se o tratamento é adequado ao paciente, etapa que ocorre antes, e não depois, do início da farmacoterapia.",
         "rationale": "Incorreta. O terceiro passo ocorre antes da prescrição inicial, verificando a adequação prévia do tratamento, enquanto a decisão descrita no caso ocorre após semanas de acompanhamento, correspondendo ao sexto passo, de monitorização."
       },
       {
@@ -7261,7 +7261,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Classificação de entorpecentes de concentrações especiais em comparação aos entorpecentes da lista A1",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Um paciente em pos-operatório recebe codeína para dor moderada, enquanto outro paciente em cuidados paliativos recebe morfina para dor intensa. O farmacêutico confere os dois receituários de controle especial correspondentes. Qual alternativa diferência corretamente a classificação regulatória dessas duas substâncias?",
+    "prompt": "Um paciente em pós-operatório recebe codeína para dor moderada, enquanto outro paciente em cuidados paliativos recebe morfina para dor intensa. O farmacêutico confere os dois receituários de controle especial correspondentes. Qual alternativa diferencia corretamente a classificação regulatória dessas duas substâncias?",
     "options": [
       {
         "letter": "A",
@@ -7308,8 +7308,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "A receita corretamente preenchida nesse caso dispensa a subscrição, já que esse componente não seria essêncial quando o paciente já recebe orientações verbais completas do médico.",
-        "rationale": "Incorreta. A subscrição, quantidade total do medicamento, é componente essêncial da receita, independentemente das orientações verbais fornecidas ao paciente durante a consulta."
+        "text": "A receita corretamente preenchida nesse caso dispensa a subscrição, já que esse componente não seria essencial quando o paciente já recebe orientações verbais completas do médico.",
+        "rationale": "Incorreta. A subscrição, quantidade total do medicamento, é componente essencial da receita, independentemente das orientações verbais fornecidas ao paciente durante a consulta."
       },
       {
         "letter": "D",
@@ -7351,7 +7351,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Os ossos abrigam cerca de 99% do cálcio corporal e 85% do fósforo corporal, funcionando como reservatório essêncial desses minerais, além de sua função estrutural."
+    "clinicalPointers": "Os ossos abrigam cerca de 99% do cálcio corporal e 85% do fósforo corporal, funcionando como reservatório essencial desses minerais, além de sua função estrutural."
   },
   {
     "id": 211,
@@ -7555,14 +7555,14 @@ const QUESTIONS_DATABASE = [
     "id": 217,
     "code": "OSTEOP-43",
     "category": "Farmacoterapia do Tecido Ósseo",
-    "subcategory": "Diferênciação entre fatores de risco modificáveis e não modificáveis para osteoporose",
+    "subcategory": "Diferenciação entre fatores de risco modificáveis e não modificáveis para osteoporose",
     "origem": "nova",
     "difficulty": "Avançada",
     "prompt": "Durante uma consulta preventiva, uma paciente pergunta quais dos seus fatores de risco para osteoporose (raça branca, histórico familiar de fraturas, sedentarismo, tabagismo e baixa ingestão de cálcio) podem ser modificados com mudanças de hábito. Qual alternativa avalia corretamente essa distinção, segundo os fatores de risco descritos?",
     "options": [
       {
         "letter": "A",
-        "text": "Sedentarismo, tabagismo e baixa ingestão de cálcio são fatores de risco potêncialmente modificáveis por mudanças de hábito, enquanto raça branca e histórico familiar de fraturas são fatores de risco não modificáveis, todos reconhecidos como relevantes para a osteoporose.",
+        "text": "Sedentarismo, tabagismo e baixa ingestão de cálcio são fatores de risco potencialmente modificáveis por mudanças de hábito, enquanto raça branca e histórico familiar de fraturas são fatores de risco não modificáveis, todos reconhecidos como relevantes para a osteoporose.",
         "rationale": "CORRETA. Raça branca, histórico familiar, sedentarismo, baixa ingestão de cálcio e vitamina D, tabagismo e baixo peso corporal são fatores de risco para a osteoporose; entre esses, sedentarismo, tabagismo e ingestão de cálcio são passíveis de modificação por mudança de hábito, enquanto raça e histórico familiar não o são."
       },
       {
@@ -7573,7 +7573,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Nenhum dos fatores de risco citados pela paciente pode ser modificado, sendo a prevenção da osteoporose dependente exclusivamente de fatores genéticos fixos.",
-        "rationale": "Incorreta. Sedentarismo, tabagismo e baixa ingestão de cálcio e vitamina D são fatores de risco passíveis de intervenção por meio de mudanças de hábito, o que contrária a ideia de que nenhum fator pode ser modificado."
+        "rationale": "Incorreta. Sedentarismo, tabagismo e baixa ingestão de cálcio e vitamina D são fatores de risco passíveis de intervenção por meio de mudanças de hábito, o que contraria a ideia de que nenhum fator pode ser modificado."
       },
       {
         "letter": "D",
@@ -7621,10 +7621,10 @@ const QUESTIONS_DATABASE = [
     "id": 219,
     "code": "OSTEOP-45",
     "category": "Farmacoterapia do Tecido Ósseo",
-    "subcategory": "Integração entre estrutura óssea cortical e trabecular e sítios preferênciais de fratura osteoporótica",
+    "subcategory": "Integração entre estrutura óssea cortical e trabecular e sítios preferenciais de fratura osteoporótica",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Um professor explica por que as fraturas osteoporóticas costumam ocorrer preferêncialmente em determinados sítios do esqueleto, como vértebras, quadril e punho, relacionando essa distribuição à composição predominante do osso nessas regiões. Qual alternativa integra corretamente esse racional?",
+    "prompt": "Um professor explica por que as fraturas osteoporóticas costumam ocorrer preferencialmente em determinados sítios do esqueleto, como vértebras, quadril e punho, relacionando essa distribuição à composição predominante do osso nessas regiões. Qual alternativa integra corretamente esse racional?",
     "options": [
       {
         "letter": "A",
@@ -7648,7 +7648,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Regiões ricas em osso trabecular, mais poroso e metabolicamente ativo, tendem a ser mais sensíveis à perda de massa óssea da osteoporose, o que ajuda a explicar a distribuição preferêncial das fraturas em vértebras, quadril e punho."
+    "clinicalPointers": "Regiões ricas em osso trabecular, mais poroso e metabolicamente ativo, tendem a ser mais sensíveis à perda de massa óssea da osteoporose, o que ajuda a explicar a distribuição preferencial das fraturas em vértebras, quadril e punho."
   },
   {
     "id": 220,
@@ -8669,7 +8669,7 @@ function renderReview() {
           ${q.marked ? `<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">🏳️ Marcada</span>` : ""}
           ${badge}
         </div>
-        <p class="font-medium mb-3">${qi + 1}. ${renderHighlightedText(q.prompt, q.highlights)}</p>
+        <p class="font-medium mb-3" style="white-space: pre-line">${qi + 1}. ${renderHighlightedText(q.prompt, q.highlights)}</p>
         <div class="space-y-2 mb-3">${optionsHtml}</div>
         <div class="rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800 p-2.5 text-xs text-amber-700 dark:text-amber-300">
           💡 ${escapeHtml(q.clinicalPointers)}

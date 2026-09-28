@@ -252,7 +252,7 @@
         <button id="btn-mark-review" class="px-2 py-1 rounded-full border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-700" title="Marcar para revisão">🏳️ <span id="mark-label">Marcar</span></button>
       </div>
 
-      <p id="q-prompt" class="text-base sm:text-lg font-medium mb-1.5 leading-relaxed select-text"></p>
+      <p id="q-prompt" class="text-base sm:text-lg font-medium mb-1.5 leading-relaxed select-text" style="white-space: pre-line"></p>
       <p class="text-xs text-slate-400 dark:text-slate-500 mb-5">🖍️ Selecione um trecho do enunciado para grifar. Clique num grifo para apagá-lo.</p>
 
       <div id="q-options" class="space-y-2.5 mb-4"></div>
@@ -418,7 +418,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 1,
     "code": "PERI-01",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Classificação ASA",
     "difficulty": "Intermediária",
     "prompt": "Carlos, 55 anos, hipertenso controlado, tabagista (20 maços-ano), será submetido a herniorrafia inguinal eletiva. Segundo a classificação ASA, qual a categoria mais adequada?",
@@ -450,7 +450,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 2,
     "code": "PERI-02",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Capacidade funcional (METs)",
     "difficulty": "Intermediária",
     "prompt": "Marta, 68 anos, é avaliada no pré-operatório de uma prostatectomia. Ela sobe dois lances de escada sem parar e sem dispneia. Qual a capacidade funcional estimada, em METs?",
@@ -482,7 +482,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 3,
     "code": "PERI-03",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Índice de risco cardíaco de Lee",
     "difficulty": "Avançada",
     "prompt": "Um paciente vai se submeter a cirurgia de grande porte e, somando os fatores do índice de risco cardíaco revisado de Lee, reúne ao todo 4 pontos. Qual a conduta recomendada antes da liberação cirúrgica?",
@@ -514,7 +514,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 4,
     "code": "PERI-04",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Estratificação de risco cirúrgico",
     "difficulty": "Intermediária",
     "prompt": "Ana, 45 anos, hígida, será submetida a uma tireoidectomia, classificada como cirurgia de baixo risco. Qual a conduta quanto à avaliação cardiovascular?",
@@ -546,7 +546,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 5,
     "code": "PERI-05",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Exames pré-operatórios por idade",
     "difficulty": "Intermediária",
     "prompt": "Roberto, 38 anos, sem comorbidades, fará uma correção de hérnia inguinal videolaparoscópica eletiva. Segundo o macete de exames pré-operatórios por faixa etária, qual a conduta?",
@@ -578,7 +578,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 6,
     "code": "PERI-06",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Exames pré-operatórios por idade",
     "difficulty": "Intermediária",
     "prompt": "Sr. Aurélio, 67 anos, será submetido a colecistectomia eletiva. Segundo o macete por faixa etária, quais exames pré-operatórios são indicados?",
@@ -610,7 +610,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 7,
     "code": "PERI-07",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Consentimento informado",
     "difficulty": "Intermediária",
     "prompt": "Durante a consulta pré-operatória, o cirurgião entrega um formulário genérico de consentimento e pede que o paciente assine imediatamente, sem maiores explicações, momentos antes de entrar na sala. Qual erro está sendo cometido?",
@@ -642,7 +642,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 8,
     "code": "PERI-08",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Jejum pré-operatório",
     "difficulty": "Intermediária",
     "prompt": "Helena, 40 anos, terá cirurgia eletiva às 8h da manhã. Até que horário antes da cirurgia ela pode ingerir líquidos claros com maltodextrina?",
@@ -674,7 +674,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 9,
     "code": "PERI-09",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Jejum pré-operatório",
     "difficulty": "Intermediária",
     "prompt": "Um lactente em aleitamento materno exclusivo terá cirurgia eletiva pela manhã. Qual o tempo mínimo de jejum recomendado para o leite materno?",
@@ -706,7 +706,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 10,
     "code": "PERI-10",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Protocolo ERAS/ACERTO",
     "difficulty": "Intermediária",
     "prompt": "Segundo o protocolo ERAS/ACERTO, qual das condutas abaixo é uma recomendação central para acelerar a recuperação pós-operatória?",
@@ -738,7 +738,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 11,
     "code": "PERI-11",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Suspensão de medicações",
     "difficulty": "Intermediária",
     "prompt": "Paciente em uso crônico de clopidogrel será submetido a cirurgia eletiva de médio porte, com indicação de suspender o antiagregante. Com quantos dias de antecedência ele deve ser suspenso?",
@@ -770,7 +770,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 12,
     "code": "PERI-12",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Suspensão de medicações",
     "difficulty": "Intermediária",
     "prompt": "Paciente hipertenso em uso de losartana (BRA) será operado pela manhã. Qual a conduta mais adequada quanto a essa medicação no dia da cirurgia?",
@@ -802,7 +802,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 13,
     "code": "PERI-13",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Manejo do diabético",
     "difficulty": "Intermediária",
     "prompt": "Paciente diabético em uso de insulina basal terá cirurgia pela manhã. Qual o ajuste de dose e a meta glicêmica perioperatória recomendados?",
@@ -834,7 +834,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 14,
     "code": "PERI-14",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Manejo do diabético",
     "difficulty": "Intermediária",
     "prompt": "Paciente em uso de inibidor de SGLT2 para diabetes tipo 2 será submetido a cirurgia eletiva. Com quanto tempo de antecedência esse medicamento deve ser suspenso?",
@@ -866,7 +866,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 15,
     "code": "PERI-15",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Profilaxia de TEV (Caprini)",
     "difficulty": "Intermediária",
     "prompt": "Paciente cirúrgico é avaliado pelo escore de Caprini e totaliza 4 pontos. Qual a conduta de profilaxia de TEV recomendada?",
@@ -898,7 +898,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 16,
     "code": "PERI-16",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Profilaxia de TEV (esquemas)",
     "difficulty": "Intermediária",
     "prompt": "Paciente vai iniciar enoxaparina como profilaxia farmacológica de TEV no pós-operatório. Qual o esquema posológico correto?",
@@ -930,7 +930,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 17,
     "code": "PERI-17",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Normotermia intraoperatória",
     "difficulty": "Intermediária",
     "prompt": "Durante uma cirurgia de médio porte com 2 horas de duração, a equipe nota que o paciente já perdeu quase 1°C de temperatura central desde a indução. Em qual momento da cirurgia costuma ocorrer a maior queda de temperatura?",
@@ -962,7 +962,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 18,
     "code": "PERI-18",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Febre pós-operatória",
     "difficulty": "Intermediária",
     "prompt": "Paciente no 6º dia de pós-operatório de uma colecistectomia aberta, previamente afebril, desenvolve febre de 38,3°C, com dor e hiperemia leve na incisão. Considerando as janelas de febre pós-operatória, qual a causa mais provável?",
@@ -2562,7 +2562,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 68,
     "code": "CICA-01",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Classificação por profundidade",
     "difficulty": "Intermediária",
     "prompt": "Paciente sofre um corte superficial que atinge apenas a epiderme, sem comprometer a derme. Como essa ferida é classificada quanto à profundidade?",
@@ -2594,7 +2594,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 69,
     "code": "CICA-02",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Tecido de granulação",
     "difficulty": "Intermediária",
     "prompt": "Paciente sofre um ferimento que destrói epiderme, derme, tecido celular subcutâneo e expõe tendões. Como é chamado o tecido novo formado durante a reparação dessa ferida, e o que ele origina?",
@@ -2626,7 +2626,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 70,
     "code": "CICA-03",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Cicatrização por primeira intenção",
     "difficulty": "Intermediária",
     "prompt": "Cirurgião realiza uma incisão limpa, sem perda significativa de tecido, sem infecção ou edema, e aproxima as bordas com sutura ao final do procedimento. Qual tipo de cicatrização está sendo utilizado?",
@@ -2658,7 +2658,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 71,
     "code": "CICA-04",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Cicatrização por segunda intenção",
     "difficulty": "Intermediária",
     "prompt": "Paciente com uma úlcera extensa, com grande perda de tecido e pouca epitelização, é deixada para cicatrizar sem sutura, a partir da formação progressiva de tecido de granulação. Qual o tipo de cicatrização, e uma característica importante desse processo?",
@@ -2690,7 +2690,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 72,
     "code": "CICA-05",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Cicatrização por terceira intenção",
     "difficulty": "Intermediária",
     "prompt": "Ferida contaminada é inicialmente deixada aberta e, após limpeza, é suturada cerca de 5 dias depois, quando o leito já está limpo. Qual tipo de cicatrização está sendo empregado, e em qual situação ele costuma ser indicado?",
@@ -2722,7 +2722,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 73,
     "code": "CICA-06",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Fase inflamatória (células)",
     "difficulty": "Intermediária",
     "prompt": "No 2º dia após uma cirurgia, a ferida operatória apresenta os primeiros sinais de reparo tecidual. Qual célula predomina nesse momento inicial, e qual sua principal função?",
@@ -2754,7 +2754,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 74,
     "code": "CICA-07",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Fase inflamatória (macrófago)",
     "difficulty": "Intermediária",
     "prompt": "Em uma ferida em processo de cicatrização, qual célula é considerada essencial, ou seja, não substituível, sendo responsável por debridamento via enzimas, liberação de citocinas e estímulo à angiogênese e aos fibroblastos?",
@@ -2786,7 +2786,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 75,
     "code": "CICA-08",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Fase inflamatória (linfócito)",
     "difficulty": "Intermediária",
     "prompt": "Paciente com ferida crônica, em fase mais tardia de cicatrização, tem biópsia mostrando predomínio de um tipo celular que atinge seu pico por volta do 7º dia, auxiliando no combate à infecção e na cicatrização tardia. Qual célula é essa?",
@@ -2818,7 +2818,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 76,
     "code": "CICA-09",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Fase proliferativa (fibroplasia)",
     "difficulty": "Intermediária",
     "prompt": "Cerca de 48h após um trauma, uma ferida começa a formar colágeno ativamente, marcando o início da formação da cicatriz. Qual processo e qual célula são responsáveis por essa etapa, e qual fator de crescimento a estimula?",
@@ -2850,7 +2850,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 77,
     "code": "CICA-10",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Fatores que prejudicam a cicatrização",
     "difficulty": "Intermediária",
     "prompt": "Paciente com albumina de 1,8 g/dL será submetido a uma cirurgia eletiva com fechamento primário. Qual o principal risco relacionado a esse achado laboratorial para a cicatrização da ferida?",
@@ -2882,7 +2882,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 78,
     "code": "CICA-11",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Fatores que prejudicam a cicatrização",
     "difficulty": "Intermediária",
     "prompt": "Paciente recebeu altas doses de corticoide nos 3 primeiros dias após um ferimento extenso, por outra indicação clínica. Qual o impacto esperado sobre a cicatrização dessa ferida?",
@@ -2914,7 +2914,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 79,
     "code": "CICA-12",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Desbridamento e hipóxia",
     "difficulty": "Intermediária",
     "prompt": "Paciente com ferida crônica em membro inferior apresenta tecido necrótico extenso no leito da lesão. Por que a remoção desse tecido, o desbridamento, é importante para a cicatrização?",
@@ -2946,7 +2946,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 80,
     "code": "CICA-13",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Cicatrização anormal (queloide)",
     "difficulty": "Intermediária",
     "prompt": "Paciente apresenta cicatriz elevada em cicatriz de apendicectomia, surgida cerca de 5 meses após a cirurgia, que ultrapassa as bordas originais da incisão e não regride. Qual o diagnóstico mais provável?",
@@ -2978,7 +2978,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 81,
     "code": "CICA-14",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Cicatrização anormal (hipertrófica)",
     "difficulty": "Intermediária",
     "prompt": "Paciente apresenta cicatriz elevada, que respeita os limites da ferida original, surgida cerca de 6 semanas após uma cirurgia em face extensora do cotovelo, área de tensão. Qual o diagnóstico mais provável, e a evolução esperada?",
@@ -3010,7 +3010,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 82,
     "code": "CICA-15",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Fase de maturação",
     "difficulty": "Intermediária",
     "prompt": "Uma ferida cirúrgica, uma semana após o procedimento, começa a ter fibroblastos se diferenciando em miofibroblastos, responsáveis pela contração centrípeta da ferida. Em qual fase da cicatrização esse evento ocorre, e qual enzima tem papel importante no equilíbrio do colágeno nessa fase?",
@@ -3042,7 +3042,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 83,
     "code": "CICA-16",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Cicatrização por segunda intenção",
     "difficulty": "Intermediária",
     "prompt": "Paciente sofre mordedura de cão em antebraço, ferida com contaminação relevante. A equipe opta por não suturar de imediato, deixando a ferida cicatrizar espontaneamente, com formação de tecido de granulação. Qual tipo de cicatrização é esperado?",
@@ -3074,7 +3074,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 84,
     "code": "LESO-01",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Lesões pigmentadas benignas",
     "difficulty": "Intermediária",
     "prompt": "Paciente idosa apresenta lesão pápulo-acastanhada no dorso, de superfície rugosa e \"graxenta\", crescendo lentamente há anos, sem outros sintomas. Qual o diagnóstico mais provável?",
@@ -3106,7 +3106,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 85,
     "code": "LESO-02",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Tumores benignos",
     "difficulty": "Intermediária",
     "prompt": "Paciente apresenta múltiplas lesões pedunculadas, macias, de 1 a 5mm, na região cervical e nas axilas. Qual o diagnóstico, e qual associação relevante deve ser investigada?",
@@ -3138,7 +3138,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 86,
     "code": "LESO-03",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Tumores benignos",
     "difficulty": "Intermediária",
     "prompt": "Paciente apresenta nódulo firme, acastanhado a enegrecido, na perna, surgido após uma picada de inseto. À palpação, é um nódulo intradérmico bastante firme. Qual o diagnóstico mais provável?",
@@ -3170,7 +3170,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 87,
     "code": "LESO-04",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Tumores benignos (corno cutâneo)",
     "difficulty": "Intermediária",
     "prompt": "Paciente apresenta lesão tumoral sólida, cônica, hiperceratótica, branca a amarelada, projetando-se vários centímetros acima da pele no couro cabeludo. Qual a conduta correta em relação a essa lesão?",
@@ -3202,7 +3202,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 88,
     "code": "LESO-05",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Tumores benignos (lipoma)",
     "difficulty": "Intermediária",
     "prompt": "Paciente jovem apresenta nódulo subcutâneo móvel, indolor, de consistência amolecida, em região de tecido gorduroso, de crescimento lento. Qual o diagnóstico mais provável?",
@@ -3234,7 +3234,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 89,
     "code": "LESO-06",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Tumores benignos (granuloma piogênico)",
     "difficulty": "Intermediária",
     "prompt": "Paciente apresenta lesão vermelho-viva, séssil, friável, na região periungueal, que sangra facilmente ao menor trauma, com crescimento rápido após pequeno ferimento local. Qual o diagnóstico, e por que o nome dado a essa lesão é considerado inadequado?",
@@ -3266,7 +3266,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 90,
     "code": "LESO-07",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Tumores benignos (hemangioma)",
     "difficulty": "Intermediária",
     "prompt": "Lactente apresenta lesão vascular avermelhada, ausente ao nascimento, que cresceu progressivamente nas primeiras semanas de vida. Qual o diagnóstico mais provável, e qual medicação revolucionou o tratamento desse tipo de lesão?",
@@ -3298,7 +3298,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 91,
     "code": "LESO-08",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Tumores benignos (neurofibroma)",
     "difficulty": "Intermediária",
     "prompt": "Paciente apresenta múltiplos nódulos da cor da pele, moles a firmes, espalhados pelo corpo, além de manchas café com leite. Qual o diagnóstico mais provável para os nódulos, e qual sua origem histológica?",
@@ -3330,7 +3330,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 92,
     "code": "LESO-09",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Tumores benignos (cisto sebáceo)",
     "difficulty": "Intermediária",
     "prompt": "Paciente apresenta nódulo assintomático, de crescimento lento, móvel, com pequeno orifício central ligado à pele, do qual sai material amorfo e caseoso de cheiro rançoso quando comprimido. Qual o diagnóstico e sua origem mais frequente?",
@@ -3362,7 +3362,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 93,
     "code": "LESO-10",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Hipertrofias traumáticas (calosidades)",
     "difficulty": "Intermediária",
     "prompt": "Trabalhador manual apresenta placas hiperceratóticas, duras e amareladas, nas regiões plantares e palmares, sem outros sintomas. Qual o diagnóstico e o mecanismo por trás dessa lesão?",
@@ -3394,7 +3394,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 94,
     "code": "LESO-11",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Lesões pré-malignas (ceratose actínica)",
     "difficulty": "Intermediária",
     "prompt": "Paciente idoso, pele clara, apresenta múltiplas máculas e placas ásperas, com escamas aderentes sobre base eritematosa, no dorso das mãos e na face, área com longa história de exposição solar. Qual o diagnóstico, e qual sua importância clínica?",
@@ -3426,7 +3426,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 95,
     "code": "LESO-12",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Lesões pré-malignas (doença de Bowen)",
     "difficulty": "Avançada",
     "prompt": "Paciente apresenta placa eritematosa única, bem delimitada, de bordas irregulares, superfície escamativa e crostosa, de crescimento lento, na perna. A biópsia revela carcinoma espinocelular intraepitelial (in situ). Qual o nome dessa apresentação clínica?",
@@ -3458,7 +3458,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 96,
     "code": "LESO-13",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Carcinoma basocelular",
     "difficulty": "Intermediária",
     "prompt": "Paciente apresenta lesão perolada, com telangiectasias, de crescimento lento, no dorso nasal, com pequena crosta central, sem dor e sem linfonodos palpáveis. Qual o diagnóstico mais provável, e qual seu comportamento biológico típico?",
@@ -3490,7 +3490,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 97,
     "code": "LESO-14",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Carcinoma espinocelular",
     "difficulty": "Intermediária",
     "prompt": "Paciente tabagista, com longa exposição solar, apresenta lesão ulcerada e sangrante no lábio inferior, dolorosa, que não cicatriza e cresce nas últimas semanas. Qual o diagnóstico mais provável, e o que diferencia sua gravidade do CBC?",
@@ -3522,7 +3522,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 98,
     "code": "LESO-15",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Tratamento CBC/CEC (margens)",
     "difficulty": "Avançada",
     "prompt": "Paciente será submetido à excisão de um carcinoma basocelular em região de baixo risco. Qual a margem cirúrgica recomendada, e o que muda se fosse um carcinoma espinocelular no mesmo contexto?",
@@ -3554,7 +3554,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 99,
     "code": "LESO-16",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Melanoma (subtipos)",
     "difficulty": "Intermediária",
     "prompt": "Paciente apresenta lesão pigmentada de crescimento rápido, em semanas a meses, com nódulo em pele clinicamente normal, sem seguir necessariamente o padrão do ABCDE. Qual o subtipo de melanoma mais provável?",
@@ -3586,7 +3586,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 100,
     "code": "LESO-17",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Melanoma (subtipos)",
     "difficulty": "Intermediária",
     "prompt": "Paciente idoso apresenta lesão pigmentada de crescimento radial lento, em área de pele com dano solar acumulado importante, na face. Qual o subtipo de melanoma mais provável?",
@@ -3618,7 +3618,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 101,
     "code": "LESO-18",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Melanoma (Breslow e margem)",
     "difficulty": "Avançada",
     "prompt": "Paciente apresenta melanoma com índice de Breslow de 1,5mm, confirmado por biópsia excisional. Segundo a relação entre índice de Breslow e conduta, quais as próximas etapas de margem cirúrgica e investigação linfonodal?",
@@ -3650,7 +3650,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 102,
     "code": "SEG-01",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Erro médico (conceitos jurídicos)",
     "difficulty": "Intermediária",
     "prompt": "Durante uma cirurgia, o cirurgião realiza uma manobra sem o conhecimento técnico necessário para o ato, resultando em dano ao paciente. Qual conceito jurídico melhor caracteriza essa falha?",
@@ -3682,7 +3682,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 103,
     "code": "SEG-02",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Falha de sistema",
     "difficulty": "Intermediária",
     "prompt": "Um evento adverso ocorre em centro cirúrgico após múltiplas falhas se alinharem: equipe incompleta no plantão, checklist não realizado e troca de circulante sem passagem de compressas. Qual conceito melhor explica esse tipo de evento?",
@@ -3714,7 +3714,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 104,
     "code": "SEG-03",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Checklist de cirurgia segura (OMS)",
     "difficulty": "Intermediária",
     "prompt": "Após a implementação do checklist de cirurgia segura da OMS em um hospital, a equipe observa redução das taxas de complicações e mortalidade. Qual a redução aproximada de complicações relatada com essa medida?",
@@ -3746,7 +3746,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 105,
     "code": "SEG-04",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Variáveis de segurança do paciente",
     "difficulty": "Intermediária",
     "prompt": "Um serviço de cirurgia investe em metas mensuráveis, comunicação transparente sobre eventos, sem cultura de punição, e comunicação efetiva entre cirurgia, anestesia e enfermagem. Essas medidas fazem parte de qual conceito?",
@@ -3778,7 +3778,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 106,
     "code": "SEG-05",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Otimização pré-operatória (tabagismo)",
     "difficulty": "Intermediária",
     "prompt": "Paciente tabagista está em consulta pré-operatória, com cirurgia eletiva marcada para 5 semanas. Qual o tempo mínimo recomendado de cessação do tabagismo para reduzir o risco de complicações?",
@@ -3810,7 +3810,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 107,
     "code": "SEG-06",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Otimização pré-operatória (álcool)",
     "difficulty": "Intermediária",
     "prompt": "Paciente etilista está em consulta pré-operatória de uma cirurgia eletiva. Qual o tempo mínimo recomendado de cessação do álcool antes do procedimento?",
@@ -3842,7 +3842,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 108,
     "code": "SEG-07",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Otimização pré-operatória (anemia)",
     "difficulty": "Intermediária",
     "prompt": "Paciente anêmico está sendo preparado para uma cirurgia eletiva de médio porte. Qual a conduta mais adequada em relação à anemia antes da cirurgia?",
@@ -3874,7 +3874,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 109,
     "code": "SEG-08",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Glicemia perioperatória",
     "difficulty": "Intermediária",
     "prompt": "Paciente diabético está no perioperatório de uma cirurgia eletiva. Qual a faixa de glicemia perioperatória-alvo recomendada?",
@@ -3906,7 +3906,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 110,
     "code": "SEG-09",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Antissepsia (banho e pele)",
     "difficulty": "Intermediária",
     "prompt": "Antes de uma cirurgia eletiva, a equipe realiza banho do paciente com um sabão específico e, na sala, faz antissepsia da pele com outra solução. Quais são, respectivamente, os agentes recomendados para o banho e para a antissepsia da pele?",
@@ -3938,7 +3938,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 111,
     "code": "SEG-10",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Tricotomia",
     "difficulty": "Intermediária",
     "prompt": "Uma paciente será tricotomizada na véspera de sua cirurgia, com lâmina, por conveniência da equipe. Qual o risco dessa conduta, e a recomendação correta?",
@@ -3970,7 +3970,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 112,
     "code": "SEG-11",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Checklist (sign in)",
     "difficulty": "Intermediária",
     "prompt": "Durante o checklist de cirurgia segura, a equipe confirma identificação do paciente, sítio cirúrgico e consentimento informado antes da indução anestésica. Qual etapa do checklist corresponde a esse momento?",
@@ -4002,7 +4002,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 113,
     "code": "SEG-12",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Checklist (time out)",
     "difficulty": "Intermediária",
     "prompt": "Já na sala, antes da incisão, a equipe faz uma pausa para confirmar em voz alta os nomes e funções de todos, o procedimento a ser realizado, e se o antibiótico profilático foi administrado nos últimos 60 minutos. Qual etapa do checklist corresponde a esse momento?",
@@ -4034,7 +4034,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 114,
     "code": "SEG-13",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Checklist (sign out)",
     "difficulty": "Intermediária",
     "prompt": "Ao final da cirurgia, antes de o paciente sair da sala, a equipe confere a contagem de compressas e instrumentais, além de revisar recomendações pós-operatórias. Qual etapa do checklist corresponde a esse momento?",
@@ -4066,7 +4066,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 115,
     "code": "SEG-14",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Normotermia e tríade letal",
     "difficulty": "Intermediária",
     "prompt": "Durante uma cirurgia de médio porte, a equipe de anestesia monitoriza continuamente a temperatura do paciente, buscando mantê-la acima de determinado valor, para evitar a chamada tríade letal. Qual a meta de temperatura e quais os outros dois componentes dessa tríade, além da hipotermia?",
@@ -4098,7 +4098,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 116,
     "code": "SEG-15",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Fluido restritivo intraoperatório",
     "difficulty": "Intermediária",
     "prompt": "Durante uma laparotomia, a equipe opta por uma reposição volêmica restritiva, guiada por metas hemodinâmicas, em vez de uma hidratação liberal. Qual o principal risco associado à sobrecarga de fluidos nesse contexto?",
@@ -4130,7 +4130,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 117,
     "code": "SEG-16",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "ERAS pós-operatório",
     "difficulty": "Intermediária",
     "prompt": "Paciente no pós-operatório imediato de uma cirurgia abdominal não complicada recebe alta orientação de iniciar dieta e deambulação. Segundo os princípios discutidos, quando essas condutas devem ser iniciadas, e é necessário aguardar eliminação de flatos antes da dieta?",
@@ -4162,7 +4162,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 118,
     "code": "SEG-17",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Profilaxia de TEV estendida (oncológico)",
     "difficulty": "Intermediária",
     "prompt": "Paciente com câncer, submetido a cirurgia abdominal oncológica, é avaliado pelo escore de Caprini e apresenta alto risco de TEV. Além da profilaxia farmacológica e mecânica padrão, por quanto tempo a profilaxia deve ser estendida nesse contexto oncológico abdominal?",
@@ -4194,7 +4194,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 119,
     "code": "SEG-18",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Antibioticoprofilaxia (timing)",
     "difficulty": "Intermediária",
     "prompt": "Paciente vai receber cefazolina como antibioticoprofilaxia cirúrgica. Em qual momento ela deve ser administrada em relação à incisão, e quando deve ser suspensa?",
@@ -4226,7 +4226,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 120,
     "code": "PERI-19",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Porte cirúrgico",
     "difficulty": "Intermediária",
     "prompt": "O porte de uma cirurgia (pequeno, médio ou grande) é um dos fatores que influenciam a magnitude do desequilíbrio fisiológico esperado no perioperatório. Uma histerectomia total abdominal, por exemplo, é classicamente considerada uma cirurgia de:",
@@ -4249,7 +4249,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Tipicamente pequeno porte, com pouca variação relevante conforme a via de acesso (aberta ou laparoscópica).",
-        "rationale": "Incorreta. A classificação de porte considera a magnitude do procedimento e não e fixa como 'sempre pequeno'; procedimentos como histerectomia total são classicamente de porte maior, especialmente pela via aberta."
+        "rationale": "Incorreta. A classificação de porte considera a magnitude do procedimento e não é fixa como 'sempre pequeno'; procedimentos como histerectomia total são classicamente de porte maior, especialmente pela via aberta."
       }
     ],
     "correctLetter": "B",
@@ -4258,7 +4258,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 121,
     "code": "PERI-20",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Avaliação pré-operatória - visão geral",
     "difficulty": "Intermediária",
     "prompt": "A avaliação pré-operatória de um paciente cirúrgico busca responder a um conjunto de perguntas centrais que organizam toda a investigação (condição clínica atual, risco cirúrgico, necessidade de exames, ajuste de medicações, entre outras). Qual a principal finalidade dessa avaliação estruturada?",
@@ -4271,7 +4271,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Estimar e otimizar o risco cirúrgico do paciente, identificando comorbidades, ajustando medicações e solicitando apenas os exames realmente indicados, para reduzir complicações perioperatórias.",
-        "rationale": "CORRETA. A avaliação pré-operatória estruturada visa estimar o risco cirúrgico individual do paciente, identificar e otimizar comorbidades relevantes, ajustar medicações em uso e direcionar a solicitação de exames apenas quando ha indicação real, com o objetivo central de reduzir complicações no período perioperatório."
+        "rationale": "CORRETA. A avaliação pré-operatória estruturada visa estimar o risco cirúrgico individual do paciente, identificar e otimizar comorbidades relevantes, ajustar medicações em uso e direcionar a solicitação de exames apenas quando há indicação real, com o objetivo central de reduzir complicações no período perioperatório."
       },
       {
         "letter": "C",
@@ -4290,7 +4290,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 122,
     "code": "PERI-21",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Classificação ASA - sufixo E",
     "difficulty": "Intermediária",
     "prompt": "Paciente politraumatizado precisa ser submetido a laparotomia de urgência, sem tempo hábil para otimização pré-operatória completa. Além da categoria numérica da classificação ASA (I a V), qual notação adicional deve ser acrescentada para indicar o caráter de urgência/emergência dessa cirurgia?",
@@ -4308,12 +4308,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Não existe notação adicional para esse cenário na classificação ASA.",
-        "rationale": "Incorreta. A classificação ASA prevê especificamente a adição da letra E para sinalizar cirurgias de urgência/emergência, quando não ha tempo para otimização pré-operatória completa."
+        "rationale": "Incorreta. A classificação ASA prevê especificamente a adição da letra E para sinalizar cirurgias de urgência/emergência, quando não há tempo para otimização pré-operatória completa."
       },
       {
         "letter": "D",
         "text": "Deve-se reclassificar automaticamente o paciente para ASA V, independentemente de sua condição clínica de base.",
-        "rationale": "Incorreta. A urgência do procedimento é sinalizada pelo sufixo E, mas a categoria numérica (I a V) continua refletindo a condição clínica de base do paciente, não e automaticamente elevada a V apenas pelo caráter de urgência."
+        "rationale": "Incorreta. A urgência do procedimento é sinalizada pelo sufixo E, mas a categoria numérica (I a V) continua refletindo a condição clínica de base do paciente, não é automaticamente elevada a V apenas pelo caráter de urgência."
       }
     ],
     "correctLetter": "A",
@@ -4322,10 +4322,10 @@ const QUESTIONS_DATABASE = [
   {
     "id": 123,
     "code": "PERI-22",
-    "category": "Perioperatorio",
-    "subcategory": "Exames pré-operatórios - indicações especificas",
+    "category": "Perioperatório",
+    "subcategory": "Exames pré-operatórios - indicações específicas",
     "difficulty": "Intermediária",
-    "prompt": "Paciente de 55 anos, tabagista com carga tabágica de 35 maços-ano, sera submetido a uma cirurgia eletiva de médio porte. Além dos exames de rotina indicados pela idade, qual exame adicional é classicamente indicado nesse caso específico, dada a carga tabágica elevada?",
+    "prompt": "Paciente de 55 anos, tabagista com carga tabágica de 35 maços-ano, será submetido a uma cirurgia eletiva de médio porte. Além dos exames de rotina indicados pela idade, qual exame adicional é classicamente indicado nesse caso específico, dada a carga tabágica elevada?",
     "options": [
       {
         "letter": "A",
@@ -4354,10 +4354,10 @@ const QUESTIONS_DATABASE = [
   {
     "id": 124,
     "code": "PERI-23",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Medicamentos a manter no perioperatório",
     "difficulty": "Intermediária",
-    "prompt": "Paciente hipertenso em uso regular de um betabloqueador (como o metoprolol) sera submetido a cirurgia eletiva. Qual a conduta mais adequada quanto a essa medicação no dia da cirurgia?",
+    "prompt": "Paciente hipertenso em uso regular de um betabloqueador (como o metoprolol) será submetido a cirurgia eletiva. Qual a conduta mais adequada quanto a essa medicação no dia da cirurgia?",
     "options": [
       {
         "letter": "A",
@@ -4372,12 +4372,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Dobrar a dose do betabloqueador no dia da cirurgia, para compensar o estresse cirúrgico.",
-        "rationale": "Incorreta. Não ha indicação de dobrar a dose de betabloqueador no dia da cirurgia; a conduta padrão e manter a dose habitual."
+        "rationale": "Incorreta. Não há indicação de dobrar a dose de betabloqueador no dia da cirurgia; a conduta padrão e manter a dose habitual."
       },
       {
         "letter": "D",
         "text": "Substituir o betabloqueador por um bloqueador de canal de cálcio apenas no dia da cirurgia.",
-        "rationale": "Incorreta. Não ha indicação de substituir a classe medicamentosa no dia da cirurgia; o betabloqueador deve ser mantido em sua forma habitual."
+        "rationale": "Incorreta. Não há indicação de substituir a classe medicamentosa no dia da cirurgia; o betabloqueador deve ser mantido em sua forma habitual."
       }
     ],
     "correctLetter": "B",
@@ -4386,15 +4386,15 @@ const QUESTIONS_DATABASE = [
   {
     "id": 125,
     "code": "PERI-24",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Suspensão de anticoagulantes - heparina não fracionada",
     "difficulty": "Intermediária",
-    "prompt": "Paciente em uso de heparina não fracionada por via intravenosa continua sera submetido a uma cirurgia eletiva com necessidade de suspensão do anticoagulante. Com quanto tempo de antecedência a heparina não fracionada deve ser suspensa antes do procedimento?",
+    "prompt": "Paciente em uso de heparina não fracionada por via intravenosa contínua será submetido a uma cirurgia eletiva com necessidade de suspensão do anticoagulante. Com quanto tempo de antecedência a heparina não fracionada deve ser suspensa antes do procedimento?",
     "options": [
       {
         "letter": "A",
         "text": "6 horas antes.",
-        "rationale": "CORRETA. Por ter meia-vida curta, a heparina não fracionada em infusão continua pode ser suspensa cerca de 6 horas antes da cirurgia, permitindo a normalização razoável da coagulação nesse intervalo."
+        "rationale": "CORRETA. Por ter meia-vida curta, a heparina não fracionada em infusão contínua pode ser suspensa cerca de 6 horas antes da cirurgia, permitindo a normalização razoável da coagulação nesse intervalo."
       },
       {
         "letter": "B",
@@ -4418,10 +4418,10 @@ const QUESTIONS_DATABASE = [
   {
     "id": 126,
     "code": "PERI-25",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Fitoterápicos e suplementos no perioperatório",
     "difficulty": "Intermediária",
-    "prompt": "Paciente em uso regular de ginkgo biloba, por conta própria, sera submetido a uma cirurgia eletiva. Sabendo que alguns fitoterápicos podem interferir na coagulação, com quanto tempo de antecedência o ginkgo biloba deve ser suspenso antes do procedimento?",
+    "prompt": "Paciente em uso regular de ginkgo biloba, por conta própria, será submetido a uma cirurgia eletiva. Sabendo que alguns fitoterápicos podem interferir na coagulação, com quanto tempo de antecedência o ginkgo biloba deve ser suspenso antes do procedimento?",
     "options": [
       {
         "letter": "A",
@@ -4431,7 +4431,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "24 horas antes, o mesmo prazo do anticoncepcional oral.",
-        "rationale": "Incorreta. O anticoncepcional oral, quando ha indicação de suspensão por outros motivos (como risco tromboembólico), costuma ter um prazo bem mais longo (cerca de 4 semanas), diferente do ginkgo biloba."
+        "rationale": "Incorreta. O anticoncepcional oral, quando há indicação de suspensão por outros motivos (como risco tromboembólico), costuma ter um prazo bem mais longo (cerca de 4 semanas), diferente do ginkgo biloba."
       },
       {
         "letter": "C",
@@ -4440,7 +4440,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "Não ha necessidade de suspender fitoterápicos antes de cirurgias, pois são produtos naturais sem risco de sangramento.",
+        "text": "Não há necessidade de suspender fitoterápicos antes de cirurgias, pois são produtos naturais sem risco de sangramento.",
         "rationale": "Incorreta. Apesar de serem produtos de origem natural, diversos fitoterápicos (como o ginkgo biloba) têm potencial real de interferir na coagulação e aumentar o risco de sangramento perioperatório, exigindo suspensão com antecedência adequada."
       }
     ],
@@ -4450,39 +4450,39 @@ const QUESTIONS_DATABASE = [
   {
     "id": 127,
     "code": "PERI-26",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Manejo perioperatório de agonistas de GLP-1",
     "difficulty": "Intermediária",
-    "prompt": "Paciente em uso de um agonista de GLP-1 (como a semaglutida) para tratamento de diabetes ou obesidade sera submetido a uma cirurgia eletiva sob anestesia geral. Além do jejum habitual, qual cuidado adicional é classicamente recomendado nesse contexto, pelo risco de esvaziamento gástrico retardado associado a essa classe de medicamentos?",
+    "prompt": "Paciente em uso de um agonista de GLP-1 (como a semaglutida) para tratamento de diabetes ou obesidade será submetido a uma cirurgia eletiva sob anestesia geral. Além do jejum habitual, qual cuidado adicional é classicamente recomendado nesse contexto, pelo risco de esvaziamento gástrico retardado associado a essa classe de medicamentos?",
     "options": [
       {
         "letter": "A",
         "text": "O jejum padrão de 8 horas para sólidos costuma ser suficiente nesses pacientes, já que o mecanismo de ação desses fármacos atuaria predominantemente sobre o apetite, sem impacto relevante sobre o esvaziamento gástrico.",
-        "rationale": "Incorreta. Agonistas de GLP-1 estão associados a esvaziamento gástrico retardado, o que motiva cuidados adicionais além do jejum padrão, como dieta liquida nas 24h anteriores e possível avaliação do conteúdo gástrico residual."
+        "rationale": "Incorreta. Agonistas de GLP-1 estão associados a esvaziamento gástrico retardado, o que motiva cuidados adicionais além do jejum padrão, como dieta líquida nas 24h anteriores e possível avaliação do conteúdo gástrico residual."
       },
       {
         "letter": "B",
-        "text": "Considerar dieta liquida nas 24 horas anteriores a cirurgia, manter o jejum habitual, e considerar avaliação do conteúdo gástrico residual (por exemplo, por ultrassonografia gástrica a beira leito, o POCUS gástrico), pelo risco de esvaziamento gástrico retardado e broncoaspiração.",
-        "rationale": "CORRETA. Pelo risco de esvaziamento gástrico retardado associado aos agonistas de GLP-1 (o que aumenta o risco de conteúdo gástrico residual e broncoaspiração durante a indução anestésica), recomenda-se, além do jejum habitual, considerar dieta liquida nas 24 horas anteriores ao procedimento e a possibilidade de avaliar o conteúdo gástrico residual a beira leito, como pelo POCUS gástrico, antes da indução."
+        "text": "Considerar dieta líquida nas 24 horas anteriores a cirurgia, manter o jejum habitual, e considerar avaliação do conteúdo gástrico residual (por exemplo, por ultrassonografia gástrica a beira leito, o POCUS gástrico), pelo risco de esvaziamento gástrico retardado e broncoaspiração.",
+        "rationale": "CORRETA. Pelo risco de esvaziamento gástrico retardado associado aos agonistas de GLP-1 (o que aumenta o risco de conteúdo gástrico residual e broncoaspiração durante a indução anestésica), recomenda-se, além do jejum habitual, considerar dieta líquida nas 24 horas anteriores ao procedimento e a possibilidade de avaliar o conteúdo gástrico residual a beira leito, como pelo POCUS gástrico, antes da indução."
       },
       {
         "letter": "C",
         "text": "Suspender o uso do agonista de GLP-1 por pelo menos 6 meses antes da cirurgia eletiva, seguindo o mesmo princípio de segurança farmacológica aplicado a outras medicações de longa duração de ação.",
-        "rationale": "Incorreta. Não ha essa exigência de suspensão por 6 meses; os cuidados classicamente discutidos envolvem ajustes próximos ao período perioperatório (dieta liquida nas 24h, avaliação de conteúdo gástrico), não suspensão prolongada por meses."
+        "rationale": "Incorreta. Não há essa exigência de suspensão por 6 meses; os cuidados classicamente discutidos envolvem ajustes próximos ao período perioperatório (dieta líquida nas 24h, avaliação de conteúdo gástrico), não suspensão prolongada por meses."
       },
       {
         "letter": "D",
         "text": "Aumentar o tempo de jejum para sólidos para pelo menos 24 horas antes da cirurgia, em vez das 8 horas habituais, compensando o esvaziamento gástrico mais lento característico dessa classe de medicamentos.",
-        "rationale": "Incorreta. A recomendação discutida não e simplesmente prolongar o jejum de sólidos para 24h, e sim associar dieta liquida nas 24h anteriores e considerar avaliação do conteúdo gástrico residual, dado o risco de esvaziamento retardado."
+        "rationale": "Incorreta. A recomendação discutida não é simplesmente prolongar o jejum de sólidos para 24h, e sim associar dieta líquida nas 24h anteriores e considerar avaliação do conteúdo gástrico residual, dado o risco de esvaziamento retardado."
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "GLP-1: risco de esvaziamento gástrico retardado -> dieta liquida 24h antes + considerar POCUS gástrico."
+    "clinicalPointers": "GLP-1: risco de esvaziamento gástrico retardado -> dieta líquida 24h antes + considerar POCUS gástrico."
   },
   {
     "id": 128,
     "code": "PERI-27",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Complicações intraoperatórias - anafilaxia",
     "difficulty": "Intermediária",
     "prompt": "Durante a indução anestésica, um paciente desenvolve subitamente hipotensão, broncoespasmo e alterações cutâneas (urticária/eritema), compatível com reação anafilática. Entre os agentes classicamente associados a anafilaxia intraoperatória, quais são os mais frequentemente implicados?",
@@ -4490,7 +4490,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Bloqueadores neuromusculares, látex e certos agentes de indução anestésica.",
-        "rationale": "CORRETA. Entre as causas mais frequentes de anafilaxia intraoperatória estão os bloqueadores neuromusculares, o látex (presente em luvas e materiais ciruurgicos) e certos agentes utilizados na indução anestésica, exigindo reconhecimento precoce e ação imediata diante do quadro clínico compatível."
+        "rationale": "CORRETA. Entre as causas mais frequentes de anafilaxia intraoperatória estão os bloqueadores neuromusculares, o látex (presente em luvas e materiais cirúrgicos) e certos agentes utilizados na indução anestésica, exigindo reconhecimento precoce e ação imediata diante do quadro clínico compatível."
       },
       {
         "letter": "B",
@@ -4505,7 +4505,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Predominantemente em pacientes sem histórico prévio de alergia, sendo incomum em pacientes com alergias já conhecidas.",
-        "rationale": "Incorreta. A anafilaxia pode ocorrer tanto em pacientes com histórico prévio de alergia (que deve ser investigado e registrado) quanto, mais raramente, em pacientes sem histórico conhecido; o rastreamento de alergias e justamente uma medida preventiva importante."
+        "rationale": "Incorreta. A anafilaxia pode ocorrer tanto em pacientes com histórico prévio de alergia (que deve ser investigado e registrado) quanto, mais raramente, em pacientes sem histórico conhecido; o rastreamento de alergias é justamente uma medida preventiva importante."
       }
     ],
     "correctLetter": "A",
@@ -4514,7 +4514,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 129,
     "code": "PERI-28",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Cuidados pós-operatórios - dor e antitérmicos",
     "difficulty": "Intermediária",
     "prompt": "No pós-operatório, um paciente apresenta dor de intensidade leve a moderada na ferida operatória e febre baixa. Qual classe de medicamento é classicamente preferida para o controle inicial de dor e febre nesse contexto, com cautela quanto ao uso de anti-inflamatórios não esteroidais (AINEs)?",
@@ -4526,8 +4526,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "Apenas opioides potentes, ja de início, independentemente da intensidade da dor relatada pelo paciente na avaliação inicial.",
-        "rationale": "Incorreta. Para dor leve a moderada, a preferencia inicial não e por opioides potentes; a analgesia multimodal geralmente comeca por opções mais simples, reservando opioides para dor mais intensa ou refratária."
+        "text": "Apenas opioides potentes, já de início, independentemente da intensidade da dor relatada pelo paciente na avaliação inicial.",
+        "rationale": "Incorreta. Para dor leve a moderada, a preferência inicial não é por opioides potentes; a analgesia multimodal geralmente começa por opções mais simples, reservando opioides para dor mais intensa ou refratária."
       },
       {
         "letter": "C",
@@ -4546,7 +4546,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 130,
     "code": "PERI-29",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Náuseas e vômitos pós-operatórios",
     "difficulty": "Intermediária",
     "prompt": "Náuseas e vômitos são complicações comuns no período pós-operatório imediato. Além do desconforto ao paciente, por que o controle ativo desses sintomas (com antieméticos) é considerado importante na recuperação pós-cirúrgica?",
@@ -4559,7 +4559,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Porque náuseas e vômitos pós-operatórios raramente têm risco real associado, sendo, na maioria das vezes, apenas um incômodo transitório sem importância clínica relevante.",
-        "rationale": "Incorreta. Pelo contrário, ha riscos reais associados a náuseas e vômitos persistentes no pós-operatório, como broncoaspiração e distúrbios hidroeletrolíticos, o que justifica o controle ativo com antieméticos, não a desconsideração do sintoma."
+        "rationale": "Incorreta. Pelo contrário, há riscos reais associados a náuseas e vômitos persistentes no pós-operatório, como broncoaspiração e distúrbios hidroeletrolíticos, o que justifica o controle ativo com antieméticos, não a desconsideração do sintoma."
       },
       {
         "letter": "C",
@@ -4569,7 +4569,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Porque, sem antieméticos, o paciente teria um risco consideravelmente maior de desenvolver infecção do sítio cirúrgico.",
-        "rationale": "Incorreta. Não ha relação direta e obrigatória entre ausência de controle de náuseas/vômitos e infecção do sítio cirúrgico; os riscos classicamente associados são broncoaspiração, desidratação e distúrbios hidroeletrolíticos."
+        "rationale": "Incorreta. Não há relação direta e obrigatória entre ausência de controle de náuseas/vômitos e infecção do sítio cirúrgico; os riscos classicamente associados são broncoaspiração, desidratação e distúrbios hidroeletrolíticos."
       }
     ],
     "correctLetter": "A",
@@ -4586,7 +4586,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Contaminação endógena (originada do próprio paciente); a contaminação pelas mãos da equipe, instrumentais ou ambiente é chamada de exógena.",
-        "rationale": "CORRETA. A contaminação endógena tem origem na própria microbiota do paciente (pele, mucosas, trato aberto durante o procedimento); ja a contaminação exógena tem origem externa ao paciente, vinda das mãos da equipe, de instrumentais ou do ambiente da sala cirúrgica."
+        "rationale": "CORRETA. A contaminação endógena tem origem na própria microbiota do paciente (pele, mucosas, trato aberto durante o procedimento); já a contaminação exógena tem origem externa ao paciente, vinda das mãos da equipe, de instrumentais ou do ambiente da sala cirúrgica."
       },
       {
         "letter": "B",
@@ -4596,7 +4596,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Ambas as fontes são classificadas da mesma forma, sem distinção terminológica entre elas.",
-        "rationale": "Incorreta. Ha, sim, uma distinção terminológica clara é classicamente utilizada entre contaminação endógena (do próprio paciente) e exógena (de fontes externas)."
+        "rationale": "Incorreta. Há, sim, uma distinção terminológica clara é classicamente utilizada entre contaminação endógena (do próprio paciente) e exógena (de fontes externas)."
       },
       {
         "letter": "D",
@@ -4618,7 +4618,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Staphylococcus aureus, predominante na microbiota da pele.",
-        "rationale": "CORRETA. A pele e predominantemente colonizada por cocos Gram-positivos, com destaque para o Staphylococcus aureus (além de estafilococos coagulase-negativos), sendo esse o agente de maior importância a ser coberto quando a antibioticoprofilaxia é indicada em cirurgias limpas envolvendo a pele."
+        "rationale": "CORRETA. A pele é predominantemente colonizada por cocos Gram-positivos, com destaque para o Staphylococcus aureus (além de estafilococos coagulase-negativos), sendo esse o agente de maior importância a ser coberto quando a antibioticoprofilaxia é indicada em cirurgias limpas envolvendo a pele."
       },
       {
         "letter": "B",
@@ -4660,12 +4660,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "A classificação de potencial de contaminação é definida apenas antes da cirurgia, sendo dificilmente alterada depois de estabelecida.",
-        "rationale": "Incorreta. Pelo contrário, um dos pontos centrais do conceito e que o intraoperatório pode confirmar ou reclassificar a categoria estimada previamente, conforme o que e efetivamente observado durante o procedimento."
+        "rationale": "Incorreta. Pelo contrário, um dos pontos centrais do conceito e que o intraoperatório pode confirmar ou reclassificar a categoria estimada previamente, conforme o que é efetivamente observado durante o procedimento."
       },
       {
         "letter": "D",
         "text": "A presença de secreção purulenta não tem qualquer relação com a classificação de potencial de contaminação da cirurgia.",
-        "rationale": "Incorreta. A presença de pus e justamente o critério definidor da categoria mais grave (infectada) dentro da classificação de potencial de contaminação."
+        "rationale": "Incorreta. A presença de pus é justamente o critério definidor da categoria mais grave (infectada) dentro da classificação de potencial de contaminação."
       }
     ],
     "correctLetter": "B",
@@ -4719,7 +4719,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A opinião do cirurgião ou do médico assistente responsável pelo caso, baseada na avaliação clínica direta do quadro.",
-        "rationale": "CORRETA. Além da cultura positiva de fluido ou tecido, a opinião do cirurgião ou do médico assistente, baseada na avaliação clínica direta do paciente, é classicamente aceita como forma valida de diagnóstico de ISC (superficial, profunda ou cavitária), mesmo na ausência de confirmação microbiológica formal."
+        "rationale": "CORRETA. Além da cultura positiva de fluido ou tecido, a opinião do cirurgião ou do médico assistente, baseada na avaliação clínica direta do paciente, é classicamente aceita como forma válida de diagnóstico de ISC (superficial, profunda ou cavitária), mesmo na ausência de confirmação microbiológica formal."
       },
       {
         "letter": "C",
@@ -4729,7 +4729,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Poucas formas alternativas a cultura microbiológica costumam ser aceitas para o diagnóstico de ISC.",
-        "rationale": "Incorreta. Pelo contrário, a opinião do cirurgião ou médico assistente, baseada em avaliação clínica, e explicitamente reconhecida como forma valida de diagnóstico, além da cultura positiva."
+        "rationale": "Incorreta. Pelo contrário, a opinião do cirurgião ou médico assistente, baseada em avaliação clínica, e explicitamente reconhecida como forma válida de diagnóstico, além da cultura positiva."
       }
     ],
     "correctLetter": "B",
@@ -4741,7 +4741,7 @@ const QUESTIONS_DATABASE = [
     "category": "ISC",
     "subcategory": "Fatores de risco do paciente para ISC",
     "difficulty": "Intermediária",
-    "prompt": "Entre os fatores de risco relacionados ao PACIENTE (e não ao procedimento cirúrgico em si) para o desenvolvimento de infecção de sítio cirúrgico, qual das opções abaixo reune corretamente exemplos clássicos desse grupo?",
+    "prompt": "Entre os fatores de risco relacionados ao PACIENTE (e não ao procedimento cirúrgico em si) para o desenvolvimento de infecção de sítio cirúrgico, qual das opções abaixo reúne corretamente exemplos clássicos desse grupo?",
     "options": [
       {
         "letter": "A",
@@ -4756,7 +4756,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Apenas a idade do paciente, sem qualquer outro fator relevante relacionado ao paciente.",
-        "rationale": "Incorreta. Embora a idade possa ser um fator considerado, ha vários outros fatores relacionados ao paciente classicamente descritos (diabetes, obesidade, tabagismo, imunossupressão, infecção a distância, ASA elevado), não apenas a idade isoladamente."
+        "rationale": "Incorreta. Embora a idade possa ser um fator considerado, há vários outros fatores relacionados ao paciente classicamente descritos (diabetes, obesidade, tabagismo, imunossupressão, infecção a distância, ASA elevado), não apenas a idade isoladamente."
       },
       {
         "letter": "D",
@@ -4788,7 +4788,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Apenas a duração da cirurgia importa entre os fatores do procedimento, sem outro elemento técnico sendo clinicamente relevante.",
-        "rationale": "Incorreta. Embora a duração seja um fator relevante, ha diversos outros fatores classicamente relacionados ao procedimento (contaminação do campo, quebra de técnica, trauma tecidual, hematoma/espaço morto, hipoperfusão/hipotermia), não apenas a duração isoladamente."
+        "rationale": "Incorreta. Embora a duração seja um fator relevante, há diversos outros fatores classicamente relacionados ao procedimento (contaminação do campo, quebra de técnica, trauma tecidual, hematoma/espaço morto, hipoperfusão/hipotermia), não apenas a duração isoladamente."
       },
       {
         "letter": "D",
@@ -4809,8 +4809,8 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "Banho pré-operatório, tratamento de infecções remotas (a distância) ja identificadas, controle da glicemia, cessação do tabagismo, e retirada de pelos apenas se necessário.",
-        "rationale": "CORRETA. Na fase pré-operatória, as medidas clássicas de prevenção de ISC incluem banho do paciente antes da cirurgia, tratamento prévio de qualquer infecção remota ja identificada, controle adequado da glicemia, orientação para cessação do tabagismo, e retirada de pelos (tricotomia) apenas quando estritamente necessária, evitando o procedimento de rotina."
+        "text": "Banho pré-operatório, tratamento de infecções remotas (a distância) já identificadas, controle da glicemia, cessação do tabagismo, e retirada de pelos apenas se necessário.",
+        "rationale": "CORRETA. Na fase pré-operatória, as medidas clássicas de prevenção de ISC incluem banho do paciente antes da cirurgia, tratamento prévio de qualquer infecção remota já identificada, controle adequado da glicemia, orientação para cessação do tabagismo, e retirada de pelos (tricotomia) apenas quando estritamente necessária, evitando o procedimento de rotina."
       },
       {
         "letter": "B",
@@ -4825,11 +4825,11 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Poucas medidas preventivas específicas são recomendadas antes da cirurgia; a prevenção se concentra principalmente na sala cirúrgica.",
-        "rationale": "Incorreta. Pelo contrário, ha diversas medidas preventivas especificas e bem estabelecidas para a fase pré-operatória, como banho, tratamento de infecções remotas, controle glicêmico, cessação do tabagismo e cuidados com a tricotomia."
+        "rationale": "Incorreta. Pelo contrário, há diversas medidas preventivas específicas e bem estabelecidas para a fase pré-operatória, como banho, tratamento de infecções remotas, controle glicêmico, cessação do tabagismo e cuidados com a tricotomia."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Prevenção ANTES: banho, tratar infecção remota, controlar glicemia, parar de fumar, pelos so se necessário."
+    "clinicalPointers": "Prevenção ANTES: banho, tratar infecção remota, controlar glicemia, parar de fumar, pelos só se necessário."
   },
   {
     "id": 139,
@@ -4841,8 +4841,8 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "Cuidados com o curativo, higiene das mãos da equipe e do próprio paciente/cuidadores, vigilância continua e orientação ao paciente sobre sinais de alerta de infecção.",
-        "rationale": "CORRETA. No período pós-operatório, as medidas clássicas de prevenção de ISC incluem cuidados adequados com o curativo da ferida operatória, reforço da higiene das mãos (equipe, paciente e cuidadores), vigilância continua para detecção precoce de sinais de infecção, e orientação clara ao paciente sobre quais sinais de alerta (febre, secreção, dor crescente) devem motivar retorno ao serviço de saúde."
+        "text": "Cuidados com o curativo, higiene das mãos da equipe e do próprio paciente/cuidadores, vigilância contínua e orientação ao paciente sobre sinais de alerta de infecção.",
+        "rationale": "CORRETA. No período pós-operatório, as medidas clássicas de prevenção de ISC incluem cuidados adequados com o curativo da ferida operatória, reforço da higiene das mãos (equipe, paciente e cuidadores), vigilância contínua para detecção precoce de sinais de infecção, e orientação clara ao paciente sobre quais sinais de alerta (febre, secreção, dor crescente) devem motivar retorno ao serviço de saúde."
       },
       {
         "letter": "B",
@@ -4856,12 +4856,12 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "Poucos cuidados específicos são necessários após a alta hospitalar, ja que o risco de ISC diminuiria bastante nesse momento.",
+        "text": "Poucos cuidados específicos são necessários após a alta hospitalar, já que o risco de ISC diminuiria bastante nesse momento.",
         "rationale": "Incorreta. O risco de ISC persiste após a alta (até 30 dias, ou até 1 ano com prótese), o que torna a orientação sobre sinais de alerta e os cuidados contínuos com a ferida igualmente importantes mesmo após a alta hospitalar."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Prevenção DEPOIS: cuidado com curativo, higiene das mãos, vigilância continua, orientar sinais de alerta."
+    "clinicalPointers": "Prevenção DEPOIS: cuidado com curativo, higiene das mãos, vigilância contínua, orientar sinais de alerta."
   },
   {
     "id": 140,
@@ -4889,7 +4889,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "O agente deve ser escolhido principalmente com base no custo, com pouca consideração sobre a microbiota esperada no sítio cirúrgico.",
-        "rationale": "Incorreta. Embora o custo possa ser um fator pratico considerado, o princípio central classicamente ensinado é a cobertura adequada da microbiota esperada do sítio cirúrgico, não a escolha baseada exclusivamente em custo."
+        "rationale": "Incorreta. Embora o custo possa ser um fator prático considerado, o princípio central classicamente ensinado é a cobertura adequada da microbiota esperada do sítio cirúrgico, não a escolha baseada exclusivamente em custo."
       }
     ],
     "correctLetter": "A",
@@ -4905,13 +4905,13 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "Deve ser suspensa em até 24 horas após a cirurgia, ja que uma dose única (ou poucas doses) resolve a maioria dos casos quando a profilaxia é bem indicada.",
-        "rationale": "CORRETA. Segundo os princípios clássicos de antibioticoprofilaxia cirúrgica, a suspensão deve ocorrer em até 24 horas após o procedimento; a maioria dos casos e adequadamente coberta com dose única (ou poucas doses, incluindo eventual repique intraoperatório), não havendo beneficio comprovado em prolongar a profilaxia além desse prazo."
+        "text": "Deve ser suspensa em até 24 horas após a cirurgia, já que uma dose única (ou poucas doses) resolve a maioria dos casos quando a profilaxia é bem indicada.",
+        "rationale": "CORRETA. Segundo os princípios clássicos de antibioticoprofilaxia cirúrgica, a suspensão deve ocorrer em até 24 horas após o procedimento; a maioria dos casos e adequadamente coberta com dose única (ou poucas doses, incluindo eventual repique intraoperatório), não havendo benefício comprovado em prolongar a profilaxia além desse prazo."
       },
       {
         "letter": "B",
         "text": "Deve ser mantida por pelo menos 7 dias após a cirurgia, independentemente da evolução clínica do paciente.",
-        "rationale": "Incorreta. Prolongar a profilaxia por 7 dias não é a recomendação clássica; isso ultrapassa muito o prazo de 24 horas recomendado, sem beneficio adicional comprovado para profilaxia (diferente do tratamento de uma infecção ja estabelecida)."
+        "rationale": "Incorreta. Prolongar a profilaxia por 7 dias não é a recomendação clássica; isso ultrapassa muito o prazo de 24 horas recomendado, sem benefício adicional comprovado para profilaxia (diferente do tratamento de uma infecção já estabelecida)."
       },
       {
         "letter": "C",
@@ -4920,8 +4920,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "Não ha prazo definido; a suspensão fica a critério pessoal de cada cirurgião, sem recomendação padronizada.",
-        "rationale": "Incorreta. Ha, sim, uma recomendação clássica e padronizada de suspensão em até 24 horas após a cirurgia, não ficando a critério totalmente livre e individual de cada profissional."
+        "text": "Não há prazo definido; a suspensão fica a critério pessoal de cada cirurgião, sem recomendação padronizada.",
+        "rationale": "Incorreta. Há, sim, uma recomendação clássica e padronizada de suspensão em até 24 horas após a cirurgia, não ficando a critério totalmente livre e individual de cada profissional."
       }
     ],
     "correctLetter": "A",
@@ -4985,7 +4985,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Infectada.",
-        "rationale": "Incorreta. Não ha evidência de infecção (pus) descrita no caso; a categoria infectada exige a presença de pus ou infecção ja estabelecida no campo operatório, ausente nesse cenário eletivo e controlado."
+        "rationale": "Incorreta. Não há evidência de infecção (pus) descrita no caso; a categoria infectada exige a presença de pus ou infecção já estabelecida no campo operatório, ausente nesse cenário eletivo e controlado."
       }
     ],
     "correctLetter": "B",
@@ -5098,7 +5098,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Limpeza da área e uso de hidratante, sem necessidade de antibiótico tópico ou curativo oclusivo; essa área não entra no cálculo da SCQ.",
-        "rationale": "CORRETA. A queimadura de 1º grau é tratada de forma simples, com limpeza da área e uso de hidratante; não ha indicação de antibiótico tópico ou curativos mais complexos, e essa área, por convenção, não é contabilizada no cálculo da SCQ para fins de reposição volêmica."
+        "rationale": "CORRETA. A queimadura de 1º grau é tratada de forma simples, com limpeza da área e uso de hidratante; não há indicação de antibiótico tópico ou curativos mais complexos, e essa área, por convenção, não é contabilizada no cálculo da SCQ para fins de reposição volêmica."
       },
       {
         "letter": "B",
@@ -5130,7 +5130,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "O 2º grau superficial tende a cicatrizar espontaneamente (sozinho), enquanto o 2º grau profundo tende a exigir enxerto de pele para adequada cicatrização.",
-        "rationale": "CORRETA. O 2º grau superficial (que atinge a derme papilar) costuma cicatrizar espontaneamente com tratamento conservador adequado (limpeza, antibiótico tópico, curativo); ja o 2º grau profundo (que atinge a derme reticular) tem maior tendencia a necessitar de enxerto de pele para uma cicatrização adequada, dado o maior comprometimento tecidual."
+        "rationale": "CORRETA. O 2º grau superficial (que atinge a derme papilar) costuma cicatrizar espontaneamente com tratamento conservador adequado (limpeza, antibiótico tópico, curativo); já o 2º grau profundo (que atinge a derme reticular) tem maior tendência a necessitar de enxerto de pele para uma cicatrização adequada, dado o maior comprometimento tecidual."
       },
       {
         "letter": "B",
@@ -5140,7 +5140,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Poucos casos de qualquer um dos dois graus costumam exigir enxerto, cicatrizando de forma espontânea na maioria das vezes.",
-        "rationale": "Incorreta. Embora o 2º grau superficial costume cicatrizar espontaneamente, o 2º grau profundo tem maior tendencia a exigir enxerto, o que contraria a afirmação de que 'nenhum' dos dois exige esse procedimento."
+        "rationale": "Incorreta. Embora o 2º grau superficial costume cicatrizar espontaneamente, o 2º grau profundo tem maior tendência a exigir enxerto, o que contraria a afirmação de que 'nenhum' dos dois exige esse procedimento."
       },
       {
         "letter": "D",
@@ -5171,8 +5171,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "Qualquer queimadura, independentemente do grau ou da extensão, ja classifica automaticamente o paciente como grande queimado.",
-        "rationale": "Incorreta. Ha um critério específico de extensão (percentual de SCQ de 2º grau) que define grande queimado, não qualquer queimadura de qualquer grau e extensão de forma indiscriminada."
+        "text": "Qualquer queimadura, independentemente do grau ou da extensão, já classifica automaticamente o paciente como grande queimado.",
+        "rationale": "Incorreta. Há um critério específico de extensão (percentual de SCQ de 2º grau) que define grande queimado, não qualquer queimadura de qualquer grau e extensão de forma indiscriminada."
       },
       {
         "letter": "D",
@@ -5204,7 +5204,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Devem ser transferidas com a mesma urgência e pelos mesmos critérios automáticos da alta voltagem, sem qualquer distinção.",
-        "rationale": "Incorreta. Ha distinção clara nos critérios da ABA entre alta voltagem (transferência automática) e baixa voltagem (avaliação de necessidade de seguimento, sem transferência automática obrigatória)."
+        "rationale": "Incorreta. Há distinção clara nos critérios da ABA entre alta voltagem (transferência automática) e baixa voltagem (avaliação de necessidade de seguimento, sem transferência automática obrigatória)."
       },
       {
         "letter": "D",
@@ -5226,12 +5226,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Não, pois a área extremamente pequena (menos de 1%) torna a transferência desnecessária nesse tipo de lesão.",
-        "rationale": "Incorreta. Assim como ocorre com mãos, pes, face e períneo, a genitália é considerada região nobre; queimaduras nessas regiões transferem independentemente da extensão/área, mesmo sendo pequena como no caso descrito."
+        "rationale": "Incorreta. Assim como ocorre com mãos, pés, face e períneo, a genitália é considerada região nobre; queimaduras nessas regiões transferem independentemente da extensão/área, mesmo sendo pequena como no caso descrito."
       },
       {
         "letter": "B",
-        "text": "Sim, pois queimaduras em regiões nobres como a genitália transferem independentemente da área, pelo risco funcional e de complicações especificas dessa localização.",
-        "rationale": "CORRETA. assim como face, mãos, pes e períneo, a genitália é classificada como região nobre nos critérios de transferência da ABA; queimaduras de espessura parcial ou total nessas regiões exigem transferência para centro especializado independentemente da extensão total da SCQ, pelo risco funcional e de complicações especificas dessas áreas."
+        "text": "Sim, pois queimaduras em regiões nobres como a genitália transferem independentemente da área, pelo risco funcional e de complicações específicas dessa localização.",
+        "rationale": "CORRETA. assim como face, mãos, pés e períneo, a genitália é classificada como região nobre nos critérios de transferência da ABA; queimaduras de espessura parcial ou total nessas regiões exigem transferência para centro especializado independentemente da extensão total da SCQ, pelo risco funcional e de complicações específicas dessas áreas."
       },
       {
         "letter": "C",
@@ -5240,12 +5240,12 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "A genitália não é considerada uma região nobre pelos critérios de transferência da ABA, apenas mãos, pes e face.",
-        "rationale": "Incorreta. A genitália e o períneo também são classicamente incluídos, junto com face, mãos e pes, na lista de regiões nobres que indicam transferência independentemente da área na classificação da ABA."
+        "text": "A genitália não é considerada uma região nobre pelos critérios de transferência da ABA, apenas mãos, pés e face.",
+        "rationale": "Incorreta. A genitália e o períneo também são classicamente incluídos, junto com face, mãos e pés, na lista de regiões nobres que indicam transferência independentemente da área na classificação da ABA."
       }
     ],
     "correctLetter": "B",
-    "clinicalPointers": "Regiões nobres (face, mãos, pes, genitália, períneo, grandes articulações): transferem SEMPRE, independente da área."
+    "clinicalPointers": "Regiões nobres (face, mãos, pés, genitália, períneo, grandes articulações): transferem SEMPRE, independente da área."
   },
   {
     "id": 152,
@@ -5268,7 +5268,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Não há critério específico relacionado a idade pediátrica nos critérios de transferência da ABA, apenas critérios de extensão e profundidade.",
-        "rationale": "Incorreta. Ha, sim, um critério específico voltado a pediatria (idade <=14 anos ou peso <30kg), reconhecendo a maior complexidade do manejo de queimaduras nessa faixa etária."
+        "rationale": "Incorreta. Há, sim, um critério específico voltado a pediatria (idade <=14 anos ou peso <30kg), reconhecendo a maior complexidade do manejo de queimaduras nessa faixa etária."
       },
       {
         "letter": "D",
@@ -5321,13 +5321,13 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "E composta por tecido ja morto e irreversivelmente danificado no momento da lesão, não respondendo a nenhuma medida de ressuscitação volêmica posterior.",
-        "rationale": "CORRETA. A zona de necrose, no centro da lesão por queimadura, e composta por tecido ja morto e irreversivelmente danificado desde o momento inicial da queimadura; diferente da zona de estase ao redor (viável mas em risco, podendo ser recuperada ou perdida conforme a qualidade da ressuscitação), a zona de necrose não responde a nenhuma medida terapêutica posterior, sendo uma perda tecidual ja definitiva."
+        "text": "E composta por tecido já morto e irreversivelmente danificado no momento da lesão, não respondendo a nenhuma medida de ressuscitação volêmica posterior.",
+        "rationale": "CORRETA. A zona de necrose, no centro da lesão por queimadura, e composta por tecido já morto e irreversivelmente danificado desde o momento inicial da queimadura; diferente da zona de estase ao redor (viável mas em risco, podendo ser recuperada ou perdida conforme a qualidade da ressuscitação), a zona de necrose não responde a nenhuma medida terapêutica posterior, sendo uma perda tecidual já definitiva."
       },
       {
         "letter": "B",
         "text": "E a zona mais externa da lesão, totalmente viável e que se recupera espontaneamente sem qualquer intervenção.",
-        "rationale": "Incorreta. Essa descrição corresponde a zona de HIPEREMIA (mais periférica, viável, recupera sozinha), não a zona de necrose, que é a zona mais CENTRAL e composta por tecido ja morto."
+        "rationale": "Incorreta. Essa descrição corresponde a zona de HIPEREMIA (mais periférica, viável, recupera sozinha), não a zona de necrose, que é a zona mais CENTRAL e composta por tecido já morto."
       },
       {
         "letter": "C",
@@ -5341,7 +5341,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Zona de necrose: tecido ja morto, irreversível, não responde a ressuscitação. (estase = viável em risco; hiperemia = recupera sozinha)"
+    "clinicalPointers": "Zona de necrose: tecido já morto, irreversível, não responde a ressuscitação. (estase = viável em risco; hiperemia = recupera sozinha)"
   },
   {
     "id": 155,
@@ -5386,7 +5386,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Glicose, água e oxigênio.",
-        "rationale": "CORRETA. O objetivo central de tudo o que o organismo mobiliza durante a REMIT e garantir a oferta de três recursos essenciais aos tecidos durante o trauma: glicose (energia), água (meio para as reações enzimáticas) e oxigênio (necessário ao metabolismo celular aerobico)."
+        "rationale": "CORRETA. O objetivo central de tudo o que o organismo mobiliza durante a REMIT e garantir a oferta de três recursos essenciais aos tecidos durante o trauma: glicose (energia), água (meio para as reações enzimáticas) e oxigênio (necessário ao metabolismo celular aeróbico)."
       },
       {
         "letter": "B",
@@ -5433,7 +5433,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Diminuição isolada da resistência vascular sistêmica, sem qualquer outra alteração hormonal significativa nesse momento.",
-        "rationale": "Incorreta. Na fase ebb, a resistência vascular sistêmica está classicamente AUMENTADA (não diminuída), e ha alterações hormonais significativas associadas (catecolaminas, glico/mineralocorticoides, insulina, glucagon)."
+        "rationale": "Incorreta. Na fase ebb, a resistência vascular sistêmica está classicamente AUMENTADA (não diminuída), e há alterações hormonais significativas associadas (catecolaminas, glico/mineralocorticoides, insulina, glucagon)."
       }
     ],
     "correctLetter": "A",
@@ -5450,7 +5450,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "A insulina permanece diminuída na fase flow, exatamente como na fase ebb, sem qualquer mudança entre as duas fases.",
-        "rationale": "Incorreta. Ha uma mudança classicamente descrita entre as duas fases: enquanto a insulina está diminuída na fase ebb, ela passa a estar AUMENTADA na fase flow, uma diferença relevante entre os dois momentos da REMIT."
+        "rationale": "Incorreta. Há uma mudança classicamente descrita entre as duas fases: enquanto a insulina está diminuída na fase ebb, ela passa a estar AUMENTADA na fase flow, uma diferença relevante entre os dois momentos da REMIT."
       },
       {
         "letter": "B",
@@ -5464,7 +5464,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "A insulina so se altera na fase ebb; na fase flow, ela permanece em níveis idênticos aos de um indivíduo sem trauma.",
+        "text": "A insulina só se altera na fase ebb; na fase flow, ela permanece em níveis idênticos aos de um indivíduo sem trauma.",
         "rationale": "Incorreta. A insulina também se altera especificamente na fase flow (aumentando em relação a fase ebb), não permanecendo em níveis idênticos aos basais de um indivíduo sem trauma."
       }
     ],
@@ -5482,7 +5482,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Não há relação relevante entre o tamanho do trauma e a intensidade da REMIT; a resposta tende a ser semelhante, independentemente da magnitude da lesão, já que o organismo reagiria de forma padronizada a qualquer agressão.",
-        "rationale": "Incorreta. Ha, sim, uma relação direta classicamente descrita: quanto menor o trauma, menor tende a ser a interferência no eixo endócrino-metabólico, e quanto maior o trauma, mais intensa tende a ser a resposta desencadeada."
+        "rationale": "Incorreta. Há, sim, uma relação direta classicamente descrita: quanto menor o trauma, menor tende a ser a interferência no eixo endócrino-metabólico, e quanto maior o trauma, mais intensa tende a ser a resposta desencadeada."
       },
       {
         "letter": "B",
@@ -5513,13 +5513,13 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "Analgesia adequada, ja que a dor é uma das vias que perpetua a ativação do sistema nervoso autônomo para a resposta de luta e fuga, contribuindo para a intensidade da REMIT.",
+        "text": "Analgesia adequada, já que a dor é uma das vias que perpetua a ativação do sistema nervoso autônomo para a resposta de luta e fuga, contribuindo para a intensidade da REMIT.",
         "rationale": "CORRETA. A analgesia adequada é classicamente destacada como uma forma de auxiliar o paciente em REMIT, pois a dor é uma das vias que desencadeiam e perpetuam a resposta (ativando o sistema nervoso autônomo para a resposta de luta e fuga); otimizar a analgesia atua diretamente sobre esse gatilho, ajudando a modular a intensidade da resposta."
       },
       {
         "letter": "B",
         "text": "Restrição hídrica absoluta, sem qualquer reposição volêmica, independentemente do estado hemodinâmico do paciente.",
-        "rationale": "Incorreta. A recomendação clássica não e restrição hídrica absoluta e sem critério; e evitar a Hiperidratação excessiva (que pode causar edema de ferida, por exemplo), mantendo, porém, hidratação adequada conforme a necessidade clínica do paciente."
+        "rationale": "Incorreta. A recomendação clássica não é restrição hídrica absoluta e sem critério; e evitar a Hiperidratação excessiva (que pode causar edema de ferida, por exemplo), mantendo, porém, hidratação adequada conforme a necessidade clínica do paciente."
       },
       {
         "letter": "C",
@@ -5528,8 +5528,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "Sedação profunda continua, independentemente do nível de dor ou do estado clínico do paciente.",
-        "rationale": "Incorreta. A medida classicamente destacada é a analgesia adequada (controle da dor), não a sedação profunda continua e indiscriminada, que é uma intervenção diferente e com outras indicações especificas."
+        "text": "Sedação profunda contínua, independentemente do nível de dor ou do estado clínico do paciente.",
+        "rationale": "Incorreta. A medida classicamente destacada é a analgesia adequada (controle da dor), não a sedação profunda contínua e indiscriminada, que é uma intervenção diferente e com outras indicações específicas."
       }
     ],
     "correctLetter": "A",
@@ -5546,7 +5546,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Risco mínimo; hiperidratar um paciente oligúrico costuma ser a conduta mais segura e recomendada, independentemente da causa da oligúria.",
-        "rationale": "Incorreta. Pelo contrário, ha um risco específico e relevante associado a hiperidratação nesse contexto (edema de ferida), o que contraria a ideia de que essa conduta é sempre segura sem qualquer ressalva."
+        "rationale": "Incorreta. Pelo contrário, há um risco específico e relevante associado a hiperidratação nesse contexto (edema de ferida), o que contraria a ideia de que essa conduta é sempre segura sem qualquer ressalva."
       },
       {
         "letter": "B",
@@ -5556,7 +5556,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Hiperidratação tende a reduzir o risco de edema, sendo o oposto do que costuma ocorrer na prática clínica.",
-        "rationale": "Incorreta. Pelo contrário, a hiperidratação excessiva AUMENTA o risco de edema (incluindo edema de ferida), não o reduz; essa e justamente a razão pela qual se deve avaliar cuidadosamente a causa da oligúria antes de hidratar agressivamente."
+        "rationale": "Incorreta. Pelo contrário, a hiperidratação excessiva AUMENTA o risco de edema (incluindo edema de ferida), não o reduz; essa é justamente a razão pela qual se deve avaliar cuidadosamente a causa da oligúria antes de hidratar agressivamente."
       },
       {
         "letter": "D",
@@ -5578,7 +5578,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Avaliar o paciente como um todo: verificar se a sonda vesical está obstruída, se houve uso de opioide (que pode causar retenção urinária), e se a hidratação intraoperatória realizada pelo anestesiologista foi adequada, antes de simplesmente aumentar o volume infundido.",
-        "rationale": "CORRETA. A abordagem recomendada e avaliar o paciente de forma ampla e individualizada: verificar obstrução da sonda vesical, possível retenção urinária associada ao uso de opioide, e a adequação da hidratação ja realizada no intraoperatório, antes de simplesmente assumir hipovolemia e aumentar agressivamente o volume infundido, o que poderia ser inadequado se a causa real for outra."
+        "rationale": "CORRETA. A abordagem recomendada e avaliar o paciente de forma ampla e individualizada: verificar obstrução da sonda vesical, possível retenção urinária associada ao uso de opioide, e a adequação da hidratação já realizada no intraoperatório, antes de simplesmente assumir hipovolemia e aumentar agressivamente o volume infundido, o que poderia ser inadequado se a causa real for outra."
       },
       {
         "letter": "B",
@@ -5593,11 +5593,11 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Solicitar diálise como conduta inicial diante da oligúria, avançando diretamente para suporte renal substitutivo, uma vez que a função renal comprometida representaria um risco imediato e prioritário à vida do paciente.",
-        "rationale": "Incorreta. A diálise é uma intervenção reservada para situações especificas e mais graves, não a conduta inicial recomendada diante de oligúria pós-operatória sem antes avaliar as causas mais comuns e potencialmente reversíveis."
+        "rationale": "Incorreta. A diálise é uma intervenção reservada para situações específicas e mais graves, não a conduta inicial recomendada diante de oligúria pós-operatória sem antes avaliar as causas mais comuns e potencialmente reversíveis."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Avaliar oligúria pós-op: checar sonda obstruída, retenção por opioide, adequação da hidratação intraoperatória - antes de so aumentar volume."
+    "clinicalPointers": "Avaliar oligúria pós-op: checar sonda obstruída, retenção por opioide, adequação da hidratação intraoperatória - antes de só aumentar volume."
   },
   {
     "id": 163,
@@ -5609,8 +5609,8 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "A REMIT sera idêntica em intensidade nos dois casos, ja que ambas são cirurgias abdominais, com magnitude semelhante de resposta hormonal e inflamatória em ambas as situações.",
-        "rationale": "Incorreta. Apesar de ambas serem cirurgias abdominais, a intensidade da REMIT não e idêntica; o tamanho do trauma (porte da cirurgia e magnitude da manipulação tecidual) influencia diretamente a intensidade da resposta, sendo esperada uma resposta mais atenuada na apendicectomia videolaparoscópica em comparação a cirurgia oncológica extensa e aberta."
+        "text": "A REMIT será idêntica em intensidade nos dois casos, já que ambas são cirurgias abdominais, com magnitude semelhante de resposta hormonal e inflamatória em ambas as situações.",
+        "rationale": "Incorreta. Apesar de ambas serem cirurgias abdominais, a intensidade da REMIT não é idêntica; o tamanho do trauma (porte da cirurgia e magnitude da manipulação tecidual) influencia diretamente a intensidade da resposta, sendo esperada uma resposta mais atenuada na apendicectomia videolaparoscópica em comparação a cirurgia oncológica extensa e aberta."
       },
       {
         "letter": "B",
@@ -5637,7 +5637,7 @@ const QUESTIONS_DATABASE = [
     "category": "REMIT",
     "subcategory": "Cortisol - papel na REMIT",
     "difficulty": "Intermediária",
-    "prompt": "Além de ser o principal responsável pela gliconeogênese durante a REMIT, o cortisol exerce outro efeito relevante sobre o sistema cardiovascular durante a resposta ao trauma. Qual e esse efeito adicional?",
+    "prompt": "Além de ser o principal responsável pela gliconeogênese durante a REMIT, o cortisol exerce outro efeito relevante sobre o sistema cardiovascular durante a resposta ao trauma. Qual é esse efeito adicional?",
     "options": [
       {
         "letter": "A",
@@ -5669,7 +5669,7 @@ const QUESTIONS_DATABASE = [
     "category": "REMIT",
     "subcategory": "Catecolaminas - efeitos específicos",
     "difficulty": "Intermediária",
-    "prompt": "As catecolaminas (adrenalina e noradrenalina), liberadas pela medula adrenal durante a REMIT, exercem múltiplos efeitos sobre diferentes sistemas do corpo. Qual dos efeitos abaixo NÃO e classicamente atribuído as catecolaminas durante a resposta ao trauma?",
+    "prompt": "As catecolaminas (adrenalina e noradrenalina), liberadas pela medula adrenal durante a REMIT, exercem múltiplos efeitos sobre diferentes sistemas do corpo. Qual dos efeitos abaixo NÃO é classicamente atribuído as catecolaminas durante a resposta ao trauma?",
     "options": [
       {
         "letter": "A",
@@ -5679,7 +5679,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Inotropismo e cronotropismo cardíaco positivos, aumentando a pressão arterial.",
-        "rationale": "Incorreta como resposta a pergunta (ela É um efeito real das catecolaminas). O aumento da forca de contração (inotropismo) e da frequência cardíaca (cronotropismo), com consequente aumento da pressão arterial, é um efeito clássico das catecolaminas na REMIT."
+        "rationale": "Incorreta como resposta a pergunta (ela É um efeito real das catecolaminas). O aumento da força de contração (inotropismo) e da frequência cardíaca (cronotropismo), com consequente aumento da pressão arterial, é um efeito clássico das catecolaminas na REMIT."
       },
       {
         "letter": "C",
@@ -5705,8 +5705,8 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "Retém sódio e água, e libera potássio e hidrogênio, através de trocadores/bombas especificas nos túbulos renais.",
-        "rationale": "CORRETA. A aldosterona atua nos túbulos renais retendo sódio e água (contribuindo diretamente para a oligúria), e promovendo a liberação (excreção) de potássio e hidrogênio através de trocadores e bombas especificas, um mecanismo clássico de ação desse mineralocorticoide."
+        "text": "Retém sódio e água, e libera potássio e hidrogênio, através de trocadores/bombas específicas nos túbulos renais.",
+        "rationale": "CORRETA. A aldosterona atua nos túbulos renais retendo sódio e água (contribuindo diretamente para a oligúria), e promovendo a liberação (excreção) de potássio e hidrogênio através de trocadores e bombas específicas, um mecanismo clássico de ação desse mineralocorticoide."
       },
       {
         "letter": "B",
@@ -5733,7 +5733,7 @@ const QUESTIONS_DATABASE = [
     "category": "REMIT",
     "subcategory": "Via inflamatória como gatilho da REMIT",
     "difficulty": "Intermediária",
-    "prompt": "Entre as três vias que desencadeiam a REMIT (inflamatória, receptores de pressão e dor), a via inflamatória tem uma característica particular quanto a sua evolução. Qual e essa característica?",
+    "prompt": "Entre as três vias que desencadeiam a REMIT (inflamatória, receptores de pressão e dor), a via inflamatória tem uma característica particular quanto a sua evolução. Qual é essa característica?",
     "options": [
       {
         "letter": "A",
@@ -5743,7 +5743,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A via inflamatória tende a ser sistêmica já desde o início, raramente começando como uma resposta local restrita à área do trauma.",
-        "rationale": "Incorreta. Pelo contrário, a via inflamatória classicamente comeca como uma resposta LOCAL, podendo evoluir posteriormente para uma resposta sistêmica, não sendo sistêmica desde o início em todos os casos."
+        "rationale": "Incorreta. Pelo contrário, a via inflamatória classicamente começa como uma resposta LOCAL, podendo evoluir posteriormente para uma resposta sistêmica, não sendo sistêmica desde o início em todos os casos."
       },
       {
         "letter": "C",
@@ -5757,12 +5757,12 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Via inflamatória: comeca LOCAL (na área do trauma) e pode evoluir para resposta metabólica SISTÊMICA."
+    "clinicalPointers": "Via inflamatória: começa LOCAL (na área do trauma) e pode evoluir para resposta metabólica SISTÊMICA."
   },
   {
     "id": 168,
     "code": "CICA-17",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Três fases da cicatrização - nomenclatura",
     "difficulty": "Intermediária",
     "prompt": "O processo de cicatrização de feridas é classicamente dividido em três fases sucessivas (que podem ocorrer simultaneamente em diferentes pontos da mesma ferida). Quais são essas três fases, na ordem clássica?",
@@ -5780,7 +5780,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Fase aguda, fase crônica e fase terminal, uma nomenclatura não utilizada para descrever a cicatrização normal.",
-        "rationale": "Incorreta. Essa nomenclatura (aguda/crônica/terminal) não corresponde a classificação clássica das fases da cicatrização, que e inflamatória, proliferativa e de maturação."
+        "rationale": "Incorreta. Essa nomenclatura (aguda/crônica/terminal) não corresponde a classificação clássica das fases da cicatrização, que é inflamatória, proliferativa e de maturação."
       },
       {
         "letter": "D",
@@ -5794,7 +5794,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 169,
     "code": "CICA-18",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Fase inflamatória - evento inicial",
     "difficulty": "Intermediária",
     "prompt": "Logo após uma lesão, com o extravasamento de sangue, a fase inflamatória da cicatrização se inicia. Qual o evento inicial classicamente descrito nessa fase, antes mesmo da vasodilatação e do aumento da permeabilidade vascular?",
@@ -5806,8 +5806,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "Vasodilatação imediata, seguida de vasoconstrição tardia, uma sequencia invertida em relação ao classicamente descrito.",
-        "rationale": "Incorreta. A sequencia clássica é o oposto: primeiro ocorre vasoconstrição com formação de trombo, e SOMENTE DEPOIS sucedem a vasodilatação e o aumento de permeabilidade vascular, não vasodilatação imediata seguida de vasoconstrição tardia."
+        "text": "Vasodilatação imediata, seguida de vasoconstrição tardia, uma sequência invertida em relação ao classicamente descrito.",
+        "rationale": "Incorreta. A sequência clássica é o oposto: primeiro ocorre vasoconstrição com formação de trombo, e SOMENTE DEPOIS sucedem a vasodilatação e o aumento de permeabilidade vascular, não vasodilatação imediata seguida de vasoconstrição tardia."
       },
       {
         "letter": "C",
@@ -5817,7 +5817,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Migração de queratinócitos para o leito da ferida, evento que ocorre antes de qualquer resposta vascular.",
-        "rationale": "Incorreta. A migração de queratinócitos (epitelização) é um evento da fase PROLIFERATIVA, não o evento inicial da fase inflamatória, que e vascular (vasoconstrição + trombo)."
+        "rationale": "Incorreta. A migração de queratinócitos (epitelização) é um evento da fase PROLIFERATIVA, não o evento inicial da fase inflamatória, que é vascular (vasoconstrição + trombo)."
       }
     ],
     "correctLetter": "A",
@@ -5826,10 +5826,10 @@ const QUESTIONS_DATABASE = [
   {
     "id": 170,
     "code": "CICA-19",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Fase inflamatória - mediadores e sinais flogísticos",
     "difficulty": "Intermediária",
-    "prompt": "Após o evento vascular inicial da fase inflamatória, a vasodilatação e o aumento da permeabilidade vascular são mediados por substâncias especificas, resultando nos clássicos sinais flogísticos. Quais são essas substâncias mediadoras, e quais os sinais flogísticos resultantes?",
+    "prompt": "Após o evento vascular inicial da fase inflamatória, a vasodilatação e o aumento da permeabilidade vascular são mediados por substâncias específicas, resultando nos clássicos sinais flogísticos. Quais são essas substâncias mediadoras, e quais os sinais flogísticos resultantes?",
     "options": [
       {
         "letter": "A",
@@ -5858,7 +5858,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 171,
     "code": "CICA-20",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Angiogênese na fase proliferativa",
     "difficulty": "Intermediária",
     "prompt": "Dentro da fase proliferativa da cicatrização, a angiogênese é a subfase responsável por aumentar a oferta de oxigênio e nutrientes ao local da lesão, através da formação de novos vasos sanguíneos. Qual mediador é classicamente apontado como o principal estimulador dessa subfase?",
@@ -5890,10 +5890,10 @@ const QUESTIONS_DATABASE = [
   {
     "id": 172,
     "code": "CICA-21",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Epitelização - função de barreira",
     "difficulty": "Intermediária",
-    "prompt": "A epitelização, uma das subfases da fase proliferativa da cicatrização, envolve a migração ativa de células epidérmicas sobre o tecido de granulação ja formado. Além de cobrir a ferida, qual outra função importante essa camada epitelial recém-formada desempenha?",
+    "prompt": "A epitelização, uma das subfases da fase proliferativa da cicatrização, envolve a migração ativa de células epidérmicas sobre o tecido de granulação já formado. Além de cobrir a ferida, qual outra função importante essa camada epitelial recém-formada desempenha?",
     "options": [
       {
         "letter": "A",
@@ -5902,7 +5902,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "Produzir diretamente o colágeno que da forca tênsil final a cicatriz.",
+        "text": "Produzir diretamente o colágeno que da força tênsil final a cicatriz.",
         "rationale": "Incorreta. A produção de colágeno é uma função classicamente atribuída aos FIBROBLASTOS, durante a fibroplasia, não as células epidérmicas envolvidas na epitelização, que atuam cobrindo a superfície da ferida."
       },
       {
@@ -5922,7 +5922,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 173,
     "code": "CICA-22",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Fatores que prejudicam a cicatrização - classificação",
     "difficulty": "Intermediária",
     "prompt": "Os fatores que podem prejudicar adversamente o processo de cicatrização de uma ferida são classicamente divididos em duas grandes categorias. Quais são essas categorias?",
@@ -5954,20 +5954,20 @@ const QUESTIONS_DATABASE = [
   {
     "id": 174,
     "code": "CICA-23",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Contaminação x colonização x infecção",
     "difficulty": "Intermediária",
     "prompt": "Ao avaliar uma ferida, é importante diferenciar contaminação, colonização e infecção, conceitos frequentemente confundidos. Qual a diferença central entre contaminação (presença de bactérias não replicadas) e colonização (presença de bactérias em replicação, porém sem dano tecidual)?",
     "options": [
       {
         "letter": "A",
-        "text": "Na contaminação, as bactérias presentes na ferida ainda não estão se multiplicando; na colonização, ja ha replicação bacteriana ativa, porém ainda sem causar dano aos tecidos da ferida.",
-        "rationale": "CORRETA. A contaminação se refere a presença de bactérias na ferida que ainda NÃO estão em processo de replicação; a colonização se refere a presença de bactérias em estado de REPLICAÇÃO ativa, mas ainda SEM causar dano tecidual; a infecção, por sua vez, é definida pela presença de bactérias em replicação COM dano tecidual associado, sendo a colonização critica/infecção local um estado intermediário entre a colonização e a infecção propriamente estabelecida."
+        "text": "Na contaminação, as bactérias presentes na ferida ainda não estão se multiplicando; na colonização, já há replicação bacteriana ativa, porém ainda sem causar dano aos tecidos da ferida.",
+        "rationale": "CORRETA. A contaminação se refere a presença de bactérias na ferida que ainda NÃO estão em processo de replicação; a colonização se refere a presença de bactérias em estado de REPLICAÇÃO ativa, mas ainda SEM causar dano tecidual; a infecção, por sua vez, é definida pela presença de bactérias em replicação COM dano tecidual associado, sendo a colonização crítica/infecção local um estado intermediário entre a colonização e a infecção propriamente estabelecida."
       },
       {
         "letter": "B",
         "text": "Os dois termos são usados como sinônimos na prática clínica, sem distinção relevante entre eles para a conduta terapêutica.",
-        "rationale": "Incorreta. Ha uma distinção prática relevante: contaminação implica bactérias presentes mas não replicando; colonização implica bactérias replicando, porém ainda sem dano tecidual, um estágio intermediário importante antes de uma infecção estabelecida."
+        "rationale": "Incorreta. Há uma distinção prática relevante: contaminação implica bactérias presentes mas não replicando; colonização implica bactérias replicando, porém ainda sem dano tecidual, um estágio intermediário importante antes de uma infecção estabelecida."
       },
       {
         "letter": "C",
@@ -5977,7 +5977,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Colonização representa um estágio mais grave do que uma infecção já estabelecida, invertendo a lógica esperada dessa progressão.",
-        "rationale": "Incorreta. A progressão lógica clássica e: contaminação -> colonização -> colonização critica/infecção local -> infecção estabelecida, sendo a infecção estabelecida o estágio mais grave, não a colonização."
+        "rationale": "Incorreta. A progressão lógica clássica e: contaminação -> colonização -> colonização crítica/infecção local -> infecção estabelecida, sendo a infecção estabelecida o estágio mais grave, não a colonização."
       }
     ],
     "correctLetter": "A",
@@ -5986,10 +5986,10 @@ const QUESTIONS_DATABASE = [
   {
     "id": 175,
     "code": "CICA-24",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Idade avançada e cicatrização",
     "difficulty": "Intermediária",
-    "prompt": "Pacientes idosos apresentam classicamente maior dificuldade de cicatrização em comparação a pacientes mais jovens, mesmo na ausência de outras comorbidades especificas. Quais alterações relacionadas ao envelhecimento explicam essa maior dificuldade?",
+    "prompt": "Pacientes idosos apresentam classicamente maior dificuldade de cicatrização em comparação a pacientes mais jovens, mesmo na ausência de outras comorbidades específicas. Quais alterações relacionadas ao envelhecimento explicam essa maior dificuldade?",
     "options": [
       {
         "letter": "A",
@@ -5999,7 +5999,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Aumento da espessura da pele e da produção de colágeno, o que paradoxalmente dificultaria a cicatrização em idosos, tornando o tecido mais resistente a novas lesões.",
-        "rationale": "Incorreta. É o OPOSTO que ocorre: ha REDUÇÃO (não aumento) da espessura da pele e da organização do colágeno com o envelhecimento, o que contribui para a maior dificuldade de cicatrização nessa população."
+        "rationale": "Incorreta. É o OPOSTO que ocorre: há REDUÇÃO (não aumento) da espessura da pele e da organização do colágeno com o envelhecimento, o que contribui para a maior dificuldade de cicatrização nessa população."
       },
       {
         "letter": "C",
@@ -6018,7 +6018,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 176,
     "code": "CICA-25",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Diabetes como fator de risco para cicatrização",
     "difficulty": "Intermediária",
     "prompt": "Entre as doenças crônicas classicamente citadas como fatores de risco relacionados ao paciente para o comprometimento da cicatrização, o diabetes recebe destaque especial. Por que o diabetes é considerado um fator de risco tão relevante para atraso na cicatrização de feridas?",
@@ -6050,7 +6050,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 177,
     "code": "CICA-26",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Irradiação e cicatrização",
     "difficulty": "Intermediária",
     "prompt": "Pacientes submetidos previamente a radioterapia em uma determinada região do corpo apresentam maior risco de complicações na cicatrização de feridas cirúrgicas realizadas posteriormente nessa mesma área. Qual a explicação clássica para esse fenômeno?",
@@ -6082,7 +6082,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 178,
     "code": "CICA-27",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Granulação x epitelização - reparo conforme tipo de ferida",
     "difficulty": "Intermediária",
     "prompt": "Comparando o processo de reparo entre uma ferida superficial (limitada a epiderme) e uma ferida com perda total (destruição de epiderme, derme e tecidos profundos), qual a diferença central no mecanismo de reparo entre esses dois tipos de ferida?",
@@ -6090,12 +6090,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Em feridas superficiais e de perda parcial, o reparo ocorre por reconstituição do epitélio a partir da pele adjacente não acometida (tornando o resultado quase imperceptível); em feridas com perda total, o reparo exige a formação de um novo tecido, o tecido de granulação, que resulta em cicatriz visível.",
-        "rationale": "CORRETA. Feridas superficiais e de perda parcial se reparam por reconstituição do próprio epitélio e seus anexos, a partir da pele adjacente ainda intacta, tornando o resultado final quase imperceptível; ja feridas com perda total exigem a formação de um tecido inteiramente novo, o tecido de granulação, cujo processo resulta em uma cicatriz visível, diferente do reparo praticamente invisível das feridas mais superficiais."
+        "rationale": "CORRETA. Feridas superficiais e de perda parcial se reparam por reconstituição do próprio epitélio e seus anexos, a partir da pele adjacente ainda intacta, tornando o resultado final quase imperceptível; já feridas com perda total exigem a formação de um tecido inteiramente novo, o tecido de granulação, cujo processo resulta em uma cicatriz visível, diferente do reparo praticamente invisível das feridas mais superficiais."
       },
       {
         "letter": "B",
         "text": "Não há diferença relevante no mecanismo de reparo entre os dois tipos de ferida; ambas tendem a resultar em cicatriz visível de aspecto semelhante, já que o organismo utilizaria a mesma via de reparo tecidual, independentemente da profundidade da lesão observada.",
-        "rationale": "Incorreta. Ha diferença real e relevante no mecanismo: feridas superficiais/perda parcial reparam-se de forma quase imperceptível (reconstituição epitelial), enquanto feridas de perda total formam tecido de granulação, resultando em cicatriz visível, um processo bem diferente."
+        "rationale": "Incorreta. Há diferença real e relevante no mecanismo: feridas superficiais/perda parcial reparam-se de forma quase imperceptível (reconstituição epitelial), enquanto feridas de perda total formam tecido de granulação, resultando em cicatriz visível, um processo bem diferente."
       },
       {
         "letter": "C",
@@ -6114,15 +6114,15 @@ const QUESTIONS_DATABASE = [
   {
     "id": 179,
     "code": "CICA-28",
-    "category": "Cicatrizacao",
+    "category": "Cicatrização",
     "subcategory": "Colagenase na fase de maturação",
     "difficulty": "Intermediária",
-    "prompt": "Durante a fase de maturação da cicatrização (que se inicia cerca de uma semana após a lesão), ocorre um equilíbrio dinâmico entre a síntese e a degradação de colágeno, resultando em um tecido cicatricial com maior forca tênsil ao longo do tempo. Qual enzima tem papel central nesse equilíbrio, especificamente na degradação do colágeno em excesso?",
+    "prompt": "Durante a fase de maturação da cicatrização (que se inicia cerca de uma semana após a lesão), ocorre um equilíbrio dinâmico entre a síntese e a degradação de colágeno, resultando em um tecido cicatricial com maior força tênsil ao longo do tempo. Qual enzima tem papel central nesse equilíbrio, especificamente na degradação do colágeno em excesso?",
     "options": [
       {
         "letter": "A",
         "text": "Colagenase.",
-        "rationale": "CORRETA. A colagenase é a enzima classicamente descrita com papel central no equilíbrio entre síntese (anabolismo) e degradação (catabolismo) do colágeno durante a fase de maturação, atuando na degradação do colágeno em excesso e contribuindo para a remodelação progressiva da cicatriz, que ganha forca tênsil ao longo do tempo."
+        "rationale": "CORRETA. A colagenase é a enzima classicamente descrita com papel central no equilíbrio entre síntese (anabolismo) e degradação (catabolismo) do colágeno durante a fase de maturação, atuando na degradação do colágeno em excesso e contribuindo para a remodelação progressiva da cicatriz, que ganha força tênsil ao longo do tempo."
       },
       {
         "letter": "B",
@@ -6141,25 +6141,25 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Fase de maturação: colagenase regula o equilíbrio entre síntese e degradação do colágeno (forca tênsil aumenta)."
+    "clinicalPointers": "Fase de maturação: colagenase regula o equilíbrio entre síntese e degradação do colágeno (força tênsil aumenta)."
   },
   {
     "id": 180,
     "code": "LESO-19",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Dermatoscópio - relevância clínica",
     "difficulty": "Intermediária",
     "prompt": "Antes de decidir entre observação clínica, bioppsia ou excisão de uma lesão pigmentada da pele, o dermatoscópio é classicamente utilizado como aliado no exame. O que essa ferramenta permite avaliar, que auxilia a sugerir se uma lesão pigmentada é mais provável de ser benigna ou maligna?",
     "options": [
       {
         "letter": "A",
-        "text": "O dermatoscópio permite avaliar padrões específicos da lesão, como a presença de rede pigmentar, estrias de pigmento e glóbulos, que ajudam a diferenciar uma lesão melanocitica benigna de uma potencialmente maligna.",
-        "rationale": "CORRETA. O dermatoscópio é um importante aliado para definir o perfil de uma lesão pigmentada, permitindo observar padrões específicos como rede pigmentar, estrias de pigmento e glóbulos; a presença ou ausência é o padrão específico desses achados ajudam a sugerir se a lesão e melanocitica benigna ou potencialmente maligna, orientando a conduta subsequente (observação, biópsia ou excisão)."
+        "text": "O dermatoscópio permite avaliar padrões específicos da lesão, como a presença de rede pigmentar, estrias de pigmento e glóbulos, que ajudam a diferenciar uma lesão melanocítica benigna de uma potencialmente maligna.",
+        "rationale": "CORRETA. O dermatoscópio é um importante aliado para definir o perfil de uma lesão pigmentada, permitindo observar padrões específicos como rede pigmentar, estrias de pigmento e glóbulos; a presença ou ausência é o padrão específico desses achados ajudam a sugerir se a lesão e melanocítica benigna ou potencialmente maligna, orientando a conduta subsequente (observação, biópsia ou excisão)."
       },
       {
         "letter": "B",
         "text": "O dermatoscópio mede diretamente a profundidade da lesão em milímetros, substituindo por completo a necessidade de biópsia para a confirmação diagnóstica em qualquer situação clínica.",
-        "rationale": "Incorreta. O dermatoscópio é um exame de superfície que avalia padrões visuais da lesão (como rede pigmentar e glóbulos), não mede diretamente a profundidade em milímetros (isso é obtido pela biópsia e analise histopatológica, como o índice de Breslow); ele não substitui a necessidade de biópsia quando ha suspeita relevante."
+        "rationale": "Incorreta. O dermatoscópio é um exame de superfície que avalia padrões visuais da lesão (como rede pigmentar e glóbulos), não mede diretamente a profundidade em milímetros (isso é obtido pela biópsia e analise histopatológica, como o índice de Breslow); ele não substitui a necessidade de biópsia quando há suspeita relevante."
       },
       {
         "letter": "C",
@@ -6173,12 +6173,12 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Dermatoscópio: avalia rede pigmentar, estrias e glóbulos -- ajuda a diferenciar lesão melanocitica benigna de maligna."
+    "clinicalPointers": "Dermatoscópio: avalia rede pigmentar, estrias e glóbulos -- ajuda a diferenciar lesão melanocítica benigna de maligna."
   },
   {
     "id": 181,
     "code": "LESO-20",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Melanoma disseminativo superficial",
     "difficulty": "Intermediária",
     "prompt": "O subtipo mais comum de melanoma, correspondendo a cerca de 70% dos casos, é caracterizado por crescimento radial lento antes de eventualmente invadir a derme e apresentar metástase mais tardia. Qual o nome desse subtipo?",
@@ -6210,7 +6210,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 182,
     "code": "LESO-21",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Melanoma acral lentiginoso - sinal de Hutchinson",
     "difficulty": "Intermediária",
     "prompt": "Paciente de pele mais escura apresenta uma faixa pigmentada longitudinal em uma unha, com extensão da pigmentação para a cutícula adjacente (achado conhecido como sinal de Hutchinson). Qual subtipo de melanoma deve ser suspeitado nesse caso, e qual sua característica de localização clássica?",
@@ -6228,7 +6228,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Melanoma nodular, tipicamente associado a crescimento lento e localização exclusiva na face, sem relação estabelecida com dano actínico ou fototipo de pele.",
-        "rationale": "Incorreta. O melanoma nodular tem crescimento RÁPIDO (não lento) e não tem localização exclusiva na face; além disso, não e o subtipo classicamente associado ao sinal de Hutchinson em unhas."
+        "rationale": "Incorreta. O melanoma nodular tem crescimento RÁPIDO (não lento) e não tem localização exclusiva na face; além disso, não é o subtipo classicamente associado ao sinal de Hutchinson em unhas."
       },
       {
         "letter": "D",
@@ -6242,7 +6242,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 183,
     "code": "LESO-22",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "ABCDE do melanoma - conceito completo",
     "difficulty": "Intermediária",
     "prompt": "A regra do ABCDE é classicamente utilizada como ferramenta prática de rastreamento para identificar lesões pigmentadas suspeitas de melanoma. O que cada uma das cinco letras dessa regra representa?",
@@ -6274,7 +6274,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 184,
     "code": "LESO-23",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Biópsia excisional - técnica preferida no melanoma",
     "difficulty": "Intermediária",
     "prompt": "Diante da suspeita clínica de um melanoma em uma lesão pigmentada, qual o tipo de biópsia classicamente preferido para confirmação diagnóstica, e com qual margem de segurança?",
@@ -6287,7 +6287,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Biópsia incisional ou por punch, sendo essa a técnica de escolha preferencial, não uma exceção.",
-        "rationale": "Incorreta. A biópsia incisional ou por punch é classicamente descrita como uma EXCEÇÃO (reservada a situações especificas, como lesões muito grandes ou em locais anatômicos delicados), não a técnica de escolha preferencial, que é a biópsia excisional."
+        "rationale": "Incorreta. A biópsia incisional ou por punch é classicamente descrita como uma EXCEÇÃO (reservada a situações específicas, como lesões muito grandes ou em locais anatômicos delicados), não a técnica de escolha preferencial, que é a biópsia excisional."
       },
       {
         "letter": "C",
@@ -6296,7 +6296,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "Biópsia excisional com margens amplas de pelo menos 5cm, ja no primeiro procedimento diagnóstico.",
+        "text": "Biópsia excisional com margens amplas de pelo menos 5cm, já no primeiro procedimento diagnóstico.",
         "rationale": "Incorreta. Margens tão amplas (5cm) não são utilizadas na biópsia inicial diagnóstica; a biópsia excisional inicial usa margens mínimas (1-3mm), sendo a ampliação de margem (conforme o índice de Breslow) definida em um segundo momento, após a confirmação diagnóstica."
       }
     ],
@@ -6306,7 +6306,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 185,
     "code": "LESO-24",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Linfonodo sentinela - critérios de indicação",
     "difficulty": "Intermediária",
     "prompt": "A pesquisa de linfonodo sentinela é uma etapa importante no estadiamento de pacientes com melanoma confirmado. Além do índice de Breslow maior que 1mm, quais outros critérios classicamente reforçam a indicação dessa pesquisa?",
@@ -6338,7 +6338,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 186,
     "code": "LESO-25",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Prevenção do melanoma",
     "difficulty": "Intermediária",
     "prompt": "Segundo os princípios discutidos na aula de lesões cutâneas, qual é classicamente apontada como a principal medida de prevenção para o melanoma e para outras neoplasias cutâneas relacionadas a exposição solar?",
@@ -6356,7 +6356,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "C",
         "text": "Ingestão regular de suplementos vitamínicos específicos, sem qualquer relação com exposição solar.",
-        "rationale": "Incorreta. Não ha essa recomendação específica de suplementação vitamínica como principal medida preventiva; o foco central classicamente descrito é a proteção a exposição solar."
+        "rationale": "Incorreta. Não há essa recomendação específica de suplementação vitamínica como principal medida preventiva; o foco central classicamente descrito é a proteção a exposição solar."
       },
       {
         "letter": "D",
@@ -6370,7 +6370,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 187,
     "code": "LESO-26",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "CBC - a neoplasia cutânea mais comum",
     "difficulty": "Intermediária",
     "prompt": "Entre todos os tumores cutâneos malignos que acometem pessoas de pele clara, o carcinoma basocelular (CBC) é classicamente descrito como o mais frequente. Qual a proporção aproximada que ele representa entre esses tumores?",
@@ -6402,7 +6402,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 188,
     "code": "LESO-27",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Tratamento do CBC avançado - vismodegibe",
     "difficulty": "Intermediária",
     "prompt": "Em casos avançados de carcinoma basocelular, nos quais a excisão cirúrgica ou outras terapias locais não são mais suficientes ou viáveis, qual terapia sistêmica é classicamente citada como opção nesse contexto?",
@@ -6434,7 +6434,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 189,
     "code": "LESO-28",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Tratamento do CEC metastático",
     "difficulty": "Intermediária",
     "prompt": "Em casos de carcinoma espinocelular (CEC) com doença metastática confirmada, além das opções cirúrgicas locais (que deixam de ser suficientes nesse contexto), qual categoria de tratamento sistêmico é classicamente citada como opção?",
@@ -6447,7 +6447,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "Apenas observação clínica, sem qualquer intervenção terapêutica adicional em casos metastáticos.",
-        "rationale": "Incorreta. Diante de doença metastática confirmada, a observação isolada sem qualquer tratamento sistêmico não é a conduta classicamente recomendada; ha opções terapêuticas sistêmicas especificas citadas (imunoterapia/quimioterapia) para esse contexto."
+        "rationale": "Incorreta. Diante de doença metastática confirmada, a observação isolada sem qualquer tratamento sistêmico não é a conduta classicamente recomendada; há opções terapêuticas sistêmicas específicas citadas (imunoterapia/quimioterapia) para esse contexto."
       },
       {
         "letter": "C",
@@ -6466,7 +6466,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 190,
     "code": "LESO-29",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Diferença de margem cirúrgica - alto risco",
     "difficulty": "Intermediária",
     "prompt": "Comparando a margem cirúrgica recomendada para o carcinoma basocelular (CBC) em situação de baixo risco (3-4mm) com a mesma situação para carcinoma espinocelular (CEC, 4-6mm ou mais), qual o princípio geral que explica essa diferença de margem entre os dois tumores?",
@@ -6479,7 +6479,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "B",
         "text": "A diferença de margem é apenas uma convenção arbitrária adotada entre diferentes serviços cirúrgicos, sem relação direta com o comportamento biológico comparativo entre os dois tipos de tumor.",
-        "rationale": "Incorreta. A diferença de margem reflete diretamente o comportamento biológico distinto dos dois tumores (o CEC sendo mais invasivo e com maior potencial de metástase que o CBC), não é uma escolha arbitraria e sem fundamento."
+        "rationale": "Incorreta. A diferença de margem reflete diretamente o comportamento biológico distinto dos dois tumores (o CEC sendo mais invasivo e com maior potencial de metástase que o CBC), não é uma escolha arbitrária e sem fundamento."
       },
       {
         "letter": "C",
@@ -6498,7 +6498,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 191,
     "code": "SEG-19",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Checklist OMS - redução de mortalidade",
     "difficulty": "Intermediária",
     "prompt": "Além da redução de complicações de aproximadamente 11% para 7%, após a implementação do checklist de cirurgia segura da OMS, qual foi a redução aproximada de MORTALIDADE observada nos estudos que fundamentaram essa campanha?",
@@ -6530,10 +6530,10 @@ const QUESTIONS_DATABASE = [
   {
     "id": 192,
     "code": "SEG-20",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Histórico do checklist de cirurgia segura - campanha da OMS",
     "difficulty": "Intermediária",
-    "prompt": "O movimento pela segurança cirúrgica ganhou forca ao longo das décadas, culminando em uma campanha específica lançada pela Organização Mundial da Saúde em 2008. Qual o nome dessa campanha, que impulsionou a adoção ampla do checklist de cirurgia segura?",
+    "prompt": "O movimento pela segurança cirúrgica ganhou força ao longo das décadas, culminando em uma campanha específica lançada pela Organização Mundial da Saúde em 2008. Qual o nome dessa campanha, que impulsionou a adoção ampla do checklist de cirurgia segura?",
     "options": [
       {
         "letter": "A",
@@ -6562,7 +6562,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 193,
     "code": "SEG-21",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "SNG e dreno - uso não rotineiro",
     "difficulty": "Intermediária",
     "prompt": "No contexto do protocolo ERAS/ACERTO e das boas práticas de cirurgia segura, qual a recomendação clássica quanto ao uso rotineiro de sonda nasogástrica (SNG) e de drenos abdominais após uma laparotomia não complicada?",
@@ -6570,12 +6570,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "SNG e dreno devem ser utilizados de rotina em toda laparotomia, independentemente da evolução clínica esperada.",
-        "rationale": "Incorreta. Essa e justamente a prática antiga que as diretrizes atuais buscam evitar; a recomendação clássica e que SNG e dreno NÃO sejam utilizados de rotina, reservando-os para indicações especificas."
+        "rationale": "Incorreta. Essa é justamente a prática antiga que as diretrizes atuais buscam evitar; a recomendação clássica e que SNG e dreno NÃO sejam utilizados de rotina, reservando-os para indicações específicas."
       },
       {
         "letter": "B",
         "text": "SNG e dreno não devem ser utilizados de rotina; a indicação deve ser individualizada, conforme a situação clínica específica de cada caso.",
-        "rationale": "CORRETA. Alinhado aos princípios do protocolo ERAS/ACERTO, a recomendação clássica e que a sondagem nasogástrica e a drenagem abdominal NÃO sejam utilizadas de forma rotineira após laparotomias não complicadas, mas sim de forma individualizada, reservadas para situações clínicas especificas que realmente justifiquem seu uso."
+        "rationale": "CORRETA. Alinhado aos princípios do protocolo ERAS/ACERTO, a recomendação clássica e que a sondagem nasogástrica e a drenagem abdominal NÃO sejam utilizadas de forma rotineira após laparotomias não complicadas, mas sim de forma individualizada, reservadas para situações clínicas específicas que realmente justifiquem seu uso."
       },
       {
         "letter": "C",
@@ -6594,15 +6594,15 @@ const QUESTIONS_DATABASE = [
   {
     "id": 194,
     "code": "SEG-22",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Analgesia multimodal - por que evitar opioide como base",
     "difficulty": "Intermediária",
-    "prompt": "No manejo da dor pós-operatória dentro dos princípios de cirurgia segura e recuperação acelerada, prefere-se a analgesia multimodal (combinando diferentes classes de analgésicos) em vez de basear o controle da dor predominantemente em opioides. Qual a razão clássica para essa preferencia?",
+    "prompt": "No manejo da dor pós-operatória dentro dos princípios de cirurgia segura e recuperação acelerada, prefere-se a analgesia multimodal (combinando diferentes classes de analgésicos) em vez de basear o controle da dor predominantemente em opioides. Qual a razão clássica para essa preferência?",
     "options": [
       {
         "letter": "A",
         "text": "Opioides como base da analgesia estão associados a efeitos colaterais indesejados, como íleo, náusea e sedação excessiva, que podem atrasar a recuperação pós-operatória.",
-        "rationale": "CORRETA. A analgesia multimodal é preferida porque opioides utilizados como base principal do controle da dor estão classicamente associados a efeitos colaterais indesejados, como íleo paralitico, náusea e sedação excessiva, todos capazes de atrasar a recuperação pós-operatória esperada dentro dos princípios de protocolos como o ERAS/ACERTO."
+        "rationale": "CORRETA. A analgesia multimodal é preferida porque opioides utilizados como base principal do controle da dor estão classicamente associados a efeitos colaterais indesejados, como íleo paralítico, náusea e sedação excessiva, todos capazes de atrasar a recuperação pós-operatória esperada dentro dos princípios de protocolos como o ERAS/ACERTO."
       },
       {
         "letter": "B",
@@ -6611,13 +6611,13 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "C",
-        "text": "Opioides são mais caros que outras classes de analgésicos, sendo essa a única razão para a preferencia pela analgesia multimodal, em vez de refletir alguma diferença real de eficácia clínica entre as classes.",
+        "text": "Opioides são mais caros que outras classes de analgésicos, sendo essa a única razão para a preferência pela analgesia multimodal, em vez de refletir alguma diferença real de eficácia clínica entre as classes.",
         "rationale": "Incorreta. A razão central classicamente discutida não é o custo, e sim os efeitos colaterais indesejados dos opioides (íleo, náusea, sedação) quando utilizados como base principal da analgesia, o que pode atrasar a recuperação."
       },
       {
         "letter": "D",
         "text": "A analgesia multimodal é preferida apenas por tradição histórica, sem qualquer justificativa fisiológica real.",
-        "rationale": "Incorreta. Ha, sim, justificativa fisiológica clara e bem documentada: os efeitos colaterais dos opioides (íleo, náusea, sedação) quando usados como base da analgesia, o que motiva a preferencia pela combinação multimodal."
+        "rationale": "Incorreta. Há, sim, justificativa fisiológica clara e bem documentada: os efeitos colaterais dos opioides (íleo, náusea, sedação) quando usados como base da analgesia, o que motiva a preferência pela combinação multimodal."
       }
     ],
     "correctLetter": "A",
@@ -6626,14 +6626,14 @@ const QUESTIONS_DATABASE = [
   {
     "id": 195,
     "code": "SEG-23",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Marcação do sítio cirúrgico - paciente acordado",
     "difficulty": "Intermediária",
-    "prompt": "Antes da cirurgia, a marcação do sítio cirúrgico (por exemplo, indicando qual membro ou lado do corpo sera operado) é uma medida de segurança essencial para prevenir cirurgia em local errado. Segundo os princípios de cirurgia segura, em qual momento e com qual participação do paciente essa marcação deve ser idealmente realizada?",
+    "prompt": "Antes da cirurgia, a marcação do sítio cirúrgico (por exemplo, indicando qual membro ou lado do corpo será operado) é uma medida de segurança essencial para prevenir cirurgia em local errado. Segundo os princípios de cirurgia segura, em qual momento e com qual participação do paciente essa marcação deve ser idealmente realizada?",
     "options": [
       {
         "letter": "A",
-        "text": "Após a indução anestésica, quando o paciente ja está sedado, para evitar desconforto ao paciente durante o processo de marcação.",
+        "text": "Após a indução anestésica, quando o paciente já está sedado, para evitar desconforto ao paciente durante o processo de marcação.",
         "rationale": "Incorreta. Pelo contrário, a recomendação clássica e que a marcação seja feita com o paciente AINDA ACORDADO, justamente para que ele possa participar e confirmar o local correto, algo que não seria possível após a indução anestésica."
       },
       {
@@ -6658,20 +6658,20 @@ const QUESTIONS_DATABASE = [
   {
     "id": 196,
     "code": "SEG-24",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Time out - revisão do cirurgião",
     "difficulty": "Intermediária",
     "prompt": "Durante a etapa do time out (antes da incisão), a equipe realiza uma revisão específica com cada membro, incluindo perguntas direcionadas ao cirurgião sobre o próprio procedimento a ser realizado. Quais aspectos essa revisão do cirurgião classicamente contempla?",
     "options": [
       {
         "letter": "A",
-        "text": "Quais os passos críticos da cirurgia, qual a duração estimada do procedimento, e se ha previsão de perdas sanguíneas relevantes.",
-        "rationale": "CORRETA. A revisão do cirurgião durante o time out classicamente contempla a antecipação de eventos críticos, incluindo: quais são os passos críticos esperados da cirurgia, qual a duração estimada do procedimento, e se ha previsão de perdas sanguíneas relevantes, permitindo que toda a equipe esteja preparada para essas eventualidades."
+        "text": "Quais os passos críticos da cirurgia, qual a duração estimada do procedimento, e se há previsão de perdas sanguíneas relevantes.",
+        "rationale": "CORRETA. A revisão do cirurgião durante o time out classicamente contempla a antecipação de eventos críticos, incluindo: quais são os passos críticos esperados da cirurgia, qual a duração estimada do procedimento, e se há previsão de perdas sanguíneas relevantes, permitindo que toda a equipe esteja preparada para essas eventualidades."
       },
       {
         "letter": "B",
         "text": "Apenas o nome completo do cirurgião, sem qualquer pergunta relacionada ao procedimento em si.",
-        "rationale": "Incorreta. A revisão do cirurgião no time out vai além da simples identificação; ela contempla perguntas especificas sobre os passos críticos, duração estimada e previsão de perdas sanguíneas do procedimento a ser realizado."
+        "rationale": "Incorreta. A revisão do cirurgião no time out vai além da simples identificação; ela contempla perguntas específicas sobre os passos críticos, duração estimada e previsão de perdas sanguíneas do procedimento a ser realizado."
       },
       {
         "letter": "C",
@@ -6690,20 +6690,20 @@ const QUESTIONS_DATABASE = [
   {
     "id": 197,
     "code": "SEG-25",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Time out - revisão do anestesista e da enfermagem",
     "difficulty": "Intermediária",
-    "prompt": "Ainda durante o time out, além da revisão específica com o cirurgião, a equipe também realiza revisões direcionadas ao anestesista e a enfermagem. O que essas revisões especificas classicamente contemplam?",
+    "prompt": "Ainda durante o time out, além da revisão específica com o cirurgião, a equipe também realiza revisões direcionadas ao anestesista e a enfermagem. O que essas revisões específicas classicamente contemplam?",
     "options": [
       {
         "letter": "A",
         "text": "Com o anestesista, pergunta-se sobre alguma preocupação especial em relação ao paciente; com a enfermagem, pergunta-se sobre a correta esterilização do instrumental cirúrgico e eventuais preocupações com os equipamentos.",
-        "rationale": "CORRETA. Durante o time out, a revisão com o ANESTESISTA classicamente pergunta sobre alguma preocupação especial em relação ao paciente daquele caso específico; ja a revisão com a ENFERMAGEM pergunta sobre a correta esterilização do instrumental cirúrgico e eventuais preocupações relacionadas aos equipamentos disponíveis para o procedimento."
+        "rationale": "CORRETA. Durante o time out, a revisão com o ANESTESISTA classicamente pergunta sobre alguma preocupação especial em relação ao paciente daquele caso específico; já a revisão com a ENFERMAGEM pergunta sobre a correta esterilização do instrumental cirúrgico e eventuais preocupações relacionadas aos equipamentos disponíveis para o procedimento."
       },
       {
         "letter": "B",
-        "text": "Com o anestesista, pergunta-se sobre a esterilização do instrumental; com a enfermagem, pergunta-se sobre preocupações especificas do paciente, uma inversão dos papéis reais.",
-        "rationale": "Incorreta. Essa descrição inverte os papéis: a pergunta sobre esterilização do instrumental é feita a ENFERMAGEM, e a pergunta sobre preocupações especificas do paciente é feita ao ANESTESISTA, não o contrário."
+        "text": "Com o anestesista, pergunta-se sobre a esterilização do instrumental; com a enfermagem, pergunta-se sobre preocupações específicas do paciente, uma inversão dos papéis reais.",
+        "rationale": "Incorreta. Essa descrição inverte os papéis: a pergunta sobre esterilização do instrumental é feita a ENFERMAGEM, e a pergunta sobre preocupações específicas do paciente é feita ao ANESTESISTA, não o contrário."
       },
       {
         "letter": "C",
@@ -6712,8 +6712,8 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "Essas revisões especificas com anestesista e enfermagem não fazem parte do time out, sendo realizadas apenas no sign out, ao final da cirurgia.",
-        "rationale": "Incorreta. Essas revisões especificas com anestesista e enfermagem fazem parte classicamente do TIME OUT (antes da incisão), não do sign out (ao final da cirurgia), que tem outro foco (contagem de compressas/instrumentais e recomendações pós-operatórias)."
+        "text": "Essas revisões específicas com anestesista e enfermagem não fazem parte do time out, sendo realizadas apenas no sign out, ao final da cirurgia.",
+        "rationale": "Incorreta. Essas revisões específicas com anestesista e enfermagem fazem parte classicamente do TIME OUT (antes da incisão), não do sign out (ao final da cirurgia), que tem outro foco (contagem de compressas/instrumentais e recomendações pós-operatórias)."
       }
     ],
     "correctLetter": "A",
@@ -6722,7 +6722,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 198,
     "code": "SEG-26",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Autonomia do paciente como variável de segurança",
     "difficulty": "Intermediária",
     "prompt": "Entre as variáveis que sustentam a segurança do paciente no processo cirúrgico, a autonomia do paciente é destacada como um aspecto relevante. O que essa variável representa, na prática, dentro do cuidado cirúrgico seguro?",
@@ -6734,7 +6734,7 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "B",
-        "text": "O paciente deve ser mantido majoritariamente alheio as decisões clínicas, cabendo principalmente a equipe medica decidir o cuidado sem grande participação dele.",
+        "text": "O paciente deve ser mantido majoritariamente alheio as decisões clínicas, cabendo principalmente à equipe médica decidir o cuidado sem grande participação dele.",
         "rationale": "Incorreta. Pelo contrário, a autonomia do paciente como variável de segurança implica justamente o OPOSTO: a participação ativa do paciente nas decisões e confirmações relacionadas ao seu próprio cuidado, não sua exclusão completa do processo decisório."
       },
       {
@@ -6744,17 +6744,17 @@ const QUESTIONS_DATABASE = [
       },
       {
         "letter": "D",
-        "text": "Essa variável não tem qualquer relação real com a segurança do processo cirúrgico, sendo apenas uma formalidade ética sem impacto pratico.",
-        "rationale": "Incorreta. A autonomia do paciente é classicamente descrita como uma das variáveis que efetivamente sustentam a segurança do processo cirúrgico, não uma formalidade sem impacto pratico real."
+        "text": "Essa variável não tem qualquer relação real com a segurança do processo cirúrgico, sendo apenas uma formalidade ética sem impacto prático.",
+        "rationale": "Incorreta. A autonomia do paciente é classicamente descrita como uma das variáveis que efetivamente sustentam a segurança do processo cirúrgico, não uma formalidade sem impacto prático real."
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "Autonomia do paciente: participar, confirmar informações e consentir de forma esclarecida -- não ser so espectador."
+    "clinicalPointers": "Autonomia do paciente: participar, confirmar informações e consentir de forma esclarecida -- não ser só espectador."
   },
   {
     "id": 199,
     "code": "SEG-27",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Profissionalismo como variável de segurança",
     "difficulty": "Intermediária",
     "prompt": "Uma das variáveis discutidas como sustentáculo da segurança do paciente e o profissionalismo, descrito de forma resumida como 'fazer certo quando ninguém está olhando'. O que essa ideia busca transmitir, dentro do contexto de cirurgia segura?",
@@ -6762,12 +6762,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Que a adesão a boas práticas de segurança (como checklist, técnica asséptica correta, entre outras) deve ser consistente e genuína, independentemente de supervisão externa ou de estar sendo observado por auditores ou superiores.",
-        "rationale": "CORRETA. A ideia de profissionalismo como 'fazer certo quando ninguém está olhando' busca transmitir que a adesão as boas práticas de segurança cirúrgica deve ser uma conduta CONSISTENTE e genuína da equipe, praticada de forma integral mesmo quando não ha supervisão externa direta, auditoria ou observação por superiores, refletindo um compromisso interno com a segurança do paciente, não apenas cumprimento de formalidades sob fiscalização."
+        "rationale": "CORRETA. A ideia de profissionalismo como 'fazer certo quando ninguém está olhando' busca transmitir que a adesão as boas práticas de segurança cirúrgica deve ser uma conduta CONSISTENTE e genuína da equipe, praticada de forma integral mesmo quando não há supervisão externa direta, auditoria ou observação por superiores, refletindo um compromisso interno com a segurança do paciente, não apenas cumprimento de formalidades sob fiscalização."
       },
       {
         "letter": "B",
-        "text": "Que as boas práticas de segurança so precisam ser seguidas quando ha auditoria ou supervisão presente, refletindo apenas uma questão de conveniência operacional da equipe.",
-        "rationale": "Incorreta. Essa interpretação e exatamente o OPOSTO da ideia transmitida pelo conceito; o profissionalismo, nesse contexto, significa justamente manter a adesão as boas práticas mesmo SEM supervisão ou auditoria presente, não flexibiliza-las na ausência de fiscalização."
+        "text": "Que as boas práticas de segurança só precisam ser seguidas quando há auditoria ou supervisão presente, refletindo apenas uma questão de conveniência operacional da equipe.",
+        "rationale": "Incorreta. Essa interpretação é exatamente o OPOSTO da ideia transmitida pelo conceito; o profissionalismo, nesse contexto, significa justamente manter a adesão as boas práticas mesmo SEM supervisão ou auditoria presente, não flexibiliza-las na ausência de fiscalização."
       },
       {
         "letter": "C",
@@ -6777,7 +6777,7 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "D",
         "text": "Essa variável não teria relação real com desfechos clínicos, sendo apenas um conceito filosófico abstrato sem qualquer aplicação prática validada na literatura.",
-        "rationale": "Incorreta. Pelo contrário, o profissionalismo é classicamente descrito como uma das variáveis concretas que sustentam a segurança real do paciente, com impacto pratico nos desfechos, não apenas um conceito filosófico abstrato."
+        "rationale": "Incorreta. Pelo contrário, o profissionalismo é classicamente descrito como uma das variáveis concretas que sustentam a segurança real do paciente, com impacto prático nos desfechos, não apenas um conceito filosófico abstrato."
       }
     ],
     "correctLetter": "A",
@@ -6786,7 +6786,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 200,
     "code": "SEG-28",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Educação continuada como variável de segurança",
     "difficulty": "Intermediária",
     "prompt": "Entre as variáveis que sustentam a segurança do processo cirúrgico, a educação continuada é destacada como um aspecto relevante, envolvendo a revisão periódica de protocolos e o treinamento constante da equipe. Por que essa variável é considerada importante para a segurança cirúrgica ao longo do tempo?",
@@ -6794,12 +6794,12 @@ const QUESTIONS_DATABASE = [
       {
         "letter": "A",
         "text": "Porque protocolos, evidências científicas e boas práticas evoluem continuamente, é uma equipe que não se atualiza regularmente corre o risco de manter condutas ultrapassadas ou menos seguras, mesmo sem perceber.",
-        "rationale": "CORRETA. A educação continuada é considerada importante porque protocolos, evidências científicas e boas práticas de segurança cirúrgica estão em constante evolução; sem revisão periódica e treinamento contínuo da equipe, ha risco real de manter condutas desatualizadas ou menos seguras ao longo do tempo, mesmo sem que a própria equipe perceba essa defasagem."
+        "rationale": "CORRETA. A educação continuada é considerada importante porque protocolos, evidências científicas e boas práticas de segurança cirúrgica estão em constante evolução; sem revisão periódica e treinamento contínuo da equipe, há risco real de manter condutas desatualizadas ou menos seguras ao longo do tempo, mesmo sem que a própria equipe perceba essa defasagem."
       },
       {
         "letter": "B",
-        "text": "Porque, uma vez que a equipe é treinada corretamente uma única vez, não ha necessidade de qualquer atualização futura, independentemente do tempo decorrido.",
-        "rationale": "Incorreta. Essa afirmação contraria diretamente o próprio conceito de educação CONTINUADA, que pressupõe justamente a necessidade de atualização regular e continua, não um treinamento único e definitivo sem necessidade de revisão futura."
+        "text": "Porque, uma vez que a equipe é treinada corretamente uma única vez, não há necessidade de qualquer atualização futura, independentemente do tempo decorrido.",
+        "rationale": "Incorreta. Essa afirmação contraria diretamente o próprio conceito de educação CONTINUADA, que pressupõe justamente a necessidade de atualização regular e contínua, não um treinamento único e definitivo sem necessidade de revisão futura."
       },
       {
         "letter": "C",
@@ -6818,7 +6818,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 201,
     "code": "EXT-PERI-01",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Jejum pré-operatório (ERAS/ACERTO)",
     "difficulty": "Intermediária",
     "prompt": "(Revalida 2026/1) Homem, 38 anos, avaliado como risco anestésico ASA II, será submetido a colecistectomia videolaparoscópica eletiva, programada para iniciar às 16h. Segundo o Projeto ACERTO e as recomendações da ERAS Society, qual conduta deve ser adotada quanto ao jejum pré-operatório?",
@@ -6850,7 +6850,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 202,
     "code": "EXT-PERI-02",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Íleo pós-operatório x obstrução mecânica",
     "difficulty": "Avançada",
     "prompt": "(ENAMED 2026) Homem, 58 anos, no 2º dia de pós-operatório de hemicolectomia esquerda por neoplasia de cólon, apresenta distensão abdominal progressiva, náuseas e vômitos ocasionais, sem eliminação de flatos ou fezes desde a cirurgia. Está em bom estado geral, afebril, hemodinamicamente estável. Abdome globoso, timpânico, indolor, sem sinais de peritonite; ruídos hidroaéreos diminuídos. Radiografia de abdome mostra distensão difusa de alças de delgado e cólon, SEM níveis hidroaéreos. A conduta recomendada nesse momento é:",
@@ -6882,7 +6882,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 203,
     "code": "EXT-PERI-03",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Febre pós-operatória - fonte pulmonar",
     "difficulty": "Avançada",
     "prompt": "(Revalida 2022/2) Homem, 75 anos, diabético (metformina) e tabagista, no 4º dia de pós-operatório de colecistectomia videolaparoscópica (alta no 2º dia, evoluindo bem), é levado à urgência por confusão mental de início recente. Ao exame: Glasgow 14, temperatura 38,6°C, pulso 120 bpm, FR 26 irpm, SatO2 93% com cateter nasal, crepitações em base pulmonar direita, PA 96x60 mmHg, abdome indolor com ferida cirúrgica em bom estado, sem secreção purulenta. Qual a conduta adequada?",
@@ -6914,7 +6914,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 204,
     "code": "EXT-PERI-04",
-    "category": "Perioperatorio",
+    "category": "Perioperatório",
     "subcategory": "Febre pós-operatória - foco intra-abdominal",
     "difficulty": "Avançada",
     "prompt": "(Revalida 2023/2) Homem, 53 anos, submetido a laparotomia de emergência por diverticulite perfurada (sigmoidectomia + colostomia a Hartmann) há 7 dias. Desde o 2º dia de pós-operatório, apresenta febre intermitente de até 39°C e distensão abdominal persistente, sem conseguir se alimentar. Ao exame: febre 38,9°C, FC 114, FR 22, PA 110x70, abdome distendido, hipertimpânico, doloroso à palpação profunda difusa, ferida operatória limpa e seca sem sinais flogísticos, colostomia com bom aspecto. Em uso de ciprofloxacino e metronidazol IV. Leucócitos 21.500 com 4% de bastões. Qual o diagnóstico mais provável e a investigação mais adequada?",
@@ -7202,7 +7202,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 214,
     "code": "EXT-LESO-01",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Melanoma acral (localização plantar)",
     "difficulty": "Intermediária",
     "prompt": "(Revalida 2025/2) Paciente de 58 anos, trabalhador rural, procura o ambulatório de dermatologia com queixa de sangramento frequente em lesão pruriginosa na região plantar direita há 30 dias. Ao exame, nota-se lesão com bordas irregulares, hipercrômica (tons de preto, castanho e cinza), medindo 12 mm no maior diâmetro. Qual a principal hipótese diagnóstica?",
@@ -7234,7 +7234,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 215,
     "code": "EXT-LESO-02",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "Lesão facial pigmentada de crescimento recente",
     "difficulty": "Intermediária",
     "prompt": "(Revalida 2023/2) Homem, 58 anos, trabalhador da construção civil, procura o ambulatório com história de lesão na face há aproximadamente 4 anos, com crescimento nos últimos 2 meses. Nega outras lesões cutâneas ou comorbidades. Ao exame, a lesão é descrita como enegrecida/heterogênea, de bordas irregulares e levemente assimétrica, na região frontal. Qual a hipótese diagnóstica mais provável?",
@@ -7266,7 +7266,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 216,
     "code": "EXT-LESO-03",
-    "category": "LesoesCutaneas",
+    "category": "Lesões Cutâneas",
     "subcategory": "ABCDE do melanoma - lesão de antebraço",
     "difficulty": "Intermediária",
     "prompt": "(Revalida 2025/1) Mulher branca, 47 anos, procura a unidade básica de saúde queixando-se de lesão escurecida, assimétrica e de bordas irregulares em antebraço esquerdo. Relata que, nas últimas quatro semanas, a lesão tem aumentado de tamanho e se tornado pruriginosa, com episódio de pequeno sangramento local. Qual a principal hipótese diagnóstica?",
@@ -7298,7 +7298,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 217,
     "code": "EXT-SEG-01",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "Checklist de cirurgia segura - etapa de identificação (Sign In)",
     "difficulty": "Intermediária",
     "prompt": "(Revalida 2023/2) Paciente de 48 anos, com fratura de fêmur fechada há 12 horas, estável, sem comorbidades, será submetido à fixação definitiva da fratura. Antes da indução anestésica, a equipe realiza a etapa de identificação do checklist de cirurgia segura. O que deve ser verificado pela equipe nessa etapa, visando à segurança do paciente?",
@@ -7330,7 +7330,7 @@ const QUESTIONS_DATABASE = [
   {
     "id": 218,
     "code": "EXT-SEG-02",
-    "category": "CirurgiaSegura",
+    "category": "Cirurgia Segura",
     "subcategory": "ERAS/ACERTO - alimentação pós-operatória precoce",
     "difficulty": "Intermediária",
     "prompt": "(Revalida 2025/1) Mulher, 45 anos, sem comorbidades, submetida a colecistectomia videolaparoscópica eletiva, sem complicações, durando cerca de 40 minutos. No pós-operatório imediato, está hemodinamicamente estável, sem náusea, com dor abdominal leve. De acordo com os protocolos ERAS e ACERTO, qual a conduta adequada quanto à alimentação dessa paciente?",
@@ -8851,7 +8851,7 @@ function renderReview() {
           ${q.marked ? `<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">🏳️ Marcada</span>` : ""}
           ${badge}
         </div>
-        <p class="font-medium mb-3">${qi + 1}. ${renderHighlightedText(q.prompt, q.highlights)}</p>
+        <p class="font-medium mb-3" style="white-space: pre-line">${qi + 1}. ${renderHighlightedText(q.prompt, q.highlights)}</p>
         <div class="space-y-2 mb-3">${optionsHtml}</div>
         <div class="rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-100 dark:border-amber-800 p-2.5 text-xs text-amber-700 dark:text-amber-300">
           💡 ${escapeHtml(q.clinicalPointers)}
