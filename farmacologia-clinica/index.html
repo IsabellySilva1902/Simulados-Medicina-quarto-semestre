@@ -958,7 +958,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Prova anterior - Alternativa aos bisfosfonatos em paciente com úlcera péptica",
     "origem": "prova_antiga",
     "difficulty": "Intermediária",
-    "prompt": "Um paciente idoso com osteoporose e histórico de úlcera péptica foi recomendado a usar bisfosfonatos. No entanto, o médico está preocupado com os possíveis efeitos gastrointestinais adversos desses medicamentos. Qual das seguintes opções e uma alternativa aos bisfosfonatos que pode ser considerada para esse paciente, levando em conta a sua condição pré-existente?",
+    "prompt": "Um paciente idoso com osteoporose e histórico de úlcera péptica foi recomendado a usar bisfosfonatos. No entanto, o médico está preocupado com os possíveis efeitos gastrointestinais adversos desses medicamentos. Qual das seguintes opções é uma alternativa aos bisfosfonatos que pode ser considerada para esse paciente, levando em conta a sua condição pré-existente?",
     "options": [
       {
         "letter": "A",
@@ -2080,7 +2080,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Escolha terapêutica racional em úlcera duodenal não complicada por AINE",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Um paciente com úlcera duodenal não complicada, sem sangramento ativo, associada ao uso crônico de AINE, precisa iniciar tratamento para promover a cicatrização da lesão, além da retirada do fator etiológico. Qual classe farmacológica, e a base desse tratamento, independentemente da causa específica da úlcera?",
+    "prompt": "Um paciente com úlcera duodenal não complicada, sem sangramento ativo, associada ao uso crônico de AINE, precisa iniciar tratamento para promover a cicatrização da lesão, além da retirada do fator etiológico. Qual classe farmacológica é a base desse tratamento, independentemente da causa específica da úlcera?",
     "options": [
       {
         "letter": "A",
@@ -2216,7 +2216,7 @@ const QUESTIONS_DATABASE = [
     "options": [
       {
         "letter": "A",
-        "text": "O omeprazol foi escolhido por promover inibição mais acentuada da secreção ácida que o antagonista H2, adequada a um quadro de DRGE moderada, enquanto o antagonista H2 e mais indicado para esofagite não erosiva de menor intensidade.",
+        "text": "O omeprazol foi escolhido por promover inibição mais acentuada da secreção ácida que o antagonista H2, adequada a um quadro de DRGE moderada, enquanto o antagonista H2 é mais indicado para esofagite não erosiva de menor intensidade.",
         "rationale": "CORRETA. A potência de ação difere entre IBP e antagonista H2: o IBP relaciona-se a inibição mais acentuada da secreção ácida, coerente com quadros de maior intensidade, e o antagonista H2, a esofagite não erosiva de menor gravidade."
       },
       {
@@ -2236,7 +2236,7 @@ const QUESTIONS_DATABASE = [
       }
     ],
     "correctLetter": "A",
-    "clinicalPointers": "O IBP promove inibição mais acentuada da secreção ácida, adequada a quadros moderados a intensos de DRGE, enquanto o antagonista H2 e mais indicado para esofagite não erosiva de menor gravidade."
+    "clinicalPointers": "O IBP promove inibição mais acentuada da secreção ácida, adequada a quadros moderados a intensos de DRGE, enquanto o antagonista H2 é mais indicado para esofagite não erosiva de menor gravidade."
   },
   {
     "id": 56,
@@ -2311,7 +2311,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Efeitos extradigestivos comparados entre IBP e antiácido de alumínio",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Um paciente em uso crônico de IBP para DRGE e outro em uso frequente de antiácido a base de hidróxido de alumínio para dispepsia apresentam queixas digestivas diferentes ao longo do tempo, o primeiro com diarreia ocasional e o segundo com constipação. Considerando os perfis farmacológicos gerais dessas classes discutidos, qual alternativa e mais coerente?",
+    "prompt": "Um paciente em uso crônico de IBP para DRGE e outro em uso frequente de antiácido a base de hidróxido de alumínio para dispepsia apresentam queixas digestivas diferentes ao longo do tempo, o primeiro com diarreia ocasional e o segundo com constipação. Considerando os perfis farmacológicos gerais dessas classes discutidos, qual alternativa é mais coerente?",
     "options": [
       {
         "letter": "A",
@@ -3697,7 +3697,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Vantagem parcial dos coxibes e limitação cardiovascular",
     "origem": "nova",
     "difficulty": "Intermediária",
-    "prompt": "Um pesquisador compara um AINE não seletivo com um inibidor seletivo da COX-2, observando menor agressão gastrointestinal com o segundo, mas destaca que essa vantagem não elimina todos os riscos sistêmicos. Qual interpretação e mais adequada?",
+    "prompt": "Um pesquisador compara um AINE não seletivo com um inibidor seletivo da COX-2, observando menor agressão gastrointestinal com o segundo, mas destaca que essa vantagem não elimina todos os riscos sistêmicos. Qual interpretação é mais adequada?",
     "options": [
       {
         "letter": "A",
@@ -4720,7 +4720,7 @@ const QUESTIONS_DATABASE = [
     "subcategory": "Bloqueio H1 competitivo e reversível e sua interação com a intensidade da exposição ao alérgeno",
     "origem": "nova",
     "difficulty": "Avançada",
-    "prompt": "Em um experimento, a mesma dose de um anti-histamínico H1 e administrada em situações de baixa e alta exposição a um alérgeno. Na exposição intensa, observa-se maior dificuldade de controle dos sintomas. Qual interpretação farmacológica e clínica e mais adequada?",
+    "prompt": "Em um experimento, a mesma dose de um anti-histamínico H1 e administrada em situações de baixa e alta exposição a um alérgeno. Na exposição intensa, observa-se maior dificuldade de controle dos sintomas. Qual interpretação farmacológica e clínica é mais adequada?",
     "options": [
       {
         "letter": "A",
@@ -7944,11 +7944,40 @@ function sampleBalanced(pool, subjects, n, rng, seenIds, respectAntiRepeat) {
   return selected.slice(0, n);
 }
 
+// Atualiza uma tentativa salva com o texto atual do banco (correcoes feitas depois
+// que o simulado comecou). Alternativas sao localizadas pela letra original ou,
+// em tentativas antigas, pelo texto sem acentos. Grifos do enunciado so sao
+// descartados se o enunciado mudou (as posicoes deixariam de bater).
+function refreshAttemptFromBank(attempt) {
+  if (!attempt || !Array.isArray(attempt.questions)) return;
+  const fold = (t) => String(t || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/\s+/g, " ").trim();
+  attempt.questions.forEach((q) => {
+    const src = QUESTIONS_DATABASE.find((x) => x.code === q.code);
+    if (!src) return;
+    if (src.prompt !== q.prompt) {
+      q.prompt = src.prompt;
+      q.highlights = [];
+    }
+    q.clinicalPointers = src.clinicalPointers;
+    q.category = src.category;
+    q.subcategory = src.subcategory;
+    (q.options || []).forEach((o) => {
+      let so = o.letter ? src.options.find((x) => x.letter === o.letter) : null;
+      if (!so) so = src.options.find((x) => fold(x.text) === fold(o.text));
+      if (!so) return;
+      o.letter = so.letter;
+      o.text = so.text;
+      o.rationale = so.rationale;
+    });
+  });
+}
+
 function buildSessionQuestions(questions, rng) {
   return questions.map((q) => {
     const opts = q.options.map((o) => ({
       text: o.text,
       rationale: o.rationale,
+      letter: o.letter,
       isCorrect: o.letter === q.correctLetter,
     }));
     shuffleInPlace(opts, rng);
@@ -8958,6 +8987,7 @@ function init() {
     const saved = lsGet(LS_KEYS.current, null);
     if (!saved) return;
     App.attempt = saved;
+    refreshAttemptFromBank(App.attempt);
     normalizeAttemptQuestions(App.attempt);
     App.timerQuestionIndex = null;
     App.questionStartTs = null;
