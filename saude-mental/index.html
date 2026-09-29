@@ -239,6 +239,7 @@
           <div id="quiz-progress-bar" class="h-full bg-brand-500 transition-all" style="width:0%"></div>
         </div>
       </div>
+      <span id="quiz-timer" class="text-sm font-mono font-medium text-slate-600 dark:text-slate-300 whitespace-nowrap" title="Tempo total do simulado (pausa quando a aba não está visível)">⏱ 00:00</span>
       <span id="quiz-progress-label" class="text-sm text-slate-500 dark:text-slate-400 whitespace-nowrap">0 / 0</span>
     </div>
 
@@ -305,6 +306,11 @@
     <div class="rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 sm:p-6 mb-6">
       <h3 class="font-semibold mb-3">Desempenho por assunto</h3>
       <div id="result-by-subject" class="space-y-3"></div>
+    </div>
+
+    <div class="rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 sm:p-6 mb-6">
+      <h3 class="font-semibold mb-3">Tempo por questão</h3>
+      <div id="result-by-question-time" class="max-h-80 overflow-y-auto pr-1"></div>
     </div>
 
     <div class="grid sm:grid-cols-2 gap-3 mb-6">
@@ -397,7 +403,7 @@
       </div>
       <div>
         <p class="font-medium text-slate-800 dark:text-slate-100">🎯 Depois do simulado</p>
-        <p>As questões que você errar voltam sozinhas nos próximos simulados, em intervalos cada vez maiores (revisão espaçada, como no Anki; aparecem com o selo 🔁 revisão). A seção "Pontos fracos", na página inicial, guarda as questões que você errou — use-a para revisar só o que precisa. Veja também a dica de "caderno de erros" logo no topo da página.</p>
+        <p>As questões que você errar voltam sozinhas nos próximos simulados, em intervalos cada vez maiores (revisão espaçada, como no Anki; aparecem com o selo 🔁 revisão). Questões que você acerta, mas levando bem mais tempo que o seu ritmo normal para aquele tipo de questão, também entram na revisão. A seção "Pontos fracos", na página inicial, guarda as questões que você errou — use-a para revisar só o que precisa. Veja também a dica de "caderno de erros" logo no topo da página.</p>
       </div>
       <div>
         <p class="font-medium text-slate-800 dark:text-slate-100">👥 Código de sessão (opcional)</p>
@@ -7606,7 +7612,94 @@ const App = {
   lastGraded: null,    // resultado calculado da ultima tentativa (para revisao)
   reviewFilter: "all",
   autosaveTimer: null,
+  timerQuestionIndex: null, // indice da questao cujo cronometro esta acumulando
+  questionStartTs: null,    // performance.now() do inicio do trecho ativo atual (null = pausado)
+  clockTickInterval: null,  // setInterval do relogio visivel no topo do quiz
 };
+
+/* =========================================================================
+   3b. CRONOMETRO (tempo ativo total e por questao)
+   ========================================================================= */
+function formatClock(ms) {
+  const totalSec = Math.max(0, Math.floor(ms / 1000));
+  const h = Math.floor(totalSec / 3600);
+  const m = Math.floor((totalSec % 3600) / 60);
+  const s = totalSec % 60;
+  const mm = String(m).padStart(2, "0");
+  const ss = String(s).padStart(2, "0");
+  return h > 0 ? `${h}:${mm}:${ss}` : `${mm}:${ss}`;
+}
+
+function normalizeAttemptQuestions(attempt) {
+  attempt.questions.forEach((q) => {
+    if (!q.highlights) q.highlights = [];
+    if (typeof q.timeMs !== "number") q.timeMs = 0;
+  });
+}
+
+// Soma o trecho ativo em curso (desde o ultimo resumeTimer) ao tempo acumulado
+// da questao correspondente, sem parar o cronometro (usado pelo autosave/relogio).
+function syncActiveTime() {
+  if (App.questionStartTs === null || !App.attempt) return;
+  const now = performance.now();
+  const q = App.attempt.questions[App.timerQuestionIndex];
+  if (q) q.timeMs = (q.timeMs || 0) + (now - App.questionStartTs);
+  App.questionStartTs = now;
+}
+
+function pauseTimer() {
+  syncActiveTime();
+  App.questionStartTs = null;
+}
+
+function resumeTimer() {
+  if (App.questionStartTs !== null) return;
+  if (document.hidden) return;
+  if (App.currentScreen !== "quiz") return;
+  if (!App.attempt || App.attempt.finished) return;
+  App.questionStartTs = performance.now();
+}
+
+// Chamado no inicio de renderQuizQuestion: fecha o trecho ativo da questao
+// anterior (se o indice mudou) e retoma a contagem na questao atual.
+function switchTimerToCurrentQuestion() {
+  const idx = App.attempt.currentIndex;
+  if (App.timerQuestionIndex !== idx) {
+    pauseTimer();
+    App.timerQuestionIndex = idx;
+  }
+  resumeTimer();
+}
+
+function getTotalActiveMs() {
+  if (!App.attempt) return 0;
+  syncActiveTime();
+  return App.attempt.questions.reduce((sum, q) => sum + (q.timeMs || 0), 0);
+}
+
+function updateClockDisplay() {
+  const el = document.getElementById("quiz-timer");
+  if (!el) return;
+  el.textContent = "⏱ " + formatClock(getTotalActiveMs());
+}
+
+function startClockTick() {
+  stopClockTick();
+  App.clockTickInterval = setInterval(updateClockDisplay, 1000);
+  updateClockDisplay();
+}
+
+function stopClockTick() {
+  if (App.clockTickInterval) clearInterval(App.clockTickInterval);
+  App.clockTickInterval = null;
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) pauseTimer();
+  else resumeTimer();
+});
+window.addEventListener("blur", pauseTimer);
+window.addEventListener("focus", resumeTimer);
 
 /* =========================================================================
    4. AMOSTRAGEM BALANCEADA
@@ -7701,6 +7794,7 @@ function buildSessionQuestions(questions, rng) {
       marked: false,
       hintShown: false,
       highlights: [],           // trechos grifados no enunciado: [{start, end}]
+      timeMs: 0,                 // tempo ativo acumulado nesta questao (ms); pausado quando a aba fica oculta
     };
   });
 }
@@ -7881,9 +7975,44 @@ function srsDueList(subjects) {
     .sort((a, b) => a.it.due - b.it.due || a.it.box - b.it.box);
 }
 
+// Tempo "esperado" de uma questao, em segundos: leitura do texto (~200 palavras/min)
+// + extra para figura (heredograma, tabela, codigo genetico) ou calculo.
+function srsExpectedSec(q) {
+  const src = QUESTIONS_DATABASE.find((x) => x.code === q.code) || q;
+  const text = String(src.prompt || "") + " " + (src.options || []).map((o) => o.text).join(" ");
+  const words = text.split(/\s+/).filter(Boolean).length;
+  let sec = 15 + words * 0.3;
+  if (src.visual || src.visualHtml) sec += 45;
+  if (/probabilidade|calcul|quantos|quantas|propor[cç][aã]o|fita|c[oó]don/i.test(String(src.prompt || ""))) sec += 30;
+  return sec;
+}
+
+const SRS_SLOW_FACTOR = 3; // "demorou demais" = mais de 3x o seu ritmo normal para aquela questao
+const SRS_SLOW_MIN_SEC = 90; // ...e pelo menos 1min30
+
 function srsRecord(questions, regular) {
   const s = srsLoad();
+  if (!Array.isArray(s.ratios)) s.ratios = [];
   if (regular) s.counter++;
+  // ritmo pessoal: razao entre o tempo gasto ate responder e o tempo esperado
+  const timed = questions
+    .filter((q) => q.answerIndex !== null && q.answerIndex !== undefined)
+    .map((q) => ({ q, sec: (q.answerMs || q.timeMs || 0) / 1000 }))
+    .filter((x) => x.sec > 0)
+    .map((x) => ({ q: x.q, sec: x.sec, ratio: x.sec / srsExpectedSec(x.q) }));
+  const sample = s.ratios.concat(timed.map((x) => x.ratio));
+  let med = null;
+  if (sample.length >= 8) {
+    const sorted = sample.slice().sort((a, b) => a - b);
+    const m = Math.floor(sorted.length / 2);
+    med = sorted.length % 2 ? sorted[m] : (sorted[m - 1] + sorted[m]) / 2;
+  }
+  const slow = new Set(
+    regular && med
+      ? timed.filter((x) => x.sec >= SRS_SLOW_MIN_SEC && x.ratio > SRS_SLOW_FACTOR * med).map((x) => x.q.code)
+      : []
+  );
+  let nSlow = 0;
   questions.forEach((q) => {
     if (q.answerIndex === null || q.answerIndex === undefined) return;
     const ok = q.options[q.answerIndex].isCorrect;
@@ -7892,12 +8021,25 @@ function srsRecord(questions, regular) {
       s.items[q.code] = { box: 0, due: s.counter + SRS_INTERVALS[0] };
       return;
     }
+    if (slow.has(q.code)) {
+      // acertou, mas levou muito mais tempo que o seu normal: entra (ou fica) na revisao sem avancar
+      if (!it) {
+        s.items[q.code] = { box: 1, due: s.counter + SRS_INTERVALS[1], slow: true };
+        nSlow++;
+      } else if (it.due <= s.counter) {
+        s.items[q.code] = { box: it.box, due: s.counter + SRS_INTERVALS[it.box], slow: true };
+        nSlow++;
+      }
+      return;
+    }
     if (!it || !regular || it.due > s.counter) return; // acerto fora da hora da revisao nao conta
     const box = it.box + 1;
     if (box >= SRS_INTERVALS.length) delete s.items[q.code];
     else s.items[q.code] = { box, due: s.counter + SRS_INTERVALS[box] };
   });
+  if (regular) s.ratios = sample.slice(-300);
   lsSet(LS_KEYS.srs, s);
+  return nSlow;
 }
 
 function renderSrsSummary() {
@@ -7906,8 +8048,9 @@ function renderSrsSummary() {
   const s = srsLoad();
   const total = Object.keys(s.items).filter((c) => QUESTIONS_DATABASE.some((q) => q.code === c)).length;
   const due = srsDueList(null).length;
+  const nSlow = Object.entries(s.items).filter(([c, it]) => it.slow && QUESTIONS_DATABASE.some((q) => q.code === c)).length;
   el.textContent = total
-    ? `🔁 Revisão espaçada: ${total} questão(ões) na fila; ${due} entra(m) no próximo simulado (as revisões ocupam até ~30% dele).`
+    ? `🔁 Revisão espaçada: ${total} questão(ões) na fila${nSlow ? ` (${nSlow} por demora)` : ""}; ${due} entra(m) no próximo simulado (as revisões ocupam até ~30% dele).`
     : "🔁 Revisão espaçada: as questões que você errar voltam sozinhas nos próximos simulados, em intervalos cada vez maiores.";
 }
 
@@ -7987,9 +8130,12 @@ function startQuiz(opts) {
     finished: false,
   };
   App.attempt.questions.forEach((q) => { if (reviewIds.has(q.id)) q.isReview = true; });
+  App.timerQuestionIndex = null;
+  App.questionStartTs = null;
   saveCurrentAttempt();
-  renderQuizQuestion();
   showScreen("quiz");
+  renderQuizQuestion();
+  startClockTick();
   startAutosave();
 }
 
@@ -8003,6 +8149,7 @@ function stopAutosave() {
 }
 function saveCurrentAttempt() {
   if (App.currentScreen !== "quiz" || !App.attempt || App.attempt.finished) return;
+  syncActiveTime();
   lsSet(LS_KEYS.current, App.attempt);
 }
 
@@ -8102,8 +8249,10 @@ function removeHighlight(index) {
 }
 
 function renderQuizQuestion() {
+  switchTimerToCurrentQuestion();
   const q = currentQuestion();
   if (!q.highlights) q.highlights = []; // compatibilidade com tentativas salvas antes deste recurso
+  if (typeof q.timeMs !== "number") q.timeMs = 0; // compatibilidade com tentativas salvas antes deste recurso
   const total = App.attempt.questions.length;
   const idx = App.attempt.currentIndex;
 
@@ -8210,6 +8359,8 @@ function selectOption(i) {
   const q = currentQuestion();
   if (App.attempt.mode === "tutor" && q.answerIndex !== null) return; // trava apos responder no modo tutor
   q.answerIndex = i;
+  syncActiveTime();
+  q.answerMs = q.timeMs; // tempo ate a resposta (nao conta a leitura da explicacao no modo tutor)
   renderQuizQuestion();
 }
 
@@ -8274,6 +8425,8 @@ function confirmQuitQuiz() {
    9. FINALIZAR E GRADE
    ========================================================================= */
 function finishQuiz() {
+  pauseTimer();
+  stopClockTick();
   stopAutosave();
   App.attempt.finished = true;
   App.attempt.finishedAt = Date.now();
@@ -8282,8 +8435,10 @@ function finishQuiz() {
   const answered = questions.filter((q) => q.answerIndex !== null);
   const correct = answered.filter((q) => q.options[q.answerIndex].isCorrect);
   const wrong = answered.filter((q) => !q.options[q.answerIndex].isCorrect);
-  const totalTimeMs = App.attempt.finishedAt - App.attempt.startedAt;
-  const avgTimeMs = answered.length ? totalTimeMs / answered.length : 0;
+  const totalTimeMs = questions.reduce((sum, q) => sum + (q.timeMs || 0), 0);
+  const avgTimeMs = answered.length
+    ? answered.reduce((sum, q) => sum + (q.timeMs || 0), 0) / answered.length
+    : 0;
   const scorePct = questions.length ? Math.round((correct.length / questions.length) * 100) : 0;
 
   const bySubject = {};
@@ -8313,7 +8468,8 @@ function finishQuiz() {
   lsSet(LS_KEYS.weak, Array.from(weak));
 
   // revisao espacada
-  srsRecord(questions, !App.attempt.label);
+  const nSlow = srsRecord(questions, !App.attempt.label);
+  if (nSlow) setTimeout(() => toast(`⏱️ ${nSlow} questão(ões) que você acertou, mas com tempo bem acima do seu ritmo, entrou(aram) na revisão espaçada.`, "info"), 400);
 
   // historico
   const history = lsGet(LS_KEYS.history, []);
@@ -8334,6 +8490,14 @@ function finishQuiz() {
   showScreen("results");
 }
 
+function timeBadge(qTimeMs, avgMs) {
+  if (!avgMs) return { label: "—", cls: "bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-400" };
+  const ratio = qTimeMs / avgMs;
+  if (ratio > 1.15) return { label: "Acima da média", cls: "bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300" };
+  if (ratio < 0.85) return { label: "Abaixo da média", cls: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300" };
+  return { label: "Na média", cls: "bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300" };
+}
+
 function renderResults() {
   const g = App.lastGraded;
   document.getElementById("result-score").textContent = g.scorePct + "%";
@@ -8343,6 +8507,21 @@ function renderResults() {
   document.getElementById("result-wrong").textContent = g.wrong.length;
   document.getElementById("result-time-total").textContent = formatTime(g.totalTimeMs);
   document.getElementById("result-time-avg").textContent = formatTime(g.avgTimeMs);
+
+  const timeListEl = document.getElementById("result-by-question-time");
+  timeListEl.innerHTML = g.questions
+    .map((q, i) => {
+      const badge = timeBadge(q.timeMs || 0, g.avgTimeMs);
+      return `
+      <div class="flex items-center justify-between gap-2 text-sm py-1.5 border-b border-slate-100 dark:border-slate-700 last:border-0">
+        <span class="text-slate-500 dark:text-slate-400 truncate"><span class="font-mono text-xs">${i + 1}.</span> ${escapeHtml(q.code)}</span>
+        <span class="flex items-center gap-2 shrink-0">
+          <span class="tabular-nums text-slate-700 dark:text-slate-200">${formatTime(q.timeMs || 0)}</span>
+          <span class="px-2 py-0.5 rounded-full text-xs whitespace-nowrap ${badge.cls}">${badge.label}</span>
+        </span>
+      </div>`;
+    })
+    .join("");
 
   const bySubjectEl = document.getElementById("result-by-subject");
   const entries = Object.entries(g.bySubject).sort((a, b) => a[0].localeCompare(b[0], "pt-BR"));
@@ -8524,6 +8703,18 @@ function exportResultsPage() {
     })
     .join("");
 
+  const timeRowsHtml = g.questions
+    .map((q, i) => {
+      const badge = timeBadge(q.timeMs || 0, g.avgTimeMs);
+      const color = badge.label === "Acima da média" ? "#f43f5e" : badge.label === "Abaixo da média" ? "#10b981" : "#64748b";
+      return `
+      <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid #f1f5f9;">
+        <span style="color:#64748b;">${i + 1}. ${escapeHtml(q.code)}</span>
+        <span><b>${formatTime(q.timeMs || 0)}</b> <span style="color:${color};font-size:11px;">${badge.label}</span></span>
+      </div>`;
+    })
+    .join("");
+
   const html = `<!DOCTYPE html>
 <html lang="pt-BR"><head><meta charset="UTF-8">
 <title>Resultado — Simulado de Saúde Mental</title>
@@ -8555,6 +8746,8 @@ function exportResultsPage() {
     </div>
     <h2>Desempenho por assunto</h2>
     ${rowsHtml}
+    <h2>Tempo por questão</h2>
+    <div style="margin-bottom:16px;">${timeRowsHtml}</div>
     <button class="printbtn" onclick="window.print()">🖨️ Imprimir / salvar como PDF</button>
   </div>
 </body></html>`;
@@ -8722,8 +8915,12 @@ function init() {
     if (!saved) return;
     App.attempt = saved;
     refreshAttemptFromBank(App.attempt);
-    renderQuizQuestion();
+    normalizeAttemptQuestions(App.attempt);
+    App.timerQuestionIndex = null;
+    App.questionStartTs = null;
     showScreen("quiz");
+    renderQuizQuestion();
+    startClockTick();
     startAutosave();
   });
   document.getElementById("btn-discard-resume").addEventListener("click", () => {
@@ -8835,7 +9032,10 @@ function init() {
   }
 
   window.addEventListener("beforeunload", () => {
-    if (App.currentScreen === "quiz" && App.attempt && !App.attempt.finished) saveCurrentAttempt();
+    if (App.currentScreen === "quiz" && App.attempt && !App.attempt.finished) {
+      pauseTimer();
+      saveCurrentAttempt();
+    }
   });
 }
 
