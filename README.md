@@ -9,6 +9,7 @@ Simulados interativos de múltipla escolha, estilo ENAMED/residência, um por di
 - [`saude-mental/`](saude-mental/) — 220 questões, 7 assuntos
 - [`clinica-cirurgica/`](clinica-cirurgica/) — 237 questões, 8 assuntos
 - [`topicos-medicos/`](topicos-medicos/) — 200 questões, 5 assuntos (Tópicos Especiais em Ciências Médicas)
+- [`praticas-cirurgicas/`](praticas-cirurgicas/) — simulado **teórico-prático** com 350 questões abertas (flashcards com fotos): instrumentais, montagem da mesa, paramentação, fios e nós, feridas e curativos. Formato diferente dos demais; cópia do repositório `simulado-praticas-cirurgicas`.
 
 ## Funcionalidades (todas as disciplinas)
 
