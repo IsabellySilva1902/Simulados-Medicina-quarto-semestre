@@ -173,7 +173,20 @@
           <h3 class="font-semibold mb-3">2. Quantidade de questões</h3>
           <input id="input-qtd" type="number" min="5" value="20" step="1"
             class="w-full rounded-lg border border-slate-300 dark:border-slate-600 dark:bg-slate-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500">
-          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Distribuídas proporcionalmente entre os assuntos marcados. Máximo disponível: <span id="qtd-max-label">0</span>.</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Máximo disponível: <span id="qtd-max-label">0</span>.</p>
+          <label class="block text-sm font-medium mt-3">Distribuição entre os assuntos
+            <select id="select-peso" class="mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-600 dark:bg-slate-900 px-3 py-2 text-sm">
+              <option value="prova">Peso da prova (Dor 40% · DM 30% · DLP 20% · HAS 5% · Falciforme 5%)</option>
+              <option value="igual">Igual entre os assuntos</option>
+            </select>
+          </label>
+          <label class="block text-sm font-medium mt-3">Tipo de questão
+            <select id="select-estilo" class="mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-600 dark:bg-slate-900 px-3 py-2 text-sm">
+              <option value="todas">Todas (diretas + detalhadas)</option>
+              <option value="prova">Só estilo da prova (diretas)</option>
+              <option value="detalhadas">Só detalhadas</option>
+            </select>
+          </label>
         </div>
         <div>
           <h3 class="font-semibold mb-3">3. Modo de resolução</h3>
@@ -401,7 +414,7 @@
       </div>
       <div>
         <p class="font-medium text-slate-800 dark:text-slate-100">2. Defina a quantidade de questões</p>
-        <p>Elas são distribuídas proporcionalmente entre os assuntos marcados.</p>
+        <p>Por padrão seguem o <strong>peso da prova</strong> (Dor Crônica 40%, Diabetes 30%, Dislipidemia 20%, Hipertensão 5%, Falciforme 5%, como na VAT1). Dá para trocar para "igual entre os assuntos". Em <strong>Tipo de questão</strong> você escolhe só as <strong>diretas, no estilo da prova</strong> (códigos com P, ex.: DOR-P03), só as <strong>detalhadas</strong> ou todas.</p>
       </div>
       <div>
         <p class="font-medium text-slate-800 dark:text-slate-100">3. Escolha o modo</p>
@@ -415,6 +428,10 @@
       <div>
         <p class="font-medium text-slate-800 dark:text-slate-100">⌨️ Atalhos de teclado</p>
         <p><strong>← / →</strong> questão anterior / próxima · <strong>A–D</strong> ou <strong>1–4</strong> marcam a alternativa · <strong>Enter</strong> confere a resposta (modo Tutor) · <strong>F</strong> marca para revisão · <strong>H</strong> mostra a dica.</p>
+      </div>
+      <div>
+        <p class="font-medium text-slate-800 dark:text-slate-100">🧠 Técnica de prova: eliminar alternativas</p>
+        <p>Na prova real, as alternativas erradas costumam ter <strong>termos absolutos</strong> (<em>exclusivamente, apenas, isoladamente, imediatamente, sempre, absoluto, obrigatório, perfeitamente, descarta, dispensando</em>) ou propor condutas exageradas ("repouso absoluto", "hemodiálise imediata", "biópsia urgente"). A certa costuma ser a mais equilibrada: <em>avaliar, considerar, intensificar e organizar, investigar a adesão</em>. Use isso para <strong>eliminar</strong>, mas confirme pelo conteúdo: aqui no simulado, de propósito, a certa às vezes também tem "apenas" ou "qualquer que seja".</p>
       </div>
       <div>
         <p class="font-medium text-slate-800 dark:text-slate-100">🎯 Depois do simulado</p>
@@ -6899,6 +6916,516 @@ const QUESTIONS_DATABASE = [
     ],
     "correctLetter": "C",
     "clinicalPointers": "Alguns fármacos para dor neuropática não foram incorporados ao SUS por decisão da CONITEC."
+  },
+  {
+    "id": 201,
+    "code": "DOR-P01",
+    "category": "Dor Crônica",
+    "subcategory": "Manejo multimodal",
+    "difficulty": "Básica",
+    "prompt": "Mulher de 41 anos, costureira, com diagnóstico de fibromialgia há três anos, refere dor difusa, sono não reparador e cansaço. Na consulta, pede \"um remédio forte, tipo morfina\", porque \"nada resolve\". À luz do PCDT de Dor Crônica para a dor nociplástica, qual plano deve ser adotado?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Iniciar morfina em dose baixa de horário, já que a dor nociplástica responde preferencialmente aos opioides fortes da RENAME.",
+        "rationale": "Incorreta. Opioides não têm benefício na fibromialgia e trazem risco de dependência e hiperalgesia."
+      },
+      {
+        "letter": "B",
+        "text": "Priorizar exercício aeróbico gradual e terapia cognitivo-comportamental, com amitriptilina em dose baixa, sem opioides.",
+        "rationale": "CORRETA. Na dor nociplástica (fibromialgia) o pilar é não farmacológico (exercício e TCC); a amitriptilina em dose baixa é a opção farmacológica, e opioides não são recomendados."
+      },
+      {
+        "letter": "C",
+        "text": "Prescrever anti-inflamatório oral contínuo e repouso no leito até que todos os pontos dolorosos desapareçam completamente.",
+        "rationale": "Incorreta. AINE tem pouco efeito na dor nociplástica e o repouso piora o condicionamento; o exercício é central."
+      },
+      {
+        "letter": "D",
+        "text": "Solicitar ressonância de corpo inteiro e encaminhar exclusivamente ao reumatologista antes de iniciar qualquer tratamento.",
+        "rationale": "Incorreta. A fibromialgia é diagnóstico clínico, conduzido na APS; exames de imagem não confirmam nem orientam o tratamento."
+      }
+    ],
+    "correctLetter": "B",
+    "clinicalPointers": "Fibromialgia: exercício + TCC + amitriptilina; opioide não.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 202,
+    "code": "DOR-P02",
+    "category": "Dor Crônica",
+    "subcategory": "Diagnóstico na APS",
+    "difficulty": "Básica",
+    "prompt": "Homem de 64 anos, pedreiro aposentado, tem dor no joelho direito há dois anos, que piora ao subir escadas e melhora com repouso, com rigidez matinal de 15 minutos e crepitação ao exame, sem derrame articular. O interno quer pedir ressonância magnética \"para confirmar a artrose\" antes de tratar. Segundo o PCDT, qual é a conduta adequada?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Fazer o diagnóstico clinicamente; a radiografia pode ajudar, mas a ressonância não é necessária para tratar.",
+        "rationale": "CORRETA. A osteoartrite é diagnóstico clínico; a ressonância não é exame de rotina e não deve atrasar o tratamento."
+      },
+      {
+        "letter": "B",
+        "text": "Aguardar o resultado da ressonância antes de qualquer analgésico, pois só ela confirma a osteoartrite com segurança.",
+        "rationale": "Incorreta. A ressonância não é exigida para o diagnóstico e o tratamento não deve esperar por ela."
+      },
+      {
+        "letter": "C",
+        "text": "Solicitar artroscopia diagnóstica, já que a crepitação isolada indica lesão meniscal com necessidade cirúrgica.",
+        "rationale": "Incorreta. Crepitação é achado comum da osteoartrite e não indica procedimento invasivo."
+      },
+      {
+        "letter": "D",
+        "text": "Pedir VHS e fator reumatoide e descartar a osteoartrite se os dois exames vierem dentro da normalidade.",
+        "rationale": "Incorreta. Exames inflamatórios normais são esperados na osteoartrite e não a descartam."
+      }
+    ],
+    "correctLetter": "A",
+    "clinicalPointers": "Osteoartrite: diagnóstico clínico; ressonância não é de rotina.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 203,
+    "code": "DOR-P03",
+    "category": "Dor Crônica",
+    "subcategory": "Diagnóstico na APS",
+    "difficulty": "Intermediária",
+    "prompt": "Mulher de 59 anos, diarista, tem dor lombar há um ano. Na anamnese, a médica pergunta como a dor se comporta à noite, para diferenciar causas mecânicas de doenças graves. Qual relato é compatível com dor mecânica, sem sinal de alarme?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Acorda de madrugada com dor contínua que não alivia em nenhuma posição na cama.",
+        "rationale": "Incorreta. Dor noturna contínua, que não melhora com repouso, é sinal de alarme (tumor, infecção)."
+      },
+      {
+        "letter": "B",
+        "text": "Acorda com suor intenso à noite e perdeu 8 kg em três meses sem querer.",
+        "rationale": "Incorreta. Sudorese noturna e perda de peso são sinais de alarme que exigem investigação."
+      },
+      {
+        "letter": "C",
+        "text": "Acorda com rigidez de mais de uma hora que só melhora ao se movimentar.",
+        "rationale": "Incorreta. Rigidez prolongada que melhora com movimento sugere padrão inflamatório, não mecânico."
+      },
+      {
+        "letter": "D",
+        "text": "Acorda só ao mudar de posição na cama e volta a dormir ao se acomodar.",
+        "rationale": "CORRETA. Dor que surge apenas com a mudança de posição e alivia ao se acomodar é típica da dor mecânica."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "Dor que acorda só ao mudar de posição = mecânica; dor contínua noturna = alarme.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 204,
+    "code": "DOR-P04",
+    "category": "Dor Crônica",
+    "subcategory": "Síndrome dolorosa miofascial",
+    "difficulty": "Intermediária",
+    "prompt": "Homem de 39 anos, operador de caixa, tem dor cervical e cefaleia temporal há seis meses. À palpação do trapézio direito, há nódulo em banda tensa que reproduz exatamente a dor habitual, irradiando para a têmpora. No trapézio esquerdo, há nódulo semelhante, doloroso só à pressão, sem reproduzir a queixa. Segundo o PCDT, como classificar os achados?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Direito: latente; esquerdo: ativo, pois só o ponto sem queixa espontânea é ativo.",
+        "rationale": "Incorreta. A definição está invertida: ativo é o que reproduz a dor que o paciente sente."
+      },
+      {
+        "letter": "B",
+        "text": "Os dois são ativos, porque todo nódulo em banda tensa já configura ponto-gatilho ativo.",
+        "rationale": "Incorreta. A banda tensa existe nos dois tipos; o que diferencia é reproduzir ou não a queixa."
+      },
+      {
+        "letter": "C",
+        "text": "Direito: ponto-gatilho ativo; esquerdo: latente, doloroso apenas quando pressionado.",
+        "rationale": "CORRETA. O PG ativo reproduz a queixa espontânea do paciente; o latente só dói à palpação."
+      },
+      {
+        "letter": "D",
+        "text": "Nenhum é ponto-gatilho, pois dor referida à distância exclui o diagnóstico de dor miofascial.",
+        "rationale": "Incorreta. A dor referida à distância é característica do ponto-gatilho."
+      }
+    ],
+    "correctLetter": "C",
+    "clinicalPointers": "PG ativo reproduz a queixa; PG latente só dói à palpação.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 205,
+    "code": "DOR-P05",
+    "category": "Dor Crônica",
+    "subcategory": "Diagnóstico na APS",
+    "difficulty": "Básica",
+    "prompt": "Homem de 38 anos, motoboy, procura a UBS com dor lombar há dez dias, iniciada após carregar peso. Não há febre, perda de peso, trauma importante, alteração urinária ou déficit neurológico. Ele pede uma ressonância \"para ver se é hérnia\". De acordo com o PCDT, qual conduta é adequada?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Prescrever repouso absoluto no leito por duas semanas, até que a dor lombar desapareça completamente.",
+        "rationale": "Incorreta. O repouso prolongado atrasa a recuperação; recomenda-se manter as atividades."
+      },
+      {
+        "letter": "B",
+        "text": "Manter as atividades conforme tolerado, com analgesia simples e reavaliação, sem imagem por ora.",
+        "rationale": "CORRETA. Sem sinais de alarme, a lombalgia aguda é manejada clinicamente; imagem precoce não muda a conduta."
+      },
+      {
+        "letter": "C",
+        "text": "Solicitar ressonância imediata da coluna para excluir hérnia antes de liberar o paciente para o trabalho.",
+        "rationale": "Incorreta. Sem sinais de alarme não há indicação de imagem, e achados incidentais são frequentes."
+      },
+      {
+        "letter": "D",
+        "text": "Iniciar opioide forte de horário, pois a dor aguda intensa justifica analgesia de terceiro degrau.",
+        "rationale": "Incorreta. A primeira escolha é analgesia simples; opioide forte não é conduta inicial."
+      }
+    ],
+    "correctLetter": "B",
+    "clinicalPointers": "Lombalgia aguda sem red flags: manter atividade, sem imagem.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 206,
+    "code": "DOR-P06",
+    "category": "Dor Crônica",
+    "subcategory": "Síndrome dolorosa miofascial",
+    "difficulty": "Intermediária",
+    "prompt": "Mulher de 50 anos refere dor na face lateral da coxa até o joelho há quatro meses, que \"parece ciático\". O teste de Lasègue é negativo, força, reflexos e sensibilidade estão preservados, e a palpação de um nódulo em banda tensa no glúteo mínimo reproduz a dor. Segundo o PCDT, qual é a interpretação?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Dor referida de ponto-gatilho miofascial, sem lesão nervosa; o exame neurológico normal reforça isso.",
+        "rationale": "CORRETA. O PG do glúteo mínimo mimetiza ciatalgia por dor referida; o exame neurológico normal afasta radiculopatia."
+      },
+      {
+        "letter": "B",
+        "text": "Radiculopatia L5 confirmada pela irradiação, devendo-se indicar a descompressão cirúrgica da raiz.",
+        "rationale": "Incorreta. Irradiação não confirma radiculopatia; Lasègue negativo e exame normal falam contra."
+      },
+      {
+        "letter": "C",
+        "text": "Lesão do nervo isquiático, pois toda dor irradiada para a perna indica comprometimento do tronco nervoso.",
+        "rationale": "Incorreta. Dor irradiada pode ser referida de ponto-gatilho, sem lesão de nervo."
+      },
+      {
+        "letter": "D",
+        "text": "Quadro psicogênico, já que não há alteração neurológica objetiva que justifique a dor relatada.",
+        "rationale": "Incorreta. A dor tem causa física identificada (ponto-gatilho); exame neurológico normal não a torna psicogênica."
+      }
+    ],
+    "correctLetter": "A",
+    "clinicalPointers": "SDM mimetiza ciatalgia; exame neurológico normal + PG que reproduz a dor.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 207,
+    "code": "DOR-P07",
+    "category": "Dor Crônica",
+    "subcategory": "Tratamento farmacológico: dor nociceptiva",
+    "difficulty": "Básica",
+    "prompt": "Mulher de 70 anos com osteoartrite de quadril e dor moderada, hipertensão controlada e gastrite tratada no passado, sem sangramento digestivo, procura a UBS. Considerando a RENAME e o PCDT, qual é a conduta farmacológica inicial?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Diclofenaco em dose alta, contínuo, associado à codeína como primeira linha para a osteoartrite.",
+        "rationale": "Incorreta. Dose alta contínua de AINE e opioide não são a primeira linha."
+      },
+      {
+        "letter": "B",
+        "text": "Ibuprofeno contínuo por seis meses sem gastroproteção, pois a gastrite já está completamente curada.",
+        "rationale": "Incorreta. AINE prolongado aumenta o risco gastrointestinal, cardiovascular e renal na idosa."
+      },
+      {
+        "letter": "C",
+        "text": "Infiltração intra-articular mensal de corticoide como tratamento inicial e exclusivo da dor.",
+        "rationale": "Incorreta. A infiltração não é conduta inicial nem exclusiva; começa-se por analgésico e exercício."
+      },
+      {
+        "letter": "D",
+        "text": "Paracetamol regular até 4 g/dia, com exercício; se preciso, AINE na menor dose pelo menor tempo.",
+        "rationale": "CORRETA. Paracetamol é a primeira escolha; AINE (ibuprofeno) entra na menor dose efetiva e pelo menor tempo."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "OA: paracetamol até 4 g/dia; AINE na menor dose pelo menor tempo.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 208,
+    "code": "DM-P01",
+    "category": "Diabetes Mellitus",
+    "subcategory": "Hipoglicemia e hiperglicemia",
+    "difficulty": "Intermediária",
+    "prompt": "Homem de 72 anos, com DM2 em uso de insulina NPH e gliclazida, é trazido pela filha à UBS sonolento, confuso e sem conseguir engolir com segurança. A glicemia capilar é de 38 mg/dL. Segundo o fluxo de manejo na Atenção Primária, qual é a classificação e a conduta?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Hipoglicemia nível 1; oferecer 15 g de carboidrato por via oral e liberar após uma nova glicemia normal.",
+        "rationale": "Incorreta. Com 38 mg/dL e rebaixamento não é nível 1, e a via oral é insegura."
+      },
+      {
+        "letter": "B",
+        "text": "Hipoglicemia nível 2; oferecer suco adoçado pela boca, já que o paciente ainda está acordado e responde.",
+        "rationale": "Incorreta. Ele não consegue engolir com segurança; há risco de aspiração."
+      },
+      {
+        "letter": "C",
+        "text": "Hipoglicemia nível 3; glicose hipertônica EV (ou glucagon, sem acesso venoso) e encaminhamento.",
+        "rationale": "CORRETA. Alteração do nível de consciência que exige ajuda de terceiros define o nível 3; a via oral é contraindicada e a sulfonilureia pode prolongar o quadro."
+      },
+      {
+        "letter": "D",
+        "text": "Cetoacidose diabética; iniciar insulina regular endovenosa e hidratação antes de corrigir a glicemia.",
+        "rationale": "Incorreta. O quadro é hipoglicemia; insulina agravaria o rebaixamento."
+      }
+    ],
+    "correctLetter": "C",
+    "clinicalPointers": "Hipoglicemia nível 3 = rebaixamento/precisa de terceiros → glicose EV ou glucagon.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 209,
+    "code": "DM-P02",
+    "category": "Diabetes Mellitus",
+    "subcategory": "Complicações e acompanhamento",
+    "difficulty": "Básica",
+    "prompt": "Mulher de 57 anos, com DM2 há seis anos, tem HbA1c de 6,9% e nenhum sintoma. Diz que, \"com a glicemia controlada\", não quer mais fazer exames de complicações. Segundo o PCDT de DM2, como deve ser o seguimento?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Suspender o rastreamento de complicações enquanto a HbA1c continuar dentro da meta e ela não tiver sintomas.",
+        "rationale": "Incorreta. Complicações podem evoluir silenciosamente mesmo com bom controle."
+      },
+      {
+        "letter": "B",
+        "text": "Manter, ao menos anualmente, exame dos pés, fundo de olho, função renal e risco cardiovascular.",
+        "rationale": "CORRETA. O rastreamento de complicações é periódico e independe de sintomas ou de a HbA1c estar na meta."
+      },
+      {
+        "letter": "C",
+        "text": "Examinar os pés apenas se surgirem dor, dormência ou feridas, já que hoje ela está assintomática.",
+        "rationale": "Incorreta. O exame dos pés serve justamente para detectar perda de sensibilidade antes dos sintomas."
+      },
+      {
+        "letter": "D",
+        "text": "Solicitar fundo de olho e função renal somente quando a HbA1c ultrapassar 8% em dois exames.",
+        "rationale": "Incorreta. O rastreio ocular e renal é periódico, não condicionado à piora da HbA1c."
+      }
+    ],
+    "correctLetter": "B",
+    "clinicalPointers": "DM2: pés, olhos, rim e risco CV pelo menos anualmente, mesmo controlado.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 210,
+    "code": "DM-P03",
+    "category": "Diabetes Mellitus",
+    "subcategory": "Diagnóstico",
+    "difficulty": "Básica",
+    "prompt": "Menina de 12 anos é levada à UBS por poliúria, sede intensa e perda de 4 kg em três semanas. Está consciente, sem vômitos, e a glicemia capilar ao acaso é de 340 mg/dL. Considerando os critérios do PCDT de DM1, qual é a interpretação correta?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Sintomas clássicos com glicemia ao acaso ≥ 200 mg/dL já firmam o diabetes; avaliar cetose.",
+        "rationale": "CORRETA. Com sintomas de hiperglicemia, uma glicemia ao acaso ≥ 200 mg/dL basta; na criança, o DM1 é a principal hipótese e é preciso avaliar cetose."
+      },
+      {
+        "letter": "B",
+        "text": "Só considerar diabetes após duas glicemias de jejum ≥ 126 mg/dL colhidas em dias diferentes, por segurança.",
+        "rationale": "Incorreta. A repetição é exigida no assintomático; com sintomas clássicos, a glicemia ao acaso basta."
+      },
+      {
+        "letter": "C",
+        "text": "Afastar DM1, pois a doença ocorre exclusivamente em crianças menores de cinco anos de idade.",
+        "rationale": "Incorreta. O DM1 pode surgir em qualquer idade, com pico na infância e adolescência."
+      },
+      {
+        "letter": "D",
+        "text": "Atribuir a perda de peso a uma virose e repetir a glicemia em três meses, se persistirem os sintomas.",
+        "rationale": "Incorreta. Adiar a avaliação expõe a menina ao risco de cetoacidose."
+      }
+    ],
+    "correctLetter": "A",
+    "clinicalPointers": "Sintomas + glicemia ao acaso ≥ 200 = diabetes, sem repetir.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 211,
+    "code": "DM-P04",
+    "category": "Diabetes Mellitus",
+    "subcategory": "Complicações e acompanhamento",
+    "difficulty": "Intermediária",
+    "prompt": "Agricultor de 61 anos mora em comunidade rural a 40 km da sede do município. Teve infarto há três anos e tem DM2, usando metformina de forma irregular porque \"a farmácia é longe\". Exames: HbA1c 8,6%, PA 146/92 mmHg e LDL-c 112 mg/dL, sem estatina. Considerando prevenção secundária e as barreiras de acesso, qual é a conduta mais indicada?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Encaminhar exclusivamente ao cardiologista e retirar o paciente do acompanhamento pela Atenção Primária à Saúde.",
+        "rationale": "Incorreta. O cuidado continua coordenado pela APS, que conhece o território e as barreiras."
+      },
+      {
+        "letter": "B",
+        "text": "Manter a prescrição atual e orientar retorno à UBS somente se voltar a ter dor no peito.",
+        "rationale": "Incorreta. Há metas fora do alvo e falta a estatina; não intervir é inércia terapêutica."
+      },
+      {
+        "letter": "C",
+        "text": "Suspender a metformina e recomendar chás caseiros, já que ele mora longe da farmácia municipal.",
+        "rationale": "Incorreta. Retirar o tratamento eficaz por dificuldade de acesso agrava o risco; o acesso é que deve ser organizado."
+      },
+      {
+        "letter": "D",
+        "text": "Iniciar estatina, intensificar o controle glicêmico e pressórico e organizar a entrega dos remédios na área rural.",
+        "rationale": "CORRETA. Após IAM, a estatina está indicada independentemente do LDL; a conduta inclui intensificar o tratamento e enfrentar a barreira de acesso."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "Pós-IAM: estatina sempre + intensificar + resolver barreira de acesso.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 212,
+    "code": "DLP-P01",
+    "category": "Dislipidemia",
+    "subcategory": "Hipercolesterolemia familiar",
+    "difficulty": "Intermediária",
+    "prompt": "Mulher de 27 anos tem LDL-c de 290 mg/dL, xantomas tendíneos e mãe com infarto aos 45 anos. O escore da OMS (Dutch) confirma hipercolesterolemia familiar definitiva, e não houve resposta à dieta. Qual é o tratamento farmacológico inicial pelo PCDT de Dislipidemia?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Ezetimiba isolada como primeira linha, reservando a estatina para depois dos 40 anos de idade.",
+        "rationale": "Incorreta. A estatina é a base do tratamento da HF; adiar aumenta o risco cardiovascular."
+      },
+      {
+        "letter": "B",
+        "text": "Evolocumabe como terapia inicial, por ser o tratamento padrão do protocolo do SUS para HF.",
+        "rationale": "Incorreta. Inibidores de PCSK9 não são a primeira linha do protocolo."
+      },
+      {
+        "letter": "C",
+        "text": "Estatina de alta potência, como atorvastatina, na maior dose tolerada, mantendo a dieta.",
+        "rationale": "CORRETA. Na HF o tratamento inicial é estatina de alta potência na dose máxima tolerada, associada às medidas de estilo de vida."
+      },
+      {
+        "letter": "D",
+        "text": "Fibrato contínuo associado à estatina de baixa potência, por causa do risco cardiovascular elevado.",
+        "rationale": "Incorreta. Fibrato não reduz LDL de forma relevante; a HF exige estatina de alta potência."
+      }
+    ],
+    "correctLetter": "C",
+    "clinicalPointers": "HF: estatina de alta potência na maior dose tolerada.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 213,
+    "code": "DLP-P02",
+    "category": "Dislipidemia",
+    "subcategory": "Estratificação de risco",
+    "difficulty": "Básica",
+    "prompt": "Homem de 60 anos teve AVC isquêmico aterotrombótico há dois meses. O LDL-c é de 118 mg/dL e ele não usa estatina, porque lhe disseram que o colesterol \"está normal\". Segundo o PCDT de Dislipidemia, qual é a conduta?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Manter apenas dieta, porque o LDL-c ainda está abaixo de 160 mg/dL e não justifica medicamento agora.",
+        "rationale": "Incorreta. O limiar de LDL-c não se aplica a quem já teve evento aterosclerótico."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar estatina: doença aterosclerótica estabelecida indica tratamento qualquer que seja o LDL-c.",
+        "rationale": "CORRETA. Em prevenção secundária o risco é muito alto e a estatina é indicada qualquer que seja o LDL-c."
+      },
+      {
+        "letter": "C",
+        "text": "Calcular o escore de risco global antes de decidir, para saber se o risco é realmente alto.",
+        "rationale": "Incorreta. Com doença cardiovascular estabelecida não se calcula escore: o risco já é muito alto."
+      },
+      {
+        "letter": "D",
+        "text": "Iniciar fibrato isolado até que o LDL-c fique abaixo de 100 mg/dL nos exames de controle.",
+        "rationale": "Incorreta. Fibrato não é o tratamento para reduzir LDL-c na prevenção secundária."
+      }
+    ],
+    "correctLetter": "B",
+    "clinicalPointers": "Prevenção secundária: estatina independentemente do LDL basal.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 214,
+    "code": "HAS-P01",
+    "category": "Hipertensão Arterial Sistêmica",
+    "subcategory": "HAS secundária e resistente",
+    "difficulty": "Intermediária",
+    "prompt": "Mulher de 70 anos, que não sabe ler, usa losartana, anlodipino e hidroclorotiazida e mantém PA de 158/96 mmHg. A agente comunitária percebe que ela confunde as caixas: toma a losartana duas vezes e às vezes esquece o diurético. Diante da suspeita de hipertensão resistente, qual é a conduta adequada?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Confirmar a adesão e adaptar a prescrição com símbolos ou caixa organizadora antes de somar outro remédio.",
+        "rationale": "CORRETA. A má adesão causa pseudorresistência; antes de rotular como resistente, adequa-se o cuidado à literacia da paciente."
+      },
+      {
+        "letter": "B",
+        "text": "Acrescentar espironolactona, pois três anti-hipertensivos sem controle já definem hipertensão resistente.",
+        "rationale": "Incorreta. Sem confirmar a adesão, o diagnóstico de hipertensão resistente não pode ser feito."
+      },
+      {
+        "letter": "C",
+        "text": "Encaminhar exclusivamente ao cardiologista, já que a baixa escolaridade impede o tratamento na UBS.",
+        "rationale": "Incorreta. A baixa escolaridade pede adaptação do cuidado na APS, não exclusão."
+      },
+      {
+        "letter": "D",
+        "text": "Suspender todos os anti-hipertensivos e recomeçar o tratamento apenas com mudanças no estilo de vida.",
+        "rationale": "Incorreta. Suspender tudo expõe a paciente a risco cardiovascular sem resolver a causa."
+      }
+    ],
+    "correctLetter": "A",
+    "clinicalPointers": "Antes de HAS resistente: excluir pseudorresistência (adesão).",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
+  },
+  {
+    "id": 215,
+    "code": "FALC-P01",
+    "category": "Doença Falciforme",
+    "subcategory": "Transfusão e terapia curativa",
+    "difficulty": "Intermediária",
+    "prompt": "Menino de 10 anos, com HbSS e em uso regular de hidroxiureia, teve AVC isquêmico há um ano e ficou com sequela motora. Tem uma irmã de 13 anos, sem a doença, HLA-idêntica. A família pergunta se existe tratamento curativo na rede pública. Segundo o PCDT da Doença Falciforme, qual é a conduta?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Contraindicar o transplante, porque no SUS ele só é realizado em pacientes com mais de 18 anos de idade.",
+        "rationale": "Incorreta. O transplante para doença falciforme é indicado justamente em crianças e adolescentes que cumprem os critérios."
+      },
+      {
+        "letter": "B",
+        "text": "Indicar transplante autólogo, usando as próprias células-tronco do paciente, sem condicionamento prévio.",
+        "rationale": "Incorreta. O autólogo reinfundiria células com a mutação; o curativo é o alogênico."
+      },
+      {
+        "letter": "C",
+        "text": "Manter só a transfusão crônica, pois o transplante exige falência renal e osteonecrose associadas ao AVC.",
+        "rationale": "Incorreta. Não é preciso somar todas essas complicações; o AVC já é critério."
+      },
+      {
+        "letter": "D",
+        "text": "Encaminhar para avaliação de TCTH alogênico aparentado: AVC, hidroxiureia prévia e irmã HLA-idêntica.",
+        "rationale": "CORRETA. O TCTH aparentado é a única terapia curativa e está indicado em HbSS com complicação grave (como AVC), uso prévio de hidroxiureia e doador familiar HLA-idêntico."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "TCTH aparentado: HbSS + hidroxiureia prévia + complicação grave + doador HLA-idêntico.",
+    "sourceLabel": "Estilo da prova (VAT1)",
+    "estilo": "prova"
   }
 ];
 </script>
@@ -7153,19 +7680,42 @@ window.addEventListener("focus", resumeTimer);
 /* =========================================================================
    4. AMOSTRAGEM BALANCEADA
    ========================================================================= */
-function sampleBalanced(pool, subjects, n, rng, seenIds, respectAntiRepeat) {
+// Peso de cada assunto na prova VAT1 (20 questões: Dor 8, DM 6, DLP 4, HAS 1, Falciforme 1)
+const EXAM_WEIGHTS = {
+  "Dor Crônica": 8,
+  "Diabetes Mellitus": 6,
+  "Dislipidemia": 4,
+  "Hipertensão Arterial Sistêmica": 1,
+  "Doença Falciforme": 1,
+};
+function filterByEstilo(pool, estilo) {
+  if (estilo === "prova") return pool.filter((q) => q.estilo === "prova");
+  if (estilo === "detalhadas") return pool.filter((q) => q.estilo !== "prova");
+  return pool;
+}
+function sampleBalanced(pool, subjects, n, rng, seenIds, respectAntiRepeat, weights) {
   const groups = subjects.map((s) => pool.filter((q) => q.category === s));
   const totalAvailable = groups.reduce((a, g) => a + g.length, 0);
   n = Math.min(n, totalAvailable);
   if (n <= 0) return [];
 
-  const raw = groups.map((g) => (totalAvailable ? (g.length / totalAvailable) * n : 0));
-  const quotas = raw.map(Math.floor);
+  let raw;
+  if (weights) {
+    const w = subjects.map((s, i) => (groups[i].length ? weights[s] || 1 : 0));
+    const sumW = w.reduce((a, b) => a + b, 0) || 1;
+    raw = w.map((x) => (x / sumW) * n);
+  } else {
+    raw = groups.map((g) => (totalAvailable ? (g.length / totalAvailable) * n : 0));
+  }
+  const quotas = raw.map((r, i) => Math.min(Math.floor(r), groups[i].length));
   let remainder = n - quotas.reduce((a, b) => a + b, 0);
   const fracOrder = raw
     .map((r, i) => ({ i, frac: r - Math.floor(r) }))
     .sort((a, b) => b.frac - a.frac);
-  for (let k = 0; k < remainder && k < fracOrder.length; k++) quotas[fracOrder[k].i]++;
+  for (let k = 0; k < fracOrder.length && remainder > 0; k++) {
+    const i = fracOrder[k].i;
+    if (quotas[i] < groups[i].length) { quotas[i]++; remainder--; }
+  }
 
   const selected = [];
   groups.forEach((g, i) => {
@@ -7315,7 +7865,8 @@ function getSelectedSubjects() {
 
 function updateQtdMaxLabel() {
   const subjects = getSelectedSubjects();
-  const max = QUESTIONS_DATABASE.filter((q) => subjects.includes(q.category)).length;
+  const estiloEl = document.getElementById("select-estilo");
+  const max = filterByEstilo(QUESTIONS_DATABASE.filter((q) => subjects.includes(q.category)), estiloEl ? estiloEl.value : "todas").length;
   document.getElementById("qtd-max-label").textContent = max;
   const qtdInput = document.getElementById("input-qtd");
   if (Number(qtdInput.value) > max && max > 0) qtdInput.value = max;
@@ -7567,8 +8118,8 @@ function renderResumeBanner() {
    7. INICIAR SIMULADO
    ========================================================================= */
 function startQuiz(opts) {
-  const { subjects, qtd, mode, sessionCode, poolOverride, label } = opts;
-  const pool = poolOverride || QUESTIONS_DATABASE.filter((q) => subjects.includes(q.category));
+  const { subjects, qtd, mode, sessionCode, poolOverride, label, peso, estilo } = opts;
+  const pool = poolOverride || filterByEstilo(QUESTIONS_DATABASE.filter((q) => subjects.includes(q.category)), estilo);
   if (!pool.length) {
     toast("Nenhuma questão disponível para os critérios escolhidos.", "err");
     return;
@@ -7587,10 +8138,11 @@ function startQuiz(opts) {
     // revisoes vencidas entram primeiro (nao em sessoes compartilhadas por codigo)
     if (!sessionCode) {
       const cap = Math.max(1, Math.round(qtd * SRS_MAX_SHARE));
-      srsDueList(subjects).slice(0, Math.min(cap, qtd)).forEach((x) => reviewIds.add(x.q.id));
+      const poolIds = new Set(pool.map((q) => q.id));
+      srsDueList(subjects).filter((x) => poolIds.has(x.q.id)).slice(0, Math.min(cap, qtd)).forEach((x) => reviewIds.add(x.q.id));
     }
     const reviews = pool.filter((q) => reviewIds.has(q.id));
-    const fresh = sampleBalanced(pool.filter((q) => !reviewIds.has(q.id)), subjects, qtd - reviews.length, rng, seen, respectAntiRepeat);
+    const fresh = sampleBalanced(pool.filter((q) => !reviewIds.has(q.id)), subjects, qtd - reviews.length, rng, seen, respectAntiRepeat, peso === "igual" ? null : EXAM_WEIGHTS);
     chosen = reviews.concat(fresh);
     shuffleInPlace(chosen, rng);
   }
@@ -8549,6 +9101,8 @@ function copyInviteLink() {
   if (code) url.searchParams.set("codigo", code);
   url.searchParams.set("assuntos", subjects.map((s) => encodeURIComponent(s)).join(","));
   url.searchParams.set("qtd", qtd);
+  url.searchParams.set("peso", document.getElementById("select-peso").value);
+  url.searchParams.set("estilo", document.getElementById("select-estilo").value);
   navigator.clipboard
     .writeText(url.toString())
     .then(() => toast("Link de convite copiado!", "ok"))
@@ -8561,6 +9115,10 @@ function applyQueryParams() {
   const qtd = params.get("qtd");
   if (codigo) document.getElementById("input-session-code").value = codigo;
   if (qtd) document.getElementById("input-qtd").value = qtd;
+  const peso = params.get("peso"), estilo = params.get("estilo");
+  if (peso === "prova" || peso === "igual") document.getElementById("select-peso").value = peso;
+  if (["todas", "prova", "detalhadas"].includes(estilo)) document.getElementById("select-estilo").value = estilo;
+  updateQtdMaxLabel();
 }
 
 /* =========================================================================
@@ -8568,8 +9126,14 @@ function applyQueryParams() {
    ========================================================================= */
 function init() {
   applyDarkMode(lsGet(LS_KEYS.dark, false));
+  const pe = lsGet(STORAGE_SUBJECT + "_prefs_peso_estilo", null);
+  if (pe) {
+    if (pe.peso) document.getElementById("select-peso").value = pe.peso;
+    if (pe.estilo) document.getElementById("select-estilo").value = pe.estilo;
+  }
   renderHome();
   applyQueryParams();
+  document.getElementById("select-estilo").addEventListener("change", updateQtdMaxLabel);
 
   document.getElementById("btn-select-all-subjects").addEventListener("click", () => {
     document.querySelectorAll(".subject-checkbox").forEach((cb) => (cb.checked = true));
@@ -8590,7 +9154,10 @@ function init() {
     const qtd = Math.max(1, Number(document.getElementById("input-qtd").value) || 1);
     const mode = document.querySelector('input[name="mode"]:checked').value;
     const sessionCode = document.getElementById("input-session-code").value.trim();
-    startQuiz({ subjects, qtd, mode, sessionCode });
+    const peso = document.getElementById("select-peso").value;
+    const estilo = document.getElementById("select-estilo").value;
+    lsSet(STORAGE_SUBJECT + "_prefs_peso_estilo", { peso, estilo });
+    startQuiz({ subjects, qtd, mode, sessionCode, peso, estilo });
   });
 
   document.getElementById("btn-copy-invite").addEventListener("click", copyInviteLink);
