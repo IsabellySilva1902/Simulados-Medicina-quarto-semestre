@@ -1997,6 +1997,40 @@ const QUESTIONS_DATABASE = [
     "clinicalPointers": "Priapismo > 2 horas = emergência."
   },
   {
+    "id": 254,
+    "code": "FALC-V01",
+    "category": "Doença Falciforme",
+    "subcategory": "Prova VAT1 - Transplante de células-tronco hematopoéticas",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 13",
+    "difficulty": "Avançada",
+    "prompt": "Jovem de 14 anos, pardo, portador de Anemia Falciforme (HbSS) em uso regular de hidroxiureia, apresenta histórico de acidente vascular cerebral isquêmico há 8 meses com hemiparesia residual. O paciente possui um irmão biológico hígido totalmente compatível e reside em uma comunidade rural isolada com escassos recursos de reabilitação neurofuncional. Buscando promover a equidade e diminuir a progressão de danos neurológicos permanentes, a equipe médica avalia a indicação de terapêutica curativa na rede pública. De acordo com as diretrizes do PCDT da Doença Falciforme do Ministério da Saúde para o TCTH alogênico mieloablativo, assinale a conduta correta:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Encaminhar para avaliação do TCTH alogênico aparentado, reconhecendo a sequela cerebrovascular como critério elegível absoluto para indicação do procedimento curativo na rede pública federal.",
+        "rationale": "CORRETA. HbSS em uso de hidroxiureia, irmão HLA-idêntico e complicação grave (AVC) reúnem os critérios para avaliação de TCTH alogênico aparentado, a única terapia curativa."
+      },
+      {
+        "letter": "B",
+        "text": "Contraindicar o TCTH por causa da faixa etária do adolescente e manter o paciente exclusivamente em terapia transfusional crônica sem investigação imunológica do doador.",
+        "rationale": "Incorreta. A idade não o exclui, e o doador compatível é justamente o que viabiliza o transplante."
+      },
+      {
+        "letter": "C",
+        "text": "Condicionar a liberação do transplante à presença simultânea de osteonecrose articular múltipla e falência renal crônica avançada como requisitos obrigatórios do protocolo clínico oficial.",
+        "rationale": "Incorreta. Não é preciso somar essas complicações; o AVC já é critério."
+      },
+      {
+        "letter": "D",
+        "text": "Substituir o transplante de doador familiar por modalidade autóloga sem condicionamento prévio, dispensando o cadastro do paciente no registro nacional de receptores de órgãos.",
+        "rationale": "Incorreta. O transplante autólogo reinfundiria células com a mutação; o curativo é o alogênico, com condicionamento."
+      }
+    ],
+    "correctLetter": "A",
+    "clinicalPointers": "TCTH aparentado: HbSS + hidroxiureia + complicação grave (ex.: AVC) + doador HLA-idêntico."
+  },
+  {
     "id": 41,
     "code": "DLP-01",
     "category": "Dislipidemia",
@@ -3538,6 +3572,142 @@ const QUESTIONS_DATABASE = [
     ],
     "correctLetter": "D",
     "clinicalPointers": "TG ≥ 400: usar não-HDL (CT − HDL); alvo = alvo do LDL + 30."
+  },
+  {
+    "id": 242,
+    "code": "DLP-V01",
+    "category": "Dislipidemia",
+    "subcategory": "Prova VAT1 - Prevenção secundária pós-IAM",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 1",
+    "difficulty": "Básica",
+    "prompt": "Um homem de 55 anos recebe alta hospitalar após dez dias de internação por Infarto Agudo do Miocárdio com supra de ST. Seu perfil lipídico colhido na admissão mostrava LDL-C de 135 mg/dL, HDL-C de 38 mg/dL e Triglicerídeos de 160 mg/dL. Ele não apresentava diagnósticos prévios de dislipidemia. Qual é a indicação do tratamento farmacológico estabelecida pelo PCDT para este paciente?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Indicar ezetimiba em monoterapia devido ao risco cardiovascular alto.",
+        "rationale": "Incorreta. A base do tratamento na prevenção secundária é a estatina; ezetimiba isolada não é a indicação."
+      },
+      {
+        "letter": "B",
+        "text": "Iniciar fibrato isolado até o LDL atingir a meta inferior a 100 mg/dL.",
+        "rationale": "Incorreta. Fibrato não é o tratamento para reduzir LDL-c nem para a prevenção secundária."
+      },
+      {
+        "letter": "C",
+        "text": "Manter apenas dieta pois o LDL inicial está abaixo do valor 160 mg/dL.",
+        "rationale": "Incorreta. Após IAM o risco é muito alto e a estatina é indicada qualquer que seja o LDL-c."
+      },
+      {
+        "letter": "D",
+        "text": "Iniciar estatina de alta potência para todos na prevenção secundária.",
+        "rationale": "CORRETA. Doença aterosclerótica estabelecida (IAM) = muito alto risco: estatina de alta potência, independentemente do LDL-c basal."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "Pós-IAM: estatina de alta potência, qualquer que seja o LDL-c."
+  },
+  {
+    "id": 244,
+    "code": "DLP-V02",
+    "category": "Dislipidemia",
+    "subcategory": "Prova VAT1 - Tratamento da hipercolesterolemia familiar",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 3",
+    "difficulty": "Intermediária",
+    "prompt": "Um jovem de 22 anos apresenta LDL-C de 260 mg/dL, xantomas tendinosos e pai falecido por infarto aos 40 anos. O escore da OMS confirma o diagnóstico definitivo de Hipercolesterolemia Familiar (HF). Ele não apresenta resposta adequada apenas com dieta. Qual é a indicação do tratamento farmacológico inicial fornecido pelo SUS conforme o PCDT de Dislipidemia?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Indicar ezetimiba isolada como a primeira linha terapêutica da HF.",
+        "rationale": "Incorreta. A primeira linha na HF é a estatina."
+      },
+      {
+        "letter": "B",
+        "text": "Indicar evolocumabe como a terapia primária do protocolo do SUS.",
+        "rationale": "Incorreta. Inibidor de PCSK9 não é a terapia inicial do protocolo."
+      },
+      {
+        "letter": "C",
+        "text": "Indicar estatina e fibrato de forma contínua devido ao elevado risco cardiovascular.",
+        "rationale": "Incorreta. Fibrato não reduz LDL-c de forma relevante e não faz parte do tratamento inicial da HF."
+      },
+      {
+        "letter": "D",
+        "text": "Indicar estatina de alta potência na maior dose tolerada pelo paciente.",
+        "rationale": "CORRETA. Na HF o tratamento inicial é estatina de alta potência na maior dose tolerada, mantendo as medidas de estilo de vida. (Pelo escore: xantoma 6 + LDL 250–329: 5 + pai com DAC prematura 1 = 12.)"
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "HF: estatina de alta potência na maior dose tolerada."
+  },
+  {
+    "id": 245,
+    "code": "DLP-V03",
+    "category": "Dislipidemia",
+    "subcategory": "Prova VAT1 - Toxicidade muscular da estatina",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 4",
+    "difficulty": "Intermediária",
+    "prompt": "Um homem de 58 anos em prevenção secundária pós-infarto do miocárdio em uso de Atorvastatina 40 mg/dia apresenta queixa de mialgia difusa intensa e fraqueza muscular. Os exames mostram transaminases normais e CPK = 2.400 U/L (valor de referência até 190 U/L). Qual deve ser a conduta médica imediata recomendada pelo PCDT diante deste quadro de toxicidade muscular?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Suspender a estatina imediatamente devido à elevação de CPK acima de 10 vezes o LSN.",
+        "rationale": "CORRETA. 10 × 190 = 1.900; CPK de 2.400 está acima de 10× o LSN, com sintomas: suspensão imediata pelo risco de rabdomiólise."
+      },
+      {
+        "letter": "B",
+        "text": "Manter a medicação e associar fenofibrato para reduzir a sobrecarga de toxicidade.",
+        "rationale": "Incorreta. O fibrato também tem toxicidade muscular e não reduz o risco; manter a estatina é perigoso."
+      },
+      {
+        "letter": "C",
+        "text": "Substituir a estatina por ezetimiba na dose de 10 mg/dia até a normalização enzimática.",
+        "rationale": "Incorreta. A conduta imediata é suspender; a reintrodução é decidida depois da normalização."
+      },
+      {
+        "letter": "D",
+        "text": "Reduzir a dose da estatina pela metade e reavaliar os exames de CPK em trinta dias.",
+        "rationale": "Incorreta. Reduzir a dose é para CPK abaixo de 10× o LSN; acima disso, suspende-se."
+      }
+    ],
+    "correctLetter": "A",
+    "clinicalPointers": "CPK > 10× LSN = suspender a estatina imediatamente."
+  },
+  {
+    "id": 250,
+    "code": "DLP-V04",
+    "category": "Dislipidemia",
+    "subcategory": "Prova VAT1 - Diagnóstico laboratorial: TG ≥ 400",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 9",
+    "difficulty": "Intermediária",
+    "prompt": "Um homem de 54 anos, assintomático, realiza exames de rotina na Unidade Básica de Saúde. O perfil lipídico revela: Colesterol Total = 280 mg/dL, HDL-C = 40 mg/dL e Triglicerídeos = 480 mg/dL. Considerando as recomendações do Protocolo Clínico e Diretrizes Terapêuticas (PCDT) de Dislipidemia do Ministério da Saúde para o diagnóstico laboratorial, qual é a conduta correta para a avaliação das lipoproteínas deste paciente?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "O LDL-C deve ser estimado por Friedewald pois o CT está abaixo de 300.",
+        "rationale": "Incorreta. A validade de Friedewald depende do TG (< 400), não do CT."
+      },
+      {
+        "letter": "B",
+        "text": "O VLDL-C deve ser calculado dividindo o valor de TG por 5 normalmente.",
+        "rationale": "Incorreta. TG ÷ 5 só estima o VLDL quando o TG está abaixo de 400."
+      },
+      {
+        "letter": "C",
+        "text": "O perfil lipídico deve ser repetido após 12 horas de jejum absoluto.",
+        "rationale": "Incorreta. A solução é usar o não-HDL-c, não repetir em jejum prolongado."
+      },
+      {
+        "letter": "D",
+        "text": "O não-HDL-C deve ser utilizado pois os triglicerídeos superam 400.",
+        "rationale": "CORRETA. Com TG ≥ 400, usa-se o não-HDL-c: 280 − 40 = 240 mg/dL (alvo = alvo do LDL-c + 30)."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "TG ≥ 400: Friedewald não vale; usar não-HDL (CT − HDL)."
   },
   {
     "id": 81,
@@ -5089,6 +5259,40 @@ const QUESTIONS_DATABASE = [
     "clinicalPointers": "HAS antes de 20 semanas = crônica; após 20 semanas = gestacional."
   },
   {
+    "id": 261,
+    "code": "HAS-V01",
+    "category": "Hipertensão Arterial Sistêmica",
+    "subcategory": "Prova VAT1 - Pseudorresistência e literacia em saúde",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 20",
+    "difficulty": "Intermediária",
+    "prompt": "Um homem de 62 anos, trabalhador rural aposentado, morador de assentamento com baixa escolaridade e restrição financeira, retorna à UBS com queixa de tontura esporádica. Ele possui diagnósticos de HAS, DM2 e dislipidemia. Está em uso prescrito de Enalapril 20 mg 2x/dia, Hidroclorotiazida 25 mg 1x/dia, Anlodipino 10 mg 1x/dia, Metformina 850 mg 2x/dia e Sinvastatina 20 mg 1x/dia. No consultório, sua PA permanece em 148/94 mmHg (confirmada em três medições). Durante a anamnese, a equipe identifica que o paciente confunde as caixas dos remédios e frequentemente interrompe as tomadas por falta de transporte para buscar os fármacos na farmácia central. Diante desse cenário de suspeita de HAR versus pseudorresistência associada a determinantes sociais e literacia em saúde, qual a conduta adequada?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Substituir toda a medicação oral por insulinoterapia plena e encaminhar o paciente à hemodiálise imediata para prevenção de complicações vasculares.",
+        "rationale": "Incorreta. Não há indicação de insulina plena nem de diálise."
+      },
+      {
+        "letter": "B",
+        "text": "Dar alta ao paciente orientando que busque atendimento em prontos-socorros em crises, visto que a baixa escolaridade impede a adesão ao tratamento.",
+        "rationale": "Incorreta. A baixa escolaridade pede adaptação do cuidado, não abandono."
+      },
+      {
+        "letter": "C",
+        "text": "Adicionar imediatamente o quarto anti-hipertensivo (espironolactona) sem investigar a adesão, assumindo o diagnóstico definitivo de hipertensão resistente.",
+        "rationale": "Incorreta. Antes de diagnosticar HAR é obrigatório excluir pseudorresistência (adesão, avental branco)."
+      },
+      {
+        "letter": "D",
+        "text": "Investigar a adesão terapêutica, adequar a identificação dos remédios para a literacia do paciente e articular a entrega pela equipe de saúde da família.",
+        "rationale": "CORRETA. A má adesão explica a PA alta (pseudorresistência); adapta-se o cuidado à literacia e ao acesso antes de somar outro fármaco."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "Antes de HAR: excluir pseudorresistência (adesão, literacia, acesso)."
+  },
+  {
     "id": 121,
     "code": "DM-01",
     "category": "Diabetes Mellitus",
@@ -6633,6 +6837,210 @@ const QUESTIONS_DATABASE = [
     ],
     "correctLetter": "D",
     "clinicalPointers": "Pé sem PSP = risco 0, anual; rastreio de complicações independe da HbA1c."
+  },
+  {
+    "id": 243,
+    "code": "DM-V01",
+    "category": "Diabetes Mellitus",
+    "subcategory": "Prova VAT1 - Apresentação clínica do DM1",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 2",
+    "difficulty": "Básica",
+    "prompt": "Um adolescente de 15 anos, previamente hígido, procura a Unidade Básica de Saúde acompanhado pelo pai por apresentar sede intensa e aumento importante da frequência urinária há cerca de três semanas. A família também relata perda de aproximadamente 5 kg no último mês e cansaço progressivo. No dia da consulta, o adolescente apresenta náuseas e dois episódios de vômitos. A glicemia capilar realizada na UBS é de 312 mg/dL. Diante desse quadro, considerando os critérios diagnósticos e a apresentação clínica do diabetes mellitus tipo 1 (DM1), a conduta mais adequada é:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Confirmar DM1 exclusivamente após a realização de duas glicemias de jejum ≥ 126 mg/dL em dias diferentes.",
+        "rationale": "Incorreta. Com sintomas clássicos, glicemia ao acaso ≥ 200 mg/dL já firma o diagnóstico; esperar atrasa a conduta diante do risco de cetoacidose."
+      },
+      {
+        "letter": "B",
+        "text": "Considerar inicialmente uma gastroenterite, pois náuseas e vômitos não são manifestações relacionadas ao DM1.",
+        "rationale": "Incorreta. Náuseas e vômitos em quem tem hiperglicemia sintomática sugerem cetoacidose."
+      },
+      {
+        "letter": "C",
+        "text": "Considerar o diagnóstico improvável, pois o DM1 geralmente se manifesta na infância e raramente ocorre na adolescência.",
+        "rationale": "Incorreta. O DM1 é frequente na infância e na adolescência."
+      },
+      {
+        "letter": "D",
+        "text": "Considerar DM1 diante da hiperglicemia associada a sintomas clássicos, avaliando imediatamente a possibilidade de cetoacidose diabética.",
+        "rationale": "CORRETA. Poliúria, polidipsia, perda de peso e glicemia de 312 mg/dL com vômitos: DM1 é a hipótese principal e a cetoacidose precisa ser avaliada de imediato."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "Sintomas clássicos + glicemia ≥ 200 = diabetes; vômitos → pensar em cetoacidose."
+  },
+  {
+    "id": 246,
+    "code": "DM-V02",
+    "category": "Diabetes Mellitus",
+    "subcategory": "Prova VAT1 - Seguimento do DM2",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 5",
+    "difficulty": "Básica",
+    "prompt": "Uma paciente de 49 anos com DM2, hipertensão arterial e dislipidemia comparece à UBS. Sua HbA1c é de 6,8%, e ela não apresenta sintomas. Durante a consulta, afirma que acredita não precisar mais realizar exames para complicações do diabetes porque sua glicemia \"está controlada\". A respeito do seguimento dessa paciente, assinale a alternativa correta:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "O exame dos pés é indicado apenas quando o paciente apresenta dor, parestesias ou lesões cutâneas.",
+        "rationale": "Incorreta. O exame dos pés é periódico (ao diagnóstico e anual), justamente para detectar alterações antes dos sintomas."
+      },
+      {
+        "letter": "B",
+        "text": "O acompanhamento deve incluir avaliação do risco cardiovascular, exame dos pés e rastreamento periódico de complicações renais e oculares.",
+        "rationale": "CORRETA. Peso e PA em cada consulta, risco CV anual, pés anualmente e rastreio periódico de nefropatia e retinopatia, independentemente da HbA1c."
+      },
+      {
+        "letter": "C",
+        "text": "A HbA1c dentro da meta indica bom controle do diabetes e torna desnecessário o rastreamento de complicações na ausência de sintomas.",
+        "rationale": "Incorreta. Complicações podem evoluir silenciosamente mesmo com bom controle."
+      },
+      {
+        "letter": "D",
+        "text": "Avaliar os pés anualmente. O rastreamento de retinopatia e doença renal deve ser realizado apenas quando houver elevação persistente da HbA1c.",
+        "rationale": "Incorreta. Retinopatia e nefropatia são rastreadas periodicamente desde o diagnóstico do DM2, não só com HbA1c alta."
+      }
+    ],
+    "correctLetter": "B",
+    "clinicalPointers": "DM2 controlado: manter rastreio de pés, rins, olhos e risco CV."
+  },
+  {
+    "id": 247,
+    "code": "DM-V03",
+    "category": "Diabetes Mellitus",
+    "subcategory": "Prova VAT1 - Hipoglicemia grave",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 6",
+    "difficulty": "Intermediária",
+    "prompt": "Um homem de 68 anos, com DM2 em uso de Insulina NPH e metformina, é trazido pela família à Unidade Básica de Saúde. Apresenta-se torporoso, rebaixado, incapaz de responder a comandos simples ou deglutir com segurança. A aferição da glicemia capilar na sala de medicação revela 36 mg/dL. Considerando a classificação de gravidade e o protocolo de manejo de emergência na Atenção Primária à Saúde, assinale a alternativa correta:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Caracteriza-se como hipoglicemia de Nível 1; a conduta indicada é a aplicação de glucagon oral e observação ambulatorial do paciente por seis horas.",
+        "rationale": "Incorreta. O nível 1 é 54–69 mg/dL com paciente lúcido; além disso, glucagon não é usado por via oral."
+      },
+      {
+        "letter": "B",
+        "text": "Caracteriza-se como cetoacidose diabética; a conduta indicada é a infusão endovenosa contínua de insulina regular associada à soroterapia fisiológica.",
+        "rationale": "Incorreta. É hipoglicemia; insulina agravaria o quadro."
+      },
+      {
+        "letter": "C",
+        "text": "Caracteriza-se como hipoglicemia de Nível 2; a conduta indicada é a oferta oral de 30 g de carboidrato líquido com canudo sob supervisão do acompanhante.",
+        "rationale": "Incorreta. A via oral é contraindicada em quem não deglute com segurança; o rebaixamento define o nível 3."
+      },
+      {
+        "letter": "D",
+        "text": "Caracteriza-se como hipoglicemia de Nível 3; a conduta indicada é a administração endovenosa imediata de glicose hipertônica e encaminhamento para Pronto Socorro.",
+        "rationale": "CORRETA. Alteração do nível de consciência com necessidade de ajuda de terceiros define o nível 3: glicose hipertônica EV e encaminhamento."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "Hipoglicemia nível 3 (rebaixamento) → glicose hipertônica EV e encaminhar."
+  },
+  {
+    "id": 252,
+    "code": "DM-V04",
+    "category": "Diabetes Mellitus",
+    "subcategory": "Prova VAT1 - Intensificação do tratamento do DM2",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 11",
+    "difficulty": "Intermediária",
+    "prompt": "Uma mulher de 67 anos com DM2, hipertensão e obesidade está em acompanhamento na UBS. Faz uso de metformina em dose otimizada associada à glibenclamida há aproximadamente 18 meses. Refere adesão adequada ao tratamento e relata que passou a caminhar regularmente e modificou sua alimentação. Entretanto, sua HbA1c permanece em 8,4%. A paciente encontra-se clinicamente estável, sem sintomas de hiperglicemia importante e com função renal preservada. A equipe discute a necessidade de intensificação terapêutica. Nesse contexto, qual alternativa está de acordo com a abordagem recomendada pelo PCDT?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Suspender todos os antidiabéticos orais e iniciar insulinoterapia basal-bolus, pois HbA1c superior a 8% contraindica a manutenção de medicamentos orais.",
+        "rationale": "Incorreta. HbA1c de 8,4% não contraindica os orais, e a metformina é mantida mesmo quando se inicia insulina."
+      },
+      {
+        "letter": "B",
+        "text": "Manter o tratamento atual e repetir a HbA1c somente após 12 meses, pois a paciente já adotou medidas de estilo de vida.",
+        "rationale": "Incorreta. Fora da meta, manter tudo igual é inércia terapêutica."
+      },
+      {
+        "letter": "C",
+        "text": "Acrescentar dapagliflozina ao tratamento, mantendo metformina, avaliando a manutenção da sulfonilureia conforme o contexto clínico e reforçando as medidas não farmacológicas.",
+        "rationale": "CORRETA. Mulher ≥ 60 anos com fator de alto risco (HAS), fora da meta com metformina e sulfonilureia: elegível à dapagliflozina 10 mg na 2ª intensificação, mantendo a metformina."
+      },
+      {
+        "letter": "D",
+        "text": "Prescrever dapagliflozina, suspendendo os demais antidiabéticos orais devido à potência deste iSGLT-2.",
+        "rationale": "Incorreta. A dapagliflozina é acrescentada, não substitui a metformina."
+      }
+    ],
+    "correctLetter": "C",
+    "clinicalPointers": "Fora da meta com metformina + SU: acrescentar dapagliflozina (se elegível), mantendo a metformina."
+  },
+  {
+    "id": 255,
+    "code": "DM-V05",
+    "category": "Diabetes Mellitus",
+    "subcategory": "Prova VAT1 - Confirmação diagnóstica do DM2",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 14",
+    "difficulty": "Básica",
+    "prompt": "Uma mulher de 42 anos, preta, trabalhadora doméstica residente em comunidade periférica sem saneamento básico, realiza exame de rastreamento de rotina na UBS. A paciente é assintomática e não apresenta queixas de poliúria ou polidipsia. O resultado da glicemia de jejum de 8 horas resultou em 132 mg/dL. Considerando os critérios de confirmação diagnóstica do PCDT de DM2, qual conduta deve ser adotada pela equipe de Saúde da Família?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Confirmar o diagnóstico com nova glicemia de jejum ou HbA1c em nova amostra de sangue periférico.",
+        "rationale": "CORRETA. No assintomático, um único exame alterado precisa ser confirmado com um segundo teste (glicemia de jejum ou HbA1c)."
+      },
+      {
+        "letter": "B",
+        "text": "Confirmar o diagnóstico com glicemia capilar aleatória no momento da consulta.",
+        "rationale": "Incorreta. Glicemia capilar não serve para diagnóstico, e a aleatória só vale com sintomas clássicos."
+      },
+      {
+        "letter": "C",
+        "text": "Iniciar o tratamento imediato com metformina sem testes adicionais, visto que a primeira glicemia de jejum já ultrapassou o limiar de 126 mg/dL.",
+        "rationale": "Incorreta. Sem sintomas, o diagnóstico exige confirmação antes do tratamento."
+      },
+      {
+        "letter": "D",
+        "text": "Descartar o diagnóstico de diabetes e solicitar um teste de tolerância à glicose oral em um ano, atribuindo a alteração ao estresse alimentar.",
+        "rationale": "Incorreta. Glicemia de 132 mg/dL está na faixa de diabetes e deve ser confirmada agora."
+      }
+    ],
+    "correctLetter": "A",
+    "clinicalPointers": "Assintomático com um exame alterado: confirmar com novo teste."
+  },
+  {
+    "id": 258,
+    "code": "DM-V06",
+    "category": "Diabetes Mellitus",
+    "subcategory": "Prova VAT1 - Prevenção secundária e barreiras de acesso",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 17",
+    "difficulty": "Avançada",
+    "prompt": "Um homem de 56 anos, pequeno agricultor residente em zona rural isolada com transporte público precário, comparece à UBS após dois anos sem acompanhamento. Ele tem histórico de Infarto Agudo do Miocárdio (IAM) há quatro anos e encontra-se em uso irregular de Metformina 1000 mg/dia e Atenolol 50 mg/dia. Seus exames atuais mostram HbA1c de 8,4%, glicemia de jejum de 176 mg/dL, PA de 144/90 mmHg e LDL-colesterol de 118 mg/dL. O paciente relata dificuldade em obter medicamentos na cidade e medo de ficar incapacitado para o trabalho agrícola. Diante do quadro de prevenção secundária cardiovascular, inércia terapêutica e barreiras geográficas/ambientais de acesso ao SUS, qual é a conduta clínica e de gestão do cuidado mais indicada?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Suspender a metformina e o atenolol, recomendando o uso exclusivo de chás caseiros para o controle do diabetes e da hipertensão em populações rurais.",
+        "rationale": "Incorreta. Retirar o tratamento eficaz aumenta o risco; a barreira de acesso é que precisa ser enfrentada."
+      },
+      {
+        "letter": "B",
+        "text": "Manter a prescrição inalterada para evitar sobrecarregar o paciente, orientando que retorne à Unidade Básica de Saúde apenas se apresentar nova dor torácica.",
+        "rationale": "Incorreta. É inércia terapêutica: há metas fora do alvo e falta a estatina."
+      },
+      {
+        "letter": "C",
+        "text": "Iniciar estatina para prevenção secundária e encaminhar paciente para endocrinologista, visto que possui risco cardiovascular muito alto e não precisa mais permanecer na APS.",
+        "rationale": "Incorreta. O cuidado continua coordenado pela APS, que conhece o território."
+      },
+      {
+        "letter": "D",
+        "text": "Iniciar estatina para prevenção secundária, intensificar a terapia metabólica e pressórica e organizar o fluxo de dispensação de remédios na área rural.",
+        "rationale": "CORRETA. Após IAM, estatina independentemente do LDL-c; intensificar o controle (HbA1c 8,4%, PA 144/90) e resolver o acesso aos remédios."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "Pós-IAM: estatina + intensificar + organizar o acesso aos remédios."
   },
   {
     "id": 161,
@@ -8211,6 +8619,278 @@ const QUESTIONS_DATABASE = [
     ],
     "correctLetter": "C",
     "clinicalPointers": "Fibromialgia: amitriptilina 10–25 mg à noite + exercício + TCC; sem opioide."
+  },
+  {
+    "id": 248,
+    "code": "DOR-V01",
+    "category": "Dor Crônica",
+    "subcategory": "Prova VAT1 - Fibromialgia (dor nociplástica)",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 7",
+    "difficulty": "Básica",
+    "prompt": "Mulher de 35 anos com diagnóstico de fibromialgia (dor nociplástica) retorna à consulta solicitando prescrição de opioide forte ou anti-inflamatório, alegando que \"a dor é insuportável\". À luz das evidências científicas sintetizadas no PCDT de dor crônica para dor nociplástica, qual orientação e plano terapêutico devem ser adotados pela equipe?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Prescrever opioides fracos continuamente associados a AINEs orais como primeira linha para remissão da dor.",
+        "rationale": "Incorreta. Opioides e AINEs não são a base do tratamento da dor nociplástica."
+      },
+      {
+        "letter": "B",
+        "text": "Indicar infiltrações articulares com corticoide e laserterapia de baixa potência para controle da sensibilização.",
+        "rationale": "Incorreta. A fibromialgia não é doença articular; infiltração não trata a sensibilização central."
+      },
+      {
+        "letter": "C",
+        "text": "Recomendar repouso no leito e prescrição de pregabalina em dose máxima por ser o padrão-ouro no protocolo.",
+        "rationale": "Incorreta. O repouso piora o quadro e a pregabalina não foi incorporada ao SUS."
+      },
+      {
+        "letter": "D",
+        "text": "Priorizar a terapia cognitivo-comportamental, exercícios aeróbicos e amitriptilina, evitando o uso de opioides.",
+        "rationale": "CORRETA. Na dor nociplástica: abordagem multimodal com TCC, exercício e modulador do SNC (amitriptilina), sem opioides."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "Fibromialgia: TCC + exercício + amitriptilina; sem opioide."
+  },
+  {
+    "id": 249,
+    "code": "DOR-V02",
+    "category": "Dor Crônica",
+    "subcategory": "Prova VAT1 - Síndrome dolorosa miofascial: ponto-gatilho ativo",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 8",
+    "difficulty": "Intermediária",
+    "prompt": "Durante o exame físico de uma paciente de 41 anos com dor crônica na cintura escapular e região cervical, o médico realiza a palpação sistemática e o mapeamento muscular em busca de pontos-gatilho (PG) ativos e latentes nos músculos trapézio, elevador da escápula e supraespinal. De acordo com as diretrizes do PCDT da Dor Crônica para a propedêutica musculoesquelética da Síndrome Dolorosa Miofascial (SDM), qual achado e conduta de mapeamento muscular caracterizam o diagnóstico correto?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "O achado de ponto-gatilho latente caracteriza-se por dor contínua espontânea acompanhada por atrofia muscular focal grave.",
+        "rationale": "Incorreta. O PG latente só dói à palpação; dor espontânea é do PG ativo, e não há atrofia focal grave."
+      },
+      {
+        "letter": "B",
+        "text": "A ausência de dor referida à distância na digitopressão de nódulo muscular descarta o quadro de síndrome miofascial ativa.",
+        "rationale": "Incorreta. A dor referida é frequente, mas sua ausência em um ponto não descarta a SDM."
+      },
+      {
+        "letter": "C",
+        "text": "O mapeamento muscular deve restringir-se à área dolorida relatada pelo paciente, sendo dispensável examinar o lado oposto.",
+        "rationale": "Incorreta. O mapeamento é sistemático, inclusive porque a dor referida aparece longe do PG."
+      },
+      {
+        "letter": "D",
+        "text": "A identificação de nódulo em banda tensa muscular que reproduz a queixa familiar do paciente confirma ponto-gatilho ativo.",
+        "rationale": "CORRETA. PG ativo = nódulo hipersensível em banda tensa que reproduz a dor que o paciente reconhece."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "PG ativo reproduz a queixa; latente só dói à palpação."
+  },
+  {
+    "id": 251,
+    "code": "DOR-V03",
+    "category": "Dor Crônica",
+    "subcategory": "Prova VAT1 - Analgesia na osteoartrite (RENAME)",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 10",
+    "difficulty": "Básica",
+    "prompt": "Homem de 52 anos com osteoartrite de joelho sintomática procura a UBS com dor nociceptiva de intensidade moderada. O paciente não possui antecedente de sangramento digestivo, mas apresenta hipertensão arterial sistêmica controlada. Considerando a Relação Nacional de Medicamentos Essenciais (RENAME) e as diretrizes de prescrição do PCDT, assinale a opção correta:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Indicar AINE tópico isolado como monoterapia de longa duração por ser a escolha incorporada no protocolo.",
+        "rationale": "Incorreta. A primeira linha é o analgésico simples; AINE tópico de longa duração não é a escolha do protocolo."
+      },
+      {
+        "letter": "B",
+        "text": "Associar ibuprofeno e naproxeno continuamente por seis meses sem necessidade de gastroproteção com omeprazol.",
+        "rationale": "Incorreta. Não se associam dois AINEs, e o uso prolongado exige cautela."
+      },
+      {
+        "letter": "C",
+        "text": "Iniciar diclofenaco de sódio oral em dose alta associado a tramadol como primeira linha para osteoartrite.",
+        "rationale": "Incorreta. AINE em dose alta com opioide não é primeira linha."
+      },
+      {
+        "letter": "D",
+        "text": "Prescrever paracetamol até quatro gramas diárias ou ibuprofeno na menor dose efetiva pelo menor tempo possível.",
+        "rationale": "CORRETA. Paracetamol até 4 g/dia é a primeira linha; o AINE (ibuprofeno) entra na menor dose e pelo menor tempo."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "OA: paracetamol até 4 g/dia; AINE na menor dose pelo menor tempo."
+  },
+  {
+    "id": 253,
+    "code": "DOR-V04",
+    "category": "Dor Crônica",
+    "subcategory": "Prova VAT1 - Osteoartrite: diagnóstico clínico",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 12",
+    "difficulty": "Básica",
+    "prompt": "Mulher de 62 anos apresenta dor mecânica em ambos os joelhos relacionada a atividades habituais e rigidez matinal de 15 minutos. Ao exame físico, observa-se crepitação articular e limitação discreta de amplitude, sem sinais de derrame agudo. A residente sugere solicitar ressonância magnética de joelhos para \"confirmar a extensão do dano cartilaginoso\" antes de prescrever tratamento. Considerando as diretrizes de exames complementares do PCDT para osteoartrite, assinale a conduta adequada:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "O diagnóstico de osteoartrite é clínico e a ressonância magnética não é recomendada de rotina para confirmação.",
+        "rationale": "CORRETA. Dor mecânica, rigidez matinal curta e crepitação firmam o diagnóstico clínico; a ressonância não é de rotina."
+      },
+      {
+        "letter": "B",
+        "text": "A ausência de alteração na radiografia bipodal em carga descarta osteoartrite e exige biópsia sinovial urgente.",
+        "rationale": "Incorreta. Radiografia normal não descarta OA, e biópsia não tem indicação."
+      },
+      {
+        "letter": "C",
+        "text": "A ressonância magnética é o exame padrão-ouro obrigatório para orientar a prescrição inicial de analgésicos no SUS.",
+        "rationale": "Incorreta. O tratamento inicial não depende de ressonância."
+      },
+      {
+        "letter": "D",
+        "text": "O achado de perda de cartilagem na ressonância correlaciona-se perfeitamente com a intensidade da dor referida.",
+        "rationale": "Incorreta. Achados de imagem frequentemente não se correlacionam com a dor."
+      }
+    ],
+    "correctLetter": "A",
+    "clinicalPointers": "OA: diagnóstico clínico; ressonância não é de rotina."
+  },
+  {
+    "id": 256,
+    "code": "DOR-V05",
+    "category": "Dor Crônica",
+    "subcategory": "Prova VAT1 - Lombalgia: imagem × sintomas",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 15",
+    "difficulty": "Básica",
+    "prompt": "Paciente de 44 anos com dor lombar crônica não específica há 5 meses sem sinais de alarme (red flags) traz ressonância magnética da coluna que evidencia protrusão discal L4-L5 e alteração degenerativa das facetas articulares. O exame neurológico é normal, sem déficits motores ou sensitivos. O paciente demonstra ansiedade extrema por acreditar que sua coluna está \"destruída\". Com base nas orientações do PCDT da Dor Crônica sobre o uso de exames complementares e a desconexão entre imagem e sintomatologia, assinale a opção correta:",
+    "options": [
+      {
+        "letter": "A",
+        "text": "A demonstração de protrusão discal na ressonância confirma que a lombalgia possui mecanismo puramente neuropático.",
+        "rationale": "Incorreta. Com exame neurológico normal, não há sinal de dor neuropática; protrusão não define o mecanismo."
+      },
+      {
+        "letter": "B",
+        "text": "O laudo com alterações estruturais exige a indicação de intervenção cirúrgica descompressiva para evitar sequelas.",
+        "rationale": "Incorreta. Sem déficit nem red flags, achados de imagem não indicam cirurgia."
+      },
+      {
+        "letter": "C",
+        "text": "Achados degenerativos em exames de imagem são frequentes em assintomáticos e não guardam relação direta com a dor.",
+        "rationale": "CORRETA. Alterações degenerativas são comuns em pessoas sem dor; a imagem muitas vezes não explica a lombalgia."
+      },
+      {
+        "letter": "D",
+        "text": "A ausência de dor em repouso descarta o achado degenerativo e indica que o exame de ressonância foi laudado errado.",
+        "rationale": "Incorreta. A presença ou não de dor em repouso não invalida o laudo."
+      }
+    ],
+    "correctLetter": "C",
+    "clinicalPointers": "Achados degenerativos são comuns em assintomáticos e não explicam a dor."
+  },
+  {
+    "id": 257,
+    "code": "DOR-V06",
+    "category": "Dor Crônica",
+    "subcategory": "Prova VAT1 - Determinantes sociais da dor",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 16",
+    "difficulty": "Básica",
+    "prompt": "Mulher negra, 46 anos, trabalhadora doméstica informal, consulta por dor lombossacra e cefaleia crônicas há mais de um ano. Relata que nas consultas anteriores seus sintomas foram ignorados e rotulados como \"somatização e falta de esforço\", sem investigação adequada. Sob a perspectiva crítico-reflexiva dos determinantes sociais expressa no PCDT, como o profissional deve conduzir o caso?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Atribuir o quadro exclusivamente a fatores genéticos étnicos, descartando o impacto das condições de trabalho.",
+        "rationale": "Incorreta. Ignora os determinantes sociais e de trabalho."
+      },
+      {
+        "letter": "B",
+        "text": "Desconsiderar os relatos de discriminação na anamnese por não apresentarem relevância no raciocínio biológico.",
+        "rationale": "Incorreta. A discriminação faz parte da gênese e da perpetuação da dor."
+      },
+      {
+        "letter": "C",
+        "text": "Encaminhar a paciente diretamente para a psiquiatria por considerar que queixas sem lesão são somatizações puras.",
+        "rationale": "Incorreta. Repete o rótulo de \"somatização\" sem acolher nem investigar."
+      },
+      {
+        "letter": "D",
+        "text": "Reconhecer que iniquidades sociais e discriminação de raça e gênero somatizam e se expressam como dor crônica.",
+        "rationale": "CORRETA. O PCDT reconhece que iniquidades e discriminação de raça e gênero se expressam no corpo como dor crônica."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "Iniquidades e discriminação de raça e gênero se expressam como dor crônica."
+  },
+  {
+    "id": 259,
+    "code": "DOR-V07",
+    "category": "Dor Crônica",
+    "subcategory": "Prova VAT1 - Dor noturna: mecânica × sinal de alarme",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 18",
+    "difficulty": "Intermediária",
+    "prompt": "Durante o atendimento de uma paciente de 62 anos com dor crônica na coluna e nos quadris na Atenção Primária, a médica investiga as características da dor noturna para diferenciar causas benignas/degenerativas de doenças graves que exigem investigação complementar urgente. Com base nas orientações do PCDT sobre a interpretação do padrão do sono e dos despertares noturnos na anamnese, qual relato da paciente afasta a suspeita de doença inflamatória ou neoplásica grave?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "A presença de rigidez articular matinal intensa com duração superior a uma hora que reduz gradativamente com a movimentação ao longo do dia.",
+        "rationale": "Incorreta. Rigidez matinal > 1 hora que melhora com movimento é padrão inflamatório, não afasta doença inflamatória."
+      },
+      {
+        "letter": "B",
+        "text": "O relato de perda de peso não intencional superior a dez por cento do peso corporal associado à sudorese noturna e astenia progressiva.",
+        "rationale": "Incorreta. Perda de peso e sudorese noturna são sinais de alarme (neoplasia, infecção)."
+      },
+      {
+        "letter": "C",
+        "text": "O despertar na madrugada acompanhado de febre baixa contínua e da necessidade imperiosa de levantar-se e caminhar para obter alívio.",
+        "rationale": "Incorreta. Febre e dor que obriga a levantar sugerem causa infecciosa ou inflamatória."
+      },
+      {
+        "letter": "D",
+        "text": "O despertar noturno que ocorre exclusivamente ao mudar de posição na cama ou ao deitar-se diretamente sobre a articulação acometida.",
+        "rationale": "CORRETA. Dor que surge só com a mudança de posição ou a carga sobre a articulação é mecânica, sem sinal de alarme."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "Acordar só ao mudar de posição = dor mecânica; febre, perda de peso, dor contínua = alarme."
+  },
+  {
+    "id": 260,
+    "code": "DOR-V08",
+    "category": "Dor Crônica",
+    "subcategory": "Prova VAT1 - Síndrome dolorosa miofascial imitando ciatalgia",
+    "origem": "prova_antiga",
+    "sourceLabel": "Prova VAT1 2026.2 (Turma D), questão 19",
+    "difficulty": "Avançada",
+    "prompt": "Paciente de 46 anos refere dor profunda em peso e queimor na nádega esquerda, irradiada pela face posterior da coxa e perna até a região maleolar, presente há 4 meses. Relata que a dor piora ao caminhar e ao sentar-se sobre o lado afetado. Ao exame físico, apresenta reflexos patelar e aquileu preservados, força muscular grau 5/5 nos dermátomos L4, L5 e S1, teste de Elevação da Perna Estendida (Lasègue) negativo e eletroneuromiografia sem sinais de denervação. A palpação profunda entre o quadril e a crista ilíaca posterior revela nodulação hipersensível em banda tensa muscular que reproduz exatamente a dor irradiada para a perna. De acordo com a fisiopatologia da Síndrome Dolorosa Miofascial (SDM) no PCDT, qual é a explicação para esse mimetismo?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "O relato de dor irradiada para a perna confirma radiculopatia L5 por hérnia discal, dispensando exames neurofisiológicos.",
+        "rationale": "Incorreta. Lasègue negativo, força e reflexos normais e ENMG sem denervação falam contra radiculopatia."
+      },
+      {
+        "letter": "B",
+        "text": "A presença de alodinia tátil na coxa isoladamente confirma lesão estrutural primária do tronco do nervo isquiático principal.",
+        "rationale": "Incorreta. Não há alodinia descrita, e a ENMG normal não mostra lesão do nervo."
+      },
+      {
+        "letter": "C",
+        "text": "A eletroneuromiografia normal indica que a dor é de origem psicogênica, sem substrato físico identificável.",
+        "rationale": "Incorreta. Há substrato físico: o ponto-gatilho que reproduz a dor. (Na prova original, esta alternativa repetia o texto da B; foi trocada para não haver duas iguais.)"
+      },
+      {
+        "letter": "D",
+        "text": "A dor referida por ponto-gatilho decorre de conexões medulares facilitadas, sem lesão do sistema nervoso somatossensitivo.",
+        "rationale": "CORRETA. O PG em banda tensa gera dor referida à distância por conexões medulares facilitadas; o exame neurológico normal confirma que não há lesão nervosa."
+      }
+    ],
+    "correctLetter": "D",
+    "clinicalPointers": "PG glúteo imita ciatalgia por dor referida; exame neurológico normal."
   }
 ];
 </script>
