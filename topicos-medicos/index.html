@@ -108,6 +108,14 @@
       </p>
     </div>
 
+    <div id="prova-card" class="rounded-xl bg-white dark:bg-slate-800 border-2 border-brand-200 dark:border-brand-800 p-4 sm:p-5 mb-6 flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
+      <div>
+        <p class="font-semibold text-slate-800 dark:text-slate-100">📝 Prova VAT1 2026.2 (Turma D)</p>
+        <p class="text-sm text-slate-500 dark:text-slate-400">As <span id="prova-count">20</span> questões da prova, na ordem original e com as alternativas na ordem da prova. Usa o modo (Exame ou Tutor) marcado mais abaixo.</p>
+      </div>
+      <button type="button" id="btn-start-prova" class="px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-semibold whitespace-nowrap shadow">Fazer só a prova</button>
+    </div>
+
     <details class="rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 p-4 sm:p-5 mb-6">
       <summary class="cursor-pointer font-semibold text-amber-800 dark:text-amber-200">
         📓 Dica de estudo: monte seu caderno de erros enquanto resolve
@@ -407,6 +415,10 @@
         <p class="font-medium text-slate-800 dark:text-slate-100">3. Escolha o modo</p>
         <p><strong>Exame:</strong> só mostra o resultado no final, como numa prova de verdade.<br>
         <strong>Tutor:</strong> corrige na hora. Responda e clique em "Conferir resposta" para ver se acertou e ler a justificativa, sem revelar sem querer.</p>
+      </div>
+      <div>
+        <p class="font-medium text-slate-800 dark:text-slate-100">📝 Fazer só a prova VAT1</p>
+        <p>O botão "Fazer só a prova", no topo da página inicial, abre as 20 questões da prova VAT1 2026.2 (Turma D) na ordem original, sem embaralhar as alternativas, no modo marcado (Exame ou Tutor). As questões da prova também continuam no sorteio normal, com códigos terminados em V01, V02…</p>
       </div>
       <div>
         <p class="font-medium text-slate-800 dark:text-slate-100">✏️ Durante a questão</p>
@@ -9212,7 +9224,8 @@ function refreshAttemptFromBank(attempt) {
   });
 }
 
-function buildSessionQuestions(questions, rng) {
+// keepOrder: mantém as alternativas na ordem original (usado na prova completa)
+function buildSessionQuestions(questions, rng, keepOrder) {
   return questions.map((q) => {
     const opts = q.options.map((o) => ({
       text: o.text,
@@ -9220,7 +9233,7 @@ function buildSessionQuestions(questions, rng) {
       letter: o.letter,
       isCorrect: o.letter === q.correctLetter,
     }));
-    shuffleInPlace(opts, rng);
+    if (!keepOrder) shuffleInPlace(opts, rng);
     return {
       id: q.id,
       code: q.code,
@@ -9257,6 +9270,9 @@ function showScreen(name) {
    6. TELA INICIAL
    ========================================================================= */
 function renderHome() {
+  const nProva = provaQuestions().length;
+  document.getElementById("prova-count").textContent = nProva;
+  document.getElementById("prova-card").classList.toggle("hidden", !nProva);
   const total = QUESTIONS_DATABASE.length;
   const subjects = uniqueSubjects();
   document.getElementById("stat-total").textContent = total;
@@ -9558,8 +9574,14 @@ function renderResumeBanner() {
 /* =========================================================================
    7. INICIAR SIMULADO
    ========================================================================= */
+// Questões da prova VAT1, na ordem da prova (número tirado de sourceLabel: "..., questão N")
+function provaQuestions() {
+  const num = (q) => Number((/quest[aã]o (\d+)/i.exec(q.sourceLabel || "") || [])[1]) || 0;
+  return QUESTIONS_DATABASE.filter((q) => (q.sourceLabel || "").startsWith("Prova VAT1")).sort((a, b) => num(a) - num(b));
+}
+
 function startQuiz(opts) {
-  const { subjects, qtd, mode, sessionCode, poolOverride, label } = opts;
+  const { subjects, qtd, mode, sessionCode, poolOverride, label, keepOrder } = opts;
   const pool = poolOverride || QUESTIONS_DATABASE.filter((q) => subjects.includes(q.category));
   if (!pool.length) {
     toast("Nenhuma questão disponível para os critérios escolhidos.", "err");
@@ -9574,7 +9596,7 @@ function startQuiz(opts) {
   if (poolOverride) {
     // pools de retentativa (erradas/marcadas/fracas): usa o pool inteiro, so embaralha ordem
     chosen = pool.slice(0, qtd);
-    shuffleInPlace(chosen, rng);
+    if (!keepOrder) shuffleInPlace(chosen, rng);
   } else {
     // revisoes vencidas entram primeiro (nao em sessoes compartilhadas por codigo)
     if (!sessionCode) {
@@ -9598,7 +9620,7 @@ function startQuiz(opts) {
     sessionCode: sessionCode || "",
     subjects,
     label: label || null,
-    questions: buildSessionQuestions(chosen, rng),
+    questions: buildSessionQuestions(chosen, rng, keepOrder),
     currentIndex: 0,
     finished: false,
   };
@@ -10605,6 +10627,13 @@ function init() {
     localStorage.removeItem(LS_KEYS.current);
     renderResumeBanner();
     toast("Simulado descartado.", "info");
+  });
+
+  document.getElementById("btn-start-prova").addEventListener("click", () => {
+    const pool = provaQuestions();
+    if (!pool.length) return;
+    const mode = document.querySelector('input[name="mode"]:checked')?.value || "exame";
+    startQuiz({ subjects: uniqueSubjects(), qtd: pool.length, mode, sessionCode: "", poolOverride: pool, keepOrder: true });
   });
 
   document.getElementById("btn-review-weak").addEventListener("click", () => {
